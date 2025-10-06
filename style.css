@@ -11,6 +11,8 @@ body {
   line-height: 1.6;
   color: #111;
   height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* TEXT STYLES */
@@ -631,6 +633,361 @@ align-items: center;
         }
 
 
-.quotes-container{
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       .testimonial-section {
+  background: #000;
+  z-index: 1;
+  overflow: hidden;
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #ffffff;
+  width: 100%;
+  position: relative;
+}
+
+.testimonial-container{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.testimonial-content{
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.testimonial-carousel {
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: flex-start; /* align items to start horizontally */
+  align-items: flex-start;     /* align items to top vertically */
+  padding: 0px 80px 40px ;
+  gap: 50px; /* space between text and quote icon */
+  position: relative;
+}
+
+
+/* Testimonial text */
+.testimonial-text {
+  font-size: 46px;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.02rem;
+  color: #fff;
+  max-width: 100%;
+}
+
+/* Company logo under text */
+.testimonial-company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonial-mastercard {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-mastercard-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.testimonial-circle-red {
+  background-color: #eb001b;
+  position: relative;
+  left: 10px;
+  z-index: 2;
+}
+
+.testimonial-circle-yellow {
+  background-color: #f79e1b;
+  position: relative;
+  right: 10px;
+}
+
+.testimonial-mastercard-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+/* Quote icon on the right side */
+.testimonial-quote-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  opacity: 0.8;
+  margin-top: 100px;
+}
+
+.testimonial-quote-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #ff0048;
+}
+
+/* Indicators */
+.testimonial-indicators {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.testimonial-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testimonial-indicator.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-slide {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .testimonial-quote-icon {
+    align-self: flex-end;
+  }
+
+  .testimonial-text {
+    font-size: 1.6rem;
+  }
+
+  .testimonial-mastercard-text {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+
+
+
+.news-section {
+    padding: 80px 0px 80px 80px; /* Remove horizontal padding */
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Prevent horizontal scroll on section */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    position: relative;
+    display: inline-block;
+    letter-spacing: -0.03em;
+line-height: 0.77; /* 77% of font size */
+
+}
+
+.news-carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.news-carousel {
+      display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    padding: 20px 80px; /* Add left padding to push cards to the right */
+    margin-left: -80px; /* Compensate for the padding to push cards off-screen */
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.news-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.news-card {
+     background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 425px;
+    max-width: 425px;
+    flex-shrink: 0;
+}
+
+
+.news-image {
+    height: 212.5px; /* Half of 425px */
+    overflow: hidden;
+    flex: 0 0 auto;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #6a6767;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.news-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+
+}
+
+.news-excerpt {
+    color: #555;
+    line-height: 1.1;
+    margin-bottom: 5px;
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.news-company {
+    font-weight: 600;
+    color: #000000;
+}
+
+.read-more {
+    color: #FF2B2B;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .news-carousel {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .news-carousel-container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-section {
+        padding: 60px 0;
+    }
+    
+    .news-content {
+        padding: 20px;
+    }
+    
+    .news-title {
+        font-size: 1.2rem;
+    }
+    
+    .news-carousel-container {
+        padding: 0 10px;
+    }
 }
