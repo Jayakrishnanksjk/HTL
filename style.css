@@ -501,17 +501,21 @@ align-items: center;
 
 /* Typography */
 .featured-project-card .client-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
 .featured-project-card .location,
 .featured-project-card .service-type,
 .featured-project-card .project-size {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   color: #555;
   margin: 2px 0;
+}
+
+.featured-project-card .project-size {
+  margin-bottom: 0px;
+  margin-top: 8px;
 }
 
 /* Optional: hide scrollbar */
