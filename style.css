@@ -243,7 +243,7 @@ align-items: center;
 
 
 .section-header>h2{
-  font-size: 48px;
+  font-size: 40px;
   line-height: 77% !important;
   letter-spacing: -1.44px;
   font-weight: 500;
@@ -433,7 +433,7 @@ align-items: center;
 }
 
 /* Section header */
-.featured-projects .section-header {
+/* .featured-projects .section-header {
   text-align: left;
   margin-bottom: 20px;
 }
@@ -443,7 +443,7 @@ align-items: center;
   font-weight: 600;
   color: #333;
   margin-bottom: 10px;
-}
+} */
 
 /* Carousel container */
 .featured-carousel-container {
@@ -458,6 +458,7 @@ align-items: center;
   gap: 30px; /* space between cards */
   flex-wrap: nowrap; /* keep cards in one row */
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 /* Project card (unique for this carousel) */
@@ -854,7 +855,7 @@ border-top: #ffffff solid var(--footer-border-width);
 
 
        .testimonial-section {
-  background: #000;
+  background: var(--gray-primary);
   z-index: 1;
   overflow: hidden;
   height: 77vh;
@@ -862,7 +863,6 @@ border-top: #ffffff solid var(--footer-border-width);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #ffffff;
   width: 100%;
   position: relative;
 }
@@ -1026,22 +1026,22 @@ border-top: #ffffff solid var(--footer-border-width);
     overflow: hidden; /* Prevent horizontal scroll on section */
 }
 
-.section-header {
+/* .section-header {
     text-align: center;
     margin-bottom: 10px;
     width: 100%;
-}
+} */
 
-.section-header h2 {
+/* .section-header h2 {
     font-size: 2.8rem;
     font-weight: 500;
     color: #1a1a1a;
     position: relative;
     display: inline-block;
     letter-spacing: -0.03em;
-line-height: 0.77; /* 77% of font size */
+line-height: 0.77;
 
-}
+} */
 
 .news-carousel-container {
     width: 100%;
@@ -1170,10 +1170,10 @@ line-height: 0.77; /* 77% of font size */
         margin: 0 auto;
     }
     
-    .section-header h2 {
+    /* .section-header h2 {
         font-size: 2rem;
     }
-    
+     */
     .news-carousel-container {
         padding: 0 15px;
     }
