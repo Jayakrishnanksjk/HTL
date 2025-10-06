@@ -1,3 +1,8 @@
+:root {
+  --gray-primary: #0D0D0D;
+   --btn-gradient: linear-gradient(to top, #ff1d4e 0%, #ff2b2b 50%);
+     --footer-border-width: 2px;
+}
 /* Reset */
 * {
   margin: 0;
@@ -11,6 +16,8 @@ body {
   line-height: 1.6;
   color: #111;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* TEXT STYLES */
@@ -120,7 +127,7 @@ border: none;
 
 /* Navbar */
 .navbar {
-  background-color: #000;
+  background-color: var(--gray-primary);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -247,7 +254,7 @@ align-items: center;
 
 .btn {
   /* background: #ff2b2b; */
-  background: linear-gradient(to top, #ff1d4e 0%, #ff2b2b 50%);
+  background: var(--btn-gradient);
 
   color: #fff;
   text-decoration: none;
@@ -517,17 +524,168 @@ align-items: center;
 }
 
 
+footer{
+  background-color: var(--gray-primary);
+  border-top: #fff solid var(--footer-border-width);
+  color: #fff;
+  height: 556px;
+  display: flex;
+flex-direction: column;
+  width: 100%;
 
 
+}
+
+.topper-section{
+ display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+height: 100%;
+}
+
+.topper-section>.Topper-containers{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  border: #fff solid var(--footer-border-width);
+  padding: 24px 24px;
+  border-left: none;
+  border-top: none;
+}
+.footer-section-header{
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 120%;
+  font-weight: 500;
+}
+.footer-link-group{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 8px;
+}
+.footer-link-group>a{
+  font-size: 12px;
+  line-height: 140%;
+  opacity: 70%;
+  font-weight: 300;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: -0.28px;
+}
+.footer-link-group>a:hover{
+  opacity: 100%;
+}
+
+.topper-section>.Topper-containers:nth-child(even){
+  border: #fff solid var(--footer-border-width);
+  border-left: none;
+  border-top: none;
+}
 
 
+.topper-section>.Topper-containers:first-child{
+  border-left: none;
+}
+
+.bottom-section{
+display: grid;
+width: 100%;
+grid-template-columns: 1fr 3fr;
+flex-direction: row;
+}
+
+.bottom-section>.left{
+display: flex;
+flex-direction: column;
+width: 100%;
+gap: 40px;
+padding: 24px 24px; 
+align-items: center;
+justify-content: center;
+border: #fff solid var(--footer-border-width);
+border-top: none;
+border-bottom: none;
+border-left: none;
+}
+.bottom-section>.right{
+border: #fff solid var(--footer-border-width);
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+padding: 24px 24px; 
+
+width: 100%;
+}
 
 
+.Topper-containers-last{
+  flex: 1;
+  gap: 0;
+ display: flex;
+ height: 100%;
+  flex-direction: column;
+  border-bottom: #fff solid var(--footer-border-width);
+  border-left: none;
+  border-top: none;
+}
+.last-inner-containers{
+  display: flex;
+  padding: 24px 24px; 
+  flex-direction: column;
+   gap: 14px;
 
+  height: 100%;
+}
+.last-inner-containers:last-child{
+border-top: #ffffff solid var(--footer-border-width);
+ height: fit-content;
+}
+
+.copyrights{
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 120%;
+  text-align: right;
+  opacity: 56%;
+}
+.location-group{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+}
+.location-group>a{
+ font-size: 12px;
+  line-height: 140%;
+  opacity: 70%;
+  font-weight: 300;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: -0.28px;
+  opacity: 60%;
+}
+.location-group>a:hover{
+  opacity: 100%;
+}
+.location-group>p{
+  color: white;
+  text-decoration: none;
+   font-size: 12px;
+   opacity: 60%;
+  font-weight: 300;
+  line-height: 120%;
+}
 .trusted-brands-container {
             /* padding: 80px 0; */
             padding-top: 64px;
-            background: #000000;
+            background: var(--gray-primary);
             z-index: 1;
             overflow: hidden;
             height: 100vh;
@@ -629,8 +787,3 @@ align-items: center;
         .trusted-brands-container * {
             box-sizing: border-box;
         }
-
-
-.quotes-container{
-
-}
