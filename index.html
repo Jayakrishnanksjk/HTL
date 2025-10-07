@@ -10,16 +10,97 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="normalize.css" />
 </head>
 
 <body>
   <!-- Hero Section -->
-  <nav class="navbar">
-    <div class="nav-brand">
-      <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" />
+  <nav class="navbar" id="navbar">
+    <div class="nav-body">
+      <div class="nav-brand">
+        <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" />
+      </div>
+      <button class="nav-toggle" onclick="toggleNav()">Menu
+        <!-- <div class="nav-link-btn" id="navToggle">
+        ms
+        <object data="./images/close.svg" type="image/svg+xml" height="32px"></object>
+      </div> -->
+      </button>
     </div>
-    <div class="nav-link-btn">
-      <object data="./images/close.svg" type="image/svg+xml" height="32px"></object>
+    <div class="nav-menu-section" id="navSection">
+      <div class="inner-container">
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Company</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">About Us</a>
+              <a href="#" class="link-box">Our Team</a>
+              <a href="#" class="link-box">People and Culture</a>
+              <a href="#" class="link-box">Services</a>
+              <a href="#" class="link-box">CSR Initiatives</a>
+              <a href="#" class="link-box">Investor Relations</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Services</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">HVAC</a>
+              <a href="#" class="link-box">MEP</a>
+              <a href="#" class="link-box">Fit-out</a>
+              <a href="#" class="link-box">Base build</a>
+              <a href="#" class="link-box">Cleanrooms</a>
+              <a href="#" class="link-box">C&I & Interior Fit-out</a>
+              <a href="#" class="link-box">Virtual Project Management</a>
+              <a href="#" class="link-box">Operations & Maintenance</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Sectors</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">Commercial Real Estate & GCC</a>
+              <a href="#" class="link-box">Industrial & Warehousing</a>
+              <a href="#" class="link-box">Data Centres & Critical rooms</a>
+              <a href="#" class="link-box">Pharma & Biotech Life sciences</a>
+              <a href="#" class="link-box">Hospitality & Luxury Retail</a>
+              <a href="#" class="link-box">Hospital & healthcare</a>
+              <a href="#" class="link-box">Educational institutes</a>
+              <a href="#" class="link-box">Gov & Infra</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Resources</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">Projects</a>
+              <a href="#" class="link-box">News & Articles</a>
+            </div>
+          </div>
+
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Socials</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </nav>
 
@@ -577,147 +658,20 @@
 
 
 
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+  <!-- Scripts -->
+  <script src="./js/navbar.js"></script>
+  <!-- <script src="./js/carousal.js"></script> -->
+  <script src="./js/stats.js"></script>
+  <!-- <script src="./js/testemonial.js"></script> -->
 
+  <!-- Animations -->
+  <script src="./js/animation/Lenis.js"></script>
 
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.querySelector(".projects-carousel");
-      const prevBtn = document.querySelector(".prev-btn");
-      const nextBtn = document.querySelector(".next-btn");
-      const cards = document.querySelectorAll(".project-card");
-      const cardWidth = cards[0].offsetWidth + 30; // width + gap
-
-      let currentPosition = 0;
-      const maxPosition = (cards.length - 3) * cardWidth;
-      let autoScrollInterval;
-
-      function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentPosition}px)`;
-
-        // Show/hide buttons based on position
-        prevBtn.style.opacity = currentPosition === 0 ? "0.5" : "1";
-        nextBtn.style.opacity = currentPosition >= maxPosition ? "0.5" : "1";
-      }
-
-      function nextSlide() {
-        if (currentPosition < maxPosition) {
-          currentPosition += cardWidth;
-        } else {
-          currentPosition = 0; // Loop back to start
-        }
-        updateCarousel();
-      }
-
-      function prevSlide() {
-        if (currentPosition > 0) {
-          currentPosition -= cardWidth;
-        } else {
-          currentPosition = maxPosition; // Loop to end
-        }
-        updateCarousel();
-      }
-
-      function startAutoScroll() {
-        autoScrollInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
-      }
-
-      function stopAutoScroll() {
-        clearInterval(autoScrollInterval);
-      }
-
-      // Event listeners for manual controls
-      prevBtn.addEventListener("click", function () {
-        stopAutoScroll();
-        prevSlide();
-        startAutoScroll();
-      });
-
-      nextBtn.addEventListener("click", function () {
-        stopAutoScroll();
-        nextSlide();
-        startAutoScroll();
-      });
-
-      // Pause auto-scroll on hover
-      carousel.addEventListener("mouseenter", stopAutoScroll);
-      carousel.addEventListener("mouseleave", startAutoScroll);
-
-      // Initialize
-      updateCarousel();
-      startAutoScroll();
-    });
-  </script>
-
-  <script>
-    const statGroups = document.querySelectorAll(".stats-group");
-    let current = 0;
-
-    setInterval(() => {
-      statGroups[current].classList.remove("active");
-      current = (current + 1) % statGroups.length;
-      statGroups[current].classList.add("active");
-    }, 4000); // switch every 4 seconds
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const testimonialTrack = document.querySelector(".testimonial-track");
-      const testimonialSlides =
-        document.querySelectorAll(".testimonial-slide");
-      const testimonialIndicators = document.querySelectorAll(
-        ".testimonial-indicator"
-      );
-
-      let testimonialCurrentIndex = 0;
-      const testimonialTotalSlides = testimonialSlides.length;
-      let testimonialAutoAdvance;
-
-      // Function to update carousel position
-      function updateTestimonialCarousel() {
-        testimonialTrack.style.transform = `translateX(-${testimonialCurrentIndex * 0
-          }%)`;
-        testimonialIndicators.forEach((indicator, index) => {
-          indicator.classList.toggle(
-            "active",
-            index === testimonialCurrentIndex
-          );
-        });
-      }
-
-      // Indicator click
-      testimonialIndicators.forEach((indicator) => {
-        indicator.addEventListener("click", function () {
-          testimonialCurrentIndex = parseInt(this.getAttribute("data-index"));
-          updateTestimonialCarousel();
-        });
-      });
-
-      // Auto-advance carousel every 5 seconds
-      function startAutoAdvance() {
-        testimonialAutoAdvance = setInterval(function () {
-          testimonialCurrentIndex =
-            (testimonialCurrentIndex + 1) % testimonialTotalSlides;
-          updateTestimonialCarousel();
-        }, 5000);
-      }
-
-      // Start auto-advance
-      startAutoAdvance();
-
-      // Pause auto-advance on hover
-      const testimonialCarousel = document.querySelector(
-        ".testimonial-carousel"
-      );
-      testimonialCarousel.addEventListener("mouseenter", function () {
-        clearInterval(testimonialAutoAdvance);
-      });
-      testimonialCarousel.addEventListener("mouseleave", function () {
-        startAutoAdvance();
-      });
-    });
-  </script>
 </body>
 
 </html>
