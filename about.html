@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTL Website</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTL Website</title>
 
-  <body>
-    <!-- Hero Section -->
-    <nav class="navbar" id="navbar">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <nav class="navbar" id="navbar">
+
     <div class="nav-body">
-      <div class="nav-brand">
-  <a href="index.html">
-    <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" />
-  </a>
-</div>
+      <a class="link-style-reset" href="./index.html">
+        <div class="nav-brand">
+          <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" href="index.html" />
+        </div>
+      </a>
 
-      <button class="nav-toggle" onclick="toggleNav()">Menu
-        <!-- <div class="nav-link-btn" id="navToggle">
-        ms
-        <object data="./images/close.svg" type="image/svg+xml" height="32px"></object>
-      </div> -->
-      </button>
+      <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
+
+        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="top" y="9" width="48" height="6" fill="white" />
+          <rect class="bot" y="29" width="48" height="6" fill="white" />
+        </svg>
+
+      </div>
+
     </div>
     <div class="nav-menu-section" id="navSection">
       <div class="inner-container">
@@ -39,7 +41,7 @@
               <h3>Company</h3>
             </div>
             <div class="menu-list">
-              <a href="#" class="link-box">About Us</a>
+              <a href="about.html" class="link-box">About Us</a>
               <a href="#" class="link-box">Our Team</a>
               <a href="#" class="link-box">People and Culture</a>
               <a href="#" class="link-box">Services</a>
@@ -108,266 +110,264 @@
     </div>
   </nav>
 
-    <section class="about-banner">
-      <div class="about-content">
-        <h2>Inspiring the youth of tomorrow.</h2>
-        <p>A glimpse into our work.</p>
-      </div>
-    </section>
+  <section class="about-banner">
+    <div class="about-content">
+      <h2>Inspiring the youth of tomorrow.</h2>
+      <p>A glimpse into our work.</p>
+    </div>
+  </section>
 
-    <section class="missions-section">
-      <div class="mission-image">
-        <img src="images/about-mission.svg" alt="Our Mission" />
-      </div>
+  <section class="missions-section">
+    <div class="mission-image">
+      <img src="images/about-mission.svg" alt="Our Mission" />
+    </div>
 
-      <div class="mission-content">
-        <h2>OUR MISSION</h2>
-        <p>
-          To be the most eminent force in MEP engineering across Asia and
-          Africa, shaping environments where performance, comfort, and
-          sustainability meet.
-        </p>
-      </div>
-    </section>
-
-    <section class="missions-section">
-      <div class="mission-image">
-        <img src="images/about-vision.svg" alt="Our Mission" />
-      </div>
-
-      <div class="mission-content">
-        <h2>OUR VISION</h2>
-        <p>
-          By Raising The Standards of MEP delivery through innovation,
-          discipline, and a relentless commitment to quality—empowering every
-          project to be future-ready.
-        </p>
-      </div>
-    </section>
-
-    <section class="about-us-section">
-      <h1>ABOUT US</h1>
+    <div class="mission-content">
+      <h2>OUR MISSION</h2>
       <p>
-        Established in 1996,HTL is a leading turn key MEP engineering company,
-        providing integrated, future-ready solutions tailored for diverse
-        industries. With a strong presence in India, the Middle East, and
-        Africa, we specialise in high- performance systems for mission-critical
-        environments, luxury spaces, and complex infrastructure.
+        To be the most eminent force in MEP engineering across Asia and
+        Africa, shaping environments where performance, comfort, and
+        sustainability meet.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section class="stats-section-about">
-      <div class="stats-container-about">
-        <div class="stat-item-about">
-          <div class="stat-label-about">Offices</div>
-          <hr />
-          <div class="stat-value-about">07+</div>
-        </div>
-        <div class="stat-item-about">
-          <div class="stat-label-about">Countries</div>
-          <hr />
-          <div class="stat-value-about">03+</div>
-        </div>
-        <div class="stat-item-about">
-          <div class="stat-label-about">Years in Business</div>
-          <hr />
-          <div class="stat-value-about">30+</div>
-        </div>
-        <div class="stat-item-about">
-          <div class="stat-label-about">Team Strength</div>
-          <hr />
-          <div class="stat-value-about">600+</div>
+  <section class="missions-section">
+    <div class="mission-image">
+      <img src="images/about-vision.svg" alt="Our Mission" />
+    </div>
+
+    <div class="mission-content">
+      <h2>OUR VISION</h2>
+      <p>
+        By Raising The Standards of MEP delivery through innovation,
+        discipline, and a relentless commitment to quality—empowering every
+        project to be future-ready.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-us-section">
+    <h1>ABOUT US</h1>
+    <p>
+      Established in 1996,HTL is a leading turn key MEP engineering company,
+      providing integrated, future-ready solutions tailored for diverse
+      industries. With a strong presence in India, the Middle East, and
+      Africa, we specialise in high- performance systems for mission-critical
+      environments, luxury spaces, and complex infrastructure.
+    </p>
+  </section>
+
+  <section class="stats-section-about">
+    <div class="stats-container-about">
+      <div class="stat-item-about">
+        <div class="stat-label-about">Offices</div>
+        <hr />
+        <div class="stat-value-about">07+</div>
+      </div>
+      <div class="stat-item-about">
+        <div class="stat-label-about">Countries</div>
+        <hr />
+        <div class="stat-value-about">03+</div>
+      </div>
+      <div class="stat-item-about">
+        <div class="stat-label-about">Years in Business</div>
+        <hr />
+        <div class="stat-value-about">30+</div>
+      </div>
+      <div class="stat-item-about">
+        <div class="stat-label-about">Team Strength</div>
+        <hr />
+        <div class="stat-value-about">600+</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="excellence-values-section">
+    <h1>OUR VALUES</h1>
+    <div class="excellence-content">
+      <div class="excellence-item">
+        <h2>
+          Excellence <br />
+          by Design
+        </h2>
+        <p>
+          Delivering precision-driven solutions that set benchmarks in
+          engineering and construction.
+        </p>
+      </div>
+      <div class="excellence-item">
+        <h2>
+          People <br />
+          First
+        </h2>
+        <p>
+          Empowering teams and clients through trust, collaboration, and
+          respect.
+        </p>
+      </div>
+      <div class="excellence-item">
+        <h2>
+          Integrity <br />
+          Always
+        </h2>
+        <p>
+          Operating with transparency, accountability, and uncompromising
+          ethics.
+        </p>
+      </div>
+      <div class="excellence-item">
+        <h2>Innovation with <br />Purpose</h2>
+        <p>
+          Applying technology and ideas that create lasting impact and value.
+        </p>
+      </div>
+      <div class="excellence-item">
+        <h2>
+          Process-Led <br />
+          Delivery
+        </h2>
+        <p>
+          Structured execution ensuring quality, safety, and timely completion
+          every time.
+        </p>
+      </div>
+      <div class="excellence-item">
+        <h2>
+          Sustainable <br />
+          Thinking
+        </h2>
+        <p>
+          Building responsibly with practices that protect people and the
+          planet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+
+    <div class="timeline-container">
+
+      <div class="timeline-image">
+        <h1>Timeline</h1>
+        <img src="images/timeline-img.svg" alt="Factory" />
+      </div>
+
+      <div class="timeline-line">
+        <div class="timeline-year">1996</div>
+      </div>
+
+      <div class="timeline-content">
+        <p class="timeline-date">APRIL 1996</p>
+        <h2 class="timeline-title">
+          Commencement as Magnum Air technics (Sole Proprietorship)
+        </h2>
+        <p class="timeline-description">
+          In 2025, we launched our flagship platform upgrade, expanded into
+          Southeast Asia, secured strategic partnerships in biotech and
+          automation, and scaled operations with a 40% increase in deployment
+          speed, all while maintaining a user-first design ethos and setting
+          new benchmarks in reliability and performance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h1>OUR PRESENCE</h1>
+  </section>
+
+  <footer>
+    <div class="topper-section">
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">Company</h5>
+        <div class="footer-link-group">
+          <a href="#">About Us</a>
+          <a href="#">Our Team</a>
+          <a href="#">People & Culture</a>
+          <a href="#">Services</a>
+          <a href="#">CSR Initiatives</a>
         </div>
       </div>
-    </section>
-
-    <section class="excellence-values-section">
-      <h1>OUR VALUES</h1>
-      <div class="excellence-content">
-        <div class="excellence-item">
-          <h2>
-            Excellence <br />
-            by Design
-          </h2>
-          <p>
-            Delivering precision-driven solutions that set benchmarks in
-            engineering and construction.
-          </p>
-        </div>
-        <div class="excellence-item">
-          <h2>
-            People <br />
-            First
-          </h2>
-          <p>
-            Empowering teams and clients through trust, collaboration, and
-            respect.
-          </p>
-        </div>
-        <div class="excellence-item">
-          <h2>
-            Integrity <br />
-            Always
-          </h2>
-          <p>
-            Operating with transparency, accountability, and uncompromising
-            ethics.
-          </p>
-        </div>
-        <div class="excellence-item">
-          <h2>Innovation with <br />Purpose</h2>
-          <p>
-            Applying technology and ideas that create lasting impact and value.
-          </p>
-        </div>
-        <div class="excellence-item">
-          <h2>
-            Process-Led <br />
-            Delivery
-          </h2>
-          <p>
-            Structured execution ensuring quality, safety, and timely completion
-            every time.
-          </p>
-        </div>
-        <div class="excellence-item">
-          <h2>
-            Sustainable <br />
-            Thinking
-          </h2>
-          <p>
-            Building responsibly with practices that protect people and the
-            planet.
-          </p>
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">services</h5>
+        <div class="footer-link-group">
+          <a href="#">HVAC</a>
+          <a href="#">MEP</a>
+          <a href="#">Fit-out</a>
+          <a href="#">Base build</a>
+          <a href="#">Cleanrooms</a>
+          <a href="#">C&I & Interior fit-out</a>
+          <a href="#">Virtual Project Management</a>
+          <a href="#">Operations & Maintenance</a>
         </div>
       </div>
-    </section>
-
-    <section class="timeline-section">
-      
-      <div class="timeline-container">
-        
-        <div class="timeline-image">
-          <h1>Timeline</h1>
-          <img src="images/timeline-img.svg" alt="Factory" />
-        </div>
-
-        <div class="timeline-line">
-          <div class="timeline-year">1996</div>
-        </div>
-
-        <div class="timeline-content">
-          <p class="timeline-date">APRIL 1996</p>
-          <h2 class="timeline-title">
-            Commencement as Magnum Air technics (Sole Proprietorship)
-          </h2>
-          <p class="timeline-description">
-            In 2025, we launched our flagship platform upgrade, expanded into
-            Southeast Asia, secured strategic partnerships in biotech and
-            automation, and scaled operations with a 40% increase in deployment
-            speed, all while maintaining a user-first design ethos and setting
-            new benchmarks in reliability and performance.
-          </p>
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">Sectors</h5>
+        <div class="footer-link-group">
+          <a href="#">Commercial Real Estate & GCC</a>
+          <a href="#">Industrial & Warehousing</a>
+          <a href="#">Data Centres & Critical rooms</a>
+          <a href="#">Pharma & biotech life sciences</a>
+          <a href="#">Hospital & healthcare</a>
+          <a href="#">Educational institutes</a>
+          <a href="#">Gov & Infra</a>
         </div>
       </div>
-    </section>
-
-    <section class="map-section">
-      <h1>OUR PRESENCE</h1>
-    </section>
-
-    <footer>
-      <div class="topper-section">
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">Company</h5>
+      <div class="Topper-containers-last">
+        <div class="last-inner-containers">
+          <h5 class="footer-section-header">Contact us</h5>
           <div class="footer-link-group">
-            <a href="#">About Us</a>
-            <a href="#">Our Team</a>
-            <a href="#">People & Culture</a>
-            <a href="#">Services</a>
-            <a href="#">CSR Initiatives</a>
+            <a href="#">info@abcd.demo</a>
+            <a href="#">+91 920 000 0000</a>
           </div>
         </div>
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">services</h5>
+        <div class="last-inner-containers">
+          <h5 class="footer-section-header">Follow us on</h5>
           <div class="footer-link-group">
-            <a href="#">HVAC</a>
-            <a href="#">MEP</a>
-            <a href="#">Fit-out</a>
-            <a href="#">Base build</a>
-            <a href="#">Cleanrooms</a>
-            <a href="#">C&I & Interior fit-out</a>
-            <a href="#">Virtual Project Management</a>
-            <a href="#">Operations & Maintenance</a>
-          </div>
-        </div>
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">Sectors</h5>
-          <div class="footer-link-group">
-            <a href="#">Commercial Real Estate & GCC</a>
-            <a href="#">Industrial & Warehousing</a>
-            <a href="#">Data Centres & Critical rooms</a>
-            <a href="#">Pharma & biotech life sciences</a>
-            <a href="#">Hospital & healthcare</a>
-            <a href="#">Educational institutes</a>
-            <a href="#">Gov & Infra</a>
-          </div>
-        </div>
-        <div class="Topper-containers-last">
-          <div class="last-inner-containers">
-            <h5 class="footer-section-header">Contact us</h5>
-            <div class="footer-link-group">
-              <a href="#">info@abcd.demo</a>
-              <a href="#">+91 920 000 0000</a>
-            </div>
-          </div>
-          <div class="last-inner-containers">
-            <h5 class="footer-section-header">Follow us on</h5>
-            <div class="footer-link-group">
-              <a href="#">LinkedIn</a>
-            </div>
+            <a href="#">LinkedIn</a>
           </div>
         </div>
       </div>
-      <div class="bottom-section">
-        <div class="left">
-          <img
-            src="./images/Logo/Footer Image Block.png"
-            height="56px"
-            alt="logo footer"
-          />
-          <object
-            data="./images/Logo/iso.svg"
-            type="image/svg+xml"
-            height="48px"
-          ></object>
-        </div>
-        <div class="right">
-          <div class="location-group">
-            <a href="#">Mumbai</a>
-            <p>|</p>
-            <a href="#">CBD-Belapur</a>
-            <p>|</p>
-            <a href="#">Pune</a>
-            <p>|</p>
-            <a href="#">Bangalore</a>
-            <p>|</p>
-            <a href="#">Ahemdabad</a>
-            <p>|</p>
-            <a href="#">New Delhi</a>
-            <p>|</p>
-            <a href="#">Hyderabad</a>
-            <p>|</p>
-            <a href="#">Africa</a>
-          </div>
-          <p class="copyrights">
-            © 2025 HTL AIRCON<br />
-            All rights reserved
-          </p>
-        </div>
+    </div>
+    <div class="bottom-section">
+      <div class="left">
+        <img src="./images/Logo/Footer Image Block.png" height="56px" alt="logo footer" />
+        <object data="./images/Logo/iso.svg" type="image/svg+xml" height="48px"></object>
       </div>
-    </footer>
-     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+      <div class="right">
+        <div class="location-group">
+          <a href="#">Mumbai</a>
+          <p>|</p>
+          <a href="#">CBD-Belapur</a>
+          <p>|</p>
+          <a href="#">Pune</a>
+          <p>|</p>
+          <a href="#">Bangalore</a>
+          <p>|</p>
+          <a href="#">Ahemdabad</a>
+          <p>|</p>
+          <a href="#">New Delhi</a>
+          <p>|</p>
+          <a href="#">Hyderabad</a>
+          <p>|</p>
+          <a href="#">Africa</a>
+        </div>
+        <p class="copyrights">
+          © 2025 HTL AIRCON<br />
+          All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
@@ -379,5 +379,8 @@
 
   <!-- Animations -->
   <script src="./js/animation/Lenis.js"></script>
-  </body>
+  <script src="./Hamburger/script.js"></script>
+
+</body>
+
 </html>
