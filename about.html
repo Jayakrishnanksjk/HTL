@@ -16,23 +16,97 @@
 
   <body>
     <!-- Hero Section -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
+    <div class="nav-body">
       <div class="nav-brand">
-        <img
-          src="./images/htl logo.png"
-          alt="HTL brand logo"
-          height="32px"
-          width="auto"
-        />
+  <a href="index.html">
+    <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" />
+  </a>
+</div>
+
+      <button class="nav-toggle" onclick="toggleNav()">Menu
+        <!-- <div class="nav-link-btn" id="navToggle">
+        ms
+        <object data="./images/close.svg" type="image/svg+xml" height="32px"></object>
+      </div> -->
+      </button>
+    </div>
+    <div class="nav-menu-section" id="navSection">
+      <div class="inner-container">
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Company</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">About Us</a>
+              <a href="#" class="link-box">Our Team</a>
+              <a href="#" class="link-box">People and Culture</a>
+              <a href="#" class="link-box">Services</a>
+              <a href="#" class="link-box">CSR Initiatives</a>
+              <a href="#" class="link-box">Investor Relations</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Services</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">HVAC</a>
+              <a href="#" class="link-box">MEP</a>
+              <a href="#" class="link-box">Fit-out</a>
+              <a href="#" class="link-box">Base build</a>
+              <a href="#" class="link-box">Cleanrooms</a>
+              <a href="#" class="link-box">C&I & Interior Fit-out</a>
+              <a href="#" class="link-box">Virtual Project Management</a>
+              <a href="#" class="link-box">Operations & Maintenance</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Sectors</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">Commercial Real Estate & GCC</a>
+              <a href="#" class="link-box">Industrial & Warehousing</a>
+              <a href="#" class="link-box">Data Centres & Critical rooms</a>
+              <a href="#" class="link-box">Pharma & Biotech Life sciences</a>
+              <a href="#" class="link-box">Hospitality & Luxury Retail</a>
+              <a href="#" class="link-box">Hospital & healthcare</a>
+              <a href="#" class="link-box">Educational institutes</a>
+              <a href="#" class="link-box">Gov & Infra</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Resources</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">Projects</a>
+              <a href="#" class="link-box">News & Articles</a>
+            </div>
+          </div>
+
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Socials</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">LinkedIn</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="nav-link-btn">
-        <object
-          data="./images/close.svg"
-          type="image/svg+xml"
-          height="32px"
-        ></object>
-      </div>
-    </nav>
+
+    </div>
+  </nav>
 
     <section class="about-banner">
       <div class="about-content">
@@ -293,5 +367,17 @@
         </div>
       </div>
     </footer>
+     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="./js/navbar.js"></script>
+  <!-- <script src="./js/carousal.js"></script> -->
+  <script src="./js/stats.js"></script>
+  <!-- <script src="./js/testemonial.js"></script> -->
+
+  <!-- Animations -->
+  <script src="./js/animation/Lenis.js"></script>
   </body>
 </html>
