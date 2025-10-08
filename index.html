@@ -11,21 +11,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="normalize.css" />
+
+
 </head>
 
 <body>
   <!-- Hero Section -->
   <nav class="navbar" id="navbar">
+
     <div class="nav-body">
-      <div class="nav-brand">
-        <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" href="index.html"/>
+      <a class="link-style-reset" href="./index.html">
+        <div class="nav-brand">
+          <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" href="index.html" />
+        </div>
+      </a>
+
+      <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
+
+        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="top" y="9" width="48" height="6" fill="white" />
+          <rect class="bot" y="29" width="48" height="6" fill="white" />
+        </svg>
+
       </div>
-      <button class="nav-toggle" onclick="toggleNav()">Menu
-        <!-- <div class="nav-link-btn" id="navToggle">
-        ms
-        <object data="./images/close.svg" type="image/svg+xml" height="32px"></object>
-      </div> -->
-      </button>
+
     </div>
     <div class="nav-menu-section" id="navSection">
       <div class="inner-container">
@@ -103,7 +112,6 @@
 
     </div>
   </nav>
-
   <section class="hero-container">
     <div class="hero-elements">
       <div class="hero-textbox-container">
@@ -287,6 +295,108 @@
       <a href="#" class="btn">Explore Our Services</a>
     </div>
   </section>
+
+  <!-- Featured project section with interaction -->
+  <section class="nextsection">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+    </div>
+    <!-- <h2>Featured Projects</h2> -->
+    <div class="innersection">
+
+      <div class="innerwarap">
+
+        <!-- Project 1 -->
+        <div class="featured-project-card">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Project 1" />
+          </div>
+          <div class="project-info">
+            <div class="info-left">
+              <h3 class="client-name">Microsoft</h3>
+              <p class="location">Hyderabad</p>
+            </div>
+            <div class="info-right">
+              <p class="service-type">HVAC</p>
+              <p class="project-size">3,00,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="featured-project-card">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Project 2" />
+          </div>
+          <div class="project-info">
+            <div class="info-left">
+              <h3 class="client-name">Apple</h3>
+              <p class="location">Bangalore</p>
+            </div>
+            <div class="info-right">
+              <p class="service-type">Electrical</p>
+              <p class="project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <div class="featured-project-card">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Project 2" />
+          </div>
+          <div class="project-info">
+            <div class="info-left">
+              <h3 class="client-name">Apple</h3>
+              <p class="location">Bangalore</p>
+            </div>
+            <div class="info-right">
+              <p class="service-type">Electrical</p>
+              <p class="project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <div class="featured-project-card">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Project 2" />
+          </div>
+          <div class="project-info">
+            <div class="info-left">
+              <h3 class="client-name">Apple</h3>
+              <p class="location">Bangalore</p>
+            </div>
+            <div class="info-right">
+              <p class="service-type">Electrical</p>
+              <p class="project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="childrenofinnner">
+          1
+        </div>
+        <div class="childrenofinnner">
+          2
+        </div>
+        <div class="childrenofinnner">
+          3
+        </div>
+        <div class="childrenofinnner">
+          4
+        </div>
+        <div class="childrenofinnner">
+          4
+        </div>
+        <div class="childrenofinnner">
+          4
+        </div>
+        <div class="childrenofinnner">
+          4
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- Featured project section with interaction -->
+
 
   <section class="featured-projects">
     <div class="section-header">
@@ -573,88 +683,88 @@
 
   </section>
 
-    <footer>
-      <div class="topper-section">
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">Company</h5>
+  <footer>
+    <div class="topper-section">
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">Company</h5>
+        <div class="footer-link-group">
+          <a href="#">About Us</a>
+          <a href="#">Our Team</a>
+          <a href="#">People & Culture</a>
+          <a href="#">Services</a>
+          <a href="#">CSR Initiatives</a>
+        </div>
+      </div>
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">services</h5>
+        <div class="footer-link-group">
+          <a href="#">HVAC</a>
+          <a href="#">MEP</a>
+          <a href="#">Fit-out</a>
+          <a href="#">Base build</a>
+          <a href="#">Cleanrooms</a>
+          <a href="#">C&I & Interior fit-out</a>
+          <a href="#">Virtual Project Management</a>
+          <a href="#">Operations & Maintenance</a>
+        </div>
+      </div>
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">Sectors</h5>
+        <div class="footer-link-group">
+          <a href="#">Commercial Real Estate & GCC</a>
+          <a href="#">Industrial & Warehousing</a>
+          <a href="#">Data Centres & Critical rooms</a>
+          <a href="#">Pharma & biotech life sciences</a>
+          <a href="#">Hospital & healthcare</a>
+          <a href="#">Educational institutes</a>
+          <a href="#">Gov & Infra</a>
+        </div>
+      </div>
+      <div class="Topper-containers-last">
+        <div class="last-inner-containers">
+          <h5 class="footer-section-header">Contact us</h5>
           <div class="footer-link-group">
-            <a href="#">About Us</a>
-            <a href="#">Our Team</a>
-            <a href="#">People & Culture</a>
-            <a href="#">Services</a>
-            <a href="#">CSR Initiatives</a>
+            <a href="#">info@abcd.demo</a>
+            <a href="#">+91 920 000 0000</a>
           </div>
         </div>
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">services</h5>
+        <div class="last-inner-containers">
+          <h5 class="footer-section-header">Follow us on</h5>
           <div class="footer-link-group">
-            <a href="#">HVAC</a>
-            <a href="#">MEP</a>
-            <a href="#">Fit-out</a>
-            <a href="#">Base build</a>
-            <a href="#">Cleanrooms</a>
-            <a href="#">C&I & Interior fit-out</a>
-            <a href="#">Virtual Project Management</a>
-            <a href="#">Operations & Maintenance</a>
-          </div>
-        </div>
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">Sectors</h5>
-          <div class="footer-link-group">
-            <a href="#">Commercial Real Estate & GCC</a>
-            <a href="#">Industrial & Warehousing</a>
-            <a href="#">Data Centres & Critical rooms</a>
-            <a href="#">Pharma & biotech life sciences</a>
-            <a href="#">Hospital & healthcare</a>
-            <a href="#">Educational institutes</a>
-            <a href="#">Gov & Infra</a>
-          </div>
-        </div>
-        <div class="Topper-containers-last">
-          <div class="last-inner-containers">
-            <h5 class="footer-section-header">Contact us</h5>
-            <div class="footer-link-group">
-              <a href="#">info@abcd.demo</a>
-              <a href="#">+91 920 000 0000</a>
-            </div>
-          </div>
-          <div class="last-inner-containers">
-            <h5 class="footer-section-header">Follow us on</h5>
-            <div class="footer-link-group">
-              <a href="#">LinkedIn</a>
-            </div>
+            <a href="#">LinkedIn</a>
           </div>
         </div>
       </div>
-      <div class="bottom-section">
-        <div class="left">
-          <img src="./images/Logo/Footer Image Block.png" height="56px" alt="logo footer">
-          <object data="./images/Logo/iso.svg" type="image/svg+xml" height="48px"></object>
-        </div>
-        <div class="right">
-          <div class="location-group">
-            <a href="#">Mumbai</a>
-            <p>|</p>
-            <a href="#">CBD-Belapur</a>
-            <p>|</p>
-            <a href="#">Pune</a>
-            <p>|</p>
-            <a href="#">Bangalore</a>
-            <p>|</p>
-            <a href="#">Ahemdabad</a>
-            <p>|</p>
-            <a href="#">New Delhi</a>
-            <p>|</p>
-            <a href="#">Hyderabad</a>
-            <p>|</p>
-            <a href="#">Africa</a>
+    </div>
+    <div class="bottom-section">
+      <div class="left">
+        <img src="./images/Logo/Footer Image Block.png" height="56px" alt="logo footer">
+        <object data="./images/Logo/iso.svg" type="image/svg+xml" height="48px"></object>
+      </div>
+      <div class="right">
+        <div class="location-group">
+          <a href="#">Mumbai</a>
+          <p>|</p>
+          <a href="#">CBD-Belapur</a>
+          <p>|</p>
+          <a href="#">Pune</a>
+          <p>|</p>
+          <a href="#">Bangalore</a>
+          <p>|</p>
+          <a href="#">Ahemdabad</a>
+          <p>|</p>
+          <a href="#">New Delhi</a>
+          <p>|</p>
+          <a href="#">Hyderabad</a>
+          <p>|</p>
+          <a href="#">Africa</a>
 
-          </div>
-          <p class="copyrights">© 2025 HTL AIRCON<br />
-            All rights reserved</p>
         </div>
+        <p class="copyrights">© 2025 HTL AIRCON<br />
+          All rights reserved</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
 
 
@@ -662,16 +772,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
   <!-- Scripts -->
   <script src="./js/navbar.js"></script>
   <!-- <script src="./js/carousal.js"></script> -->
   <script src="./js/stats.js"></script>
   <!-- <script src="./js/testemonial.js"></script> -->
-
   <!-- Animations -->
   <script src="./js/animation/Lenis.js"></script>
-
+  <script src="./Hamburger/script.js"></script>
+  <script src="./js/animation/scrollTriggers.js"></script>
 </body>
 
 </html>
