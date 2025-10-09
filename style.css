@@ -1998,6 +1998,14 @@ footer {
   font-weight: 400;
 }
 
+
+
+
+
+
+
+
+
 .service-cards-section-2 {
   padding: 20px 80px 80px;
 }
@@ -2020,10 +2028,7 @@ footer {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
-}
-
-.service-card-2:hover {
-  transform: translateY(-5px);
+  position: relative;
 }
 
 /* Image */
@@ -2058,123 +2063,288 @@ footer {
   font-weight: 400;
 }
 
-/* Overlay container */
-.service-card-overlay-2 {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
+
+
+
+
+/* services single page */
+
+
+.hvac-hero-section {
+  display: flex;
+  justify-content: center;   /* center container horizontally */
+  align-items: center;       /* center vertically */
+  height: 85vh;
+  background: radial-gradient(circle at center 50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%),
+    url("images/services-single-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  overflow: hidden;
+  margin: 0;
+  padding: 80px;
+}
+
+/* Container holds left and right sections */
+.hvac-hero-container {
+  display: flex;
+  justify-content: space-between; /* push left/right apart */
+  align-items: center;
   width: 100%;
-  height: 100%;
+  max-width: 1400px;
+}
+
+/* Left content */
+.hvac-hero-left {
+    padding: 30px;
+     background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    flex: 1;
+    text-align: left;
+    max-width: 670px;
+}
+
+.hvac-hero-left h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+   line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.hvac-hero-left p {
+  font-size: 1.6rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  max-width: 90%;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+/* Right content (optional image or component) */
+.hvac-hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+.image-text-section {
+  padding: 80px;
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.image-text-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 110px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.image-section {
+  max-width: 425px;
+  flex: 1;
+}
+
+.image-section img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.text-section {
+  flex: 1;
+}
+
+.text-section p {
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+   line-height: 1.23;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: 0;
+  font-weight: 400;
+}
+
+
+
+.additional-services-section {
+  padding: 80px 80px;
+  background-color: #ffffff;
+}
+
+.additional-services-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.23;
+    letter-spacing: 0.23em;
+    color: #000000;
+    opacity: 60%;
+    margin-bottom: 60px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+
+.service-item{
+  padding: 20px;
+border: 1px solid rgba(0, 0, 0, 0.09);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-item h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px 0;
+    line-height: 1.2;     
+  letter-spacing: -0.04em;
+}
+
+.service-item p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2;     
+  letter-spacing: -0.01em;
+  color: #555;
+  margin: 0;
+  font-weight: 300;
+}
+
+
+
+.expert-section {
+  padding: 80px;
+  background-color: #ffffff;
+}
+
+.expert-container {
+  display: flex;
+  gap: 150px;
+  max-width: 1200px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+/* Expert Card */
+.expert-card {
+  width: 330px; /* card width */
+  border-radius: 12px;
+  overflow: hidden;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* push top and bottom divs apart */
-  padding: 20px;
-  box-sizing: border-box;
-  transition: bottom 0.4s ease;
 }
 
-/* Slide overlay up on hover */
-.service-card-image-2:hover .service-card-overlay-2 {
-  bottom: 0;
+/* Image */
+.expert-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-/* Top heading div */
-.overlay-top h2 {
-  margin: 0;
-  font-size: 1.7rem;
-  font-weight: 400;
-  color: #000;
-  text-align: left;
+.expert-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
-/* Bottom div: paragraph + button */
-.overlay-bottom {
+/* Bottom container: text + LinkedIn */
+.expert-info-container {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* center horizontally */
-  gap: 10px; /* spacing between p and button */
+  justify-content: space-between;
+  align-items: center; /* vertically center text and icon */
+  padding: 15px 20px;
 }
 
-.overlay-bottom p {
+/* Text content */
+.expert-text h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.expert-text .expert-title {
   margin: 0;
   font-size: 1rem;
-  color: #555;
-  text-align: center;
+  color: #666;
+  font-weight: 300;
 }
 
-.overlay-bottom button {
-  padding: 8px 14px;
+/* LinkedIn icon */
+.expert-linkedin img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Content next to card */
+.expert-content {
+  align-self: center;
+    justify-content: flex-start;
+    display: flex
+;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.expert-content h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 30px 0;
+  line-height: 0.77;
+letter-spacing: -0.03em;
+}
+
+.expert-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #000000;
+  margin: 0 0 40px 0;
+  font-weight: 300;
+}
+
+.specialist-btn {
+  padding: 14px 32px;
   border: none;
   border-radius: 6px;
   background-color: #ff2b2b;
   color: #fff;
   cursor: pointer;
   transition: background 0.2s ease;
-  width: 100%;
-}
-
-.overlay-bottom button:hover {
-  background-color: #ff2b2b;
-}
-
-/* Overlay container for first section */
-.service-card-overlay {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* space between top and bottom divs */
-  padding: 20px;
-  box-sizing: border-box;
-  transition: bottom 0.6s ease-in-out; /* smoother and slower */
-  z-index: 10;
-}
-
-/* Slide up on hover */
-.service-card-image:hover .service-card-overlay {
-  bottom: 0;
-}
-
-/* Top heading div */
-.overlay-top h2 {
-  margin: 0;
-  font-size: 1.7rem;
-  font-weight: 400;
-  color: #000;
-  text-align: left;
-}
-
-/* Bottom div: paragraph + button */
-.overlay-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center horizontally */
-  gap: 10px;
-}
-
-.overlay-bottom p {
-  margin: 0;
   font-size: 1rem;
-  color: #555;
-  text-align: center;
+  font-weight: 500;
 }
 
-.overlay-bottom button {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  background-color: #ff2b2b;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  width: 100%;
-}
-
-.overlay-bottom button:hover {
+.specialist-btn:hover {
   background-color: #e60000;
 }
