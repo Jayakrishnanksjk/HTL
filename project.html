@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTL Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-body">
+        <div class="nav-brand">
+          <img
+            src="./images/htl logo.png"
+            alt="HTL brand logo"
+            height="32px"
+            width="auto"
+            href="index.html"
+          />
+        </div>
+        <button class="nav-toggle" onclick="toggleNav()">
+          Menu
+          <!-- <div class="nav-link-btn" id="navToggle">
+        ms
+        <object data="./images/close.svg" type="image/svg+xml" height="32px"></object>
+      </div> -->
+        </button>
+      </div>
+      <div class="nav-menu-section" id="navSection">
+        <div class="inner-container">
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Company</h3>
+              </div>
+              <div class="menu-list">
+                <a href="about.html" class="link-box">About Us</a>
+                <a href="#" class="link-box">Our Team</a>
+                <a href="#" class="link-box">People and Culture</a>
+                <a href="#" class="link-box">Services</a>
+                <a href="#" class="link-box">CSR Initiatives</a>
+                <a href="#" class="link-box">Investor Relations</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Services</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">HVAC</a>
+                <a href="#" class="link-box">MEP</a>
+                <a href="#" class="link-box">Fit-out</a>
+                <a href="#" class="link-box">Base build</a>
+                <a href="#" class="link-box">Cleanrooms</a>
+                <a href="#" class="link-box">C&I & Interior Fit-out</a>
+                <a href="#" class="link-box">Virtual Project Management</a>
+                <a href="#" class="link-box">Operations & Maintenance</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Sectors</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">Commercial Real Estate & GCC</a>
+                <a href="#" class="link-box">Industrial & Warehousing</a>
+                <a href="#" class="link-box">Data Centres & Critical rooms</a>
+                <a href="#" class="link-box">Pharma & Biotech Life sciences</a>
+                <a href="#" class="link-box">Hospitality & Luxury Retail</a>
+                <a href="#" class="link-box">Hospital & healthcare</a>
+                <a href="#" class="link-box">Educational institutes</a>
+                <a href="#" class="link-box">Gov & Infra</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Resources</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">Projects</a>
+                <a href="#" class="link-box">News & Articles</a>
+              </div>
+            </div>
+
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Socials</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="project-hero-section">
+      <div class="project-content">
+        <h1>What We've Built</h1>
+        <p>A Glimpse Into Our Work</p>
+      </div>
+    </section>
+
+    <section class="new-projects-section">
+      <div class="new-projects-header">
+        <h2 class="new-projects-title">Projects Highlights</h2>
+        <button class="filter-btn" aria-label="Open filters">
+          <!-- SVG icon (funnel) -->
+          <img src="images/filter-svg.svg" alt="">
+        </button>
+      </div> 
+
+      <div class="new-projects-row">
+        <div class="new-project-card">
+          <div class="new-project-image">
+            <img src="images/project-1.png" alt="Project 1" />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Microsoft</h3>
+              <p class="new-location">Hyderabad</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">3,00,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-project-card">
+          <div class="new-project-image">
+            <img src="images/project-1.png" alt="Project 2" />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Google</h3>
+              <p class="new-location">Bangalore</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Electrical</p>
+              <p class="new-project-size">2,00,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-project-card">
+          <div class="new-project-image">
+            <img src="images/project-1.png" alt="Project 3" />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Amazon</h3>
+              <p class="new-location">Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Plumbing</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-project-card">
+          <div class="new-project-image">
+            <img src="images/project-1.png" alt="Project 3" />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Amazon</h3>
+              <p class="new-location">Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Plumbing</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <div class="new-project-card">
+          <div class="new-project-image">
+            <img src="images/project-1.png" alt="Project 3" />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Amazon</h3>
+              <p class="new-location">Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Plumbing</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <div class="new-project-card">
+          <div class="new-project-image">
+            <img src="images/project-1.png" alt="Project 3" />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Amazon</h3>
+              <p class="new-location">Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Plumbing</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="card-pagination">
+  <!-- Back button with left arrow -->
+  <button class="page-btn back-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+    Back
+  </button>
+
+  <!-- Page numbers -->
+  <button class="page-btn">1</button>
+  <button class="page-btn">2</button>
+  <button class="page-btn">3</button>
+  <button class="page-btn">4</button>
+  <button class="page-btn">5</button>
+
+  <!-- Next button with right arrow -->
+  <button class="page-btn next-btn">
+    Next
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+</div>
+
+
+
+    </section>
+
+    <footer>
+      <div class="topper-section">
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Company</h5>
+          <div class="footer-link-group">
+            <a href="#">About Us</a>
+            <a href="#">Our Team</a>
+            <a href="#">People & Culture</a>
+            <a href="#">Services</a>
+            <a href="#">CSR Initiatives</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">services</h5>
+          <div class="footer-link-group">
+            <a href="#">HVAC</a>
+            <a href="#">MEP</a>
+            <a href="#">Fit-out</a>
+            <a href="#">Base build</a>
+            <a href="#">Cleanrooms</a>
+            <a href="#">C&I & Interior fit-out</a>
+            <a href="#">Virtual Project Management</a>
+            <a href="#">Operations & Maintenance</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Sectors</h5>
+          <div class="footer-link-group">
+            <a href="#">Commercial Real Estate & GCC</a>
+            <a href="#">Industrial & Warehousing</a>
+            <a href="#">Data Centres & Critical rooms</a>
+            <a href="#">Pharma & biotech life sciences</a>
+            <a href="#">Hospital & healthcare</a>
+            <a href="#">Educational institutes</a>
+            <a href="#">Gov & Infra</a>
+          </div>
+        </div>
+        <div class="Topper-containers-last">
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Contact us</h5>
+            <div class="footer-link-group">
+              <a href="#">info@abcd.demo</a>
+              <a href="#">+91 920 000 0000</a>
+            </div>
+          </div>
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Follow us on</h5>
+            <div class="footer-link-group">
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <div class="left">
+          <img
+            src="./images/Logo/Footer Image Block.png"
+            height="56px"
+            alt="logo footer"
+          />
+          <object
+            data="./images/Logo/iso.svg"
+            type="image/svg+xml"
+            height="48px"
+          ></object>
+        </div>
+        <div class="right">
+          <div class="location-group">
+            <a href="#">Mumbai</a>
+            <p>|</p>
+            <a href="#">CBD-Belapur</a>
+            <p>|</p>
+            <a href="#">Pune</a>
+            <p>|</p>
+            <a href="#">Bangalore</a>
+            <p>|</p>
+            <a href="#">Ahemdabad</a>
+            <p>|</p>
+            <a href="#">New Delhi</a>
+            <p>|</p>
+            <a href="#">Hyderabad</a>
+            <p>|</p>
+            <a href="#">Africa</a>
+          </div>
+          <p class="copyrights">
+            © 2025 HTL AIRCON<br />
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="./js/navbar.js"></script>
+    <!-- <script src="./js/carousal.js"></script> -->
+    <script src="./js/stats.js"></script>
+    <!-- <script src="./js/testemonial.js"></script> -->
+
+    <!-- Animations -->
+    <script src="./js/animation/Lenis.js"></script>
+  </body>
+</html>
