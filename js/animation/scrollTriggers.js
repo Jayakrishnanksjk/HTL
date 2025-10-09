@@ -1,4 +1,3 @@
-
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
@@ -9,7 +8,7 @@ requestAnimationFrame(raf);
 lenis.on("scroll", ScrollTrigger.update);
 gsap.registerPlugin(ScrollTrigger);
 
-createHorizontalScroll(".nextsection", ".innerwarap");
+// createHorizontalScroll(".nextsection", ".innerwarap");
 
 // Calculate scroll distance (total width - viewport)
 const scrollWidth = inner.scrollWidth;

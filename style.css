@@ -458,18 +458,36 @@ body {
   gap: 24px;
   margin: 0 80px;
 }
+.missiongroup {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 64px !important;
+}
+.sectionwrap {
+  height: 100%;
+  width: 100%;
+}
+.sectiongroup {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  gap: 0;
+}
+.box1 {
+  width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
+}
 
-.childrenofinnner:nth-child(1) {
-  background: #ff1d4e;
-}
-.childrenofinnner:nth-child(2) {
-  background: #ff5f1f;
-}
-.childrenofinnner:nth-child(3) {
-  background: #1f8fff;
-}
-.childrenofinnner:nth-child(4) {
-  background: #1fff5a;
+.missions-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+  padding: 0 100px;
+  background: #ffffff;
+  color: #000000;
+  height: 100%;
 }
 
 /* Featured elements section */
@@ -1322,17 +1340,6 @@ footer {
   letter-spacing: -0.03em;
 }
 
-.missions-section {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 100px;
-  padding: 80px 100px;
-  background: #ffffff;
-  color: #000000;
-  height: 100vh;
-}
-
 .mission-image img {
   width: 444px;
   height: 444px;
@@ -1653,25 +1660,14 @@ footer {
   opacity: 60%;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* project section */
 
-.project-hero-section{
+.project-hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 85vh;
-  background: 
-    url("images/project-hero.svg");
+  background: url("images/project-hero.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1687,7 +1683,7 @@ footer {
   padding: 20px;
 }
 
-.project-content h1{
+.project-content h1 {
   text-wrap: nowrap;
   font-size: 3.8rem;
   font-weight: 300;
@@ -1696,7 +1692,7 @@ footer {
   letter-spacing: -0.03em;
 }
 
-.project-content p{
+.project-content p {
   font-size: 1.6rem;
   font-weight: 300;
   opacity: 0.9;
@@ -1705,17 +1701,15 @@ footer {
   letter-spacing: -0.03em;
 }
 
-
-
 .new-projects-section {
   padding: 0px 80px 20px 80px;
   background-color: #f9f9f9;
 }
 
 .new-projects-header {
-    position: sticky;
-  top: 60px; 
-  z-index: 100; 
+  position: sticky;
+  top: 60px;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1729,20 +1723,22 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center; /* centers icon inside */
-  width: 40px;             /* set equal width & height */
+  width: 40px; /* set equal width & height */
   height: 40px;
   background-color: #e3e3e3;
   color: #fff;
   border: none;
-  border-radius: 50%;      /* makes it circular */
+  border-radius: 50%; /* makes it circular */
   cursor: pointer;
-  padding: 0;              /* remove extra padding */
+  padding: 0; /* remove extra padding */
   font-size: 1rem;
   transition: background-color 0.2s ease, transform 0.12s ease;
 }
 
 /* small press effect */
-.filter-btn:active { transform: translateY(1px); }
+.filter-btn:active {
+  transform: translateY(1px);
+}
 
 /* SVG inherits the text color via currentColor */
 .filter-icon {
@@ -1754,7 +1750,9 @@ footer {
 }
 
 /* optional hover */
-.filter-btn:hover { background-color: #222; }
+.filter-btn:hover {
+  background-color: #222;
+}
 
 /* if you want an icon-only smaller button variant */
 .filter-btn.icon-only {
@@ -1763,12 +1761,11 @@ footer {
   justify-content: center;
 }
 
-
 .new-projects-title {
   text-align: center;
   font-size: 2.8rem;
-   line-height: 0.77;
-  letter-spacing: -0.03em; 
+  line-height: 0.77;
+  letter-spacing: -0.03em;
   font-weight: 500;
 }
 
@@ -1817,49 +1814,48 @@ footer {
 .new-info-left p {
   margin: 2px 0 0;
   color: #555;
-  line-height: 0.77;     
-  letter-spacing: -0.02em; 
+  line-height: 0.77;
+  letter-spacing: -0.02em;
   font-size: 1.2rem;
 }
 
-.new-service-type{
+.new-service-type {
   margin: 0;
   text-align: right;
   color: #333;
-  letter-spacing: -0.02em; 
+  letter-spacing: -0.02em;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-.new-project-size{
+.new-project-size {
   margin: 0;
   text-align: right;
   color: #333;
-  letter-spacing: -0.02em; 
+  letter-spacing: -0.02em;
   font-size: 1.2rem;
 }
 
-
 .card-pagination {
   display: flex;
-  gap: 4px;           /* space between buttons */
-  margin-top: 40px;   /* spacing from card content */
+  gap: 4px; /* space between buttons */
+  margin-top: 40px; /* spacing from card content */
   justify-content: flex-start; /* left-aligned */
-  flex-wrap: wrap;    /* optional if you have small screens */
+  flex-wrap: wrap; /* optional if you have small screens */
 }
 
 .page-btn {
-  display: inline-flex;       /* make button a flex container */
-  align-items: center;        /* vertically center content */
-  justify-content: center;    /* horizontally center if needed */
-  gap: 4px;                   /* space between text and arrow */
+  display: inline-flex; /* make button a flex container */
+  align-items: center; /* vertically center content */
+  justify-content: center; /* horizontally center if needed */
+  gap: 4px; /* space between text and arrow */
   padding: 8px 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
   background-color: #fff;
   cursor: pointer;
   font-size: 0.7rem;
-  line-height: 1;             /* prevents extra vertical spacing */
+  line-height: 1; /* prevents extra vertical spacing */
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
@@ -1876,8 +1872,6 @@ footer {
   border-color: #ff3939;
   stroke: #fff; /* icon color changes with text */
 }
-
-
 
 /* Responsive layout */
 @media (max-width: 1300px) {
@@ -1898,24 +1892,22 @@ footer {
   }
 }
 
-
-
-
-
-
 /* service section */
 
-
-.service-cards-section{
-padding: 80px 80px 20px 80px;
+.service-cards-section {
+  padding: 80px 80px 20px 80px;
 }
 
-.service-hero-section{
+.service-hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background:  radial-gradient(circle at center 50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%),
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
     url("images/services-hero.png");
   background-size: cover;
   background-position: center;
@@ -1924,17 +1916,14 @@ padding: 80px 80px 20px 80px;
   color: #fff;
   overflow: hidden;
   margin: 0;
-  
 }
-
-
 
 .service-content {
   max-width: 100%;
   padding: 20px;
 }
 
-.service-content h1{
+.service-content h1 {
   text-wrap: nowrap;
   font-size: 3.8rem;
   font-weight: 300;
@@ -1943,7 +1932,7 @@ padding: 80px 80px 20px 80px;
   letter-spacing: -0.03em;
 }
 
-.service-content p{
+.service-content p {
   font-size: 1.6rem;
   font-weight: 300;
   opacity: 0.9;
@@ -1967,7 +1956,7 @@ padding: 80px 80px 20px 80px;
   width: 325px; /* fixed card width */
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -1990,14 +1979,13 @@ padding: 80px 80px 20px 80px;
   object-fit: cover; /* maintains aspect ratio and covers container */
 }
 
-
 .service-card-content {
   height: 60px; /* fixed height */
   padding: 20px;
   text-align: center;
   background-color: #fff;
   display: flex;
-  align-items: center;   /* vertically centers the text */
+  align-items: center; /* vertically centers the text */
   justify-content: flex-start; /* optional, centers horizontally */
 }
 
@@ -2005,9 +1993,9 @@ padding: 80px 80px 20px 80px;
   margin: 0;
   font-size: 1.7rem;
   color: #333;
-    line-height: 1.23;         /* 123% of font size */
-  letter-spacing: -0.02em; 
-  font-weight: 400;  
+  line-height: 1.23; /* 123% of font size */
+  letter-spacing: -0.02em;
+  font-weight: 400;
 }
 
 
@@ -2015,7 +2003,10 @@ padding: 80px 80px 20px 80px;
 
 
 
-.service-cards-section-2{
+
+
+
+.service-cards-section-2 {
   padding: 20px 80px 80px;
 }
 
@@ -2032,7 +2023,7 @@ padding: 80px 80px 20px 80px;
   width: 425px; /* slightly wider than first row */
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -2067,12 +2058,10 @@ padding: 80px 80px 20px 80px;
   margin: 0;
   font-size: 1.7rem;
   color: #333;
-    line-height: 1.23;         /* 123% of font size */
-  letter-spacing: -0.02em; 
-  font-weight: 400;  
+  line-height: 1.23; /* 123% of font size */
+  letter-spacing: -0.02em;
+  font-weight: 400;
 }
-
-
 
 
 
@@ -2348,7 +2337,7 @@ letter-spacing: -0.03em;
   padding: 14px 32px;
   border: none;
   border-radius: 6px;
-  background-color: #FF2B2B;
+  background-color: #ff2b2b;
   color: #fff;
   cursor: pointer;
   transition: background 0.2s ease;
