@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTL Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-body">
+        <a class="link-style-reset" href="./index.html">
+          <div class="nav-brand">
+            <img
+              src="./images/htl logo.png"
+              alt="HTL brand logo"
+              height="32px"
+              width="auto"
+              href="index.html"
+            />
+          </div>
+        </a>
+
+        <div
+          class="nav-link-btn nav-toggle"
+          id="navToggle"
+          onclick="toggleNav()"
+        >
+          <svg
+            id="burger"
+            width="48"
+            height="32"
+            viewBox="0 0 56 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect class="top" y="9" width="48" height="6" fill="white" />
+            <rect class="bot" y="29" width="48" height="6" fill="white" />
+          </svg>
+        </div>
+      </div>
+      <div class="nav-menu-section" id="navSection">
+        <div class="inner-container">
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Company</h3>
+              </div>
+              <div class="menu-list">
+                <a href="about.html" class="link-box">About Us</a>
+                <a href="#" class="link-box">Our Team</a>
+                <a href="#" class="link-box">People and Culture</a>
+                <a href="services.html" class="link-box">Services</a>
+                <a href="#" class="link-box">CSR Initiatives</a>
+                <a href="#" class="link-box">Investor Relations</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Services</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">HVAC</a>
+                <a href="#" class="link-box">MEP</a>
+                <a href="#" class="link-box">Fit-out</a>
+                <a href="#" class="link-box">Base build</a>
+                <a href="#" class="link-box">Cleanrooms</a>
+                <a href="#" class="link-box">C&I & Interior Fit-out</a>
+                <a href="#" class="link-box">Virtual Project Management</a>
+                <a href="#" class="link-box">Operations & Maintenance</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Sectors</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">Commercial Real Estate & GCC</a>
+                <a href="#" class="link-box">Industrial & Warehousing</a>
+                <a href="#" class="link-box">Data Centres & Critical rooms</a>
+                <a href="#" class="link-box">Pharma & Biotech Life sciences</a>
+                <a href="#" class="link-box">Hospitality & Luxury Retail</a>
+                <a href="#" class="link-box">Hospital & healthcare</a>
+                <a href="#" class="link-box">Educational institutes</a>
+                <a href="#" class="link-box">Gov & Infra</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Resources</h3>
+              </div>
+              <div class="menu-list">
+                <a href="project.html" class="link-box">Projects</a>
+                <a href="#" class="link-box">News & Articles</a>
+              </div>
+            </div>
+
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Socials</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-container-comm">
+      <div class="hero-elements">
+        <div class="hero-textbox-container">
+          <div class="hvac-hero-container">
+            <div class="hvac-hero-left">
+              <h1>
+                Transforming Workspaces into High-Performance Environments
+              </h1>
+              <p>
+                Delivering corporate fitouts that balance design, functionality,
+                and innovation to enhance productivity and employee experience.
+              </p>
+            </div>
+            <div class="hvac-hero-right"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-matrix">
+        <div class="stat-box">
+          <div class="stat-individual">
+            <h4 class="stats-title">Clients served</h4>
+            <hr />
+            <h2>100+</h2>
+          </div>
+
+          <div class="stat-individual">
+            <h4 class="stats-title">Clients served</h4>
+            <hr />
+            <h2>100+</h2>
+          </div>
+
+          <div class="stat-individual">
+            <h4 class="stats-title">Clients served</h4>
+            <hr />
+            <h2>100+</h2>
+          </div>
+
+          <div class="stat-individual">
+            <h4 class="stats-title">Clients served</h4>
+            <hr />
+            <h2>100+</h2>
+          </div>
+        </div>
+
+        <div class="hero-stats" style="display: none">
+          <!-- Group 1 -->
+          <div class="stats-group active">
+            <div class="stat">
+              <p>MW Executed</p>
+              <hr />
+              <span>650M+</span>
+            </div>
+            <div class="stat">
+              <p>CO₂ Reduced</p>
+              <hr />
+              <span>85K+</span>
+            </div>
+            <div class="stat">
+              <p>Energy Saved</p>
+              <hr />
+              <span>120G+</span>
+            </div>
+            <div class="stat">
+              <p>Green Projects</p>
+              <hr />
+              <span>75+</span>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="stats-group">
+            <div class="stat">
+              <p>Clients Served</p>
+              <hr />
+              <span>350+</span>
+            </div>
+            <div class="stat">
+              <p>Sq.ft. Covered</p>
+              <hr />
+              <span>1.2M+</span>
+            </div>
+            <div class="stat">
+              <p>CSAT Score</p>
+              <hr />
+              <span>98%</span>
+            </div>
+            <div class="stat">
+              <p>Team Strength</p>
+              <hr />
+              <span>200+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-text-section">
+      <div class="image-text-container">
+        <div class="image-section">
+          <img src="images/commgc-image.svg" alt="HVAC Services" />
+        </div>
+        <div class="text-section">
+          <p>
+           The GCC & CRE sector drives economic growth through government infrastructures, commercial buildings, and corporate offices that shape urban development. Rapid urbanisation and technology innovations are fuelling demand for sustainable, smart, and flexible real estate. Our expert team is fully equipped to meet these evolving challenges with tailored HVAC, MEP, and turnkey solutions. Leveraging industry knowledge and advanced technologies, we deliver efficient, green, and healthy building environments. Committed to collaboration and innovation, we help clients create productive, future-ready spaces that maximise value and support long-term sector growth.    
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+<section class="additional-services-section">
+      <div class="additional-services-container">
+        <h2 class="section-title">ADDITIONAL SERVICES</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Energy Efficiency</h3>
+            <p>
+              Optimizing systems to reduce energy consumption while maximizing
+              long-term performance.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Smart Controls</h3>
+            <p>
+              Integrating intelligent automation for precise climate monitoring
+              and management.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Scalable Designs</h3>
+            <p>
+              Engineering flexible HVAC systems that adapt to projects of every
+              size.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Indoor Air Quality</h3>
+            <p>
+              Creating healthier environments through advanced ventilation and
+              filtration solutions.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Sustainable Solutions</h3>
+            <p>
+              Applying green technologies that minimize environmental impact and
+              operating costs.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Reliable Performance</h3>
+            <p>
+              Ensuring consistent comfort and durability through quality
+              engineering and execution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="service-cards-section">
+      <div class="service-cards">
+        <div class="service-card-container">
+          <div class="service-card">
+            <div class="service-card-image">
+              <img src="images/project-1.png" alt="Electrical" />
+            </div>
+            <div class="service-card-content">
+              <h3>HVAC</h3>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-image">
+              <img src="images/project-1.png" alt="Plumbing" />
+            </div>
+            <div class="service-card-content">
+              <h3>MEP</h3>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-image">
+              <img src="images/project-1.png" alt="HVAC" />
+            </div>
+            <div class="service-card-content">
+              <h3>Cleanrooms</h3>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card-image">
+              <img src="images/project-1.png" alt="Painting" />
+            </div>
+            <div class="service-card-content">
+              <h3>BioPharma</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-cards-section-2">
+      <div class="service-cards">
+        <div class="service-card-container-2">
+          <div class="service-card-2">
+            <div class="service-card-image-2">
+              <img src="images/project-1.png" alt="Service 1" />
+
+              <!-- Hover overlay -->
+              <div class="service-card-overlay-2">
+                <!-- Top div for heading -->
+                <div class="overlay-top">
+                  <h2>C&I & Interior Fit-Out</h2>
+                </div>
+
+                <!-- Bottom div for description and button -->
+                <div class="overlay-bottom">
+                  <p>Short description about the service.</p>
+                  <button>Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card-content-2">
+              <h3>C&I & Interior Fit-Out</h3>
+            </div>
+          </div>
+
+          <div class="service-card-2">
+            <div class="service-card-image-2">
+              <img src="images/project-1.png" alt="Service 2" />
+
+              <!-- Hover overlay -->
+              <div class="service-card-overlay-2">
+                <div class="overlay-top">
+                  <h2>360 Project Management</h2>
+                </div>
+                <div class="overlay-bottom">
+                  <p>Short description about this service.</p>
+                  <button>Learn More</button>
+                </div>
+              </div>
+            </div>
+            <div class="service-card-content-2">
+              <h3>360 Project Management</h3>
+            </div>
+          </div>
+
+          <div class="service-card-2">
+            <div class="service-card-image-2">
+              <img src="images/project-1.png" alt="Service 3" />
+
+              <!-- Hover overlay -->
+              <div class="service-card-overlay-2">
+                <div class="overlay-top">
+                  <h2>Operations & Maintenance</h2>
+                </div>
+                <div class="overlay-bottom">
+                  <p>Short description about this service.</p>
+                  <button>Learn More</button>
+                </div>
+              </div>
+            </div>
+            <div class="service-card-content-2">
+              <h3>Operations & Maintenance</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="expert-section" style="padding-bottom: 80px ;">
+  <div class="expert-container">
+    <div class="expert-card">
+      <!-- Image -->
+      <div class="expert-image">
+        <img src="images/hvac-expert.png" alt="Vishal Jadav" />
+      </div>
+
+      <!-- Bottom info container -->
+      <div class="expert-info-container">
+        <div class="expert-text">
+          <h3>Vishal Jadav</h3>
+          <p class="expert-title">Senior Engineer</p>
+        </div>
+        <div class="expert-linkedin">
+          <a href="https://www.linkedin.com/in/vishal-jadav" target="_blank">
+            <img src="images/linkedin-icon.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content next to the card -->
+    <div class="expert-content">
+      <h2>Meet the Expert</h2>
+      <p>
+        Our experts bring deep knowledge and hands-on experience in HVAC,
+        delivering solutions that meet the highest standards.
+      </p>
+      <button class="specialist-btn">Speak to a Specialist</button>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="nextsection" style="padding-bottom: 80px; padding-top: 0px;">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+    </div>
+    <!-- <h2>Featured Projects</h2> -->
+    <div class="innersection">
+
+      <div class="innerwarap">
+
+        <!-- Project 1 -->
+        <div class="featured-project-card">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Project 1" />
+          </div>
+          <div class="project-info">
+            <div class="info-left">
+              <h3 class="client-name">Microsoft</h3>
+              <p class="location">Hyderabad</p>
+            </div>
+            <div class="info-right">
+              <p class="service-type">HVAC</p>
+              <p class="project-size">3,00,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="featured-project-card">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Project 2" />
+          </div>
+          <div class="project-info">
+            <div class="info-left">
+              <h3 class="client-name">Apple</h3>
+              <p class="location">Bangalore</p>
+            </div>
+            <div class="info-right">
+              <p class="service-type">Electrical</p>
+              <p class="project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <div class="featured-project-card">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Project 2" />
+          </div>
+          <div class="project-info">
+            <div class="info-left">
+              <h3 class="client-name">Apple</h3>
+              <p class="location">Bangalore</p>
+            </div>
+            <div class="info-right">
+              <p class="service-type">Electrical</p>
+              <p class="project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <div class="featured-project-card">
+          <div class="project-image">
+            <img src="images/project-1.png" alt="Project 2" />
+          </div>
+          <div class="project-info">
+            <div class="info-left">
+              <h3 class="client-name">Apple</h3>
+              <p class="location">Bangalore</p>
+            </div>
+            <div class="info-right">
+              <p class="service-type">Electrical</p>
+              <p class="project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="childrenofinnner">
+          1
+        </div>
+        <div class="childrenofinnner">
+          2
+        </div>
+        <div class="childrenofinnner">
+          3
+        </div>
+        <div class="childrenofinnner">
+          4
+        </div>
+        <div class="childrenofinnner">
+          4
+        </div>
+        <div class="childrenofinnner">
+          4
+        </div>
+        <div class="childrenofinnner">
+          4
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+    <footer>
+      <div class="topper-section">
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Company</h5>
+          <div class="footer-link-group">
+            <a href="#">About Us</a>
+            <a href="#">Our Team</a>
+            <a href="#">People & Culture</a>
+            <a href="#">Services</a>
+            <a href="#">CSR Initiatives</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">services</h5>
+          <div class="footer-link-group">
+            <a href="#">HVAC</a>
+            <a href="#">MEP</a>
+            <a href="#">Fit-out</a>
+            <a href="#">Base build</a>
+            <a href="#">Cleanrooms</a>
+            <a href="#">C&I & Interior fit-out</a>
+            <a href="#">Virtual Project Management</a>
+            <a href="#">Operations & Maintenance</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Sectors</h5>
+          <div class="footer-link-group">
+            <a href="#">Commercial Real Estate & GCC</a>
+            <a href="#">Industrial & Warehousing</a>
+            <a href="#">Data Centres & Critical rooms</a>
+            <a href="#">Pharma & biotech life sciences</a>
+            <a href="#">Hospital & healthcare</a>
+            <a href="#">Educational institutes</a>
+            <a href="#">Gov & Infra</a>
+          </div>
+        </div>
+        <div class="Topper-containers-last">
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Contact us</h5>
+            <div class="footer-link-group">
+              <a href="#">info@abcd.demo</a>
+              <a href="#">+91 920 000 0000</a>
+            </div>
+          </div>
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Follow us on</h5>
+            <div class="footer-link-group">
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <div class="left">
+          <img
+            src="./images/Logo/Footer Image Block.png"
+            height="56px"
+            alt="logo footer"
+          />
+          <object
+            data="./images/Logo/iso.svg"
+            type="image/svg+xml"
+            height="48px"
+          ></object>
+        </div>
+        <div class="right">
+          <div class="location-group">
+            <a href="#">Mumbai</a>
+            <p>|</p>
+            <a href="#">CBD-Belapur</a>
+            <p>|</p>
+            <a href="#">Pune</a>
+            <p>|</p>
+            <a href="#">Bangalore</a>
+            <p>|</p>
+            <a href="#">Ahemdabad</a>
+            <p>|</p>
+            <a href="#">New Delhi</a>
+            <p>|</p>
+            <a href="#">Hyderabad</a>
+            <p>|</p>
+            <a href="#">Africa</a>
+          </div>
+          <p class="copyrights">
+            © 2025 HTL AIRCON<br />
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Scripts -->
+    <script src="./js/navbar.js"></script>
+    <!-- <script src="./js/carousal.js"></script> -->
+    <script src="./js/stats.js"></script>
+    <!-- <script src="./js/testemonial.js"></script> -->
+    <!-- Animations -->
+    <script src="./js/animation/Lenis.js"></script>
+    <script src="./Hamburger/script.js"></script>
+    <script src="./js/animation/scrollTriggers.js"></script>
+    <script>
+      createHorizontalScroll(".nextsection", ".innerwarap");
+    </script>
+  </body>
+</html>

@@ -1998,14 +1998,6 @@ footer {
   font-weight: 400;
 }
 
-
-
-
-
-
-
-
-
 .service-cards-section-2 {
   padding: 20px 80px 80px;
 }
@@ -2063,19 +2055,18 @@ footer {
   font-weight: 400;
 }
 
-
-
-
-
 /* services single page */
-
 
 .hvac-hero-section {
   display: flex;
-  justify-content: center;   /* center container horizontally */
-  align-items: center;       /* center vertically */
-  height: 85vh;
-  background: radial-gradient(circle at center 50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%),
+  justify-content: center; /* center container horizontally */
+  align-items: center; /* center vertically */
+  height: 100vh;
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
     url("images/services-single-hero.png");
   background-size: cover;
   background-position: center;
@@ -2097,19 +2088,20 @@ footer {
 
 /* Left content */
 .hvac-hero-left {
-    padding: 30px;
-     background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-    flex: 1;
-    text-align: left;
-    max-width: 670px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  flex: 1;
+  text-align: left;
+  max-width: 670px;
 }
 
 .hvac-hero-left h1 {
   font-size: 2.5rem;
   font-weight: 400;
-   line-height: 1.1;
+  line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .hvac-hero-left p {
@@ -2119,6 +2111,7 @@ footer {
   max-width: 90%;
   opacity: 0.8;
   font-weight: 300;
+  color: #fff;
 }
 
 /* Right content (optional image or component) */
@@ -2129,17 +2122,8 @@ footer {
   align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
 .image-text-section {
-  padding: 80px;
+  padding: 100px;
   background-color: #ffffff;
   height: 100vh;
 }
@@ -2171,14 +2155,12 @@ footer {
   width: 100%;
   text-align: left;
   font-size: 2rem;
-   line-height: 1.23;
+  line-height: 1.23;
   letter-spacing: -0.04em;
   color: #000000;
   margin: 0;
   font-weight: 400;
 }
-
-
 
 .additional-services-section {
   padding: 80px 80px;
@@ -2193,12 +2175,12 @@ footer {
 .section-title {
   text-align: center;
   font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.23;
-    letter-spacing: 0.23em;
-    color: #000000;
-    opacity: 60%;
-    margin-bottom: 60px;
+  font-weight: 500;
+  line-height: 1.23;
+  letter-spacing: 0.23em;
+  color: #000000;
+  opacity: 60%;
+  margin-bottom: 60px;
 }
 
 .services-grid {
@@ -2207,10 +2189,9 @@ footer {
   gap: 30px;
 }
 
-
-.service-item{
+.service-item {
   padding: 20px;
-border: 1px solid rgba(0, 0, 0, 0.09);
+  border: 1px solid rgba(0, 0, 0, 0.09);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2223,24 +2204,22 @@ border: 1px solid rgba(0, 0, 0, 0.09);
   font-weight: 600;
   color: #333;
   margin: 0 0 10px 0;
-    line-height: 1.2;     
+  line-height: 1.2;
   letter-spacing: -0.04em;
 }
 
 .service-item p {
   text-align: center;
   font-size: 1rem;
-  line-height: 1.2;     
+  line-height: 1.2;
   letter-spacing: -0.01em;
   color: #555;
   margin: 0;
   font-weight: 300;
 }
 
-
-
 .expert-section {
-  padding: 80px;
+  padding: 80px 80px 0px 80px;
   background-color: #ffffff;
 }
 
@@ -2301,6 +2280,7 @@ border: 1px solid rgba(0, 0, 0, 0.09);
 
 /* LinkedIn icon */
 .expert-linkedin img {
+  opacity: 0.7;
   width: 24px;
   height: 24px;
 }
@@ -2308,12 +2288,11 @@ border: 1px solid rgba(0, 0, 0, 0.09);
 /* Content next to card */
 .expert-content {
   align-self: center;
-    justify-content: flex-start;
-    display: flex
-;
-    flex: 1;
-    flex-direction: column;
-    align-items: flex-start;
+  justify-content: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .expert-content h2 {
@@ -2322,19 +2301,20 @@ border: 1px solid rgba(0, 0, 0, 0.09);
   color: #000000;
   margin: 0 0 30px 0;
   line-height: 0.77;
-letter-spacing: -0.03em;
+  letter-spacing: -0.03em;
 }
 
 .expert-content p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.9rem;
+  line-height: 1.23;
+  letter-spacing: -0.04em;
   color: #000000;
   margin: 0 0 40px 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .specialist-btn {
-  padding: 14px 32px;
+  padding: 10px 32px;
   border: none;
   border-radius: 6px;
   background-color: #ff2b2b;
@@ -2347,4 +2327,19 @@ letter-spacing: -0.03em;
 
 .specialist-btn:hover {
   background-color: #e60000;
+}
+
+
+
+
+/* comm gcc */
+
+.hero-container-comm{
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  background: 
+  linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  url(images/commgc-hero.svg) no-repeat center center;
+background-size: cover;
 }
