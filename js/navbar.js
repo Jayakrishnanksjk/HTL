@@ -17,13 +17,13 @@ function toggleNav() {
 
   if (isExpanding) {
     // Expand navbar using CSS transition
+    lenis.stop();
     navbar.style.height = "100vh";
 
     // Disable body scroll
     openMenu();
     navbar.classList.add("expanded");
     // navbody.classList.add("show");
-    lenis.stop();
 
     // Wait until CSS transition completes (e.g. 0.3s)
     // Instead of guessing with setTimeout, you can bind to transitionend
