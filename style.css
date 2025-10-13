@@ -2256,11 +2256,7 @@ footer {
   display: flex;
   justify-content: center; /* center container horizontally */
   align-items: center; /* center vertically */
-<<<<<<< HEAD
-  height: 85vh;
-=======
   height: 100vh;
->>>>>>> 5d1cd23fd54dee4a053a5e729ae6cb4af353ab92
   background: radial-gradient(
       circle at center 50%,
       rgba(0, 0, 0, 0.6) 0%,
