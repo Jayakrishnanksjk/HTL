@@ -2256,7 +2256,11 @@ footer {
   display: flex;
   justify-content: center; /* center container horizontally */
   align-items: center; /* center vertically */
+<<<<<<< HEAD
   height: 85vh;
+=======
+  height: 100vh;
+>>>>>>> 5d1cd23fd54dee4a053a5e729ae6cb4af353ab92
   background: radial-gradient(
       circle at center 50%,
       rgba(0, 0, 0, 0.6) 0%,
@@ -2296,6 +2300,7 @@ footer {
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .hvac-hero-left p {
@@ -2305,6 +2310,7 @@ footer {
   max-width: 90%;
   opacity: 0.8;
   font-weight: 300;
+  color: #fff;
 }
 
 /* Right content (optional image or component) */
@@ -2316,7 +2322,7 @@ footer {
 }
 
 .image-text-section {
-  padding: 80px;
+  padding: 100px;
   background-color: #ffffff;
   height: 100vh;
 }
@@ -2412,7 +2418,7 @@ footer {
 }
 
 .expert-section {
-  padding: 80px;
+  padding: 80px 80px 0px 80px;
   background-color: #ffffff;
 }
 
@@ -2473,6 +2479,7 @@ footer {
 
 /* LinkedIn icon */
 .expert-linkedin img {
+  opacity: 0.7;
   width: 24px;
   height: 24px;
 }
@@ -2497,15 +2504,16 @@ footer {
 }
 
 .expert-content p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.9rem;
+  line-height: 1.23;
+  letter-spacing: -0.04em;
   color: #000000;
   margin: 0 0 40px 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .specialist-btn {
-  padding: 14px 32px;
+  padding: 10px 32px;
   border: none;
   border-radius: 6px;
   background-color: #ff2b2b;
@@ -2518,4 +2526,19 @@ footer {
 
 .specialist-btn:hover {
   background-color: #e60000;
+}
+
+
+
+
+/* comm gcc */
+
+.hero-container-comm{
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  background: 
+  linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  url(images/commgc-hero.svg) no-repeat center center;
+background-size: cover;
 }
