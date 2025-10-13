@@ -753,10 +753,17 @@ body {
   overflow: hidden;
   display: flex;
 }
+
+.featured-project-card-new:hover .image-container > img {
+  transform: scale(1.2);
+  transition-duration: 300ms;
+}
+
 .image-container > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition-duration: 300ms;
 }
 
 .text-container {
@@ -2524,17 +2531,13 @@ footer {
   background-color: #e60000;
 }
 
-
-
-
 /* comm gcc */
 
-.hero-container-comm{
+.hero-container-comm {
   height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
-  background: 
-  linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-  url(images/commgc-hero.svg) no-repeat center center;
-background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(images/commgc-hero.svg) no-repeat center center;
+  background-size: cover;
 }
