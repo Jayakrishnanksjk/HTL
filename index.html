@@ -1,232 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTL Website</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTL Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="normalize.css" />
-
-
-</head>
-
-<body>
-  <!-- Hero Section -->
-  <nav class="navbar" id="navbar">
-
-    <div class="nav-body">
-      <a class="link-style-reset" href="./index.html">
-        <div class="nav-brand">
-          <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" href="index.html" />
-        </div>
-      </a>
-
-      <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
-
-        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect class="top" y="9" width="48" height="6" fill="white" />
-          <rect class="bot" y="29" width="48" height="6" fill="white" />
-        </svg>
-
-      </div>
-
-    </div>
-    <div class="nav-menu-section" id="navSection">
-      <div class="inner-container">
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Company</h3>
-            </div>
-            <div class="menu-list">
-              <a href="about.html" class="link-box">About Us</a>
-              <a href="team.html" class="link-box">Our Team</a>
-              <a href="#" class="link-box">People and Culture</a>
-              <a href="services.html" class="link-box">Services</a>
-              <a href="#" class="link-box">CSR Initiatives</a>
-              <a href="#" class="link-box">Investor Relations</a>
-            </div>
+  <body>
+    <!-- Hero Section -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-body">
+        <a class="link-style-reset" href="./index.html">
+          <div class="nav-brand">
+            <img
+              src="./images/htl logo.png"
+              alt="HTL brand logo"
+              height="32px"
+              width="auto"
+              href="index.html"
+            />
           </div>
-        </div>
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Services</h3>
-            </div>
-            <div class="menu-list">
-              <a href="hvac.html" class="link-box">HVAC</a>
-              <a href="mep.html" class="link-box">MEP</a>
-              <a href="#" class="link-box">Fit-out</a>
-              <a href="#" class="link-box">Base build</a>
-              <a href="#" class="link-box">Cleanrooms</a>
-              <a href="#" class="link-box">C&I & Interior Fit-out</a>
-              <a href="#" class="link-box">Virtual Project Management</a>
-              <a href="#" class="link-box">Operations & Maintenance</a>
-            </div>
-          </div>
-        </div>
+        </a>
 
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Sectors</h3>
-            </div>
-            <div class="menu-list">
-              <a href="commGcc.html" class="link-box">Commercial Real Estate & GCC</a>
-              <a href="#" class="link-box">Industrial & Warehousing</a>
-              <a href="#" class="link-box">Data Centres & Critical rooms</a>
-              <a href="#" class="link-box">Pharma & Biotech Life sciences</a>
-              <a href="hospitality.html" class="link-box">Hospitality & Luxury Retail</a>
-              <a href="#" class="link-box">Hospital & healthcare</a>
-              <a href="#" class="link-box">Educational institutes</a>
-              <a href="#" class="link-box">Gov & Infra</a>
-            </div>
-          </div>
-        </div>
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Resources</h3>
-            </div>
-            <div class="menu-list">
-              <a href="project.html" class="link-box">Projects</a>
-              <a href="news.html" class="link-box">News & Articles</a>
-            </div>
-          </div>
-
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Socials</h3>
-            </div>
-            <div class="menu-list">
-              <a href="#" class="link-box">LinkedIn</a>
-            </div>
-          </div>
+        <div
+          class="nav-link-btn nav-toggle"
+          id="navToggle"
+          onclick="toggleNav()"
+        >
+          <svg
+            id="burger"
+            width="48"
+            height="32"
+            viewBox="0 0 56 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect class="top" y="9" width="48" height="6" fill="white" />
+            <rect class="bot" y="29" width="48" height="6" fill="white" />
+          </svg>
         </div>
       </div>
+      <div class="nav-menu-section" id="navSection">
+        <div class="inner-container">
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Company</h3>
+              </div>
+              <div class="menu-list">
+                <a href="about.html" class="link-box">About Us</a>
+                <a href="team.html" class="link-box">Our Team</a>
+                <a href="#" class="link-box">People and Culture</a>
+                <a href="services.html" class="link-box">Services</a>
+                <a href="#" class="link-box">CSR Initiatives</a>
+                <a href="#" class="link-box">Investor Relations</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Services</h3>
+              </div>
+              <div class="menu-list">
+                <a href="hvac.html" class="link-box">HVAC</a>
+                <a href="mep.html" class="link-box">MEP</a>
+                <a href="#" class="link-box">Fit-out</a>
+                <a href="#" class="link-box">Base build</a>
+                <a href="#" class="link-box">Cleanrooms</a>
+                <a href="#" class="link-box">C&I & Interior Fit-out</a>
+                <a href="#" class="link-box">Virtual Project Management</a>
+                <a href="#" class="link-box">Operations & Maintenance</a>
+              </div>
+            </div>
+          </div>
 
-    </div>
-  </nav>
-  <section class="hero-container">
-    <div class="hero-elements">
-      <div class="hero-textbox-container">
-        <div class="hero-text-box">
-          <div class="text-group">
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Sectors</h3>
+              </div>
+              <div class="menu-list">
+                <a href="commGcc.html" class="link-box"
+                  >Commercial Real Estate & GCC</a
+                >
+                <a href="#" class="link-box">Industrial & Warehousing</a>
+                <a href="#" class="link-box">Data Centres & Critical rooms</a>
+                <a href="#" class="link-box">Pharma & Biotech Life sciences</a>
+                <a href="hospitality.html" class="link-box"
+                  >Hospitality & Luxury Retail</a
+                >
+                <a href="#" class="link-box">Hospital & healthcare</a>
+                <a href="#" class="link-box">Educational institutes</a>
+                <a href="#" class="link-box">Gov & Infra</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Resources</h3>
+              </div>
+              <div class="menu-list">
+                <a href="project.html" class="link-box">Projects</a>
+                <a href="news.html" class="link-box">News & Articles</a>
+              </div>
+            </div>
+
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Socials</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero-container">
+      <div class="hero-elements">
+        <div class="hero-textbox-container">
+          <div class="hero-text-box">
+            <div class="text-group">
+              <h1 class="hero-text">
+                Engineering Precision.<br />Delivering Trust.
+              </h1>
+              <p class="hero-subtext">
+                Drive B2B success with lead-generating assets crafted through
+                persuasive web design, SEO, and Website Care rooted in
+                conversion psychology.
+              </p>
+            </div>
+            <a href="#" class="btn">Explore Capabilities</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-matrix">
+        <div class="stat-box">
+          <div class="stat-individual">
+            <h4 class="stats-title">Clients served</h4>
+            <hr />
+            <h2>100+</h2>
+          </div>
+
+          <div class="stat-individual">
+            <h4 class="stats-title">Clients served</h4>
+            <hr />
+            <h2>100+</h2>
+          </div>
+
+          <div class="stat-individual">
+            <h4 class="stats-title">Clients served</h4>
+            <hr />
+            <h2>100+</h2>
+          </div>
+
+          <div class="stat-individual">
+            <h4 class="stats-title">Clients served</h4>
+            <hr />
+            <h2>100+</h2>
+          </div>
+        </div>
+
+        <div class="hero-stats" style="display: none">
+          <!-- Group 1 -->
+          <div class="stats-group active">
+            <div class="stat">
+              <p>MW Executed</p>
+              <hr />
+              <span>650M+</span>
+            </div>
+            <div class="stat">
+              <p>CO₂ Reduced</p>
+              <hr />
+              <span>85K+</span>
+            </div>
+            <div class="stat">
+              <p>Energy Saved</p>
+              <hr />
+              <span>120G+</span>
+            </div>
+            <div class="stat">
+              <p>Green Projects</p>
+              <hr />
+              <span>75+</span>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="stats-group">
+            <div class="stat">
+              <p>Clients Served</p>
+              <hr />
+              <span>350+</span>
+            </div>
+            <div class="stat">
+              <p>Sq.ft. Covered</p>
+              <hr />
+              <span>1.2M+</span>
+            </div>
+            <div class="stat">
+              <p>CSAT Score</p>
+              <hr />
+              <span>98%</span>
+            </div>
+            <div class="stat">
+              <p>Team Strength</p>
+              <hr />
+              <span>200+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="display: none">
+      <div class="hero">
+        <div class="hero-overlay">
+          <div class="hero-content">
             <h1 class="hero-text">
               Engineering Precision.<br />Delivering Trust.
             </h1>
             <p class="hero-subtext">
               Drive B2B success with lead-generating assets crafted through
-              persuasive web design, SEO, and Website Care rooted in
-              conversion psychology.
+              persuasive web design, SEO, and Website Care rooted in conversion
+              psychology.
             </p>
+            <a href="#" class="btn">Explore Capabilities</a>
           </div>
-          <a href="#" class="btn">Explore Capabilities</a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-matrix">
-      <div class="stat-box">
-        <div class="stat-individual">
-          <h4 class="stats-title">Clients served</h4>
-          <hr />
-          <h2>100+</h2>
-        </div>
 
-        <div class="stat-individual">
-          <h4 class="stats-title">Clients served</h4>
-          <hr />
-          <h2>100+</h2>
+          <!-- Stats -->
         </div>
-
-        <div class="stat-individual">
-          <h4 class="stats-title">Clients served</h4>
-          <hr />
-          <h2>100+</h2>
-        </div>
-
-        <div class="stat-individual">
-          <h4 class="stats-title">Clients served</h4>
-          <hr />
-          <h2>100+</h2>
-        </div>
-      </div>
-
-      <div class="hero-stats" style="display: none">
-        <!-- Group 1 -->
-        <div class="stats-group active">
-          <div class="stat">
-            <p>MW Executed</p>
-            <hr />
-            <span>650M+</span>
-          </div>
-          <div class="stat">
-            <p>CO₂ Reduced</p>
-            <hr />
-            <span>85K+</span>
-          </div>
-          <div class="stat">
-            <p>Energy Saved</p>
-            <hr />
-            <span>120G+</span>
-          </div>
-          <div class="stat">
-            <p>Green Projects</p>
-            <hr />
-            <span>75+</span>
-          </div>
-        </div>
-
-        <!-- Group 2 -->
-        <div class="stats-group">
-          <div class="stat">
-            <p>Clients Served</p>
-            <hr />
-            <span>350+</span>
-          </div>
-          <div class="stat">
-            <p>Sq.ft. Covered</p>
-            <hr />
-            <span>1.2M+</span>
-          </div>
-          <div class="stat">
-            <p>CSAT Score</p>
-            <hr />
-            <span>98%</span>
-          </div>
-          <div class="stat">
-            <p>Team Strength</p>
-            <hr />
-            <span>200+</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container" style="display: none">
-    <div class="hero">
-      <div class="hero-overlay">
-        <div class="hero-content">
-          <h1 class="hero-text">
-            Engineering Precision.<br />Delivering Trust.
-          </h1>
-          <p class="hero-subtext">
-            Drive B2B success with lead-generating assets crafted through
-            persuasive web design, SEO, and Website Care rooted in conversion
-            psychology.
-          </p>
-          <a href="#" class="btn">Explore Capabilities</a>
-        </div>
-
-        <!-- Stats -->
-      </div>
-      <!-- <div class="hero-stats">
+        <!-- <div class="hero-stats">
         <div class="stats-group active">
           <div class="stat">
             <p>MW Executed</p>
@@ -273,758 +289,929 @@
         </div>
       </div> -->
 
-      <div class="hero-stats">
-        <!-- Group 1 -->
-        <div class="stats-group active">
-          <div class="stats-pair">
-            <div class="stat">
-              <p>MW Executed</p>
-              <hr />
-              <span>650M+</span>
+        <div class="hero-stats">
+          <!-- Group 1 -->
+          <div class="stats-group active">
+            <div class="stats-pair">
+              <div class="stat">
+                <p>MW Executed</p>
+                <hr />
+                <span>650M+</span>
+              </div>
+              <div class="stat">
+                <p>CO₂ Reduced</p>
+                <hr />
+                <span>85K+</span>
+              </div>
             </div>
-            <div class="stat">
-              <p>CO₂ Reduced</p>
-              <hr />
-              <span>85K+</span>
-            </div>
-          </div>
 
-          <div class="stats-pair">
-            <div class="stat">
-              <p>Energy Saved</p>
-              <hr />
-              <span>120G+</span>
-            </div>
-            <div class="stat">
-              <p>Green Projects</p>
-              <hr />
-              <span>75+</span>
-            </div>
-          </div>
-        </div>
+    <div class="stats-pair">
+      <div class="stat">
+        <p>Energy Saved</p>
+        <hr />
+        <span>120G+</span>
+      </div>
+      <div class="stat">
+        <p>Green Projects</p>
+        <hr />
+        <span>75+</span>
+      </div>
+    </div>
+  </div>
 
-        <!-- Group 2 -->
-        <div class="stats-group">
-          <div class="stats-pair">
-            <div class="stat">
-              <p>Clients Served</p>
-              <hr />
-              <span>350+</span>
+          <!-- Group 2 -->
+          <div class="stats-group">
+            <div class="stats-pair">
+              <div class="stat">
+                <p>Clients Served</p>
+                <hr />
+                <span>350+</span>
+              </div>
+              <div class="stat">
+                <p>Sq.ft. Covered</p>
+                <hr />
+                <span>1.2M+</span>
+              </div>
             </div>
-            <div class="stat">
-              <p>Sq.ft. Covered</p>
-              <hr />
-              <span>1.2M+</span>
-            </div>
-          </div>
 
-          <div class="stats-pair">
-            <div class="stat">
-              <p>CSAT Score</p>
-              <hr />
-              <span>98%</span>
-            </div>
-            <div class="stat">
-              <p>Team Strength</p>
-              <hr />
-              <span>200+</span>
+            <div class="stats-pair">
+              <div class="stat">
+                <p>CSAT Score</p>
+                <hr />
+                <span>98%</span>
+              </div>
+              <div class="stat">
+                <p>Team Strength</p>
+                <hr />
+                <span>200+</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services">
-    <div class="services-content">
-      <div class="services-content-text">
-        <h2>
-          Built for Demanding Systems<br />
-          <span>procuring, contracting and servicing HVAC & MEP</span>
-        </h2>
-        <p>
-          Solutions to our client's A-grade real estate across India, Dubai
-          and Africa
-        </p>
-      </div>
-
-      <a href="#" class="btn">Explore Our Services</a>
-    </div>
-  </section>
-
-  <!-- Featured project section with interaction -->
-  <section class="nextsection" id="projectHomePageSection">
-    <div class="section-header">
-      <h2>Featured Projects</h2>
-    </div>
-    <!-- <h2>Featured Projects</h2> -->
-    <div class="innersection">
-
-      <div class="innerwarap" id="projectHomePageSectionInner">
-
-        <!-- Project 1 -->
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">HSBC</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in Mumbai, ensuring efficient climate control,
-                  reliability, and long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/project-1.png" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">HSBC</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">HSBC</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in Mumbai, ensuring efficient climate control,
-                  reliability, and long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/project-1.png" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">HSBC</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">HSBC</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in Mumbai, ensuring efficient climate control,
-                  reliability, and long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/project-1.png" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">HSBC</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">HSBC</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in Mumbai, ensuring efficient climate control,
-                  reliability, and long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/project-1.png" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">HSBC</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">HSBC</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in Mumbai, ensuring efficient climate control,
-                  reliability, and long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/project-1.png" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">HSBC</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">HSBC</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in Mumbai, ensuring efficient climate control,
-                  reliability, and long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/project-1.png" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">HSBC</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">HSBC</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in Mumbai, ensuring efficient climate control,
-                  reliability, and long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/project-1.png" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">HSBC</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="featured-project-card-new">
-          <div class="contain">
-            <p class="viewmore-text">Load More</p>
-          </div>
-        </div>
-
-      </div>
-
-
-    </div>
-  </section>
-  <!-- Featured project section with interaction -->
-
-
-
-
-  <section class="trusted-brands-container">
-    <h3 class="trusted-brands-heading">
-      Trusted by 100+ businesses in pharma, data, and infrastructure.
-    </h3>
-
-    <div class="marquee-container">
-      <!-- First marquee moving left -->
-      <div class="brands-marquee-outer">
-        <div class="brands-marquee-left">
-          <div class="brand-logo-item">asoft</div>
-          <div class="brand-logo-item">ILL</div>
-          <div class="brand-logo-item">aws</div>
-          <div class="brand-logo-item">Google</div>
-          <div class="brand-logo-item">CtrlS</div>
-          <div class="brand-logo-item">Reliance</div>
-          <div class="brand-logo-item">Reference Limited</div>
-          <div class="brand-logo-item">mastercard</div>
-          <div class="brand-logo-item">PHILIPS</div>
-          <div class="brand-logo-item">Foxconn</div>
-
-          <!-- Duplicated for seamless loop -->
-          <div class="brand-logo-item">asoft</div>
-          <div class="brand-logo-item">ILL</div>
-          <div class="brand-logo-item">aws</div>
-          <div class="brand-logo-item">Google</div>
-          <div class="brand-logo-item">CtrlS</div>
-          <div class="brand-logo-item">Reliance</div>
-          <div class="brand-logo-item">Reference Limited</div>
-          <div class="brand-logo-item">mastercard</div>
-          <div class="brand-logo-item">PHILIPS</div>
-          <div class="brand-logo-item">Foxconn</div>
-        </div>
-      </div>
-
-      <!-- Second marquee moving right -->
-      <div class="brands-marquee-outer">
-        <div class="brands-marquee-right">
-          <div class="brand-logo-item">Microsoft</div>
-          <div class="brand-logo-item">mastercard</div>
-          <div class="brand-logo-item">PHILIPS</div>
-          <div class="brand-logo-item">Foxconn</div>
-          <div class="brand-logo-item">Reliance</div>
-          <div class="brand-logo-item">Reference Limited</div>
-          <div class="brand-logo-item">Google</div>
-          <div class="brand-logo-item">aws</div>
-          <div class="brand-logo-item">ILL</div>
-          <div class="brand-logo-item">asoft</div>
-
-          <!-- Duplicated for seamless loop -->
-          <div class="brand-logo-item">Microsoft</div>
-          <div class="brand-logo-item">mastercard</div>
-          <div class="brand-logo-item">PHILIPS</div>
-          <div class="brand-logo-item">Foxconn</div>
-          <div class="brand-logo-item">Reliance</div>
-          <div class="brand-logo-item">Reference Limited</div>
-          <div class="brand-logo-item">Google</div>
-          <div class="brand-logo-item">aws</div>
-          <div class="brand-logo-item">ILL</div>
-          <div class="brand-logo-item">asoft</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonial-section">
-    <div class="testimonial-container">
-      <div class="testimonial-slide testimonial-slide-1">
-        <div class="testimonial-content">
-          <p class="testimonial-text">
-            HTL delivered beyond expectations on time, on spec,<br> and with
-            unmatched professionalism.
+    <!-- Services Section -->
+    <section class="services">
+      <div class="services-content">
+        <div class="services-content-text">
+          <h2>
+            Built for Demanding Systems<br />
+            <span>procuring, contracting and servicing HVAC & MEP</span>
+          </h2>
+          <p>
+            Solutions to our client's A-grade real estate across India, Dubai
+            and Africa
           </p>
-          <div class="testimonial-company">
-            <img src="./images/Logo/Mastercard.png" alt="mastercardlogo" height="48px">
-          </div>
         </div>
-        <div class="testimonial-quote-icon">
-          <object data="./images/Vector.svg" type="image/svg+xml" height="100px"></object>
-          <path d="M10 7H6V17H10V7Z" />
-          <path d="M18 7H14V17H18V7Z" />
-          </svg>
+
+        <a href="#" class="btn">Explore Our Services</a>
+      </div>
+    </section>
+
+    <!-- Featured project section with interaction -->
+    <section class="nextsection" id="projectHomePageSection">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+      </div>
+      <!-- <h2>Featured Projects</h2> -->
+      <div class="innersection">
+        <div class="innerwarap" id="projectHomePageSectionInner">
+          <!-- Project 1 -->
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">HSBC</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/project-1.png" alt="Project image 1" />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">HSBC</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">HSBC</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/project-1.png" alt="Project image 1" />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">HSBC</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">HSBC</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/project-1.png" alt="Project image 1" />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">HSBC</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">HSBC</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/project-1.png" alt="Project image 1" />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">HSBC</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">HSBC</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/project-1.png" alt="Project image 1" />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">HSBC</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">HSBC</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/project-1.png" alt="Project image 1" />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">HSBC</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">HSBC</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/project-1.png" alt="Project image 1" />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">HSBC</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-project-card-new">
+            <div class="contain">
+              <p class="viewmore-text">Load More</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-    <div class="testimonial-indicators">
-      <div class="testimonial-indicator active" data-index="0"></div>
-      <div class="testimonial-indicator" data-index="1"></div>
-      <div class="testimonial-indicator" data-index="2"></div>
-      <div class="testimonial-indicator" data-index="3"></div>
-    </div>
-  </section>
+    </section>
+    <!-- Featured project section with interaction -->
 
+    <section class="trusted-brands-container">
+      <h3 class="trusted-brands-heading">
+        Trusted by 100+ businesses in pharma, data, and infrastructure.
+      </h3>
 
-  <section class="nextsection" id="newsHomePageSection">
-    <div class="section-header">
-      <h2>News & Insights</h2>
-    </div>
-    <!-- <h2>Featured Projects</h2> -->
-    <div class="innersection">
-
-      <div class="innerwarap" id="newsHomePageSectionInner">
-        <div class="news-card">
-          <div class="news-image">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Data Center" />
-          </div>
-          <div class="news-content">
-
-            <div class="news-date">
-              <i class="far fa-calendar"></i> August 14 2025
+      <div class="marquee-container">
+        <!-- First marquee moving left -->
+        <div class="brands-marquee-outer">
+          <div class="brands-marquee-left">
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/gorej.png" alt="gorej" />
             </div>
-            <div class="title-and-body-in-card">
-
-
-              <h3 class="news-title">HTL Aircon Completes Major Data Center HVAC Upgrade</h3>
-              <p class="news-excerpt">HTL Aircon recently finished a cutting-edge HVAC upgrade for a leading data
-                center,
-                boosting cooling efficiency and...</p>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/IBM.png" alt="IBM" />
             </div>
-            <div class="news-meta">
-              <a href="#" class="read-more">
-                Read more <i class="fas fa-arrow-right"></i>
-              </a>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/kotak.png" alt="KOTAK" />
             </div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-image">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Data Center" />
-          </div>
-          <div class="news-content">
-
-            <div class="news-date">
-              <i class="far fa-calendar"></i> August 14 2025
+            <div class="brand-logo-item">
+              <img
+                src="./images/Logo/brand-logos/morgan stanly.png"
+                alt="morgan stanly"
+              />
             </div>
-            <div class="title-and-body-in-card">
-
-
-              <h3 class="news-title">HTL Aircon Completes Major Data Center HVAC Upgrade</h3>
-              <p class="news-excerpt">HTL Aircon recently finished a cutting-edge HVAC upgrade for a leading data
-                center,
-                boosting cooling efficiency and...</p>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/msci.png" alt="msci" />
             </div>
-            <div class="news-meta">
-              <a href="#" class="read-more">
-                Read more <i class="fas fa-arrow-right"></i>
-              </a>
+            <div class="brand-logo-item">
+              <img
+                src="./images/Logo/brand-logos/reliance.png"
+                alt="Reliance"
+              />
             </div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-image">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Data Center" />
-          </div>
-          <div class="news-content">
-
-            <div class="news-date">
-              <i class="far fa-calendar"></i> August 14 2025
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/reference-limited-logo.png"
+                alt="Reference Limited"
+              />
             </div>
-            <div class="title-and-body-in-card">
-
-
-              <h3 class="news-title">HTL Aircon Completes Major Data Center HVAC Upgrade</h3>
-              <p class="news-excerpt">HTL Aircon recently finished a cutting-edge HVAC upgrade for a leading data
-                center,
-                boosting cooling efficiency and...</p>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/netflix.png" alt="netflix" />
             </div>
-            <div class="news-meta">
-              <a href="#" class="read-more">
-                Read more <i class="fas fa-arrow-right"></i>
-              </a>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/pwc.png" alt="pwc" />
             </div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-image">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Data Center" />
-          </div>
-          <div class="news-content">
-
-            <div class="news-date">
-              <i class="far fa-calendar"></i> August 14 2025
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/spjain.png" alt="spjain" />
             </div>
-            <div class="title-and-body-in-card">
 
-
-              <h3 class="news-title">HTL Aircon Completes Major Data Center HVAC Upgrade</h3>
-              <p class="news-excerpt">HTL Aircon recently finished a cutting-edge HVAC upgrade for a leading data
-                center,
-                boosting cooling efficiency and...</p>
+            <!-- Duplicated for seamless loop -->
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/gorej.png" alt="gorej" />
             </div>
-            <div class="news-meta">
-              <a href="#" class="read-more">
-                Read more <i class="fas fa-arrow-right"></i>
-              </a>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/IBM.png" alt="IBM" />
             </div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-image">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Data Center" />
-          </div>
-          <div class="news-content">
-
-            <div class="news-date">
-              <i class="far fa-calendar"></i> August 14 2025
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/kotak.png" alt="KOTAK" />
             </div>
-            <div class="title-and-body-in-card">
-
-
-              <h3 class="news-title">HTL Aircon Completes Major Data Center HVAC Upgrade</h3>
-              <p class="news-excerpt">HTL Aircon recently finished a cutting-edge HVAC upgrade for a leading data
-                center,
-                boosting cooling efficiency and...</p>
+            <div class="brand-logo-item">
+              <img
+                src="./images/Logo/brand-logos/morgan stanly.png"
+                alt="morgan stanly"
+              />
             </div>
-            <div class="news-meta">
-              <a href="#" class="read-more">
-                Read more <i class="fas fa-arrow-right"></i>
-              </a>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/msci.png" alt="msci" />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./images/Logo/brand-logos/reliance.png"
+                alt="Reliance"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/reference-limited-logo.png"
+                alt="Reference Limited"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/netflix.png" alt="netflix" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/pwc.png" alt="pwc" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/Logo/brand-logos/spjain.png" alt="spjain" />
             </div>
           </div>
         </div>
 
+        <!-- Second marquee moving right -->
+        <div class="brands-marquee-outer">
+          <div class="brands-marquee-right">
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/microsoft-logo.png"
+                alt="Microsoft"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/mastercard-logo.png"
+                alt="Mastercard"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/philips-logo.png" alt="PHILIPS" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/foxconn-logo.png" alt="Foxconn" />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/reliance-logo.png"
+                alt="Reliance"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/reference-limited-logo.png"
+                alt="Reference Limited"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/google-logo.png" alt="Google" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/aws-logo.png" alt="AWS" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/ill-logo.png" alt="ILL" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/asoft-logo.png" alt="Asoft" />
+            </div>
 
-
-
-
-
-
-        <div class="news-card">
-          <div class="contain">
-            <p class="viewmore-text">Load More</p>
+            <!-- Duplicated for seamless loop -->
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/microsoft-logo.png"
+                alt="Microsoft"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/mastercard-logo.png"
+                alt="Mastercard"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/philips-logo.png" alt="PHILIPS" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/foxconn-logo.png" alt="Foxconn" />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/reliance-logo.png"
+                alt="Reliance"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img
+                src="./images/brand-logos/reference-limited-logo.png"
+                alt="Reference Limited"
+              />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/google-logo.png" alt="Google" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/aws-logo.png" alt="AWS" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/ill-logo.png" alt="ILL" />
+            </div>
+            <div class="brand-logo-item">
+              <img src="./images/brand-logos/asoft-logo.png" alt="Asoft" />
+            </div>
           </div>
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-
-  <section class="cta-section">
-    <div class="cta-container">
-      <div class="textgroup">
-        <h3><span class="gradient-color">Join over 23,640 clients</span> who have <br> scaled their projects.</h3>
-        <p>Your HVAC, MEP, and Fitout needs, delivered with precision.</p>
-      </div>
-      <a href="#" class="btn">Request a Consultation</a>
-    </div>
-
-  </section>
-
-  <footer>
-    <div class="topper-section">
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">Company</h5>
-        <div class="footer-link-group">
-          <a href="#">About Us</a>
-          <a href="#">Our Team</a>
-          <a href="#">People & Culture</a>
-          <a href="#">Services</a>
-          <a href="#">CSR Initiatives</a>
         </div>
       </div>
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">services</h5>
-        <div class="footer-link-group">
-          <a href="#">HVAC</a>
-          <a href="#">MEP</a>
-          <a href="#">Fit-out</a>
-          <a href="#">Base build</a>
-          <a href="#">Cleanrooms</a>
-          <a href="#">C&I & Interior fit-out</a>
-          <a href="#">Virtual Project Management</a>
-          <a href="#">Operations & Maintenance</a>
+    </section>
+
+    <section class="testimonial-section">
+      <div class="testimonial-container">
+        <div class="testimonial-slide testimonial-slide-1">
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              HTL delivered beyond expectations on time, on spec,<br />
+              and with unmatched professionalism.
+            </p>
+            <div class="testimonial-company">
+              <img
+                src="./images/Logo/Mastercard.png"
+                alt="mastercardlogo"
+                height="48px"
+              />
+            </div>
+          </div>
+          <div class="testimonial-quote-icon">
+            <object
+              data="./images/Vector.svg"
+              type="image/svg+xml"
+              height="100px"
+            ></object>
+            <path d="M10 7H6V17H10V7Z" />
+            <path d="M18 7H14V17H18V7Z" />
+          </div>
         </div>
       </div>
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">Sectors</h5>
-        <div class="footer-link-group">
-          <a href="#">Commercial Real Estate & GCC</a>
-          <a href="#">Industrial & Warehousing</a>
-          <a href="#">Data Centres & Critical rooms</a>
-          <a href="#">Pharma & biotech life sciences</a>
-          <a href="#">Hospital & healthcare</a>
-          <a href="#">Educational institutes</a>
-          <a href="#">Gov & Infra</a>
+      <div class="testimonial-indicators">
+        <div class="testimonial-indicator active" data-index="0"></div>
+        <div class="testimonial-indicator" data-index="1"></div>
+        <div class="testimonial-indicator" data-index="2"></div>
+        <div class="testimonial-indicator" data-index="3"></div>
+      </div>
+    </section>
+
+
+    <section class="nextsection" id="newsHomePageSection">
+      <div class="section-header">
+        <h2>News & Insights</h2>
+      </div>
+      <!-- <h2>Featured Projects</h2> -->
+      <div class="innersection">
+        <div class="innerwarap" id="newsHomePageSectionInner">
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> August 14 2025
+              </div>
+              <h3 class="news-title">
+                HTL Aircon Completes Major Data Center HVAC Upgrade
+              </h3>
+              <p class="news-excerpt">
+                HTL Aircon recently finished a cutting-edge HVAC upgrade for a
+                leading data center, boosting cooling efficiency and...
+              </p>
+              <div class="news-meta">
+                <a href="#" class="read-more">
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> August 14 2025
+              </div>
+              <h3 class="news-title">
+                HTL Aircon Completes Major Data Center HVAC Upgrade
+              </h3>
+              <p class="news-excerpt">
+                HTL Aircon recently finished a cutting-edge HVAC upgrade for a
+                leading data center, boosting cooling efficiency and...
+              </p>
+              <div class="news-meta">
+                <a href="#" class="read-more">
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> August 14 2025
+              </div>
+              <h3 class="news-title">
+                HTL Aircon Completes Major Data Center HVAC Upgrade
+              </h3>
+              <p class="news-excerpt">
+                HTL Aircon recently finished a cutting-edge HVAC upgrade for a
+                leading data center, boosting cooling efficiency and...
+              </p>
+              <div class="news-meta">
+                <a href="#" class="read-more">
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> August 14 2025
+              </div>
+              <h3 class="news-title">
+                HTL Aircon Completes Major Data Center HVAC Upgrade
+              </h3>
+              <p class="news-excerpt">
+                HTL Aircon recently finished a cutting-edge HVAC upgrade for a
+                leading data center, boosting cooling efficiency and...
+              </p>
+              <div class="news-meta">
+                <a href="#" class="read-more">
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> August 14 2025
+              </div>
+              <h3 class="news-title">
+                HTL Aircon Completes Major Data Center HVAC Upgrade
+              </h3>
+              <p class="news-excerpt">
+                HTL Aircon recently finished a cutting-edge HVAC upgrade for a
+                leading data center, boosting cooling efficiency and...
+              </p>
+              <div class="news-meta">
+                <a href="#" class="read-more">
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> August 14 2025
+              </div>
+              <h3 class="news-title">
+                HTL Aircon Completes Major Data Center HVAC Upgrade
+              </h3>
+              <p class="news-excerpt">
+                HTL Aircon recently finished a cutting-edge HVAC upgrade for a
+                leading data center, boosting cooling efficiency and...
+              </p>
+              <div class="news-meta">
+                <a href="#" class="read-more">
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> August 14 2025
+              </div>
+              <h3 class="news-title">
+                HTL Aircon Completes Major Data Center HVAC Upgrade
+              </h3>
+              <p class="news-excerpt">
+                HTL Aircon recently finished a cutting-edge HVAC upgrade for a
+                leading data center, boosting cooling efficiency and...
+              </p>
+              <div class="news-meta">
+                <a href="#" class="read-more">
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="contain">
+              <p class="viewmore-text">Load More</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="Topper-containers-last">
-        <div class="last-inner-containers">
-          <h5 class="footer-section-header">Contact us</h5>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="textgroup">
+          <h3>
+            <span class="gradient-color">Join over 23,640 clients</span> who
+            have <br />
+            scaled their projects.
+          </h3>
+          <p>Your HVAC, MEP, and Fitout needs, delivered with precision.</p>
+        </div>
+        <a href="#" class="btn">Request a Consultation</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="topper-section">
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Company</h5>
           <div class="footer-link-group">
-            <a href="#">info@abcd.demo</a>
-            <a href="#">+91 920 000 0000</a>
+            <a href="#">About Us</a>
+            <a href="#">Our Team</a>
+            <a href="#">People & Culture</a>
+            <a href="#">Services</a>
+            <a href="#">CSR Initiatives</a>
           </div>
         </div>
-        <div class="last-inner-containers">
-          <h5 class="footer-section-header">Follow us on</h5>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">services</h5>
           <div class="footer-link-group">
-            <a href="#">LinkedIn</a>
+            <a href="#">HVAC</a>
+            <a href="#">MEP</a>
+            <a href="#">Fit-out</a>
+            <a href="#">Base build</a>
+            <a href="#">Cleanrooms</a>
+            <a href="#">C&I & Interior fit-out</a>
+            <a href="#">Virtual Project Management</a>
+            <a href="#">Operations & Maintenance</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Sectors</h5>
+          <div class="footer-link-group">
+            <a href="#">Commercial Real Estate & GCC</a>
+            <a href="#">Industrial & Warehousing</a>
+            <a href="#">Data Centres & Critical rooms</a>
+            <a href="#">Pharma & biotech life sciences</a>
+            <a href="#">Hospital & healthcare</a>
+            <a href="#">Educational institutes</a>
+            <a href="#">Gov & Infra</a>
+          </div>
+        </div>
+        <div class="Topper-containers-last">
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Contact us</h5>
+            <div class="footer-link-group">
+              <a href="#">info@abcd.demo</a>
+              <a href="#">+91 920 000 0000</a>
+            </div>
+          </div>
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Follow us on</h5>
+            <div class="footer-link-group">
+              <a href="#">LinkedIn</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="bottom-section">
-      <div class="left">
-        <img src="./images/Logo/Footer Image Block.png" height="56px" alt="logo footer">
-        <object data="./images/Logo/iso.svg" type="image/svg+xml" height="48px"></object>
-      </div>
-      <div class="right">
-        <div class="location-group">
-          <a href="#">Mumbai</a>
-          <p>|</p>
-          <a href="#">CBD-Belapur</a>
-          <p>|</p>
-          <a href="#">Pune</a>
-          <p>|</p>
-          <a href="#">Bangalore</a>
-          <p>|</p>
-          <a href="#">Ahemdabad</a>
-          <p>|</p>
-          <a href="#">New Delhi</a>
-          <p>|</p>
-          <a href="#">Hyderabad</a>
-          <p>|</p>
-          <a href="#">Africa</a>
-
+      <div class="bottom-section">
+        <div class="left">
+          <img
+            src="./images/Logo/Footer Image Block.png"
+            height="56px"
+            alt="logo footer"
+          />
+          <object
+            data="./images/Logo/iso.svg"
+            type="image/svg+xml"
+            height="48px"
+          ></object>
         </div>
-        <p class="copyrights">© 2025 HTL AIRCON<br />
-          All rights reserved</p>
+        <div class="right">
+          <div class="location-group">
+            <a href="#">Mumbai</a>
+            <p>|</p>
+            <a href="#">CBD-Belapur</a>
+            <p>|</p>
+            <a href="#">Pune</a>
+            <p>|</p>
+            <a href="#">Bangalore</a>
+            <p>|</p>
+            <a href="#">Ahemdabad</a>
+            <p>|</p>
+            <a href="#">New Delhi</a>
+            <p>|</p>
+            <a href="#">Hyderabad</a>
+            <p>|</p>
+            <a href="#">Africa</a>
+          </div>
+          <p class="copyrights">
+            © 2025 HTL AIRCON<br />
+            All rights reserved
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-
-
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- Scripts -->
-  <script src="./js/navbar.js"></script>
-  <!-- <script src="./js/carousal.js"></script> -->
-  <script src="./js/stats.js"></script>
-  <!-- <script src="./js/testemonial.js"></script> -->
-  <!-- Animations -->
-  <script src="./js/animation/Lenis.js"></script>
-  <script src="./Hamburger/script.js"></script>
-  <script src="./js/animation/scrollTriggers.js"></script>
-
-
-</body>
-
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Scripts -->
+    <script src="./js/navbar.js"></script>
+    <!-- <script src="./js/carousal.js"></script> -->
+    <script src="./js/stats.js"></script>
+    <!-- <script src="./js/testemonial.js"></script> -->
+    <!-- Animations -->
+    <script src="./js/animation/Lenis.js"></script>
+    <script src="./Hamburger/script.js"></script>
+    <script src="./js/animation/scrollTriggers.js"></script>
+  </body>
 </html>
