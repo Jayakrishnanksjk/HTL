@@ -54,7 +54,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-a { 
+
+a {
   cursor: pointer;
 }
 .link-style-reset {
@@ -63,22 +64,23 @@ a {
   margin: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
   font-family: "Geist", sans-serif;
-  position: relative;
   line-height: 1.6;
   color: #111;
   height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
-
+.disabled{
+  pointer-events: none;
+  opacity: 30%;
+}
 /* TEXT STYLES */
 .hero-text {
   font-size: 64px;
@@ -352,9 +354,6 @@ body {
   }
 }
 
-
-
-
 /* herosec */
 
 /* Navbar */
@@ -385,7 +384,7 @@ body {
 
 .nav-menu-section {
   display: flex;
-  z-index: -9999;
+  z-index: 0;
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
@@ -630,7 +629,6 @@ body {
 
 
 /* Navbar */
-
 .container {
   height: 100vh;
   width: 100%;
@@ -712,7 +710,7 @@ body {
   display: flex;
   padding-top: 14px !important;
   align-items: center;
-  height: 120px;
+  /* height: 120px; */
   padding: 0 80px;
   /* background-color: red; */
 }
@@ -736,11 +734,14 @@ body {
   font-size: 20px;
   line-height: 77%;
   letter-spacing: -0.6px;
-  transition: background 0.3s ease;
+  /* transition: background 0.3s ease; */
   width: fit-content;
+  transition-duration: 300ms;
 }
 .btn:hover {
-  filter: brightness(0.9); /* ≈ darken by 20% */
+  /* filter: brightness(0.9);  */
+  transform: scale(1.02);
+  transition-duration: 300ms;
 }
 
 /* Stats under hero */
@@ -791,7 +792,6 @@ body {
   margin: 10px auto;
 }
 
-
 /* Featured elements section */
 
 .nextsection {
@@ -809,8 +809,7 @@ body {
   width: 100vw;
   gap: 24px;
   align-items: center;
-  /* padding: 0 80px !important; */
-} 
+}
 
 .childrenofinnner {
   width: 400px;
@@ -907,7 +906,6 @@ body {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
 
 .stats-pair {
   display: flex;
@@ -1069,7 +1067,7 @@ body {
   transition-duration: 300ms;
   border-radius: 16px;
   min-width: 425px;
-  height: 480px;
+  height: 540px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1997,18 +1995,6 @@ footer {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .trusted-brands-container {
@@ -2376,7 +2362,7 @@ footer {
   padding: 80px 0px 100px 80px; /* Remove horizontal padding */
   background: #fff;
   width: 100%;
-  height: 100vh;
+  height: 450;
   overflow: hidden; /* Prevent horizontal scroll on section */
 }
 
@@ -2410,7 +2396,7 @@ footer {
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 450px;
+  height: 540px;
   width: 425px;
   transition-duration: 300ms;
   max-width: 425px;
@@ -2422,9 +2408,8 @@ footer {
   transform: scale(1.01);
 }
 .news-image {
-  height: 212.5px; /* Half of 425px */
+  height: 100%;
   overflow: hidden;
-  flex: 0 0 auto;
 }
 
 .news-image img {
@@ -2440,10 +2425,9 @@ footer {
 
 .news-content {
   padding: 25px;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  height: fit-content;
 }
 
 .news-date {
@@ -2452,6 +2436,14 @@ footer {
   font-weight: 400;
   display: flex;
   align-items: center;
+}
+
+.title-and-body-in-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 8px;
+  padding-bottom: 4px;
 }
 
 .news-title {
@@ -2478,7 +2470,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  padding-top: 15px;
 }
 
 .news-company {
@@ -3953,8 +3944,6 @@ footer {
   font-weight: 400;
 }
 
-
-
 /* team section */
 
 .team-hero-section {
@@ -4003,31 +3992,20 @@ footer {
   letter-spacing: -0.03em;
 }
 
-
-
-
 .team-section {
-      width: 100%;
-    height: 100vh;
-    padding: 80px 0px 80px 80px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  padding: 80px 0px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
-
-.section-header {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 .section-header h2 {
-  font-size: 2.2rem;
+  font-size: 40px;
   font-weight: 400;
   color: #222;
   margin-bottom: 10px;
 }
-
-
 
 .section-header p {
   font-size: 1.1rem;
@@ -4046,8 +4024,8 @@ footer {
   -ms-overflow-style: none; /* IE and Edge */
 }
 
-.team-section-header{
-    display: flex;
+.team-section-header {
+  display: flex;
   padding-top: 14px !important;
   align-items: center;
   height: 120px;
@@ -4064,7 +4042,6 @@ footer {
 .team-cards-container::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
-
 
 /* Team Card */
 .team-member-card {
@@ -4123,18 +4100,6 @@ footer {
   height: 24px;
   transition: opacity 0.2s ease;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ========== RESPONSIVENESS ========== */
 
@@ -4227,7 +4192,7 @@ footer {
   .team-section {
     padding: 20px 0px 20px 20px;
   }
- 
+
   .team-section-header h2 {
     font-size: 2rem;
     text-align: left;
@@ -4259,5 +4224,3 @@ footer {
     height: 18px;
   }
 }
-
-
