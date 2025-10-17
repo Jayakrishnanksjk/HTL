@@ -106,6 +106,103 @@
   </nav>
 
 
+  <!-- ===== MOBILE NAV START ===== -->
+<nav class="mobile-navbar" id="mobileNavbar">
+  <div class="mobile-nav-header">
+    <div class="mobile-brand">
+      <a href="index.html">
+        <img src="./images/htl logo.png" alt="HTL Logo" height="28" />
+      </a>
+    </div>
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="10" width="32" height="4" fill="white" />
+        <rect y="20" width="32" height="4" fill="white" />
+        <rect y="30" width="32" height="4" fill="white" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <!-- Company -->
+    <div class="mobile-dropdown">
+      <button class="dropdown-btn">
+        Company
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="about.html">About Us</a>
+        <a href="team.html">Our Team</a>
+        <a href="#">People and Culture</a>
+        <a href="services.html">Services</a>
+        <a href="#">CSR Initiatives</a>
+        <a href="#">Investor Relations</a>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="mobile-dropdown">
+      <button class="dropdown-btn">
+        Services
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="hvac.html">HVAC</a>
+        <a href="mep.html">MEP</a>
+        <a href="#">Fit-out</a>
+        <a href="#">Base build</a>
+        <a href="#">Cleanrooms</a>
+        <a href="#">C&I & Interior Fit-out</a>
+        <a href="#">Virtual Project Management</a>
+        <a href="#">Operations & Maintenance</a>
+      </div>
+    </div>
+
+    <!-- Sectors -->
+    <div class="mobile-dropdown">
+      <button class="dropdown-btn">
+        Sectors
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="commGcc.html">Commercial Real Estate & GCC</a>
+        <a href="#">Industrial & Warehousing</a>
+        <a href="#">Data Centres & Critical Rooms</a>
+        <a href="#">Pharma & Biotech Life Sciences</a>
+        <a href="hospitality.html">Hospitality & Luxury Retail</a>
+        <a href="#">Hospital & Healthcare</a>
+        <a href="#">Educational Institutes</a>
+        <a href="#">Gov & Infra</a>
+      </div>
+    </div>
+
+    <!-- Resources -->
+    <div class="mobile-dropdown">
+      <button class="dropdown-btn">
+        Resources
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="project.html">Projects</a>
+        <a href="news.html">News & Articles</a>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="mobile-dropdown">
+      <button class="dropdown-btn">
+        Socials
+        <span class="arrow">&#9662;</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- ===== MOBILE NAV END ===== -->
+
+
 
   <section class="about-banner">
     <div class="about-content">
@@ -392,6 +489,112 @@
     createHorizontalScroll(".missiongroup", ".sectiongroup");
 
   </script>
+
+  <script>
+      // Toggle entire mobile menu
+      // Mobile menu functionality with Lenis integration - FIXED VERSION
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+        const mobileNavbar = document.getElementById("mobileNavbar");
+        const mobileNavHeader = document.querySelector(".mobile-nav-header");
+
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener("click", function () {
+          const isOpening = !mobileMenu.classList.contains("active");
+          mobileMenu.classList.toggle("active");
+
+          if (isOpening) {
+            // Pause Lenis when opening menu
+            if (typeof lenis !== "undefined") {
+              lenis.stop();
+            }
+            // Make the navbar full screen but keep header visible
+            mobileNavbar.style.position = "fixed";
+            mobileNavbar.style.width = "100%";
+            mobileNavbar.style.height = "100vh";
+            mobileNavbar.style.background = "var(--gray-primary)";
+            document.body.style.overflow = "hidden";
+          } else {
+            // Resume Lenis when closing menu
+            if (typeof lenis !== "undefined") {
+              lenis.start();
+            }
+            // Reset navbar styles
+            mobileNavbar.style.position = "";
+            mobileNavbar.style.width = "";
+            mobileNavbar.style.height = "";
+            mobileNavbar.style.background = "";
+            document.body.style.overflow = "";
+
+            // Close all dropdowns when closing menu
+            dropdownBtns.forEach((btn) => {
+              btn.classList.remove("active");
+              btn.nextElementSibling.classList.remove("show");
+            });
+          }
+        });
+
+        // Single dropdown functionality
+        dropdownBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const isActive = this.classList.contains("active");
+            const dropdownContent = this.nextElementSibling;
+            const isExpanding = !isActive;
+
+            // Close all other dropdowns
+            dropdownBtns.forEach((otherBtn) => {
+              if (otherBtn !== this) {
+                otherBtn.classList.remove("active");
+                otherBtn.nextElementSibling.classList.remove("show");
+              }
+            });
+
+            // Toggle current dropdown
+            if (isExpanding) {
+              // Pause Lenis when expanding dropdown
+              if (typeof lenis !== "undefined") {
+                lenis.stop();
+              }
+              this.classList.add("active");
+              dropdownContent.classList.add("show");
+            } else {
+              // Resume Lenis when collapsing dropdown
+              if (typeof lenis !== "undefined") {
+                lenis.start();
+              }
+              this.classList.remove("active");
+              dropdownContent.classList.remove("show");
+            }
+          });
+        });
+
+        // Close menu when clicking on links
+        const menuLinks = document.querySelectorAll(".dropdown-content a");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            // Resume Lenis when navigating
+            if (typeof lenis !== "undefined") {
+              lenis.start();
+            }
+
+            // Reset navbar and close menu
+            mobileNavbar.style.position = "";
+            mobileNavbar.style.width = "";
+            mobileNavbar.style.height = "";
+            mobileNavbar.style.background = "";
+            document.body.style.overflow = "";
+
+            mobileMenu.classList.remove("active");
+            dropdownBtns.forEach((btn) => {
+              btn.classList.remove("active");
+              btn.nextElementSibling.classList.remove("show");
+            });
+          });
+        });
+      });
+    </script>
 </body>
 
 </html>

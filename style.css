@@ -488,11 +488,23 @@ body {
   padding: 16px 20px;
   position: sticky;
   top: 0;
-  z-index: 9999; /* Increased z-index */
+  z-index: 9999;
   flex-direction: column;
   min-height: 70px;
   justify-content: center;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box; /* Important: include padding in width calculation */
+}
+
+/* When menu is active, make it fixed and full-screen */
+.mobile-navbar.menu-active {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--gray-primary);
+  padding: 16px 20px;
+  box-sizing: border-box;
 }
 
 .mobile-nav-header {
@@ -500,33 +512,13 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 40px;
-  z-index: 10000; /* Ensure header stays on top */
+  z-index: 10000;
   position: relative;
-}
-
-.mobile-menu {
-  display: none;
-  flex-direction: column;
   width: 100%;
-  background-color: var(--gray-primary);
-  overflow-y: auto;
-  padding: 0 0 20px 0;
-  position: relative;
-  z-index: 9998;
+  box-sizing: border-box;
 }
 
-.mobile-menu.active {
-  display: flex;
-  height: calc(100vh - 70px); /* Full height minus header */
-  margin-top: 10px;
-}
-
-/* Rest of your CSS remains the same */
-.mobile-brand img {
-  height: 28px;
-  width: auto;
-}
-
+/* Transform hamburger to close icon when active */
 .mobile-menu-toggle {
   cursor: pointer;
   display: flex;
@@ -535,11 +527,67 @@ body {
   width: 40px;
   height: 40px;
   z-index: 10001;
+  transition: transform 0.3s ease;
+  flex-shrink: 0; /* Prevent the button from shrinking */
 }
 
+/* Hamburger to X animation - Fixed positioning */
+.mobile-menu-toggle.active svg rect:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active svg rect:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active svg rect:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-menu-toggle svg {
+  width: 32px;
+  height: 32px;
+}
+
+.mobile-menu-toggle svg rect {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.mobile-brand {
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+.mobile-brand img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--gray-primary);
+  overflow-y: auto;
+  padding: 0;
+  position: relative;
+  z-index: 9998;
+  box-sizing: border-box;
+}
+
+.mobile-menu.active {
+  display: flex;
+  height: calc(100vh - 70px);
+  margin-top: 10px;
+  padding: 0; /* Remove any extra padding */
+}
+
+/* Mobile dropdown fixes */
 .mobile-dropdown {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .mobile-dropdown:first-child {
@@ -560,6 +608,7 @@ body {
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .dropdown-btn:hover {
@@ -574,6 +623,7 @@ body {
   transition: transform 0.3s ease;
   font-size: 16px;
   margin-left: 10px;
+  flex-shrink: 0; /* Prevent arrow from affecting layout */
 }
 
 .dropdown-btn.active .arrow {
@@ -589,6 +639,8 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .dropdown-content.show {
@@ -604,12 +656,45 @@ body {
   padding: 12px 16px;
   transition: all 0.3s ease;
   border-left: 3px solid transparent;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .dropdown-content a:hover {
   background-color: var(--menu-hover);
   border-left: 3px solid var(--peach);
   padding-left: 20px;
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .mobile-navbar {
+    padding: 14px 16px;
+    min-height: 65px;
+  }
+  
+  .mobile-navbar.menu-active {
+    padding: 14px 16px;
+  }
+  
+  .mobile-menu.active {
+    height: calc(100vh - 65px);
+  }
+  
+  .dropdown-btn {
+    font-size: 16px;
+    padding: 14px 0;
+  }
+  
+  .dropdown-content a {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+  
+  .mobile-menu-toggle svg {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -620,9 +705,15 @@ body {
     display: flex;
   }
   
-  /* Prevent body scroll when menu is open */
   body.no-scroll {
     overflow: hidden;
+  }
+  
+  /* Ensure body doesn't scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
 }
 
@@ -2647,6 +2738,82 @@ footer {
   line-height: 110%;
   letter-spacing: -0.03em;
 }
+
+
+
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .about-banner {
+    height: 70vh; /* Reduced height for mobile */
+    background-attachment: scroll; /* Better performance on mobile */
+  }
+
+  .about-content {
+    padding: 15px;
+    max-width: 90%; /* Better spacing on mobile */
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+    text-wrap: wrap; /* Allow text to wrap on mobile */
+    line-height: 120%; /* Better line height for readability */
+    margin-bottom: 15px;
+  }
+
+  .about-content p {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    line-height: 130%; /* Better line height for mobile */
+  }
+}
+
+/* Tablet Responsive Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-banner {
+    height: 80vh; /* Slightly reduced height for tablet */
+  }
+
+  .about-content h2 {
+    font-size: 3.2rem; /* Adjusted font size for tablet */
+  }
+
+  .about-content p {
+    font-size: 1.4rem; /* Adjusted font size for tablet */
+  }
+}
+
+/* Large Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+  .about-banner {
+    height: 60vh; /* Even smaller height for very small devices */
+  }
+
+  .about-content h2 {
+    font-size: 2rem; /* Smaller font for very small screens */
+    line-height: 125%;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 140%;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .about-banner {
+    height: 85vh; /* More height in landscape to accommodate content */
+  }
+  
+  .about-content h2 {
+    font-size: 2rem; /* Smaller font in landscape */
+  }
+}
+
+
+
+
+
 
 .mission-image img {
   width: 444px;
