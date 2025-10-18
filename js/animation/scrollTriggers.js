@@ -9,18 +9,20 @@ lenis.on("scroll", ScrollTrigger.update);
 gsap.registerPlugin(ScrollTrigger);
 
 // createHorizontalScroll(".nextsection", ".innerwarap");
-createHorizontalScrollById("projectHomePageSection", "projectHomePageSectionInner");
+
+createHorizontalScrollById(
+  "projectHomePageSection",
+  "projectHomePageSectionInner"
+);
+createHorizontalScrollById(
+  "projectTeamPageManagement",
+  "projectTeamPageManagementInner"
+);
 createHorizontalScrollById("newsHomePageSection", "newsHomePageSectionInner");
 
 // Calculate scroll distance (total width - viewport)
 const scrollWidth = inner.scrollWidth;
 const viewportWidth = window.innerWidth;
-
-
-
-
-
-
 
 function createHorizontalScrollById(sectionId, innerId) {
   const section = document.getElementById(sectionId);
@@ -47,11 +49,6 @@ function createHorizontalScrollById(sectionId, innerId) {
     },
   });
 }
-
-
-
-
-
 
 function createHorizontalScroll(sectionSelector, innerSelector) {
   const section = document.querySelector(sectionSelector);
