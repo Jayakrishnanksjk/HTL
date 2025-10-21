@@ -77,7 +77,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-.disabled{
+.disabled {
   pointer-events: none;
   opacity: 30%;
 }
@@ -474,10 +474,6 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-
-
-
-
 
 /* Mobile Responsive Styles */
 /* ==== MOBILE NAVBAR ==== */
@@ -1393,10 +1389,6 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-
-
-
-
 /* Responsive - Just Make Everything Smaller - Fixed */
 
 /* Tablets */
@@ -1413,38 +1405,38 @@ body {
   .text-container {
     padding: 20px;
   }
-  
+
   .innerwarap {
     padding: 20px;
     margin: 0 20px;
   }
-  
+
   .hovercontainer {
     padding: 20px;
   }
-  
+
   .bottom-container > p {
     font-size: 18px;
     line-height: 22px;
   }
-  
+
   .nextsection {
     height: auto;
     min-height: 80vh;
     padding-top: 40px;
   }
-  
+
   .section-header {
     position: relative;
     z-index: 10;
     padding-bottom: 20px;
   }
-  
+
   .innersection {
     gap: 20px;
     height: auto;
   }
-  
+
   .childrenofinnner {
     width: 350px;
     height: 450px !important;
@@ -1458,43 +1450,43 @@ body {
     min-width: 300px;
     height: 380px;
   }
-  
+
   .text-container {
     padding: 16px;
   }
-  
+
   .hovercontainer {
     padding: 16px;
   }
-  
+
   .bottom-container > p {
     font-size: 16px;
     line-height: 20px;
   }
-  
+
   .nextsection {
     height: auto;
     min-height: 70vh;
     padding-top: 30px;
     top: 90px !important;
   }
-  
+
   .section-header {
     position: relative;
     z-index: 10;
     padding-bottom: 15px;
   }
-  
+
   .innersection {
     gap: 16px;
     height: auto;
   }
-  
+
   .innerwarap {
     padding: 20px;
     margin: 0 20px;
   }
-  
+
   .childrenofinnner {
     width: 300px;
     height: 400px !important;
@@ -1508,61 +1500,48 @@ body {
     min-width: 280px;
     height: 360px;
   }
-  
+
   .nextsection {
     height: auto !important;
     min-height: 60vh;
     padding-top: 20px;
   }
-  
+
   .section-header {
     position: relative;
     z-index: 10;
     padding-bottom: 10px;
   }
-  
+
   .innersection {
     gap: 12px;
     height: auto;
   }
-  
+
   .innerwarap {
     padding: 20px;
     margin: 0 20px;
   }
-  
+
   .text-container {
     padding: 12px;
   }
-  
+
   .hovercontainer {
     padding: 12px;
   }
-  
+
   .bottom-container > p {
     font-size: 14px;
     line-height: 18px;
   }
-  
+
   .childrenofinnner {
     width: 280px;
     height: 380px !important;
     font-size: 2.5rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
   background-color: var(--gray-primary);
@@ -1848,10 +1827,6 @@ footer {
   animation-play-state: paused;
 }
 
-
-
-
-
 /* Responsive - Trusted Brands - Just Make Everything Smaller */
 
 /* Tablets */
@@ -1860,15 +1835,15 @@ footer {
     height: 80vh;
     gap: 40px;
   }
-  
+
   .trusted-brands-heading {
     font-size: 32px;
   }
-  
+
   .marquee-container {
     gap: 30px;
   }
-  
+
   .brand-logo-item {
     min-width: 100px;
     height: 50px;
@@ -1883,16 +1858,16 @@ footer {
     height: 70vh;
     gap: 32px;
   }
-  
+
   .trusted-brands-heading {
     font-size: 28px;
   }
-  
+
   .marquee-container {
     transform: scale(0.5);
     gap: 24px;
   }
-  
+
   .brand-logo-item {
     min-width: 80px;
     height: 40px;
@@ -1907,11 +1882,11 @@ footer {
     height: 60vh;
     gap: 24px;
   }
-  
+
   .trusted-brands-heading {
     font-size: 24px;
   }
-  
+
   .brand-logo-item {
     min-width: 70px;
     height: 35px;
@@ -1919,24 +1894,6 @@ footer {
     padding: 0 12px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ===========================
    RESPONSIVE STYLES
@@ -2081,7 +2038,6 @@ footer {
     min-width: 90px;
     height: 50px;
     padding: 0 16px;
-    
   }
 
   .textgroup > h3 {
@@ -2254,12 +2210,6 @@ footer {
   transform: scale(1.2);
 }
 
-
-
-
-
-
-
 /* Responsive - Testimonial - Stack in Columns */
 
 /* Tablets */
@@ -2267,15 +2217,15 @@ footer {
   .testimonial-section {
     height: 70vh;
   }
-  
+
   .testimonial-container {
     gap: 30px;
   }
-  
+
   .testimonial-content {
     gap: 60px;
   }
-  
+
   .testimonial-slide {
     padding: 0px 60px 30px;
     gap: 40px;
@@ -2283,12 +2233,12 @@ footer {
     align-items: center;
     text-align: center;
   }
-  
+
   .testimonial-text {
     font-size: 36px;
     order: 2;
   }
-  
+
   .testimonial-quote-icon {
     width: 50px;
     height: 50px;
@@ -2302,7 +2252,7 @@ footer {
   .testimonial-quote-icon object {
     height: 60px;
   }
-  
+
   .testimonial-company {
     order: 3;
     margin-top: 30px;
@@ -2310,12 +2260,12 @@ footer {
     justify-content: center;
     width: 100%;
   }
-  
+
   .testimonial-indicators {
     gap: 10px;
     margin-top: 25px;
   }
-  
+
   .testimonial-indicator {
     width: 10px;
     height: 10px;
@@ -2327,15 +2277,15 @@ footer {
   .testimonial-section {
     height: 80vh;
   }
-  
+
   .testimonial-container {
     gap: 25px;
   }
-  
+
   .testimonial-content {
     gap: 40px;
   }
-  
+
   .testimonial-slide {
     padding: 0px 40px 20px;
     gap: 30px;
@@ -2343,12 +2293,12 @@ footer {
     align-items: center;
     text-align: center;
   }
-  
+
   .testimonial-text {
     font-size: 28px;
     order: 2;
   }
-  
+
   .testimonial-quote-icon {
     width: 40px;
     height: 40px;
@@ -2359,11 +2309,10 @@ footer {
     justify-content: center;
   }
 
-
   .testimonial-quote-icon object {
     height: 60px;
   }
-  
+
   .testimonial-company {
     order: 3;
     margin-top: 25px;
@@ -2371,12 +2320,12 @@ footer {
     justify-content: center;
     width: 100%;
   }
-  
+
   .testimonial-indicators {
     gap: 8px;
     margin-top: 20px;
   }
-  
+
   .testimonial-indicator {
     width: 8px;
     height: 8px;
@@ -2388,15 +2337,15 @@ footer {
   .testimonial-section {
     height: 50vh;
   }
-  
+
   .testimonial-container {
     gap: 20px;
   }
-  
+
   .testimonial-content {
     gap: 30px;
   }
-  
+
   .testimonial-slide {
     padding: 0px 30px 15px;
     gap: 25px;
@@ -2404,12 +2353,12 @@ footer {
     align-items: center;
     text-align: center;
   }
-  
+
   .testimonial-text {
     font-size: 24px;
     order: 2;
   }
-  
+
   .testimonial-quote-icon {
     width: 35px;
     height: 35px;
@@ -2420,12 +2369,11 @@ footer {
     justify-content: center;
   }
 
-
   .testimonial-quote-icon object {
     height: 60px;
   }
-  
-   .testimonial-company {
+
+  .testimonial-company {
     order: 3;
     margin-top: 20px;
     display: flex;
@@ -2433,36 +2381,16 @@ footer {
     width: 100%;
   }
 
-  
-  
   .testimonial-indicators {
     gap: 6px;
     margin-top: 15px;
   }
-  
+
   .testimonial-indicator {
     width: 7px;
     height: 7px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .news-section {
   padding: 80px 0px 100px 80px; /* Remove horizontal padding */
@@ -2605,31 +2533,31 @@ footer {
     height: 100vh;
     padding: 60px 0px 80px 60px;
   }
-  
+
   .news-carousel {
     padding: 20px 60px;
     margin-left: -60px;
     gap: 25px;
   }
-  
+
   .news-card {
     width: 380px;
     max-width: 380px;
     height: auto;
   }
-  
+
   .news-image {
     height: 190px;
   }
-  
+
   .news-content {
     padding: 20px;
   }
-  
+
   .news-title {
     font-size: 1.3rem;
   }
-  
+
   .news-excerpt {
     font-size: 0.95rem;
   }
@@ -2641,34 +2569,34 @@ footer {
     height: 100vh;
     padding: 40px 0px 60px 40px;
   }
-  
+
   .news-carousel {
     padding: 20px 40px;
     margin-left: -40px;
     gap: 20px;
   }
-  
+
   .news-card {
     width: 320px;
     max-width: 320px;
   }
-  
+
   .news-image {
     height: 160px;
   }
-  
+
   .news-content {
     padding: 18px;
   }
-  
+
   .news-title {
     font-size: 1.2rem;
   }
-  
+
   .news-excerpt {
     font-size: 0.9rem;
   }
-  
+
   .news-date {
     font-size: 0.85rem;
   }
@@ -2680,34 +2608,34 @@ footer {
     height: 90vh;
     padding: 30px 0px 50px 30px;
   }
-  
+
   .news-carousel {
     padding: 20px 30px;
     margin-left: -30px;
     gap: 15px;
   }
-  
+
   .news-card {
     width: 280px;
     max-width: 280px;
   }
-  
+
   .news-image {
     height: 140px;
   }
-  
+
   .news-content {
     padding: 16px;
   }
-  
+
   .news-title {
     font-size: 1.1rem;
   }
-  
+
   .news-excerpt {
     font-size: 0.85rem;
   }
-  
+
   .news-date {
     font-size: 0.8rem;
   }
@@ -4228,22 +4156,38 @@ footer {
 
 /* Team Card */
 .team-member-card {
-  width: 330px;
-  height: 400px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
+  box-shadow: var(--shadow-elevation-1);
+  transition-duration: 300ms;
+  border-radius: 16px;
+  width: 425px;
+  height: 540px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.team-member-card:hover {
+  transition-duration: 300ms;
+  box-shadow: var(--shadow-elevation-3);
+  transform: scale(1.01);
+}
+
+.team-member-card:hover .team-member-info {
+  height: 100%;
+  width: 100%;
+  transition-duration: 300ms;
+}
+.team-member-card:hover .team-member-image {
+  display: none;
+  visibility: 0;
 }
 
 /* Image */
 .team-member-image {
   width: 100%;
-  height: 280px;
+  height: 100%x;
   overflow: hidden;
 }
 
@@ -4257,16 +4201,44 @@ footer {
 .team-member-info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   padding: 15px 20px;
+  height: fit-content;
+  flex-direction: column;
+  transition-duration: 300ms;
 }
 
+.topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottomline {
+  display: none;
+  opacity: 0.8;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 24.6px;
+}
+.team-member-card:hover .bottomline {
+  display: flex;
+}
+
+.team-member-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 /* Text content */
 .team-member-text h3 {
   margin: 0;
-  font-size: 1.5rem;
   font-weight: 400;
-  color: #333;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: -0.64px;
+  line-height: 77%;
 }
 
 .team-member-text .team-member-title {
