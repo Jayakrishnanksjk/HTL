@@ -496,12 +496,14 @@ body {
 
 /* When menu is active, make it fixed and full-screen */
 .mobile-navbar.menu-active {
-  position: fixed;
+    position: fixed;
   width: 100%;
   height: 100vh;
   background: var(--gray-primary);
   padding: 16px 20px;
   box-sizing: border-box;
+  overflow-x: hidden; /* ✅ Prevent horizontal scroll */
+  left: 0;
 }
 
 .mobile-nav-header {
@@ -575,9 +577,13 @@ body {
 
 .mobile-menu.active {
   display: flex;
+  flex-direction: column;
+  width: 100%;
   height: calc(100vh - 70px);
   margin-top: 10px;
-  padding: 0; /* Remove any extra padding */
+  overflow-y: auto;
+  overflow-x: hidden; /* ✅ Avoid horizontal overflow */
+  box-sizing: border-box;
 }
 
 /* Mobile dropdown fixes */
@@ -634,7 +640,7 @@ body {
   border-radius: 4px;
   margin-bottom: 8px;
   max-height: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
   width: 100%;
   box-sizing: border-box;
@@ -704,6 +710,14 @@ body {
 
   body.no-scroll {
     overflow: hidden;
+  }
+  
+  /* Ensure body doesn't scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  position: fixed;
+  width: 100%;
+  left: 0;
   }
 }
 
@@ -1106,6 +1120,7 @@ body {
   .btn {
     font-size: 0.9rem;
     padding: 10px 18px;
+    align-self: center;
   }
 }
 
@@ -1382,6 +1397,10 @@ body {
     height: 420px;
   }
 
+  .section-header h2{
+    text-align: center;
+  }
+  
   .text-container {
     padding: 20px;
   }
@@ -1448,6 +1467,7 @@ body {
     height: auto;
     min-height: 70vh;
     padding-top: 30px;
+    top: 90px !important;
   }
 
   /* .section-header {
@@ -1843,6 +1863,7 @@ footer {
   }
 
   .marquee-container {
+    transform: scale(0.5);
     gap: 24px;
   }
 
@@ -1961,8 +1982,8 @@ footer {
   .trusted-brands-container {
     height: auto;
     padding: 60px 20px;
-    gap: 40px;
-    margin-top: 20px;
+    gap: 16px;
+    margin-top: 100px;
   }
 
   .trusted-brands-heading {
@@ -1972,6 +1993,7 @@ footer {
   .cta-section {
     padding: 60px 20px;
     height: auto;
+    margin-top: 100px;
   }
 
   .cta-container > .textgroup {
@@ -2520,6 +2542,7 @@ footer {
   .news-card {
     width: 380px;
     max-width: 380px;
+    height: auto;
   }
 
   .news-image {
