@@ -100,7 +100,8 @@ body {
 }
 /* --------------------------------------------- */
 .hero-container {
-  height: 100vh;
+  /* height: 100vh; */
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -497,7 +498,7 @@ body {
 
 /* When menu is active, make it fixed and full-screen */
 .mobile-navbar.menu-active {
-    position: fixed;
+  position: fixed;
   width: 100%;
   height: 100vh;
   background: var(--gray-primary);
@@ -676,25 +677,25 @@ body {
     padding: 14px 16px;
     min-height: 65px;
   }
-  
+
   .mobile-navbar.menu-active {
     padding: 14px 16px;
   }
-  
+
   .mobile-menu.active {
     height: calc(100vh - 65px);
   }
-  
+
   .dropdown-btn {
     font-size: 16px;
     padding: 14px 0;
   }
-  
+
   .dropdown-content a {
     font-size: 15px;
     padding: 10px 14px;
   }
-  
+
   .mobile-menu-toggle svg {
     width: 28px;
     height: 28px;
@@ -708,21 +709,19 @@ body {
   .mobile-navbar {
     display: flex;
   }
-  
+
   body.no-scroll {
     overflow: hidden;
   }
-  
+
   /* Ensure body doesn't scroll when menu is open */
   body.menu-open {
     overflow: hidden;
-  position: fixed;
-  width: 100%;
-  left: 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
   }
 }
-
-
 
 /* Navbar */
 .container {
@@ -804,10 +803,10 @@ body {
 
 .section-header {
   display: flex;
-  padding-top: 14px !important;
+  /* padding-top: 14px !important; */
   align-items: center;
   /* height: 120px; */
-  padding: 0 80px;
+  padding: 24px 80px;
   /* background-color: red; */
 }
 
@@ -904,7 +903,7 @@ body {
   height: 100%;
   width: 100vw;
   gap: 24px;
-  align-items: center;
+  align-items: top;
 }
 
 .childrenofinnner {
@@ -1401,10 +1400,10 @@ body {
     height: 420px;
   }
 
-  .section-header h2{
+  .section-header h2 {
     text-align: center;
   }
-  
+
   .text-container {
     padding: 20px;
   }
@@ -1429,11 +1428,11 @@ body {
     padding-top: 40px;
   }
 
-  .section-header {
+  /* .section-header {
     position: relative;
     z-index: 10;
     padding-bottom: 20px;
-  }
+  } */
 
   .innersection {
     gap: 20px;
@@ -1474,11 +1473,11 @@ body {
     top: 90px !important;
   }
 
-  .section-header {
+  /* .section-header {
     position: relative;
     z-index: 10;
     padding-bottom: 15px;
-  }
+  } */
 
   .innersection {
     gap: 16px;
@@ -1510,11 +1509,11 @@ body {
     padding-top: 20px;
   }
 
-  .section-header {
+  /* .section-header {
     position: relative;
     z-index: 10;
     padding-bottom: 10px;
-  }
+  } */
 
   .innersection {
     gap: 12px;
@@ -2686,9 +2685,6 @@ footer {
   letter-spacing: -0.03em;
 }
 
-
-
-
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
   .about-banner {
@@ -2751,16 +2747,11 @@ footer {
   .about-banner {
     height: 85vh; /* More height in landscape to accommodate content */
   }
-  
+
   .about-content h2 {
     font-size: 2rem; /* Smaller font in landscape */
   }
 }
-
-
-
-
-
 
 .mission-image img {
   width: 444px;
@@ -4118,7 +4109,7 @@ footer {
   font-size: 40px;
   font-weight: 400;
   color: #222;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .section-header p {
@@ -4176,12 +4167,16 @@ footer {
   box-shadow: var(--shadow-elevation-3);
   transform: scale(1.01);
 }
+.team-member-card.management {
+  width: 100%;
+}
 
 .team-member-card:hover .team-member-info {
   height: 100%;
   width: 100%;
   transition-duration: 300ms;
 }
+
 .team-member-card:hover .team-member-image {
   display: none;
   visibility: 0;
@@ -4190,7 +4185,7 @@ footer {
 /* Image */
 .team-member-image {
   width: 100%;
-  height: 100%x;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -4224,6 +4219,11 @@ footer {
   font-size: 20px;
   letter-spacing: -0.4px;
   line-height: 24.6px;
+}
+.bottomline > p {
+  font-size: 16px;
+  line-height: 120%;
+  text-align: justify;
 }
 .team-member-card:hover .bottomline {
   display: flex;
