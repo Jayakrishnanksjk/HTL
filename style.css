@@ -2649,7 +2649,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: calc(100vh - 64px);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("images/about-banner.svg");
   background-size: cover;
@@ -2683,6 +2683,89 @@ footer {
   margin: 0;
   line-height: 110%;
   letter-spacing: -0.03em;
+}
+
+.csr-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/about-banner.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.csr-content {
+  max-width: 100%;
+  padding: 20px;
+}
+
+.csr-content h2 {
+  text-wrap: nowrap;
+  font-size: 3.8rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+
+.csr-content p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin: 0;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+}
+
+.ceo-message {
+  height: 100vh;
+  padding: 0 80px 0 0;
+  display: flex;
+}
+
+.goal-of-brand {
+  background-color: green;
+  height: 100vh;
+  padding: 0 80px;
+  display: flex;
+}
+
+.left-message {
+  height: 100%;
+  flex: 4;
+}
+.left-message img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.right-message {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 0 32px; */
+  padding-left: 80px;
+  gap: 16px;
+  flex: 5;
+}
+
+.right-message h2 {
+}
+
+.right-message p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110% !important;
+  letter-spacing: -0.96px;
 }
 
 /* Mobile Responsive Styles */
@@ -4137,7 +4220,6 @@ footer {
 h2 {
   font-size: 40px;
   font-weight: 400;
-  color: #222;
 }
 .headingsubtext {
   font-weight: 400;
