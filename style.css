@@ -4438,45 +4438,37 @@ h2 {
   }
 }
 
-
-
-
-
-
-
-
-
-
 /* ==== Internship Section ==== */
 .internship-section {
-  padding: 60px 80px;
+  padding: 0px 0px 60px 80px;
   text-align: center;
   background: #fff;
-  font-family: "Inter", sans-serif;
-}
+  }
 
 .internship-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-  color: #000;
+  padding-left: 20px;
+  text-align: start;
+  font-size: 40px;
+  line-height: 77% !important;
+  letter-spacing: -1.44px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .internship-cards {
   display: flex;
   flex-wrap: nowrap;
   gap: 30px;
-  overflow-x: auto;        /* enables horizontal scrolling */
+  overflow-x: auto; /* enables horizontal scrolling */
   scroll-behavior: smooth; /* smooth scroll effect */
   /* padding-left: 60px;   */
-  padding-bottom: 60px;    /* space before the first card */
-  scrollbar-width: none;   /* hides scrollbar in Firefox */
+  padding-bottom: 60px; /* space before the first card */
+  scrollbar-width: none; /* hides scrollbar in Firefox */
 }
 
 .internship-cards::-webkit-scrollbar {
-  display: none;           /* hides scrollbar in Chrome/Safari */
+  display: none; /* hides scrollbar in Chrome/Safari */
 }
-
 
 .intern-card {
   background: #fff;
