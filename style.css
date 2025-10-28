@@ -225,6 +225,29 @@ body {
     padding: 0 40px;
     height: auto;
   }
+  .stat-individual {
+    width: 200px;
+    color: #fff;
+    background: #111;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+
+  .stat-individual span {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    height: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+
+  .stat-individual hr {
+    border: none;
+    height: 100%;
+    width: 0%;
+    background: #fff;
+    margin: 0;
+  }
 
   /* ✅ Important: allow wrapping */
   .stats-group {
@@ -3207,7 +3230,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: calc(100vh - 64px);
   background: url("images/project-hero.svg");
   background-size: cover;
   background-position: center;
@@ -3443,7 +3466,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 64px);
+
   background: radial-gradient(
       circle at center 50%,
       rgba(0, 0, 0, 0.6) 0%,
@@ -3602,7 +3626,8 @@ footer {
   display: flex;
   justify-content: center; /* center container horizontally */
   align-items: center; /* center vertically */
-  height: 100vh;
+  height: calc(100vh - 64px);
+
   background: radial-gradient(
       circle at center 50%,
       rgba(0, 0, 0, 0.6) 0%,
