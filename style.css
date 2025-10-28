@@ -1710,7 +1710,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 56px;
+  gap: 120px;
 }
 
 .trusted-brands-heading {
@@ -1761,10 +1761,50 @@ footer {
   background-clip: text;
   color: transparent;
 }
+/* Slider css test */
+
+.slider-container {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 200%;
+}
+
+.slide {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+.slide img {
+  display: block;
+  height: 24px;
+  width: auto;
+  transition: transform 0.3s;
+
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.slide img:hover {
+  transform: scale(1.14);
+  opacity: 1;
+}
+
+/* Slider css test */
+
 .marquee-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   align-items: center;
   justify-content: center;
 }
@@ -1797,12 +1837,17 @@ footer {
   align-items: center;
   justify-content: center;
   min-width: 120px;
-  height: 60px;
+  height: 40px;
   font-weight: 600;
   color: #444242;
   font-size: 1.2rem;
   padding: 0 30px;
   transform: scale(0.7);
+  display: flex;
+}
+
+.brand-logo-item img {
+  height: 32px;
 }
 
 @keyframes brandScrollLeft {
@@ -4525,7 +4570,7 @@ h2 {
   padding: 0px 0px 60px 80px;
   text-align: center;
   background: #fff;
-  }
+}
 
 .internship-section h2 {
   padding-left: 20px;
