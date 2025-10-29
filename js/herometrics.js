@@ -78,7 +78,7 @@ window.addEventListener("DOMContentLoaded", () => {
   createStatCycle(
     "statYears",
     "Green Projects",
-    "75+",
+    "75+sss",
     "Team Strength",
     "500+"
   );

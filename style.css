@@ -2170,6 +2170,7 @@ footer {
 .testimonial-content {
   display: flex;
   flex-direction: column;
+  flex: 10;
   gap: 80px;
 }
 
@@ -2211,46 +2212,18 @@ footer {
   align-items: center;
   gap: 10px;
 }
-
-.testimonial-mastercard {
-  display: flex;
-  align-items: center;
-}
-
-.testimonial-mastercard-circle {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-.testimonial-circle-red {
-  background-color: #eb001b;
-  position: relative;
-  left: 10px;
-  z-index: 2;
-}
-
-.testimonial-circle-yellow {
-  background-color: #f79e1b;
-  position: relative;
-  right: 10px;
-}
-
-.testimonial-mastercard-text {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 1px;
-  margin-left: 10px;
+.testimonial-company img {
+  height: 40px;
 }
 
 /* Quote icon on the right side */
 .testimonial-quote-icon {
-  flex-shrink: 0;
-  width: 60px;
-  height: 60px;
+  display: flex;
+  height: 100%;
+flex: 2;
+align-items: center;
+justify-content: center;
   opacity: 0.8;
-  margin-top: 100px;
 }
 
 .testimonial-quote-icon svg {
