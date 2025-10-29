@@ -10,10 +10,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 // createHorizontalScroll(".nextsection", ".innerwarap");
 
+// createHorizontalScrollById("culturePageSection", "culturePageSectionInner");
+
 createHorizontalScrollById(
   "projectHomePageSection",
   "projectHomePageSectionInner"
 );
+
 createHorizontalScrollById(
   "projectTeamPageManagement",
   "projectTeamPageManagementInner"

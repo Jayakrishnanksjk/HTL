@@ -225,6 +225,29 @@ body {
     padding: 0 40px;
     height: auto;
   }
+  .stat-individual {
+    width: 200px;
+    color: #fff;
+    background: #111;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+
+  .stat-individual span {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    height: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+
+  .stat-individual hr {
+    border: none;
+    height: 100%;
+    width: 0%;
+    background: #fff;
+    margin: 0;
+  }
 
   /* ✅ Important: allow wrapping */
   .stats-group {
@@ -1710,7 +1733,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 56px;
+  gap: 120px;
 }
 
 .trusted-brands-heading {
@@ -1761,10 +1784,50 @@ footer {
   background-clip: text;
   color: transparent;
 }
+/* Slider css test */
+
+.slider-container {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 200%;
+}
+
+.slide {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+.slide img {
+  display: block;
+  height: 24px;
+  width: auto;
+  transition: transform 0.3s;
+
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.slide img:hover {
+  transform: scale(1.14);
+  opacity: 1;
+}
+
+/* Slider css test */
+
 .marquee-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   align-items: center;
   justify-content: center;
 }
@@ -1797,12 +1860,17 @@ footer {
   align-items: center;
   justify-content: center;
   min-width: 120px;
-  height: 60px;
+  height: 40px;
   font-weight: 600;
   color: #444242;
   font-size: 1.2rem;
   padding: 0 30px;
   transform: scale(0.7);
+  display: flex;
+}
+
+.brand-logo-item img {
+  height: 32px;
 }
 
 @keyframes brandScrollLeft {
@@ -2102,6 +2170,7 @@ footer {
 .testimonial-content {
   display: flex;
   flex-direction: column;
+  flex: 10;
   gap: 80px;
 }
 
@@ -2143,46 +2212,18 @@ footer {
   align-items: center;
   gap: 10px;
 }
-
-.testimonial-mastercard {
-  display: flex;
-  align-items: center;
-}
-
-.testimonial-mastercard-circle {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-.testimonial-circle-red {
-  background-color: #eb001b;
-  position: relative;
-  left: 10px;
-  z-index: 2;
-}
-
-.testimonial-circle-yellow {
-  background-color: #f79e1b;
-  position: relative;
-  right: 10px;
-}
-
-.testimonial-mastercard-text {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 1px;
-  margin-left: 10px;
+.testimonial-company img {
+  height: 40px;
 }
 
 /* Quote icon on the right side */
 .testimonial-quote-icon {
-  flex-shrink: 0;
-  width: 60px;
-  height: 60px;
+  display: flex;
+  height: 100%;
+  flex: 2;
+  align-items: center;
+  justify-content: center;
   opacity: 0.8;
-  margin-top: 100px;
 }
 
 .testimonial-quote-icon svg {
@@ -3162,7 +3203,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: calc(100vh - 64px);
   background: url("images/project-hero.svg");
   background-size: cover;
   background-position: center;
@@ -3398,7 +3439,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 64px);
+
   background: radial-gradient(
       circle at center 50%,
       rgba(0, 0, 0, 0.6) 0%,
@@ -3557,7 +3599,8 @@ footer {
   display: flex;
   justify-content: center; /* center container horizontally */
   align-items: center; /* center vertically */
-  height: 100vh;
+  height: calc(100vh - 64px);
+
   background: radial-gradient(
       circle at center 50%,
       rgba(0, 0, 0, 0.6) 0%,
@@ -3848,7 +3891,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: calc(100vh - 64px);
   background: radial-gradient(
       circle at center,
       rgba(0, 0, 0, 0.6) 0%,
@@ -3909,10 +3952,17 @@ footer {
 .events-row {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
-  margin-bottom: 30px;
-  overflow-x: auto;
+  height: 100%;
+  gap: 16px;
+  overflow-x: none;
   scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.wrapperorimage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0px 0 24px 0;
+  gap: 16px;
 }
 
 .events-row::-webkit-scrollbar {
@@ -3925,11 +3975,14 @@ footer {
   background-color: white;
   flex: 0 0 auto;
   width: 400px;
+  height: 100%;
 }
-
+.gallary {
+  padding-top: 0px !important;
+}
 .event-card img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
@@ -3937,13 +3990,17 @@ footer {
 
 .event-caption {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  background: #ffffff;
+  bottom: 16px;
+  left: 16px;
+  width: 100%;
+  background: white;
   color: #000000;
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 1px 18px;
+  font-weight: 500;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  line-height: 77%;
+  padding: 7px 16px;
 }
 
 /* Responsive adjustments */
@@ -4531,7 +4588,7 @@ h2 {
   padding: 0px 0px 60px 80px;
   text-align: center;
   background: #fff;
-  }
+}
 
 .internship-section h2 {
   padding-left: 20px;
