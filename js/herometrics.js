@@ -56,29 +56,29 @@ function createStatCycle(
 window.addEventListener("DOMContentLoaded", () => {
   createStatCycle(
     "statClients",
-    "MW Executed",
-    "650M+",
+    "Team Strength",
+    "600",
     "Clients served",
     "100+"
   );
   createStatCycle(
     "statProjects",
-    "CO₂ Reduced",
-    "85K+",
+    "HP",
+    "12,000+",
     "Sq. Ft. Covered",
     "20M+"
   );
   createStatCycle(
     "statCountries",
-    "Energy Saved",
-    "120G+",
+    "IT Loads",
+    "200 MW",
     "CSAT Score",
     "96%"
   );
   createStatCycle(
     "statYears",
-    "Green Projects",
-    "75+",
+    "Presence",
+    "30+",
     "Team Strength",
     "500+"
   );

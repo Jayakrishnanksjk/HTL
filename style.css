@@ -4757,3 +4757,123 @@ h2 {
     margin-bottom: 40px;
   }
 }
+
+
+
+
+
+
+
+/* Overlay background */
+.business-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Show popup when active */
+.business-form-overlay.active {
+  display: flex;
+  padding: 100px 200px;
+}
+
+/* Form container */
+.business-form-container {
+  background: #fff;
+  border-radius: 15px;
+  padding: 50px 60px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Inter", sans-serif;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Heading */
+.business-form-container h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* Form layout */
+.business-form .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.business-form input,
+.business-form select {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.business-form input:focus,
+.business-form select:focus {
+  border-color: #000;
+}
+
+/* Note */
+.required-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Submit button */
+.submit-btn {
+  background: #ff3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #e23232;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .business-form-container {
+    width: 90%;
+    padding: 40px 25px;
+  }
+
+  .business-form .form-row {
+    flex-direction: column;
+  }
+}
