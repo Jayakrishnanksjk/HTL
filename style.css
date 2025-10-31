@@ -3431,8 +3431,11 @@ footer {
 
 /* service section */
 
-.service-cards-section {
-  padding: 80px 80px 20px 80px;
+.sectiongap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 80px 80px 24px 80px;
 }
 
 .service-hero-section {
@@ -3485,13 +3488,15 @@ footer {
 
 .service-card-container {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
   justify-content: center; /* centers the row */
 }
 
 .service-card {
-  width: 325px; /* fixed card width */
+  flex: 1;
+  position: relative;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -3503,6 +3508,15 @@ footer {
 
 .service-card:hover {
   transform: translateY(-5px);
+}
+
+.service-card:hover .service-card-content p {
+  visibility: visible;
+  opacity: 1;
+}
+
+.service-card:hover .service-card-content {
+height: 100%;
 }
 
 .service-card-image {
@@ -3518,13 +3532,20 @@ footer {
 }
 
 .service-card-content {
-  height: 60px; /* fixed height */
+  position: absolute;
+  bottom: 0;
+  height: 64px; /* fixed height */
+  transition: ease-in-out 300ms;
+  gap: 16px;
+  background-color: white;
   padding: 20px;
-  text-align: center;
-  background-color: #fff;
+  width: 100%;
+  /* background-color: #fff; */
+  flex-direction: column;
   display: flex;
-  align-items: center; /* vertically centers the text */
-  justify-content: flex-start; /* optional, centers horizontally */
+  justify-content: space-between;
+
+  /* optional, centers horizontally */
 }
 
 .service-card-content h3 {
@@ -3535,9 +3556,14 @@ footer {
   letter-spacing: -0.02em;
   font-weight: 400;
 }
+.service-card-content p {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: justify;
+  transition: linear 300ms;
 
-.service-cards-section-2 {
-  padding: 20px 80px 80px;
 }
 
 /* Container */
@@ -3729,9 +3755,9 @@ footer {
 }
 
 .services-grid .service-item:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: 50%;
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 50%;
 }
 
 .service-item {
@@ -4680,13 +4706,6 @@ h2 {
   }
 }
 
-
-
-
-
-
-
-
 .mission-highlight-section {
   display: flex;
   align-items: stretch;
@@ -4698,10 +4717,10 @@ h2 {
 
 .mission-highlight-content {
   justify-content: center;
-    flex-direction: column;
-    display: flex;
-    flex: 1;
-    padding-right: 60px;
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+  padding-right: 60px;
 }
 
 .mission-highlight-content h2 {
@@ -4714,7 +4733,7 @@ h2 {
 }
 
 .mission-highlight-content p {
-  font-size: 2.0rem;
+  font-size: 2rem;
   color: #444;
   line-height: 1.2;
   letter-spacing: -0.03em;
