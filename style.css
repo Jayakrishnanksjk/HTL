@@ -99,13 +99,50 @@ body {
 }
 /* --------------------------------------------- */
 .hero-container {
-  /* height: 100vh; */
+
+  /* height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(images/Hero\ Image.png) no-repeat center center; */
+
+    position: relative;
   height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url(images/Hero\ Image.png) no-repeat center center;
+  overflow: hidden;
 }
+
+.hero-video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* 🎥 Actual video */
+.hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 🌑 Overlay only on video */
+.hero-video-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* or your gradient */
+  z-index: 1;
+}
+
 .hero-elements {
   height: 100%;
   padding: 0 80px;

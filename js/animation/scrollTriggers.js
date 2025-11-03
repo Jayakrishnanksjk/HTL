@@ -18,6 +18,11 @@ createHorizontalScrollById(
 );
 
 createHorizontalScrollById(
+  "projectSectorSection",
+  "projectSectorSectionInner"
+);
+
+createHorizontalScrollById(
   "projectTeamPageManagement",
   "projectTeamPageManagementInner"
 );
