@@ -55,7 +55,11 @@
             <div class="menu-list">
               <a href="/hvac.html" class="link-box">HVAC</a>
               <a href="/mep.html" class="link-box">MEP</a>
+<<<<<<< HEAD
 
+=======
+              <!-- <a href="/Fitout.html" class="link-box">Fit-out</a> -->
+>>>>>>> b908acf163733c8aa8949498be5453835dc7911a
               <a href="/BaseBuild.html" class="link-box">Base build</a>
               <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
               <a href="/InteriorFitout.html" class="link-box">C&I & Interior Fit-out</a>
@@ -229,7 +233,7 @@
     <div class="new-projects-row">
       <div class="new-project-card">
         <div class="new-project-image">
-          <img src="images/project-1.png" alt="Project 1" />
+          <img src="images/projects/Microsoft_hyderabad.webp" alt="Project 1" />
         </div>
         <div class="new-project-info">
           <div class="new-info-left">
@@ -419,19 +423,146 @@
     </div>
   </footer>
 
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Scripts -->
+    <script src="./js/navbar.js"></script>
+    <!-- <script src="./js/carousal.js"></script> -->
+    <script src="./js/stats.js"></script>
+    <script src="./js/testemonials.js"></script>
+    <!-- Animations -->
+    <script src="./js/animation/Lenis.js"></script>
+    <script src="./Hamburger/script.js"></script>
+    <script src="./js/marquee.js"></script>
+    <script src="./js/herometrics.js"></script>
+    <script src="./js/animation/scrollTriggers.js"></script>
+    <script>
+      // Toggle entire mobile menu
+      // Mobile menu functionality with Lenis integration - FIXED VERSION
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const dropdownBtns = document.querySelectorAll(".dropdown-btn");
+        const mobileNavbar = document.getElementById("mobileNavbar");
+        const mobileNavHeader = document.querySelector(".mobile-nav-header");
 
-  <!-- Scripts -->
-  <script src="./js/navbar.js"></script>
-  <!-- <script src="./js/carousal.js"></script> -->
-  <script src="./js/stats.js"></script>
-  <!-- <script src="./js/testemonial.js"></script> -->
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener("click", function () {
+          const isOpening = !mobileMenu.classList.contains("active");
 
-  <!-- Animations -->
-  <script src="./js/animation/Lenis.js"></script>
+          // Toggle menu active state
+          mobileMenu.classList.toggle("active");
+          // Toggle navbar full-screen state
+          mobileNavbar.classList.toggle("menu-active");
+          // Toggle hamburger animation
+          mobileMenuToggle.classList.toggle("active");
+
+          if (isOpening) {
+            // Pause Lenis when opening menu
+            if (typeof lenis !== "undefined") {
+              lenis.stop();
+            }
+            document.body.style.overflow = "hidden";
+          } else {
+            // Resume Lenis when closing menu
+            if (typeof lenis !== "undefined") {
+              lenis.start();
+            }
+            document.body.style.overflow = "";
+
+            // Close all dropdowns when closing menu
+            dropdownBtns.forEach((btn) => {
+              btn.classList.remove("active");
+              btn.nextElementSibling.classList.remove("show");
+            });
+          }
+        });
+
+        // Single dropdown functionality
+        dropdownBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const isActive = this.classList.contains("active");
+            const dropdownContent = this.nextElementSibling;
+            const isExpanding = !isActive;
+
+            // Close all other dropdowns
+            dropdownBtns.forEach((otherBtn) => {
+              if (otherBtn !== this) {
+                otherBtn.classList.remove("active");
+                otherBtn.nextElementSibling.classList.remove("show");
+              }
+            });
+
+            // Toggle current dropdown
+            if (isExpanding) {
+              // Pause Lenis when expanding dropdown
+              if (typeof lenis !== "undefined") {
+                lenis.stop();
+              }
+              this.classList.add("active");
+              dropdownContent.classList.add("show");
+            } else {
+              // Resume Lenis when collapsing dropdown
+              if (typeof lenis !== "undefined") {
+                lenis.start();
+              }
+              this.classList.remove("active");
+              dropdownContent.classList.remove("show");
+            }
+          });
+        });
+
+        // Close menu when clicking on links
+        const menuLinks = document.querySelectorAll(".dropdown-content a");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            // Resume Lenis when navigating
+            if (typeof lenis !== "undefined") {
+              lenis.start();
+            }
+
+            // Close menu and reset states
+            mobileMenu.classList.remove("active");
+            mobileNavbar.classList.remove("menu-active");
+            mobileMenuToggle.classList.remove("active");
+            document.body.style.overflow = "";
+
+            // Close all dropdowns
+            dropdownBtns.forEach((btn) => {
+              btn.classList.remove("active");
+              btn.nextElementSibling.classList.remove("show");
+            });
+          });
+        });
+
+        // Close menu when clicking outside (optional)
+        document.addEventListener("click", function (event) {
+          if (
+            !mobileNavbar.contains(event.target) &&
+            mobileMenu.classList.contains("active")
+          ) {
+            // Close menu and reset states
+            mobileMenu.classList.remove("active");
+            mobileNavbar.classList.remove("menu-active");
+            mobileMenuToggle.classList.remove("active");
+            document.body.style.overflow = "";
+
+            // Close all dropdowns
+            dropdownBtns.forEach((btn) => {
+              btn.classList.remove("active");
+              btn.nextElementSibling.classList.remove("show");
+            });
+
+            // Resume Lenis
+            if (typeof lenis !== "undefined") {
+              lenis.start();
+            }
+          }
+        });
+      });
+    </script>
 </body>
 
 </html>
