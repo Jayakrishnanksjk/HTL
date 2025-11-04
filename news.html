@@ -119,7 +119,7 @@
       </div>
 
       <div class="new-projects-row">
-        <div class="news-card">
+        <div class="news-card" onclick="openNewsPopup(0)">
           <div class="news-image">
             <img
               src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
@@ -325,6 +325,21 @@
       </div>
     </section>
 
+
+
+    <div id="newsPopup" class="news-popup">
+  <div class="news-popup-content">
+    <span class="close-btn" onclick="closeNewsPopup()">&times;</span>
+    <h2 id="popupHeadline"></h2>
+    <p class="popup-date" id="popupDate"></p>
+    <div class="popup-body">
+      <img id="popupImage" src="" alt="News Image" />
+      <div class="popup-text" id="popupText"></div>
+    </div>
+    <a id="popupLink" href="#" target="_blank" rel="noopener noreferrer">Read Full Article</a>
+  </div>
+</div>
+
     <footer>
       <div class="topper-section">
         <div class="Topper-containers">
@@ -430,8 +445,35 @@
     <script src="./js/animation/Lenis.js"></script>
     <script src="./Hamburger/script.js"></script>
     <script src="./js/animation/scrollTriggers.js"></script>
+    <script src="./js/news.js"></script>
     <script>
       createHorizontalScroll(".nextsection", ".innerwarap");
     </script>
+
+
+<script>
+  // popup.js
+function openNewsPopup(index) {
+  const news = newsData[index];
+  document.getElementById("popupHeadline").textContent = news.headline;
+  document.getElementById("popupDate").textContent = `${news.publication} • ${news.date}`;
+  document.getElementById("popupImage").src = news.image;
+  document.getElementById("popupText").innerHTML = news.content;
+  document.getElementById("popupLink").href = news.articleLink;
+
+  document.getElementById("newsPopup").style.display = "flex";
+}
+
+function closeNewsPopup() {
+  document.getElementById("newsPopup").style.display = "none";
+}
+
+// Optional: close popup when clicking outside
+window.addEventListener("click", function (e) {
+  const popup = document.getElementById("newsPopup");
+  if (e.target === popup) closeNewsPopup();
+});
+
+</script>
   </body>
 </html>
