@@ -5052,7 +5052,7 @@ ease;
 #popupLink {
   display: inline-block;
   margin-top: 20px;
-  color: #0078ff;
+  color: red;
   font-weight: 500;
   text-decoration: none;
 }
