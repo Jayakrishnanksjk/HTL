@@ -1,230 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTL Website</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="normalize.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTL Website</title>
 
-  <body>
-    <!-- Hero Section -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-body">
-            <a class="link-style-reset" href="./index.html">
-                <div class="nav-brand">
-                    <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto"
-                        href="index.html" />
-                </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="normalize.css" />
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-body">
+      <a class="link-style-reset" href="./index.html">
+        <div class="nav-brand">
+          <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" href="index.html" />
+        </div>
+      </a>
+
+      <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
+        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="top" y="9" width="48" height="6" fill="white" />
+          <rect class="bot" y="29" width="48" height="6" fill="white" />
+        </svg>
+      </div>
+    </div>
+    <div class="nav-menu-section" id="navSection">
+      <div class="inner-container">
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Company</h3>
+            </div>
+            <div class="menu-list">
+              <a href="/about.html" class="link-box">About Us</a>
+              <a href="/team.html" class="link-box">Our Team</a>
+              <a href="/culturePage.html" class="link-box">People and Culture</a>
+              <a href="/services.html" class="link-box">Services</a>
+              <a href="/CSR.html" class="link-box">CSR Initiatives</a>
+              <a href="#" class="link-box disabled">Investor Relations</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Services</h3>
+            </div>
+            <div class="menu-list">
+              <a href="/hvac.html" class="link-box">HVAC</a>
+              <a href="/mep.html" class="link-box">MEP</a>
+              <a href="/BaseBuild.html" class="link-box">Base build</a>
+              <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
+              <a href="/InteriorFitout.html" class="link-box">C&I & Interior Fit-out</a>
+              <a href="/VirtualProjectManagement.html" class="link-box">Virtual Project Management</a>
+              <a href="/OperationNmaintainance.html" class="link-box">Operations & Maintenance</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Sectors</h3>
+            </div>
+            <div class="menu-list">
+              <a href="/commGcc.html" class="link-box">Commercial Real Estate & GCC</a>
+              <a href="/Industrial.html" class="link-box">Industrial & Warehousing</a>
+              <a href="/DataCentres.html" class="link-box">Data Centres & Critical rooms</a>
+              <a href="/Biotech.html" class="link-box">Pharma & Biotech Life sciences</a>
+              <a href="/hospitality.html" class="link-box">Hospitality & Luxury Retail</a>
+              <a href="/healthcare.html" class="link-box">Hospital & healthcare</a>
+              <a href="/Educational.html" class="link-box">Educational institutes</a>
+              <a href="/Infra.html" class="link-box">Gov & Infra</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Resources</h3>
+            </div>
+            <div class="menu-list">
+              <a href="project.html" class="link-box">Projects</a>
+              <a href="news.html" class="link-box">News & Articles</a>
+            </div>
+          </div>
+
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Socials</h3>
+            </div>
+            <div class="menu-list">
+              <a href="#" class="link-box">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hvac-hero-section">
+    <div class="hvac-hero-container">
+      <div class="hvac-hero-left">
+        <h1>Integrated Turnkey MEP Solutions for Enduring Performance </h1>
+        <p>
+          Delivering unified, end-to-end. Mechanical, Electrical, Plumbing & Firefighting infrastructure engineered for
+          efficiency, reliability, sustainability, and seamless integration.
+        </p>
+      </div>
+      <div class="hvac-hero-right"></div>
+    </div>
+  </section>
+
+  <section class="image-text-section">
+    <div class="image-text-container">
+      <div class="image-section">
+        <img src="images/service-hvac-image.png" alt="HVAC Services" />
+      </div>
+      <div class="text-section">
+        <p>
+          HTL’s turnkey MEP services deliver seamless design and installation with single-point accountability, ensuring
+          full regulatory compliance and high-quality, integrated building systems that optimize comfort, safety, and
+          operational efficiency.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="additional-services-section">
+    <div class="additional-services-container">
+      <h2 class="section-title">Key Highlights</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>HVAC Design & Maintenance</h3>
+          <p>
+            Comprehensive HVAC solutions ensuring comfort, performance, and energy efficiency.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Lighting & Controls</h3>
+          <p>
+            Smart, efficient lighting systems enhancing visual comfort and operational flexibility.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Public Health Engineering
+          </h3>
+          <p>
+            Reliable plumbing systems built for efficiency, safety, and long-term durability.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Fire Fighting & Protection Systems</h3>
+          <p>
+            Certified fire detection and suppression ensuring complete safety and compliance.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Building Automation (BMS)</h3>
+          <p>
+            Integrated control systems optimizing HVAC, lighting, and safety performance.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>BIM Coordination</h3>
+          <p>
+            3D coordination minimizing clashes for precise, efficient project delivery.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Testing & Commissioning</h3>
+          <p>
+            Thorough system testing ensures seamless operation and full functionality before handover.
+          </p>
+        </div>
+        <div class="service-item">
+          <h3>Retrofit</h3>
+          <p>
+            Modernizing existing MEP systems for improved performance, safety, and sustainability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="expert-section" style="padding-bottom: 80px ;">
+    <div class="expert-container">
+      <div class="expert-card">
+        <!-- Image -->
+        <div class="expert-image">
+          <img src="images/team new/Sachin Baraskar.webp" alt="Vishal Jadav" />
+        </div>
+
+        <!-- Bottom info container -->
+        <div class="expert-info-container">
+          <div class="expert-text">
+            <h3>Sachin Baraskar</h3>
+            <p class="expert-title">National Business Head – MEP</p>
+          </div>
+          <div class="expert-linkedin">
+            <a href="https://www.linkedin.com/in/sachin-baraskar-99203a289/" target="_blank" rel="noopener noreferrer">
+              <img src="images/linkedin-icon.svg" alt="LinkedIn" />
             </a>
-
-            <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
-                <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect class="top" y="9" width="48" height="6" fill="white" />
-                    <rect class="bot" y="29" width="48" height="6" fill="white" />
-                </svg>
-            </div>
-        </div>
-        <div class="nav-menu-section" id="navSection">
-            <div class="inner-container">
-                <div class="inner-div-nav">
-                    <div class="menu-box">
-                        <div class="title-box">
-                            <h3>Company</h3>
-                        </div>
-                        <div class="menu-list">
-                            <a href="/about.html" class="link-box">About Us</a>
-                            <a href="/team.html" class="link-box">Our Team</a>
-                            <a href="/culturePage.html" class="link-box">People and Culture</a>
-                            <a href="/services.html" class="link-box">Services</a>
-                            <a href="/CSR.html" class="link-box">CSR Initiatives</a>
-                            <a href="#" class="link-box disabled">Investor Relations</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="inner-div-nav">
-                    <div class="menu-box">
-                        <div class="title-box">
-                            <h3>Services</h3>
-                        </div>
-                        <div class="menu-list">
-                            <a href="/hvac.html" class="link-box">HVAC</a>
-                            <a href="/mep.html" class="link-box">MEP</a>
-                            <a href="/BaseBuild.html" class="link-box">Base build</a>
-                            <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
-                            <a href="/InteriorFitout.html" class="link-box">C&I & Interior Fit-out</a>
-                            <a href="/VirtualProjectManagement.html" class="link-box">Virtual Project Management</a>
-                            <a href="/OperationNmaintainance.html" class="link-box">Operations & Maintenance</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="inner-div-nav">
-                    <div class="menu-box">
-                        <div class="title-box">
-                            <h3>Sectors</h3>
-                        </div>
-                        <div class="menu-list">
-                            <a href="/commGcc.html" class="link-box">Commercial Real Estate & GCC</a>
-                            <a href="/Industrial.html" class="link-box">Industrial & Warehousing</a>
-                            <a href="/DataCentres.html" class="link-box">Data Centres & Critical rooms</a>
-                            <a href="/Biotech.html" class="link-box">Pharma & Biotech Life sciences</a>
-                            <a href="/hospitality.html" class="link-box">Hospitality & Luxury Retail</a>
-                            <a href="/healthcare.html" class="link-box">Hospital & healthcare</a>
-                            <a href="/Educational.html" class="link-box">Educational institutes</a>
-                            <a href="/Infra.html" class="link-box">Gov & Infra</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="inner-div-nav">
-                    <div class="menu-box">
-                        <div class="title-box">
-                            <h3>Resources</h3>
-                        </div>
-                        <div class="menu-list">
-                            <a href="project.html" class="link-box">Projects</a>
-                            <a href="news.html" class="link-box">News & Articles</a>
-                        </div>
-                    </div>
-
-                    <div class="menu-box">
-                        <div class="title-box">
-                            <h3>Socials</h3>
-                        </div>
-                        <div class="menu-list">
-                            <a href="#" class="link-box">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <section class="hvac-hero-section">
-      <div class="hvac-hero-container">
-        <div class="hvac-hero-left">
-          <h1>Integrated Turnkey MEP Solutions for Enduring Performance </h1>
-          <p>
-            Delivering unified, end-to-end. Mechanical, Electrical, Plumbing & Firefighting infrastructure engineered for efficiency, reliability, sustainability, and seamless integration.
-          </p>
-        </div>
-        <div class="hvac-hero-right"></div>
-      </div>
-    </section>
-
-    <section class="image-text-section">
-      <div class="image-text-container">
-        <div class="image-section">
-          <img src="images/service-hvac-image.png" alt="HVAC Services" />
-        </div>
-        <div class="text-section">
-          <p>
-            HTL’s turnkey MEP services deliver seamless design and installation with single-point accountability, ensuring full regulatory compliance and high-quality, integrated building systems that optimize comfort, safety, and operational efficiency. 
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="additional-services-section">
-      <div class="additional-services-container">
-        <h2 class="section-title">Key Highlights</h2>
-        <div class="services-grid">
-          <div class="service-item">
-            <h3>HVAC Design & Maintenance</h3>
-            <p>
-              Comprehensive HVAC solutions ensuring comfort, performance, and energy efficiency.
-            </p>
-          </div>
-          <div class="service-item">
-            <h3>Lighting & Controls</h3>
-            <p>
-              Smart, efficient lighting systems enhancing visual comfort and operational flexibility. 
-            </p>
-          </div>
-          <div class="service-item">
-            <h3>Public Health Engineering 
-</h3>
-            <p>
-              Reliable plumbing systems built for efficiency, safety, and long-term durability. 
-            </p>
-          </div>
-          <div class="service-item">
-            <h3>Fire Fighting & Protection Systems</h3>
-            <p>
-              Certified fire detection and suppression ensuring complete safety and compliance.
-            </p>
-          </div>
-          <div class="service-item">
-            <h3>Building Automation (BMS)</h3>
-            <p>
-             Integrated control systems optimizing HVAC, lighting, and safety performance.
-            </p>
-          </div>
-          <div class="service-item">
-            <h3>BIM Coordination</h3>
-            <p>
-              3D coordination minimizing clashes for precise, efficient project delivery. 
-            </p>
-          </div>
-          <div class="service-item">
-            <h3>Testing & Commissioning</h3>
-            <p>
-              Thorough system testing ensures seamless operation and full functionality before handover.
-            </p>
-          </div>
-          <div class="service-item">
-            <h3>Retrofit</h3>
-            <p>
-             Modernizing existing MEP systems for improved performance, safety, and sustainability.
-            </p>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="expert-section" style="padding-bottom: 80px ;">
-  <div class="expert-container">
-    <div class="expert-card">
-      <!-- Image -->
-      <div class="expert-image">
-        <img src="images/team new/Sachin Baraskar.webp" alt="Vishal Jadav" />
-      </div>
-
-      <!-- Bottom info container -->
-      <div class="expert-info-container">
-        <div class="expert-text">
-          <h3>Sachin Baraskar</h3>
-          <p class="expert-title">National Business Head – MEP</p>
-        </div>
-        <div class="expert-linkedin">
-          <a href="https://www.linkedin.com/in/sachin-baraskar-99203a289/" target="_blank" rel="noopener noreferrer">
-            <img src="images/linkedin-icon.svg" alt="LinkedIn" />
-          </a>
-        </div>
+      <!-- Content next to the card -->
+      <div class="expert-content">
+        <h2>Meet the Expert</h2>
+        <p>
+          HTL’s experts engineer trusted solutions, combining technical excellence with a commitment to your project’s
+          success.
+        </p>
+        <button class="specialist-btn">Talk to us</button>
       </div>
     </div>
+  </section>
 
-    <!-- Content next to the card -->
-    <div class="expert-content">
-      <h2>Meet the Expert</h2>
-      <p>
-        HTL’s experts engineer trusted solutions, combining technical excellence with a commitment to your project’s success. 
-      </p>
-      <button class="specialist-btn">Talk to us</button>
-    </div>
-  </div>
-</section>
-
-<section class="nextsection" id="projectHomePageSection">
+  <section class="nextsection" id="projectHomePageSection">
     <div class="section-header">
       <h2>Featured Projects</h2>
     </div>
@@ -418,7 +418,9 @@
             </div>
           </div>
           <div class="image-container">
-            <img src="./images/services/MEP/CtrlS-Mumbai-Phase-II-Datacenter-which-was-built-in-a-record-time-of-120-days-1.jpg" alt="Project image 1" />
+            <img
+              src="./images/services/MEP/CtrlS-Mumbai-Phase-II-Datacenter-which-was-built-in-a-record-time-of-120-days-1.jpg"
+              alt="Project image 1" />
           </div>
           <div class="text-container">
             <div class="text-innercontainer">
@@ -434,7 +436,7 @@
           </div>
         </div>
 
-        
+
 
 
         <!-- <div class="featured-project-card-new">
@@ -449,110 +451,103 @@
     </div>
   </section>
 
-    <footer>
-      <div class="topper-section">
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">Company</h5>
-          <div class="footer-link-group">
-            <a href="#">About Us</a>
-            <a href="#">Our Team</a>
-            <a href="#">People & Culture</a>
-            <a href="#">Services</a>
-            <a href="#">CSR Initiatives</a>
-          </div>
-        </div>
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">services</h5>
-          <div class="footer-link-group">
-            <a href="#">HVAC</a>
-            <a href="#">MEP</a>
-            <a href="#">Fit-out</a>
-            <a href="#">Base build</a>
-            <a href="#">Cleanrooms</a>
-            <a href="#">C&I & Interior fit-out</a>
-            <a href="#">Virtual Project Management</a>
-            <a href="#">Operations & Maintenance</a>
-          </div>
-        </div>
-        <div class="Topper-containers">
-          <h5 class="footer-section-header">Sectors</h5>
-          <div class="footer-link-group">
-            <a href="#">Commercial Real Estate & GCC</a>
-            <a href="#">Industrial & Warehousing</a>
-            <a href="#">Data Centres & Critical rooms</a>
-            <a href="#">Pharma & biotech life sciences</a>
-            <a href="#">Hospital & healthcare</a>
-            <a href="#">Educational institutes</a>
-            <a href="#">Gov & Infra</a>
-          </div>
-        </div>
-        <div class="Topper-containers-last">
-          <div class="last-inner-containers">
-            <h5 class="footer-section-header">Contact us</h5>
-            <div class="footer-link-group">
-              <a href="#">info@abcd.demo</a>
-              <a href="#">+91 920 000 0000</a>
-            </div>
-          </div>
-          <div class="last-inner-containers">
-            <h5 class="footer-section-header">Follow us on</h5>
-            <div class="footer-link-group">
-              <a href="#">LinkedIn</a>
-            </div>
-          </div>
+  <footer>
+    <div class="topper-section">
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">Company</h5>
+        <div class="footer-link-group">
+          <a href="#">About Us</a>
+          <a href="#">Our Team</a>
+          <a href="#">People & Culture</a>
+          <a href="#">Services</a>
+          <a href="#">CSR Initiatives</a>
         </div>
       </div>
-      <div class="bottom-section">
-        <div class="left">
-          <img
-            src="./images/Logo/Footer Image Block.png"
-            height="56px"
-            alt="logo footer"
-          />
-          <object
-            data="./images/Logo/iso.svg"
-            type="image/svg+xml"
-            height="48px"
-          ></object>
-        </div>
-        <div class="right">
-          <div class="location-group">
-            <a href="#">Mumbai</a>
-            <p>|</p>
-            <a href="#">CBD-Belapur</a>
-            <p>|</p>
-            <a href="#">Pune</a>
-            <p>|</p>
-            <a href="#">Bangalore</a>
-            <p>|</p>
-            <a href="#">Ahemdabad</a>
-            <p>|</p>
-            <a href="#">New Delhi</a>
-            <p>|</p>
-            <a href="#">Hyderabad</a>
-            <p>|</p>
-            <a href="#">Africa</a>
-          </div>
-          <p class="copyrights">
-            © 2025 HTL AIRCON<br />
-            All rights reserved
-          </p>
-        </div>
-      </div>
-    </footer>
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">services</h5>
+        <div class="footer-link-group">
+          <a href="#">HVAC</a>
+          <a href="#">MEP</a>
 
-    <!-- Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Scripts -->
-    <script src="./js/navbar.js"></script>
-    <!-- <script src="./js/carousal.js"></script> -->
-    <script src="./js/stats.js"></script>
-    <!-- <script src="./js/testemonial.js"></script> -->
-    <!-- Animations -->
-    <script src="./js/animation/Lenis.js"></script>
-    <script src="./Hamburger/script.js"></script>
-    <script src="./js/animation/scrollTriggers.js"></script>
-  </body>
+          <a href="#">Base build</a>
+          <a href="#">Cleanrooms</a>
+          <a href="#">C&I & Interior fit-out</a>
+          <a href="#">Virtual Project Management</a>
+          <a href="#">Operations & Maintenance</a>
+        </div>
+      </div>
+      <div class="Topper-containers">
+        <h5 class="footer-section-header">Sectors</h5>
+        <div class="footer-link-group">
+          <a href="#">Commercial Real Estate & GCC</a>
+          <a href="#">Industrial & Warehousing</a>
+          <a href="#">Data Centres & Critical rooms</a>
+          <a href="#">Pharma & biotech life sciences</a>
+          <a href="#">Hospital & healthcare</a>
+          <a href="#">Educational institutes</a>
+          <a href="#">Gov & Infra</a>
+        </div>
+      </div>
+      <div class="Topper-containers-last">
+        <div class="last-inner-containers">
+          <h5 class="footer-section-header">Contact us</h5>
+          <div class="footer-link-group">
+            <a href="#">info@abcd.demo</a>
+            <a href="#">+91 920 000 0000</a>
+          </div>
+        </div>
+        <div class="last-inner-containers">
+          <h5 class="footer-section-header">Follow us on</h5>
+          <div class="footer-link-group">
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <div class="left">
+        <img src="./images/Logo/Footer Image Block.png" height="56px" alt="logo footer" />
+        <object data="./images/Logo/iso.svg" type="image/svg+xml" height="48px"></object>
+      </div>
+      <div class="right">
+        <div class="location-group">
+          <a href="#">Mumbai</a>
+          <p>|</p>
+          <a href="#">CBD-Belapur</a>
+          <p>|</p>
+          <a href="#">Pune</a>
+          <p>|</p>
+          <a href="#">Bangalore</a>
+          <p>|</p>
+          <a href="#">Ahemdabad</a>
+          <p>|</p>
+          <a href="#">New Delhi</a>
+          <p>|</p>
+          <a href="#">Hyderabad</a>
+          <p>|</p>
+          <a href="#">Africa</a>
+        </div>
+        <p class="copyrights">
+          © 2025 HTL AIRCON<br />
+          All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Scripts -->
+  <script src="./js/navbar.js"></script>
+  <!-- <script src="./js/carousal.js"></script> -->
+  <script src="./js/stats.js"></script>
+  <!-- <script src="./js/testemonial.js"></script> -->
+  <!-- Animations -->
+  <script src="./js/animation/Lenis.js"></script>
+  <script src="./Hamburger/script.js"></script>
+  <script src="./js/animation/scrollTriggers.js"></script>
+</body>
+
 </html>
