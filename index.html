@@ -114,6 +114,15 @@
           <img src="./images/htl logo.png" alt="HTL Logo" height="28" />
         </a>
       </div>
+      <!--       
+      <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleNav()">
+        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="top" y="9" width="48" height="6" fill="white" />
+          <rect class="bot" y="29" width="48" height="6" fill="white" />
+        </svg>
+      </div> -->
+
+
       <div class="mobile-menu-toggle" id="mobileMenuToggle">
         <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect y="10" width="32" height="4" fill="white" />
@@ -133,9 +142,9 @@
         <div class="dropdown-content">
           <a href="about.html">About Us</a>
           <a href="team.html">Our Team</a>
-          <a href="#">People and Culture</a>
+          <a href="/culturePage.html">People and Culture</a>
           <a href="services.html">Services</a>
-          <a href="#">CSR Initiatives</a>
+          <a href="/CSR.html">CSR Initiatives</a>
           <a href="#">Investor Relations</a>
         </div>
       </div>
@@ -150,11 +159,11 @@
           <a href="hvac.html">HVAC</a>
           <a href="mep.html">MEP</a>
 
-          <a href="#">Base build</a>
-          <a href="#">Cleanrooms</a>
-          <a href="#">C&I & Interior Fit-out</a>
-          <a href="#">Virtual Project Management</a>
-          <a href="#">Operations & Maintenance</a>
+          <a href="/BaseBuild.html">Base build</a>
+          <a href="/Cleanroom.html">Cleanrooms</a>
+          <a href="/InteriorFitout.html">C&I & Interior Fit-out</a>
+          <a href="/VirtualProjectManagement.html">Virtual Project Management</a>
+          <a href="/OperationNmaintainance.html">Operations & Maintenance</a>
         </div>
       </div>
 
@@ -166,13 +175,13 @@
         </button>
         <div class="dropdown-content">
           <a href="commGcc.html">Commercial Real Estate & GCC</a>
-          <a href="#">Industrial & Warehousing</a>
-          <a href="#">Data Centres & Critical Rooms</a>
-          <a href="#">Pharma & Biotech Life Sciences</a>
+          <a href="/Industrial.html">Industrial & Warehousing</a>
+          <a href="/DataCentres.html">Data Centres & Critical Rooms</a>
+          <a href="/Biotech.html">Pharma & Biotech Life Sciences</a>
           <a href="hospitality.html">Hospitality & Luxury Retail</a>
-          <a href="#">Hospital & Healthcare</a>
-          <a href="#">Educational Institutes</a>
-          <a href="#">Gov & Infra</a>
+          <a href="/healthcare.html">Hospital & Healthcare</a>
+          <a href="/Educational.html">Educational Institutes</a>
+          <a href="/Infra.html">Gov & Infra</a>
         </div>
       </div>
 
@@ -856,131 +865,7 @@
   <script src="./js/marquee.js"></script>
   <script src="./js/herometrics.js"></script>
   <script src="./js/animation/scrollTriggers.js"></script>
-  <script>
-    // Toggle entire mobile menu
-    // Mobile menu functionality with Lenis integration - FIXED VERSION
-    document.addEventListener("DOMContentLoaded", function () {
-      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const dropdownBtns = document.querySelectorAll(".dropdown-btn");
-      const mobileNavbar = document.getElementById("mobileNavbar");
-      const mobileNavHeader = document.querySelector(".mobile-nav-header");
 
-      // Toggle mobile menu
-      mobileMenuToggle.addEventListener("click", function () {
-        const isOpening = !mobileMenu.classList.contains("active");
-
-        // Toggle menu active state
-        mobileMenu.classList.toggle("active");
-        // Toggle navbar full-screen state
-        mobileNavbar.classList.toggle("menu-active");
-        // Toggle hamburger animation
-        mobileMenuToggle.classList.toggle("active");
-
-        if (isOpening) {
-          // Pause Lenis when opening menu
-          if (typeof lenis !== "undefined") {
-            lenis.stop();
-          }
-          document.body.style.overflow = "hidden";
-        } else {
-          // Resume Lenis when closing menu
-          if (typeof lenis !== "undefined") {
-            lenis.start();
-          }
-          document.body.style.overflow = "";
-
-          // Close all dropdowns when closing menu
-          dropdownBtns.forEach((btn) => {
-            btn.classList.remove("active");
-            btn.nextElementSibling.classList.remove("show");
-          });
-        }
-      });
-
-      // Single dropdown functionality
-      dropdownBtns.forEach((btn) => {
-        btn.addEventListener("click", function () {
-          const isActive = this.classList.contains("active");
-          const dropdownContent = this.nextElementSibling;
-          const isExpanding = !isActive;
-
-          // Close all other dropdowns
-          dropdownBtns.forEach((otherBtn) => {
-            if (otherBtn !== this) {
-              otherBtn.classList.remove("active");
-              otherBtn.nextElementSibling.classList.remove("show");
-            }
-          });
-
-          // Toggle current dropdown
-          if (isExpanding) {
-            // Pause Lenis when expanding dropdown
-            if (typeof lenis !== "undefined") {
-              lenis.stop();
-            }
-            this.classList.add("active");
-            dropdownContent.classList.add("show");
-          } else {
-            // Resume Lenis when collapsing dropdown
-            if (typeof lenis !== "undefined") {
-              lenis.start();
-            }
-            this.classList.remove("active");
-            dropdownContent.classList.remove("show");
-          }
-        });
-      });
-
-      // Close menu when clicking on links
-      const menuLinks = document.querySelectorAll(".dropdown-content a");
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-          // Resume Lenis when navigating
-          if (typeof lenis !== "undefined") {
-            lenis.start();
-          }
-
-          // Close menu and reset states
-          mobileMenu.classList.remove("active");
-          mobileNavbar.classList.remove("menu-active");
-          mobileMenuToggle.classList.remove("active");
-          document.body.style.overflow = "";
-
-          // Close all dropdowns
-          dropdownBtns.forEach((btn) => {
-            btn.classList.remove("active");
-            btn.nextElementSibling.classList.remove("show");
-          });
-        });
-      });
-
-      // Close menu when clicking outside (optional)
-      document.addEventListener("click", function (event) {
-        if (
-          !mobileNavbar.contains(event.target) &&
-          mobileMenu.classList.contains("active")
-        ) {
-          // Close menu and reset states
-          mobileMenu.classList.remove("active");
-          mobileNavbar.classList.remove("menu-active");
-          mobileMenuToggle.classList.remove("active");
-          document.body.style.overflow = "";
-
-          // Close all dropdowns
-          dropdownBtns.forEach((btn) => {
-            btn.classList.remove("active");
-            btn.nextElementSibling.classList.remove("show");
-          });
-
-          // Resume Lenis
-          if (typeof lenis !== "undefined") {
-            lenis.start();
-          }
-        }
-      });
-    });
-  </script>
 
   <script>
     const openFormBtn = document.getElementById("openFormBtn");
