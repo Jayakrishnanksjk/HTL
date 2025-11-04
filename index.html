@@ -76,7 +76,7 @@
               <div class="menu-list">
                 <a href="/hvac.html" class="link-box">HVAC</a>
                 <a href="/mep.html" class="link-box">MEP</a>
-                <a href="/Fitout.html" class="link-box">Fit-out</a>
+                <!-- <a href="/Fitout.html" class="link-box">Fit-out</a> -->
                 <a href="/BaseBuild.html" class="link-box">Base build</a>
                 <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
                 <a href="/InteriorFitout.html" class="link-box"
@@ -278,7 +278,7 @@
                 with Engineering, supply chain & management solutions.
               </p>
             </div>
-            <a href="#" class="btn" id="openFormBtn">Explore Capabilities</a>
+            <a href="#" class="btn openFormBtn">Explore Capabilities</a>
           </div>
         </div>
       </div>
@@ -364,7 +364,7 @@
           </p>
         </div>
 
-        <a href="#" class="btn">Explore Our Services</a>
+        <a href="#" class="btn openFormBtn">Explore Our Services</a>
       </div>
     </section>
 
@@ -1032,7 +1032,7 @@
           </h3>
           <p>Get your expert advice today.</p>
         </div>
-        <a href="#" class="btn">Request a Consultation</a>
+        <a href="#" class="btn openFormBtn">Request a Consultation</a>
       </div>
     </section>
 
@@ -1269,7 +1269,7 @@
       });
     </script>
 
-    <script>
+    <!-- <script>
       const openFormBtn = document.getElementById("openFormBtn");
       const closeFormBtn = document.getElementById("closeFormBtn");
       const businessForm = document.getElementById("businessForm");
@@ -1289,6 +1289,32 @@
           businessForm.classList.remove("active");
         }
       });
-    </script>
+    </script> -->
+ 
+ <script>
+  const openFormBtns = document.querySelectorAll(".openFormBtn");
+  const closeFormBtn = document.getElementById("closeFormBtn");
+  const businessForm = document.getElementById("businessForm");
+
+  openFormBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      businessForm.classList.add("active");
+    });
+  });
+
+  closeFormBtn.addEventListener("click", () => {
+    businessForm.classList.remove("active");
+  });
+
+  businessForm.addEventListener("click", (e) => {
+    if (e.target === businessForm) {
+      businessForm.classList.remove("active");
+    }
+  });
+</script>
+
+ 
+ 
   </body>
 </html>

@@ -76,7 +76,7 @@
               <div class="menu-list">
                 <a href="/hvac.html" class="link-box">HVAC</a>
                 <a href="/mep.html" class="link-box">MEP</a>
-                <a href="/Fitout.html" class="link-box">Fit-out</a>
+                <!-- <a href="/Fitout.html" class="link-box">Fit-out</a> -->
                 <a href="/BaseBuild.html" class="link-box">Base build</a>
                 <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
                 <a href="/InteriorFitout.html" class="link-box"
@@ -308,29 +308,30 @@
     </section>
 
     <section class="stats-section-about">
-      <div class="stats-container-about">
-        <div class="stat-item-about">
-          <div class="stat-label-about">Offices</div>
-          <hr />
-          <div class="stat-value-about">07+</div>
-        </div>
-        <div class="stat-item-about">
-          <div class="stat-label-about">Countries</div>
-          <hr />
-          <div class="stat-value-about">03+</div>
-        </div>
-        <div class="stat-item-about">
-          <div class="stat-label-about">Years in Business</div>
-          <hr />
-          <div class="stat-value-about">30+</div>
-        </div>
-        <div class="stat-item-about">
-          <div class="stat-label-about">Team Strength</div>
-          <hr />
-          <div class="stat-value-about">600+</div>
-        </div>
-      </div>
-    </section>
+  <div class="stats-container-about">
+    <div class="stat-item-about">
+      <div class="stat-label-about">Offices</div>
+      <hr />
+      <div class="stat-value-about" data-target="7">0+</div>
+    </div>
+    <div class="stat-item-about">
+      <div class="stat-label-about">Countries</div>
+      <hr />
+      <div class="stat-value-about" data-target="3">0+</div>
+    </div>
+    <div class="stat-item-about">
+      <div class="stat-label-about">Years in Business</div>
+      <hr />
+      <div class="stat-value-about" data-target="30">0+</div>
+    </div>
+    <div class="stat-item-about">
+      <div class="stat-label-about">Team Strength</div>
+      <hr />
+      <div class="stat-value-about" data-target="600">0+</div>
+    </div>
+  </div>
+</section>
+
 
     <section class="excellence-values-section">
       <h1>OUR VALUES</h1>
@@ -411,42 +412,42 @@
 
         <div class="history-images">
           <img
-            src="images/timeline/1.Magnum Air techs.webp"
+            src="images/timeline/Timeline pictures/1996.webp"
             data-id="y1996"
             alt=""
           />
           <img
-            src="images/timeline/Entering_DC.webp"
+            src="images/timeline/Timeline pictures/1996.webp"
             data-id="y2004"
             alt=""
           />
           <img
-            src="images/timeline/3.Pune Office Inaguration.webp"
+            src="images/timeline/Timeline pictures/2010 Pune Branch.webp"
             data-id="y2010"
             alt=""
           />
           <img
-            src="images/timeline/4. Delhi Office.webp"
+            src="images/timeline/Timeline pictures/2014 Delhi.webp"
             data-id="y2014"
             alt=""
           />
           <img
-            src="images/timeline/5. South Branch Branch1.webp"
+            src="images/timeline/Timeline pictures/2016 South Branch.webp"
             data-id="y2016"
             alt=""
           />
           <img
-            src="images/timeline/Dubai Branch.webp"
+            src="images/timeline/Timeline pictures/2018 MEP.webp"
             data-id="y2018"
             alt=""
           />
           <img
-            src="https://images.unsplash.com/photo-1752588975097-fb5df3c7b345?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=600"
+            src="images/timeline/Timeline pictures/2020 DC.webp"
             data-id="y2020"
             alt=""
           />
           <img
-            src="https://images.unsplash.com/photo-1758968563782-186a64de4afc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=600"
+            src="images/timeline/Timeline pictures/2020 DC.webp"
             data-id="y2023"
             alt=""
           />
@@ -456,7 +457,7 @@
             alt=""
           />
           <img
-            src="images/timeline/2025BioPharma.webp"
+            src="images/timeline/Timeline pictures/2025BioPharma.webp"
             data-id="y2025"
             alt=""
           />
@@ -793,5 +794,49 @@
         });
       });
     </script>
+
+
+<script>
+  const counters = document.querySelectorAll(".stat-value-about");
+  const duration = 2000; // total animation time (ms)
+
+  const runCounter = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const startTime = performance.now();
+
+      const updateCount = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1); // max = 1
+        const value = Math.floor(progress * target);
+
+        counter.innerText = value + "+";
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target + "+";
+        }
+      };
+
+      requestAnimationFrame(updateCount);
+    });
+  };
+
+  // ✅ Trigger animation when section is visible
+  const statsSection = document.querySelector(".stats-section-about");
+  let started = false;
+
+  window.addEventListener("scroll", () => {
+    const sectionTop = statsSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.8;
+
+    if (sectionTop < triggerPoint && !started) {
+      runCounter();
+      started = true;
+    }
+  });
+</script>
+
   </body>
 </html>
