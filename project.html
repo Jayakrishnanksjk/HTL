@@ -347,6 +347,23 @@
           </div>
         </div>
       </div>
+
+
+      <div class="new-project-card" data-service="mep" data-sector="industrial">
+        <div class="new-project-image">
+          <img src="images/projects/Data Centre/Bridge Data Centre Mumbai.png" alt="Project 3" />
+        </div>
+        <div class="new-project-info">
+          <div class="new-info-left">
+            <h3 class="new-client-name">Bridge Data Centres</h3>
+            <p class="new-location">Mumbai</p>
+          </div>
+          <div class="new-info-right">
+            <p class="new-service-type">HVAC</p>
+            <p class="new-project-size">1,50,000 Sq.Ft</p>
+          </div>
+        </div>
+      </div>
     </div>
 
 
@@ -468,9 +485,10 @@
   document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".new-project-card");
     const loadMoreBtn = document.querySelector(".page-btn");
-    let visibleCards = 6; // show 6 at first
+    let visibleCards = 6; // how many cards are visible at a time
+    const step = 6; // how many to load each click
 
-    // Hide cards beyond the first 6
+    // Initially show only 6
     cards.forEach((card, index) => {
       if (index >= visibleCards) {
         card.style.display = "none";
@@ -478,19 +496,31 @@
     });
 
     loadMoreBtn.addEventListener("click", function () {
-      // Show 6 more cards
-      for (let i = visibleCards; i < visibleCards + 6 && i < cards.length; i++) {
-        cards[i].style.display = "flex"; // use flex if your cards use flexbox
-      }
-      visibleCards += 6;
+      // If not all cards are visible — load more
+      if (visibleCards < cards.length) {
+        const nextVisible = Math.min(visibleCards + step, cards.length);
+        for (let i = visibleCards; i < nextVisible; i++) {
+          cards[i].style.display = "flex"; // use flex to maintain layout
+        }
+        visibleCards = nextVisible;
 
-      // Hide button when all cards are visible
-      if (visibleCards >= cards.length) {
-        loadMoreBtn.style.display = "none";
+        // Change button text to "Show Less" when all cards are visible
+        if (visibleCards >= cards.length) {
+          loadMoreBtn.textContent = "Show Less";
+        }
+      } 
+      // If all cards are visible — collapse to the first 6
+      else {
+        cards.forEach((card, index) => {
+          card.style.display = index < step ? "flex" : "none";
+        });
+        visibleCards = step;
+        loadMoreBtn.textContent = "Load More";
       }
     });
   });
 </script>
+
 
 </body>
 
