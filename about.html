@@ -113,15 +113,6 @@
           <img src="./images/htl logo.png" alt="HTL Logo" height="28" />
         </a>
       </div>
-<<<<<<< HEAD
-      <!--       
-      <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleNav()">
-        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect class="top" y="9" width="48" height="6" fill="white" />
-          <rect class="bot" y="29" width="48" height="6" fill="white" />
-        </svg>
-      </div> -->
-=======
       <div class="nav-menu-section" id="navSection">
         <div class="inner-container">
           <div class="inner-div-nav">
@@ -164,7 +155,6 @@
               </div>
             </div>
           </div>
->>>>>>> b908acf163733c8aa8949498be5453835dc7911a
 
 
       <div class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -652,7 +642,6 @@
     createHorizontalScroll(".missiongroup", ".sectiongroup");
   </script>
 
-<<<<<<< HEAD
   <script>
     // Toggle entire mobile menu
     // Mobile menu functionality with Lenis integration - FIXED VERSION
@@ -662,33 +651,6 @@
       const dropdownBtns = document.querySelectorAll(".dropdown-btn");
       const mobileNavbar = document.getElementById("mobileNavbar");
       const mobileNavHeader = document.querySelector(".mobile-nav-header");
-=======
-    <section class="stats-section-about">
-  <div class="stats-container-about">
-    <div class="stat-item-about">
-      <div class="stat-label-about">Offices</div>
-      <hr />
-      <div class="stat-value-about" data-target="7">0+</div>
-    </div>
-    <div class="stat-item-about">
-      <div class="stat-label-about">Countries</div>
-      <hr />
-      <div class="stat-value-about" data-target="3">0+</div>
-    </div>
-    <div class="stat-item-about">
-      <div class="stat-label-about">Years in Business</div>
-      <hr />
-      <div class="stat-value-about" data-target="30">0+</div>
-    </div>
-    <div class="stat-item-about">
-      <div class="stat-label-about">Team Strength</div>
-      <hr />
-      <div class="stat-value-about" data-target="600">0+</div>
-    </div>
-  </div>
-</section>
-
->>>>>>> b908acf163733c8aa8949498be5453835dc7911a
 
       // Toggle mobile menu
       mobileMenuToggle.addEventListener("click", function () {
@@ -718,7 +680,6 @@
           mobileNavbar.style.background = "";
           document.body.style.overflow = "";
 
-<<<<<<< HEAD
           // Close all dropdowns when closing menu
           dropdownBtns.forEach((btn) => {
             btn.classList.remove("active");
@@ -726,60 +687,6 @@
           });
         }
       });
-=======
-        <div class="history-images">
-          <img
-            src="images/timeline/Timeline pictures/1996.webp"
-            data-id="y1996"
-            alt=""
-          />
-          <img
-            src="images/timeline/Timeline pictures/1996.webp"
-            data-id="y2004"
-            alt=""
-          />
-          <img
-            src="images/timeline/Timeline pictures/2010 Pune Branch.webp"
-            data-id="y2010"
-            alt=""
-          />
-          <img
-            src="images/timeline/Timeline pictures/2014 Delhi.webp"
-            data-id="y2014"
-            alt=""
-          />
-          <img
-            src="images/timeline/Timeline pictures/2016 South Branch.webp"
-            data-id="y2016"
-            alt=""
-          />
-          <img
-            src="images/timeline/Timeline pictures/2018 MEP.webp"
-            data-id="y2018"
-            alt=""
-          />
-          <img
-            src="images/timeline/Timeline pictures/2020 DC.webp"
-            data-id="y2020"
-            alt=""
-          />
-          <img
-            src="images/timeline/Timeline pictures/2020 DC.webp"
-            data-id="y2023"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1759434188986-58432949b5a4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=600"
-            data-id="y2024"
-            alt=""
-          />
-          <img
-            src="images/timeline/Timeline pictures/2025BioPharma.webp"
-            data-id="y2025"
-            alt=""
-          />
-        </div>
->>>>>>> b908acf163733c8aa8949498be5453835dc7911a
 
       // Single dropdown functionality
       dropdownBtns.forEach((btn) => {
@@ -838,58 +745,8 @@
           });
         });
       });
-<<<<<<< HEAD
     });
   </script>
 </body>
 
 </html>
-=======
-    </script>
-
-
-<script>
-  const counters = document.querySelectorAll(".stat-value-about");
-  const duration = 2000; // total animation time (ms)
-
-  const runCounter = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      const startTime = performance.now();
-
-      const updateCount = (currentTime) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1); // max = 1
-        const value = Math.floor(progress * target);
-
-        counter.innerText = value + "+";
-
-        if (progress < 1) {
-          requestAnimationFrame(updateCount);
-        } else {
-          counter.innerText = target + "+";
-        }
-      };
-
-      requestAnimationFrame(updateCount);
-    });
-  };
-
-  // ✅ Trigger animation when section is visible
-  const statsSection = document.querySelector(".stats-section-about");
-  let started = false;
-
-  window.addEventListener("scroll", () => {
-    const sectionTop = statsSection.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight * 0.8;
-
-    if (sectionTop < triggerPoint && !started) {
-      runCounter();
-      started = true;
-    }
-  });
-</script>
-
-  </body>
-</html>
->>>>>>> b908acf163733c8aa8949498be5453835dc7911a
