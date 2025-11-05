@@ -219,14 +219,42 @@
   <section class="new-projects-section">
     <div class="new-projects-header">
       <h2 class="new-projects-title">Projects Highlights</h2>
-      <button class="filter-btn" aria-label="Open filters">
-        <!-- SVG icon (funnel) -->
-        <img src="images/filter-svg.svg" alt="">
-      </button>
+
+   <div class="project-filter-bar">
+  <button class="project-clear-btn" id="clearProjectFilters">Clear filters</button>
+
+  <div class="project-dropdown" id="projectSectorDropdown">
+    <button class="project-dropdown-btn">Sector <span>▼</span></button>
+    <div class="project-dropdown-content">
+      <label><input type="checkbox" value="cre"> Commercial Real Estate & GCC</label>
+      <label><input type="checkbox" value="industrial"> Industrial & Warehousing</label>
+      <label><input type="checkbox" value="datacentres"> Data Centres & Critical rooms</label>
+      <label><input type="checkbox" value="pharma"> Pharma & biotech life sciences</label>
+      <label><input type="checkbox" value="healthcare"> Hospital & healthcare</label>
+      <label><input type="checkbox" value="education"> Educational institutes</label>
+      <label><input type="checkbox" value="govinfra"> Gov & Infra</label>
+    </div>
+  </div>
+
+  <div class="project-dropdown" id="projectServiceDropdown">
+    <button class="project-dropdown-btn">Services <span>▼</span></button>
+    <div class="project-dropdown-content">
+      <label><input type="checkbox" value="hvac"> HVAC</label>
+      <label><input type="checkbox" value="mep"> MEP</label>
+      <label><input type="checkbox" value="base-build"> Base build</label>
+      <label><input type="checkbox" value="cleanrooms"> Cleanrooms</label>
+      <label><input type="checkbox" value="interior"> C&I & Interior fit-out</label>
+      <label><input type="checkbox" value="virtual"> Virtual Project Management</label>
+      <label><input type="checkbox" value="maintenance"> Operations & Maintenance</label>
+    </div>
+  </div>
+</div>
+
+
     </div>
 
     <div class="new-projects-row">
-      <div class="new-project-card">
+      <div class="new-project-card" data-service="hvac" data-sector="industrial">
         <div class="new-project-image">
           <img src="images/projects/Microsoft_hyderabad.webp" alt="Project 1" />
         </div>
@@ -242,7 +270,7 @@
         </div>
       </div>
 
-      <div class="new-project-card">
+      <div class="new-project-card" data-service="mep" data-sector="industrial">
         <div class="new-project-image">
           <img src="images/projects/all projects/All Images/Adani Data Centre Chennai.png" alt="Project 2" />
         </div>
@@ -258,7 +286,7 @@
         </div>
       </div>
 
-      <div class="new-project-card">
+      <div class="new-project-card" data-service="mep" data-sector="industrial">
         <div class="new-project-image">
           <img src="images/projects/all projects/All Images/Nxtra Pune.jpg" alt="Project 3" />
         </div>
@@ -274,7 +302,7 @@
         </div>
       </div>
 
-      <div class="new-project-card">
+      <div class="new-project-card" data-service="mep" data-sector="industrial">
         <div class="new-project-image">
           <img src="images/projects/Data Centre/colt navi mumbai.jpg" alt="Project 3" />
         </div>
@@ -289,7 +317,7 @@
           </div>
         </div>
       </div>
-      <div class="new-project-card">
+      <div class="new-project-card" data-service="mep" data-sector="industrial">
         <div class="new-project-image">
           <img src="images/services/CtrlS-Mumbai-Phase-II-Datacenter-which-was-built-in-a-record-time-of-120-days-1.jpg" alt="Project 3" />
         </div>
@@ -304,7 +332,7 @@
           </div>
         </div>
       </div>
-      <div class="new-project-card">
+      <div class="new-project-card" data-service="mep" data-sector="industrial">
         <div class="new-project-image">
           <img src="images/projects/Data Centre/Bridge Data Centre Mumbai.png" alt="Project 3" />
         </div>
@@ -417,146 +445,23 @@
     </div>
   </footer>
 
-   <!-- Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Scripts -->
-    <script src="./js/navbar.js"></script>
-    <!-- <script src="./js/carousal.js"></script> -->
-    <script src="./js/stats.js"></script>
-    <script src="./js/testemonials.js"></script>
-    <!-- Animations -->
-    <script src="./js/animation/Lenis.js"></script>
-    <script src="./Hamburger/script.js"></script>
-    <script src="./js/marquee.js"></script>
-    <script src="./js/herometrics.js"></script>
-    <script src="./js/animation/scrollTriggers.js"></script>
-    <script>
-      // Toggle entire mobile menu
-      // Mobile menu functionality with Lenis integration - FIXED VERSION
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const dropdownBtns = document.querySelectorAll(".dropdown-btn");
-        const mobileNavbar = document.getElementById("mobileNavbar");
-        const mobileNavHeader = document.querySelector(".mobile-nav-header");
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Scripts -->
+  <script src="./js/navbar.js"></script>
+  <!-- <script src="./js/carousal.js"></script> -->
+  <script src="./js/stats.js"></script>
+  <script src="./js/testemonials.js"></script>
+  <!-- Animations -->
+  <script src="./js/animation/Lenis.js"></script>
+  <script src="./Hamburger/script.js"></script>
+  <script src="./js/marquee.js"></script>
+  <script src="./js/filteroption.js"></script>
+  <script src="./js/herometrics.js"></script>
+  <script src="./js/animation/scrollTriggers.js"></script>
 
-        // Toggle mobile menu
-        mobileMenuToggle.addEventListener("click", function () {
-          const isOpening = !mobileMenu.classList.contains("active");
-
-          // Toggle menu active state
-          mobileMenu.classList.toggle("active");
-          // Toggle navbar full-screen state
-          mobileNavbar.classList.toggle("menu-active");
-          // Toggle hamburger animation
-          mobileMenuToggle.classList.toggle("active");
-
-          if (isOpening) {
-            // Pause Lenis when opening menu
-            if (typeof lenis !== "undefined") {
-              lenis.stop();
-            }
-            document.body.style.overflow = "hidden";
-          } else {
-            // Resume Lenis when closing menu
-            if (typeof lenis !== "undefined") {
-              lenis.start();
-            }
-            document.body.style.overflow = "";
-
-            // Close all dropdowns when closing menu
-            dropdownBtns.forEach((btn) => {
-              btn.classList.remove("active");
-              btn.nextElementSibling.classList.remove("show");
-            });
-          }
-        });
-
-        // Single dropdown functionality
-        dropdownBtns.forEach((btn) => {
-          btn.addEventListener("click", function () {
-            const isActive = this.classList.contains("active");
-            const dropdownContent = this.nextElementSibling;
-            const isExpanding = !isActive;
-
-            // Close all other dropdowns
-            dropdownBtns.forEach((otherBtn) => {
-              if (otherBtn !== this) {
-                otherBtn.classList.remove("active");
-                otherBtn.nextElementSibling.classList.remove("show");
-              }
-            });
-
-            // Toggle current dropdown
-            if (isExpanding) {
-              // Pause Lenis when expanding dropdown
-              if (typeof lenis !== "undefined") {
-                lenis.stop();
-              }
-              this.classList.add("active");
-              dropdownContent.classList.add("show");
-            } else {
-              // Resume Lenis when collapsing dropdown
-              if (typeof lenis !== "undefined") {
-                lenis.start();
-              }
-              this.classList.remove("active");
-              dropdownContent.classList.remove("show");
-            }
-          });
-        });
-
-        // Close menu when clicking on links
-        const menuLinks = document.querySelectorAll(".dropdown-content a");
-        menuLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            // Resume Lenis when navigating
-            if (typeof lenis !== "undefined") {
-              lenis.start();
-            }
-
-            // Close menu and reset states
-            mobileMenu.classList.remove("active");
-            mobileNavbar.classList.remove("menu-active");
-            mobileMenuToggle.classList.remove("active");
-            document.body.style.overflow = "";
-
-            // Close all dropdowns
-            dropdownBtns.forEach((btn) => {
-              btn.classList.remove("active");
-              btn.nextElementSibling.classList.remove("show");
-            });
-          });
-        });
-
-        // Close menu when clicking outside (optional)
-        document.addEventListener("click", function (event) {
-          if (
-            !mobileNavbar.contains(event.target) &&
-            mobileMenu.classList.contains("active")
-          ) {
-            // Close menu and reset states
-            mobileMenu.classList.remove("active");
-            mobileNavbar.classList.remove("menu-active");
-            mobileMenuToggle.classList.remove("active");
-            document.body.style.overflow = "";
-
-            // Close all dropdowns
-            dropdownBtns.forEach((btn) => {
-              btn.classList.remove("active");
-              btn.nextElementSibling.classList.remove("show");
-            });
-
-            // Resume Lenis
-            if (typeof lenis !== "undefined") {
-              lenis.start();
-            }
-          }
-        });
-      });
-    </script>
 
 
 <script>

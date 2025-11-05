@@ -231,6 +231,74 @@ body {
   transition: transform 0.3s ease;
 }
 
+
+
+
+.project-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-clear-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.project-dropdown {
+  position: relative;
+}
+
+.project-dropdown-btn {
+  background: #d9d9d9;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 180px;
+}
+
+.project-dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+  padding: 10px;
+  z-index: 10;
+  flex-direction: column;
+  width: 260px;
+}
+
+.project-dropdown-content label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.project-dropdown.open .project-dropdown-content {
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===========================
    HERO RESPONSIVE
    =========================== */
@@ -3346,7 +3414,7 @@ footer {
 /* Row with 3 cards */
 .new-projects-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 30px;
   flex-wrap: wrap; /* Makes it responsive */
 }
