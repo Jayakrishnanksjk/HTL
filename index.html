@@ -1,120 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTL Website</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTL Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="normalize.css" />
-</head>
-
-<body>
-  <!-- Hero Section -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-body">
-      <a class="link-style-reset" href="./index.html">
-        <div class="nav-brand">
-          <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" href="index.html" />
-        </div>
-      </a>
-
-      <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
-        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect class="top" y="9" width="48" height="6" fill="white" />
-          <rect class="bot" y="29" width="48" height="6" fill="white" />
-        </svg>
-      </div>
-    </div>
-    <div class="nav-menu-section" id="navSection">
-      <div class="inner-container">
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Company</h3>
-            </div>
-            <div class="menu-list">
-              <a href="/about.html" class="link-box">About Us</a>
-              <a href="/team.html" class="link-box">Our Team</a>
-              <a href="/culturePage.html" class="link-box">People and Culture</a>
-              <a href="/services.html" class="link-box">Services</a>
-              <a href="/CSR.html" class="link-box">CSR Initiatives</a>
-              <a href="#" class="link-box disabled">Investor Relations</a>
-            </div>
+  <body>
+    <!-- Hero Section -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-body">
+        <a class="link-style-reset" href="./index.html">
+          <div class="nav-brand">
+            <img
+              src="./images/htl logo.png"
+              alt="HTL brand logo"
+              height="32px"
+              width="auto"
+              href="index.html"
+            />
           </div>
-        </div>
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Services</h3>
-            </div>
-            <div class="menu-list">
-              <a href="/hvac.html" class="link-box">HVAC</a>
-              <a href="/mep.html" class="link-box">MEP</a>
-
-              <a href="/BaseBuild.html" class="link-box">Base build</a>
-              <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
-              <a href="/InteriorFitout.html" class="link-box">C&I & Interior Fit-out</a>
-              <a href="/VirtualProjectManagement.html" class="link-box">Virtual Project Management</a>
-              <a href="/OperationNmaintainance.html" class="link-box">Operations & Maintenance</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Sectors</h3>
-            </div>
-            <div class="menu-list">
-              <a href="/commGcc.html" class="link-box">Commercial Real Estate & GCC</a>
-              <a href="/Industrial.html" class="link-box">Industrial & Warehousing</a>
-              <a href="/DataCentres.html" class="link-box">Data Centres & Critical rooms</a>
-              <a href="/Biotech.html" class="link-box">Pharma & Biotech Life sciences</a>
-              <a href="/hospitality.html" class="link-box">Hospitality & Luxury Retail</a>
-              <a href="/healthcare.html" class="link-box">Hospital & healthcare</a>
-              <a href="/Educational.html" class="link-box">Educational institutes</a>
-              <a href="/Infra.html" class="link-box">Gov & Infra</a>
-            </div>
-          </div>
-        </div>
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Resources</h3>
-            </div>
-            <div class="menu-list">
-              <a href="project.html" class="link-box">Projects</a>
-              <a href="news.html" class="link-box">News & Articles</a>
-            </div>
-          </div>
-
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Socials</h3>
-            </div>
-            <div class="menu-list">
-              <a href="#" class="link-box">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ===== MOBILE NAV START ===== -->
-  <nav class="mobile-navbar" id="mobileNavbar">
-    <div class="mobile-nav-header">
-      <div class="mobile-brand">
-        <a href="index.html">
-          <img src="./images/htl logo.png" alt="HTL Logo" height="28" />
         </a>
+
+        <div
+          class="nav-link-btn nav-toggle"
+          id="navToggle"
+          onclick="toggleNav()"
+        >
+          <svg
+            id="burger"
+            width="48"
+            height="32"
+            viewBox="0 0 56 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect class="top" y="9" width="48" height="6" fill="white" />
+            <rect class="bot" y="29" width="48" height="6" fill="white" />
+          </svg>
+        </div>
       </div>
-      <!--       
+      <div class="nav-menu-section" id="navSection">
+        <div class="inner-container">
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Company</h3>
+              </div>
+              <div class="menu-list">
+                <a href="/about.html" class="link-box">About Us</a>
+                <a href="/team.html" class="link-box">Our Team</a>
+                <a href="/culturePage.html" class="link-box"
+                  >People and Culture</a
+                >
+                <a href="/services.html" class="link-box">Services</a>
+                <a href="/CSR.html" class="link-box">CSR Initiatives</a>
+                <a href="#" class="link-box disabled">Investor Relations</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Services</h3>
+              </div>
+              <div class="menu-list">
+                <a href="/hvac.html" class="link-box">HVAC</a>
+                <a href="/mep.html" class="link-box">MEP</a>
+
+                <a href="/BaseBuild.html" class="link-box">Base build</a>
+                <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
+                <a href="/InteriorFitout.html" class="link-box"
+                  >C&I & Interior Fit-out</a
+                >
+                <a href="/VirtualProjectManagement.html" class="link-box"
+                  >Virtual Project Management</a
+                >
+                <a href="/OperationNmaintainance.html" class="link-box"
+                  >Operations & Maintenance</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Sectors</h3>
+              </div>
+              <div class="menu-list">
+                <a href="/commGcc.html" class="link-box"
+                  >Commercial Real Estate & GCC</a
+                >
+                <a href="/Industrial.html" class="link-box"
+                  >Industrial & Warehousing</a
+                >
+                <a href="/DataCentres.html" class="link-box"
+                  >Data Centres & Critical rooms</a
+                >
+                <a href="/Biotech.html" class="link-box"
+                  >Pharma & Biotech Life sciences</a
+                >
+                <a href="/hospitality.html" class="link-box"
+                  >Hospitality & Luxury Retail</a
+                >
+                <a href="/healthcare.html" class="link-box"
+                  >Hospital & healthcare</a
+                >
+                <a href="/Educational.html" class="link-box"
+                  >Educational institutes</a
+                >
+                <a href="/Infra.html" class="link-box">Gov & Infra</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Resources</h3>
+              </div>
+              <div class="menu-list">
+                <a href="project.html" class="link-box">Projects</a>
+                <a href="news.html" class="link-box">News & Articles</a>
+              </div>
+            </div>
+
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Socials</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== MOBILE NAV START ===== -->
+    <nav class="mobile-navbar" id="mobileNavbar">
+      <div class="mobile-nav-header">
+        <div class="mobile-brand">
+          <a href="index.html">
+            <img src="./images/htl logo.png" alt="HTL Logo" height="28" />
+          </a>
+        </div>
+        <!--       
       <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleNav()">
         <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect class="top" y="9" width="48" height="6" fill="white" />
@@ -122,771 +163,1022 @@
         </svg>
       </div> -->
 
-
-      <div class="mobile-menu-toggle" id="mobileMenuToggle">
-        <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="10" width="32" height="4" fill="white" />
-          <rect y="20" width="32" height="4" fill="white" />
-          <rect y="30" width="32" height="4" fill="white" />
-        </svg>
-      </div>
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <!-- Company -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Company
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="about.html">About Us</a>
-          <a href="team.html">Our Team</a>
-          <a href="/culturePage.html">People and Culture</a>
-          <a href="services.html">Services</a>
-          <a href="/CSR.html">CSR Initiatives</a>
-          <a href="#">Investor Relations</a>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect y="10" width="32" height="4" fill="white" />
+            <rect y="20" width="32" height="4" fill="white" />
+            <rect y="30" width="32" height="4" fill="white" />
+          </svg>
         </div>
       </div>
 
-      <!-- Services -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Services
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="hvac.html">HVAC</a>
-          <a href="mep.html">MEP</a>
-
-          <a href="/BaseBuild.html">Base build</a>
-          <a href="/Cleanroom.html">Cleanrooms</a>
-          <a href="/InteriorFitout.html">C&I & Interior Fit-out</a>
-          <a href="/VirtualProjectManagement.html">Virtual Project Management</a>
-          <a href="/OperationNmaintainance.html">Operations & Maintenance</a>
-        </div>
-      </div>
-
-      <!-- Sectors -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Sectors
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="commGcc.html">Commercial Real Estate & GCC</a>
-          <a href="/Industrial.html">Industrial & Warehousing</a>
-          <a href="/DataCentres.html">Data Centres & Critical Rooms</a>
-          <a href="/Biotech.html">Pharma & Biotech Life Sciences</a>
-          <a href="hospitality.html">Hospitality & Luxury Retail</a>
-          <a href="/healthcare.html">Hospital & Healthcare</a>
-          <a href="/Educational.html">Educational Institutes</a>
-          <a href="/Infra.html">Gov & Infra</a>
-        </div>
-      </div>
-
-      <!-- Resources -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Resources
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="project.html">Projects</a>
-          <a href="news.html">News & Articles</a>
-        </div>
-      </div>
-
-      <!-- Social -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Socials
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- ===== MOBILE NAV END ===== -->
-
-  <section class="hero-container">
-    <div class="hero-video-wrapper">
-      <video autoplay muted loop playsinline poster="images/hero-thumbnail.webp" class="hero-bg-video">
-        <source src="images/Home Video.webm" type="video/webm" />
-        <source src="images/Home Video.webm" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <div class="hero-elements">
-      <div class="hero-textbox-container">
-        <div class="hero-text-box">
-          <div class="text-group">
-            <h1 class="hero-text">
-              Engineering Infrastructure,<br />
-              Delivering Trust.
-            </h1>
-            <p class="hero-subtext">
-              Delivering integrated MEP services, powering India’s Real Estate
-              with Engineering, supply chain & management solutions.
-            </p>
-          </div>
-          <a href="#" class="btn" id="openFormBtn">Explore Capabilities</a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-matrix">
-      <div class="stat-box">
-        <div class="stat-individual" id="statClients">
-          <h4 class="stats-title">Clients served</h4>
-          <span>
-            <hr />
-          </span>
-          <h2>100+</h2>
-        </div>
-
-        <div class="stat-individual" id="statProjects">
-          <h4 class="stats-title">No of Repeat Clients</h4>
-          <span>
-            <hr />
-          </span>
-          <h2>86%</h2>
-        </div>
-
-        <div class="stat-individual" id="statCountries">
-          <h4 class="stats-title">Sq. Ft covered</h4>
-          <span>
-            <hr />
-          </span>
-          <h2>50M+</h2>
-        </div>
-
-        <div class="stat-individual" id="statYears">
-          <h4 class="stats-title">CSAT Score</h4>
-          <span>
-            <hr />
-          </span>
-          <h2>9.2</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="business-form-overlay" id="businessForm">
-    <div class="business-form-container">
-      <button class="close-btn" id="closeFormBtn">&times;</button>
-      <h2>Build a solution for your business</h2>
-
-      <form class="business-form">
-        <div class="form-row">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-        </div>
-
-        <div class="form-row">
-          <select required>
-            <option value="">Service Type</option>
-            <option value="consulting">Consulting</option>
-            <option value="design">Design</option>
-            <option value="development">Development</option>
-          </select>
-          <input type="tel" placeholder="Contact Number" required />
-        </div>
-
-        <p class="required-note">*All the fields are required</p>
-
-        <button type="submit" class="submit-btn">Submit</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Services Section -->
-  <section class="services">
-    <div class="services-content">
-      <div class="services-content-text">
-        <h2>
-          Delivering Service Excellence <br />
-          <span>Through Quality, Safety, and Global Engineering Standards Across
-            India, Middle East & Africa
-          </span>
-        </h2>
-        <p>
-          Driven by precision, built on best-in-class standards on every
-          project.
-        </p>
-      </div>
-
-      <a href="#" class="btn">Explore Our Services</a>
-    </div>
-  </section>
-
-  <!-- Featured project section with interaction -->
-  <section class="nextsection" id="projectHomePageSection">
-    <div class="section-header">
-      <h2>Featured Projects</h2>
-    </div>
-    <!-- <h2>Featured Projects</h2> -->
-    <div class="innersection">
-      <div class="innerwarap" id="projectHomePageSectionInner">
-        <!-- Project 1 -->
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">Microsoft</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in
-                  Mumbai, ensuring efficient climate control, reliability, and
-                  long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/projects/Microsoft_hyderabad.webp" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">Microsoft</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Company -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Company
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="team.html">Our Team</a>
+            <a href="/culturePage.html">People and Culture</a>
+            <a href="services.html">Services</a>
+            <a href="/CSR.html">CSR Initiatives</a>
+            <a href="#">Investor Relations</a>
           </div>
         </div>
 
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">Qualcomm</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in
-                  Mumbai, ensuring efficient climate control, reliability, and
-                  long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/projects/Qualcomm.avif" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">Qualcomm</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
+        <!-- Services -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Services
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="hvac.html">HVAC</a>
+            <a href="mep.html">MEP</a>
+
+            <a href="/BaseBuild.html">Base build</a>
+            <a href="/Cleanroom.html">Cleanrooms</a>
+            <a href="/InteriorFitout.html">C&I & Interior Fit-out</a>
+            <a href="/VirtualProjectManagement.html"
+              >Virtual Project Management</a
+            >
+            <a href="/OperationNmaintainance.html">Operations & Maintenance</a>
           </div>
         </div>
 
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">Foxconn</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in
-                  Mumbai, ensuring efficient climate control, reliability, and
-                  long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/projects/Foxconn Bengaluru.webp" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">Foxconn</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
+        <!-- Sectors -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Sectors
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="commGcc.html">Commercial Real Estate & GCC</a>
+            <a href="/Industrial.html">Industrial & Warehousing</a>
+            <a href="/DataCentres.html">Data Centres & Critical Rooms</a>
+            <a href="/Biotech.html">Pharma & Biotech Life Sciences</a>
+            <a href="hospitality.html">Hospitality & Luxury Retail</a>
+            <a href="/healthcare.html">Hospital & Healthcare</a>
+            <a href="/Educational.html">Educational Institutes</a>
+            <a href="/Infra.html">Gov & Infra</a>
           </div>
         </div>
 
-        <div class="featured-project-card-new">
-          <div class="hovercontainer">
-            <div class="innerhover">
-              <div class="top-container">
-                <div class="text-innercontainer">
-                  <div class="text-inner-left">
-                    <h2 class="project-name">Giga Factory</h2>
-                    <h5 class="project-location">Mumbai</h5>
-                  </div>
-                  <div class="text-inner-right">
-                    <div class="project-service">HVAC</div>
-                    <div class="project-area">1,00,000 Sqft</div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom-container">
-                <p>
-                  Delivered a 100,000 sq. ft. HVAC installation for HSBC in
-                  Mumbai, ensuring efficient climate control, reliability, and
-                  long-term sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/projects/Giga factory.png" alt="Project image 1" />
-          </div>
-          <div class="text-container">
-            <div class="text-innercontainer">
-              <div class="text-inner-left">
-                <h2 class="project-name">Giga Factory</h2>
-                <h5 class="project-location">Mumbai</h5>
-              </div>
-              <div class="text-inner-right">
-                <div class="project-service">HVAC</div>
-                <div class="project-area">1,00,000 Sqft</div>
-              </div>
-            </div>
+        <!-- Resources -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Resources
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="project.html">Projects</a>
+            <a href="news.html">News & Articles</a>
           </div>
         </div>
 
-        <!-- <div class="featured-project-card-new">
-            <div class="contain">
-              <p class="viewmore-text">Load More</p>
-            </div>
-          </div> -->
-      </div>
-    </div>
-  </section>
-  <!-- Featured project section with interaction -->
-
-  <section class="trusted-brands-container">
-    <h3 class="trusted-brands-heading">
-      Trusted by 100+ businesses in pharma, data, and infrastructure.
-    </h3>
-
-    <!-- Slider test -->
-
-    <div class="slider-container">
-      <div class="slider">
-        <div class="slides" data-duration="24">
-          <div class="slide">
-            <img alt="gorej" src="./images/Logo/brand-logos/gorej.png" />
-            <img alt="IBM" src="./images/Logo/brand-logos/IBM.png" />
-            <img alt="KOTAK" src="./images/Logo/brand-logos/kotak.png" />
-            <img alt="morgan stanly" src="./images/Logo/brand-logos/morgan stanly.png" />
-            <img alt="msci" src="./images/Logo/brand-logos/msci.png" />
-            <img alt="Reliance" src="./images/Logo/brand-logos/reliance.png" />
-            <img alt="citi" src="./images/Logo/brand-logos/citi.svg" />
-            <img alt="netflix" src="./images/Logo/brand-logos/netflix.png" />
-            <img alt="pwc" src="./images/Logo/brand-logos/pwc.png" />
-            <img alt="spjain" src="./images/Logo/brand-logos/spjain.png" />
-            <img alt="tiaa" src="./images/Logo/brand-logos/tiaa.png" />
-            <img alt="synchron" src="./images/Logo/brand-logos/synchron.png" />
-            <img alt="Foxconn_logo" src="./images/Logo/brand-logos/Foxconn_logo.svg" />
-            <img alt="mastercard" src="./images/Logo/brand-logos/mastercard.svg" />
-            <img alt="ubs" src="./images/Logo/brand-logos/ubs.png" />
-            <img alt="JLL_logo" src="./images/Logo/brand-logos/JLL_logo 2.svg" />
-            <img alt="aws" src="./images/Logo/brand-logos/aws.svg" />
-            <img alt="wework" src="./images/Logo/brand-logos/WeWork 2.svg" />
-            <img alt="adani" src="./images/Logo/brand-logos/Adani_logo_2012 2.svg" />
-            <img alt="bank of america" src="./images/Logo/brand-logos/Bank_of_America_logo 2.svg" />
-            <img alt="ctrls" src="./images/Logo/brand-logos/ctrls.svg" />
-            <img alt="larsen larsen-toubro" src="./images/Logo/brand-logos/larsen-toubro-lt-seeklogo 1.svg" />
-            <img alt="sarovar" src="./images/Logo/brand-logos/sarovar-hotels-and-resorts-seeklogo 3.svg" />
-            <img alt="nomura" src="./images/Logo/brand-logos/Nomura_Holdings_logo 2.svg" />
-            <img alt="podar" src="./images/Logo/brand-logos/podar-seeklogo 2.svg" />
-            <img alt="qualcomm" src="./images/Logo/brand-logos/Qualcomm-Logo 2.svg" />
-          </div>
-          <div class="slide">
-            <img alt="gorej" src="./images/Logo/brand-logos/gorej.png" />
-            <img alt="IBM" src="./images/Logo/brand-logos/IBM.png" />
-            <img alt="KOTAK" src="./images/Logo/brand-logos/kotak.png" />
-            <img alt="morgan stanly" src="./images/Logo/brand-logos/morgan stanly.png" />
-            <img alt="msci" src="./images/Logo/brand-logos/msci.png" />
-            <img alt="Reliance" src="./images/Logo/brand-logos/reliance.png" />
-            <img alt="citi" src="./images/Logo/brand-logos/citi.svg" />
-            <img alt="netflix" src="./images/Logo/brand-logos/netflix.png" />
-            <img alt="pwc" src="./images/Logo/brand-logos/pwc.png" />
-            <img alt="spjain" src="./images/Logo/brand-logos/spjain.png" />
-            <img alt="tiaa" src="./images/Logo/brand-logos/tiaa.png" />
-            <img alt="synchron" src="./images/Logo/brand-logos/synchron.png" />
-            <img alt="Foxconn_logo" src="./images/Logo/brand-logos/Foxconn_logo.svg" />
-            <img alt="mastercard" src="./images/Logo/brand-logos/mastercard.svg" />
-            <img alt="ubs" src="./images/Logo/brand-logos/ubs.png" />
-            <img alt="JLL_logo" src="./images/Logo/brand-logos/JLL_logo 2.svg" />
-            <img alt="aws" src="./images/Logo/brand-logos/aws.svg" />
-            <img alt="wework" src="./images/Logo/brand-logos/WeWork 2.svg" />
-            <img alt="adani" src="./images/Logo/brand-logos/Adani_logo_2012 2.svg" />
-            <img alt="bank of america" src="./images/Logo/brand-logos/Bank_of_America_logo 2.svg" />
-            <img alt="ctrls" src="./images/Logo/brand-logos/ctrls.svg" />
-            <img alt="larsen larsen-toubro" src="./images/Logo/brand-logos/larsen-toubro-lt-seeklogo 1.svg" />
-            <img alt="sarovar" src="./images/Logo/brand-logos/sarovar-hotels-and-resorts-seeklogo 3.svg" />
-            <img alt="nomura" src="./images/Logo/brand-logos/Nomura_Holdings_logo 2.svg" />
-            <img alt="podar" src="./images/Logo/brand-logos/podar-seeklogo 2.svg" />
-            <img alt="qualcomm" src="./images/Logo/brand-logos/Qualcomm-Logo 2.svg" />
-          </div>
-        </div>
-      </div>
-      <div class="slider">
-        <div class="slides alternate" data-duration="24">
-          <div class="slide">
-            <img alt="sarovar" src="./images/Logo/brand-logos/sarovar-hotels-and-resorts-seeklogo 3.svg" />
-            <img alt="nomura" src="./images/Logo/brand-logos/Nomura_Holdings_logo 2.svg" />
-            <img alt="podar" src="./images/Logo/brand-logos/podar-seeklogo 2.svg" />
-            <img alt="qualcomm" src="./images/Logo/brand-logos/Qualcomm-Logo 2.svg" />
-            <img alt="Atlas" src="./images/Logo/brand-logos/Atlas-Copco-Logo 2.svg" />
-            <img alt="IndusInd" src="./images/Logo/brand-logos/IndusInd_Bank_SVG_Logo 2.svg" />
-            <img alt="Indian_Space_Research_Organisation"
-              src="./images/Logo/brand-logos/Indian_Space_Research_Organisation_Logo 2.svg" />
-            <img alt="schott" src="./images/Logo/brand-logos/schott.svg" />
-            <img alt="Ibis" src="./images/Logo/brand-logos/Ibis-logo-2019 2.svg" />
-            <img alt="amgen" src="./images/Logo/brand-logos/amgen.svg" />
-            <img alt="taj" src="./images/Logo/brand-logos/Taj_Hotels_logo 2.svg" />
-            <img alt="courtyard" src="./images/Logo/brand-logos/courtyard-by-marriott-seeklogo 2.svg" />
-            <img alt="cipla" src="./images/Logo/brand-logos/Cipla_logo 2.svg" />
-            <img alt="amazon" src="./images/Logo/brand-logos/Amazon_2024 2.svg" />
-            <img alt="mahindra" src="./images/Logo/brand-logos/Mahindra_Rise_New_Logo 2.svg" />
-            <img alt="Safran_logo" src="./images/Logo/brand-logos/Safran_logo 2.svg" />
-            <img alt="Belimo" src="./images/Logo/brand-logos/Belimo-Logo 2.svg" />
-            <img alt="TevaPharm" src="./images/Logo/brand-logos/TevaPharm 2.svg" />
-            <img alt="Caterpillar_logo" src="./images/Logo/brand-logos/Caterpillar_logo 2.svg" />
-            <img alt="S&P_Global_" src="./images/Logo/brand-logos/S&P_Global_logo 2.svg" />
-            <img alt="Colt_Technology_Services_logo"
-              src="./images/Logo/brand-logos/Colt_Technology_Services_logo 2.svg" />
-          </div>
-
-          <div class="slide">
-            <img alt="sarovar" src="./images/Logo/brand-logos/sarovar-hotels-and-resorts-seeklogo 3.svg" />
-            <img alt="nomura" src="./images/Logo/brand-logos/Nomura_Holdings_logo 2.svg" />
-            <img alt="podar" src="./images/Logo/brand-logos/podar-seeklogo 2.svg" />
-            <img alt="qualcomm" src="./images/Logo/brand-logos/Qualcomm-Logo 2.svg" />
-            <img alt="Atlas" src="./images/Logo/brand-logos/Atlas-Copco-Logo 2.svg" />
-            <img alt="IndusInd" src="./images/Logo/brand-logos/IndusInd_Bank_SVG_Logo 2.svg" />
-            <img alt="Indian_Space_Research_Organisation"
-              src="./images/Logo/brand-logos/Indian_Space_Research_Organisation_Logo 2.svg" />
-            <img alt="schott" src="./images/Logo/brand-logos/schott.svg" />
-            <img alt="Ibis" src="./images/Logo/brand-logos/Ibis-logo-2019 2.svg" />
-            <img alt="amgen" src="./images/Logo/brand-logos/amgen.svg" />
-            <img alt="taj" src="./images/Logo/brand-logos/Taj_Hotels_logo 2.svg" />
-            <img alt="courtyard" src="./images/Logo/brand-logos/courtyard-by-marriott-seeklogo 2.svg" />
-            <img alt="cipla" src="./images/Logo/brand-logos/Cipla_logo 2.svg" />
-            <img alt="amazon" src="./images/Logo/brand-logos/Amazon_2024 2.svg" />
-            <img alt="mahindra" src="./images/Logo/brand-logos/Mahindra_Rise_New_Logo 2.svg" />
-            <img alt="Safran_logo" src="./images/Logo/brand-logos/Safran_logo 2.svg" />
-            <img alt="Belimo" src="./images/Logo/brand-logos/Belimo-Logo 2.svg" />
-            <img alt="TevaPharm" src="./images/Logo/brand-logos/TevaPharm 2.svg" />
-            <img alt="Caterpillar_logo" src="./images/Logo/brand-logos/Caterpillar_logo 2.svg" />
-            <img alt="S&P_Global_" src="./images/Logo/brand-logos/S&P_Global_logo 2.svg" />
-            <img alt="Colt_Technology_Services_logo"
-              src="./images/Logo/brand-logos/Colt_Technology_Services_logo 2.svg" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slider test -->
-  </section>
-
-  <section class="testimonial-section">
-    <div class="testimonial-container">
-      <div class="testimonial-slide">
-        <div class="testimonial-content">
-          <p class="testimonial-text" id="testemonialText">
-            The team has provided superior maintenance service and HVAC asset
-            integrity assurance for eight years. Their professional rigor and
-            prompt ticket resolution are key contributors to consistent smooth
-            system uptime.
-          </p>
-          <div class="testimonial-company">
-            <img id="testemonialLogo" src="./images/Logo/brand-logos/ubs.png" alt="mastercardlogo" height="48px" />
-          </div>
-        </div>
-        <div class="testimonial-quote-icon">
-          <object data="./images/Vector.svg" type="image/svg+xml" height="100px"></object>
-          <path d="M10 7H6V17H10V7Z" />
-          <path d="M18 7H14V17H18V7Z" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="nextsection" id="newsHomePageSection">
-    <div class="section-header">
-      <h2>News & Insights</h2>
-    </div>
-    <!-- <h2>Featured Projects</h2> -->
-    <div class="innersection">
-      <div class="innerwarap" id="newsHomePageSectionInner">
-        <div class="news-card">
-          <div class="news-image">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Data Center" />
-          </div>
-          <div class="news-content">
-            <div class="news-date">
-              <i class="far fa-calendar"></i> October 1 2018
-            </div>
-            <h3 class="news-title">
-              HTL Aircon Pvt. Ltd.: Symbolizing the next wave of the HVAC
-              Industry
-            </h3>
-            <p class="news-excerpt">
-              A matured economic growth, scaling urbanization, expansion of
-              commercial &residential space, and rapid transit...
-            </p>
-            <div class="news-meta">
-              <a href="https://www.theceo.in/industry/marketing-news/htl-airconpvt-ltd-symbolizing-the-next-wave-of-the-hvac-industry"
-                class="read-more" target="_blank" rel="noopener noreferrer">
-                Read more <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-image">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Data Center" />
-          </div>
-          <div class="news-content">
-            <div class="news-date">
-              <i class="far fa-calendar"></i> June 11 2018
-            </div>
-            <h3 class="news-title">
-              A record-breaker 100 cr mark for HTL Aircon
-            </h3>
-            <p class="news-excerpt">
-              Cooling Solutions major, HTL Aircon today said it aims to be
-              among the top players in India's industrial HVAC...
-            </p>
-            <div class="news-meta">
-              <a href="https://www.business-standard.com/article/news-ani/a-record-breaker-100-cr-mark-for-htl-aircon-118061100614_1.html"
-                class="read-more" target="_blank" rel="noopener noreferrer">
-                Read more <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="news-card">
-          <div class="news-image">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-              alt="Data Center" />
-          </div>
-          <div class="news-content">
-            <div class="news-date">
-              <i class="far fa-calendar"></i> November 25 2017
-            </div>
-            <h3 class="news-title">HTL Aircon eyes SME listing</h3>
-            <p class="news-excerpt">
-              HTL Aircon Pvt. Ltd., a leading HVAC (Heating, Ventilation and
-              Air Conditioning) contractor for commercial and office buildings
-              and a leading dealer...
-            </p>
-            <div class="news-meta">
-              <a href="https://www.thehindu.com/business/Industry/htl-aircon-eyes-sme-listing/article20922503.ece"
-                class="read-more" target="_blank" rel="noopener noreferrer">
-                Read more <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-        <!-- <div class="news-card">
-            <div class="contain">
-              <p class="viewmore-text">Load More</p>
-            </div>
-          </div> -->
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="cta-container">
-      <div class="textgroup">
-        <h3>
-          <span class="gradient-color">Trusted by over 3,000 clients </span>worldwide for<br />
-          engineering excellence.
-        </h3>
-        <p>Get your expert advice today.</p>
-      </div>
-      <a href="#" class="btn">Request a Consultation</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="topper-section">
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">Company</h5>
-        <div class="footer-link-group">
-          <a href="#">About Us</a>
-          <a href="#">Our Team</a>
-          <a href="#">People & Culture</a>
-          <a href="#">Services</a>
-          <a href="#">CSR Initiatives</a>
-        </div>
-      </div>
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">services</h5>
-        <div class="footer-link-group">
-          <a href="#">HVAC</a>
-          <a href="#">MEP</a>
-          <a href="#">Base build</a>
-          <a href="#">Cleanrooms</a>
-          <a href="#">C&I & Interior fit-out</a>
-          <a href="#">Virtual Project Management</a>
-          <a href="#">Operations & Maintenance</a>
-        </div>
-      </div>
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">Sectors</h5>
-        <div class="footer-link-group">
-          <a href="#">Commercial Real Estate & GCC</a>
-          <a href="#">Industrial & Warehousing</a>
-          <a href="#">Data Centres & Critical rooms</a>
-          <a href="#">Pharma & biotech life sciences</a>
-          <a href="#">Hospital & healthcare</a>
-          <a href="#">Educational institutes</a>
-          <a href="#">Gov & Infra</a>
-        </div>
-      </div>
-      <div class="Topper-containers-last">
-        <div class="last-inner-containers">
-          <h5 class="footer-section-header">Contact us</h5>
-          <div class="footer-link-group">
-            <a href="#">info@abcd.demo</a>
-            <a href="#">+91 920 000 0000</a>
-          </div>
-        </div>
-        <div class="last-inner-containers">
-          <h5 class="footer-section-header">Follow us on</h5>
-          <div class="footer-link-group">
+        <!-- Social -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Socials
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
             <a href="#">LinkedIn</a>
           </div>
         </div>
       </div>
-    </div>
-    <div class="bottom-section">
-      <div class="left">
-        <img src="./images/Logo/Footer Image Block.svg" height="56px" alt="logo footer" />
-        <object data="./images/Logo/iso.svg" type="image/svg+xml" height="48px"></object>
+    </nav>
+    <!-- ===== MOBILE NAV END ===== -->
+
+    <section class="hero-container">
+      <div class="hero-video-wrapper">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="images/hero-thumbnail.webp"
+          class="hero-bg-video"
+        >
+          <source src="images/Home Video.webm" type="video/webm" />
+          <source src="images/Home Video.webm" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <div class="right">
-        <div class="location-group">
-          <a href="#">Mumbai</a>
-          <p>|</p>
-          <a href="#">CBD-Belapur</a>
-          <p>|</p>
-          <a href="#">Pune</a>
-          <p>|</p>
-          <a href="#">Bangalore</a>
-          <p>|</p>
-          <a href="#">Ahemdabad</a>
-          <p>|</p>
-          <a href="#">New Delhi</a>
-          <p>|</p>
-          <a href="#">Hyderabad</a>
-          <p>|</p>
-          <a href="#">Africa</a>
+
+      <div class="hero-elements">
+        <div class="hero-textbox-container">
+          <div class="hero-text-box">
+            <div class="text-group">
+              <h1 class="hero-text">
+                Engineering Infrastructure,<br />
+                Delivering Trust.
+              </h1>
+              <p class="hero-subtext">
+                Delivering integrated MEP services, powering India’s Real Estate
+                with Engineering, supply chain & management solutions.
+              </p>
+            </div>
+            <a href="#" class="btn" id="openFormBtn">Explore Capabilities</a>
+          </div>
         </div>
-        <p class="copyrights">
-          © 2025 HTL AIRCON<br />
-          All rights reserved
-        </p>
+      </div>
+      <div class="hero-matrix">
+        <div class="stat-box">
+          <div class="stat-individual" id="statClients">
+            <h4 class="stats-title">Clients served</h4>
+            <span>
+              <hr />
+            </span>
+            <h2>100+</h2>
+          </div>
+
+          <div class="stat-individual" id="statProjects">
+            <h4 class="stats-title">No of Repeat Clients</h4>
+            <span>
+              <hr />
+            </span>
+            <h2>86%</h2>
+          </div>
+
+          <div class="stat-individual" id="statCountries">
+            <h4 class="stats-title">Sq. Ft covered</h4>
+            <span>
+              <hr />
+            </span>
+            <h2>50M+</h2>
+          </div>
+
+          <div class="stat-individual" id="statYears">
+            <h4 class="stats-title">CSAT Score</h4>
+            <span>
+              <hr />
+            </span>
+            <h2>9.2</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="business-form-overlay" id="businessForm">
+      <div class="business-form-container">
+        <button class="close-btn" id="closeFormBtn">&times;</button>
+        <h2>Build a solution for your business</h2>
+
+        <form class="business-form">
+          <div class="form-row">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+          </div>
+
+          <div class="form-row">
+            <select required>
+              <option value="">Service Type</option>
+              <option value="consulting">Consulting</option>
+              <option value="design">Design</option>
+              <option value="development">Development</option>
+            </select>
+            <input type="tel" placeholder="Contact Number" required />
+          </div>
+
+          <p class="required-note">*All the fields are required</p>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
       </div>
     </div>
-  </footer>
 
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- Scripts -->
-  <script src="./js/navbar.js"></script>
-  <!-- <script src="./js/carousal.js"></script> -->
-  <script src="./js/stats.js"></script>
-  <script src="./js/testemonials.js"></script>
-  <!-- Animations -->
-  <script src="./js/animation/Lenis.js"></script>
-  <script src="./Hamburger/script.js"></script>
-  <script src="./js/marquee.js"></script>
-  <script src="./js/herometrics.js"></script>
-  <script src="./js/animation/scrollTriggers.js"></script>
+    <!-- Services Section -->
+    <section class="services">
+      <div class="services-content">
+        <div class="services-content-text">
+          <h2>
+            Delivering Service Excellence <br />
+            <span
+              >Through Quality, Safety, and Global Engineering Standards Across
+              India, Middle East & Africa
+            </span>
+          </h2>
+          <p>
+            Driven by precision, built on best-in-class standards on every
+            project.
+          </p>
+        </div>
 
+        <a href="#" class="btn">Explore Our Services</a>
+      </div>
+    </section>
 
-  <script>
-    const openFormBtn = document.getElementById("openFormBtn");
-    const closeFormBtn = document.getElementById("closeFormBtn");
-    const businessForm = document.getElementById("businessForm");
+    <!-- Featured project section with interaction -->
+    <section class="nextsection" id="projectHomePageSection">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+      </div>
+      <!-- <h2>Featured Projects</h2> -->
+      <div class="innersection">
+        <div class="innerwarap" id="projectHomePageSectionInner">
+          <!-- Project 1 -->
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">Microsoft</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img
+                src="./images/projects/Microsoft_hyderabad.webp"
+                alt="Project image 1"
+              />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">Microsoft</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    openFormBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      businessForm.classList.add("active");
-    });
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">Qualcomm</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img
+                src="./images/projects/Qualcomm.avif"
+                alt="Project image 1"
+              />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">Qualcomm</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    closeFormBtn.addEventListener("click", () => {
-      businessForm.classList.remove("active");
-    });
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">Foxconn</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img
+                src="./images/projects/Foxconn Bengaluru.webp"
+                alt="Project image 1"
+              />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">Foxconn</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    // Optional: close popup when clicking outside the form
-    businessForm.addEventListener("click", (e) => {
-      if (e.target === businessForm) {
+          <div class="featured-project-card-new">
+            <div class="hovercontainer">
+              <div class="innerhover">
+                <div class="top-container">
+                  <div class="text-innercontainer">
+                    <div class="text-inner-left">
+                      <h2 class="project-name">Giga Factory</h2>
+                      <h5 class="project-location">Mumbai</h5>
+                    </div>
+                    <div class="text-inner-right">
+                      <div class="project-service">HVAC</div>
+                      <div class="project-area">1,00,000 Sqft</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-container">
+                  <p>
+                    Delivered a 100,000 sq. ft. HVAC installation for HSBC in
+                    Mumbai, ensuring efficient climate control, reliability, and
+                    long-term sustainability.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img
+                src="./images/projects/Giga factory.png"
+                alt="Project image 1"
+              />
+            </div>
+            <div class="text-container">
+              <div class="text-innercontainer">
+                <div class="text-inner-left">
+                  <h2 class="project-name">Giga Factory</h2>
+                  <h5 class="project-location">Mumbai</h5>
+                </div>
+                <div class="text-inner-right">
+                  <div class="project-service">HVAC</div>
+                  <div class="project-area">1,00,000 Sqft</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="featured-project-card-new">
+            <div class="contain">
+              <p class="viewmore-text">Load More</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Featured project section with interaction -->
+
+    <section class="trusted-brands-container">
+      <h3 class="trusted-brands-heading">
+        Trusted by 100+ businesses in pharma, data, and infrastructure.
+      </h3>
+
+      <!-- Slider test -->
+
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slides" data-duration="24">
+            <div class="slide">
+              <img alt="gorej" src="./images/Logo/brand-logos/gorej.png" />
+              <img alt="IBM" src="./images/Logo/brand-logos/IBM.png" />
+              <img alt="KOTAK" src="./images/Logo/brand-logos/kotak.png" />
+              <img
+                alt="morgan stanly"
+                src="./images/Logo/brand-logos/morgan stanly.png"
+              />
+              <img alt="msci" src="./images/Logo/brand-logos/msci.png" />
+              <img
+                alt="Reliance"
+                src="./images/Logo/brand-logos/reliance.png"
+              />
+              <img alt="citi" src="./images/Logo/brand-logos/citi.svg" />
+              <img alt="netflix" src="./images/Logo/brand-logos/netflix.png" />
+              <img alt="pwc" src="./images/Logo/brand-logos/pwc.png" />
+              <img alt="spjain" src="./images/Logo/brand-logos/spjain.png" />
+              <img alt="tiaa" src="./images/Logo/brand-logos/tiaa.png" />
+              <img
+                alt="synchron"
+                src="./images/Logo/brand-logos/synchron.png"
+              />
+              <img
+                alt="Foxconn_logo"
+                src="./images/Logo/brand-logos/Foxconn_logo.svg"
+              />
+              <img
+                alt="mastercard"
+                src="./images/Logo/brand-logos/mastercard.svg"
+              />
+              <img alt="ubs" src="./images/Logo/brand-logos/ubs.png" />
+              <img
+                alt="JLL_logo"
+                src="./images/Logo/brand-logos/JLL_logo 2.svg"
+              />
+              <img alt="aws" src="./images/Logo/brand-logos/aws.svg" />
+              <img alt="wework" src="./images/Logo/brand-logos/WeWork 2.svg" />
+              <img
+                alt="adani"
+                src="./images/Logo/brand-logos/Adani_logo_2012 2.svg"
+              />
+              <img
+                alt="bank of america"
+                src="./images/Logo/brand-logos/Bank_of_America_logo 2.svg"
+              />
+              <img alt="ctrls" src="./images/Logo/brand-logos/ctrls.svg" />
+              <img
+                alt="larsen larsen-toubro"
+                src="./images/Logo/brand-logos/larsen-toubro-lt-seeklogo 1.svg"
+              />
+              <img
+                alt="sarovar"
+                src="./images/Logo/brand-logos/sarovar-hotels-and-resorts-seeklogo 3.svg"
+              />
+              <img
+                alt="nomura"
+                src="./images/Logo/brand-logos/Nomura_Holdings_logo 2.svg"
+              />
+              <img
+                alt="podar"
+                src="./images/Logo/brand-logos/podar-seeklogo 2.svg"
+              />
+              <img
+                alt="qualcomm"
+                src="./images/Logo/brand-logos/Qualcomm-Logo 2.svg"
+              />
+            </div>
+            <div class="slide">
+              <img alt="gorej" src="./images/Logo/brand-logos/gorej.png" />
+              <img alt="IBM" src="./images/Logo/brand-logos/IBM.png" />
+              <img alt="KOTAK" src="./images/Logo/brand-logos/kotak.png" />
+              <img
+                alt="morgan stanly"
+                src="./images/Logo/brand-logos/morgan stanly.png"
+              />
+              <img alt="msci" src="./images/Logo/brand-logos/msci.png" />
+              <img
+                alt="Reliance"
+                src="./images/Logo/brand-logos/reliance.png"
+              />
+              <img alt="citi" src="./images/Logo/brand-logos/citi.svg" />
+              <img alt="netflix" src="./images/Logo/brand-logos/netflix.png" />
+              <img alt="pwc" src="./images/Logo/brand-logos/pwc.png" />
+              <img alt="spjain" src="./images/Logo/brand-logos/spjain.png" />
+              <img alt="tiaa" src="./images/Logo/brand-logos/tiaa.png" />
+              <img
+                alt="synchron"
+                src="./images/Logo/brand-logos/synchron.png"
+              />
+              <img
+                alt="Foxconn_logo"
+                src="./images/Logo/brand-logos/Foxconn_logo.svg"
+              />
+              <img
+                alt="mastercard"
+                src="./images/Logo/brand-logos/mastercard.svg"
+              />
+              <img alt="ubs" src="./images/Logo/brand-logos/ubs.png" />
+              <img
+                alt="JLL_logo"
+                src="./images/Logo/brand-logos/JLL_logo 2.svg"
+              />
+              <img alt="aws" src="./images/Logo/brand-logos/aws.svg" />
+              <img alt="wework" src="./images/Logo/brand-logos/WeWork 2.svg" />
+              <img
+                alt="adani"
+                src="./images/Logo/brand-logos/Adani_logo_2012 2.svg"
+              />
+              <img
+                alt="bank of america"
+                src="./images/Logo/brand-logos/Bank_of_America_logo 2.svg"
+              />
+              <img alt="ctrls" src="./images/Logo/brand-logos/ctrls.svg" />
+              <img
+                alt="larsen larsen-toubro"
+                src="./images/Logo/brand-logos/larsen-toubro-lt-seeklogo 1.svg"
+              />
+              <img
+                alt="sarovar"
+                src="./images/Logo/brand-logos/sarovar-hotels-and-resorts-seeklogo 3.svg"
+              />
+              <img
+                alt="nomura"
+                src="./images/Logo/brand-logos/Nomura_Holdings_logo 2.svg"
+              />
+              <img
+                alt="podar"
+                src="./images/Logo/brand-logos/podar-seeklogo 2.svg"
+              />
+              <img
+                alt="qualcomm"
+                src="./images/Logo/brand-logos/Qualcomm-Logo 2.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="slider">
+          <div class="slides alternate" data-duration="24">
+            <div class="slide">
+              <img
+                alt="sarovar"
+                src="./images/Logo/brand-logos/sarovar-hotels-and-resorts-seeklogo 3.svg"
+              />
+              <img
+                alt="nomura"
+                src="./images/Logo/brand-logos/Nomura_Holdings_logo 2.svg"
+              />
+              <img
+                alt="podar"
+                src="./images/Logo/brand-logos/podar-seeklogo 2.svg"
+              />
+              <img
+                alt="qualcomm"
+                src="./images/Logo/brand-logos/Qualcomm-Logo 2.svg"
+              />
+              <img
+                alt="Atlas"
+                src="./images/Logo/brand-logos/Atlas-Copco-Logo 2.svg"
+              />
+              <img
+                alt="IndusInd"
+                src="./images/Logo/brand-logos/IndusInd_Bank_SVG_Logo 2.svg"
+              />
+              <img
+                alt="Indian_Space_Research_Organisation"
+                src="./images/Logo/brand-logos/Indian_Space_Research_Organisation_Logo 2.svg"
+              />
+              <img alt="schott" src="./images/Logo/brand-logos/schott.svg" />
+              <img
+                alt="Ibis"
+                src="./images/Logo/brand-logos/Ibis-logo-2019 2.svg"
+              />
+              <img alt="amgen" src="./images/Logo/brand-logos/amgen.svg" />
+              <img
+                alt="taj"
+                src="./images/Logo/brand-logos/Taj_Hotels_logo 2.svg"
+              />
+              <img
+                alt="courtyard"
+                src="./images/Logo/brand-logos/courtyard-by-marriott-seeklogo 2.svg"
+              />
+              <img
+                alt="cipla"
+                src="./images/Logo/brand-logos/Cipla_logo 2.svg"
+              />
+              <img
+                alt="amazon"
+                src="./images/Logo/brand-logos/Amazon_2024 2.svg"
+              />
+              <img
+                alt="mahindra"
+                src="./images/Logo/brand-logos/Mahindra_Rise_New_Logo 2.svg"
+              />
+              <img
+                alt="Safran_logo"
+                src="./images/Logo/brand-logos/Safran_logo 2.svg"
+              />
+              <img
+                alt="Belimo"
+                src="./images/Logo/brand-logos/Belimo-Logo 2.svg"
+              />
+              <img
+                alt="TevaPharm"
+                src="./images/Logo/brand-logos/TevaPharm 2.svg"
+              />
+              <img
+                alt="Caterpillar_logo"
+                src="./images/Logo/brand-logos/Caterpillar_logo 2.svg"
+              />
+              <img
+                alt="S&P_Global_"
+                src="./images/Logo/brand-logos/S&P_Global_logo 2.svg"
+              />
+              <img
+                alt="Colt_Technology_Services_logo"
+                src="./images/Logo/brand-logos/Colt_Technology_Services_logo 2.svg"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                alt="sarovar"
+                src="./images/Logo/brand-logos/sarovar-hotels-and-resorts-seeklogo 3.svg"
+              />
+              <img
+                alt="nomura"
+                src="./images/Logo/brand-logos/Nomura_Holdings_logo 2.svg"
+              />
+              <img
+                alt="podar"
+                src="./images/Logo/brand-logos/podar-seeklogo 2.svg"
+              />
+              <img
+                alt="qualcomm"
+                src="./images/Logo/brand-logos/Qualcomm-Logo 2.svg"
+              />
+              <img
+                alt="Atlas"
+                src="./images/Logo/brand-logos/Atlas-Copco-Logo 2.svg"
+              />
+              <img
+                alt="IndusInd"
+                src="./images/Logo/brand-logos/IndusInd_Bank_SVG_Logo 2.svg"
+              />
+              <img
+                alt="Indian_Space_Research_Organisation"
+                src="./images/Logo/brand-logos/Indian_Space_Research_Organisation_Logo 2.svg"
+              />
+              <img alt="schott" src="./images/Logo/brand-logos/schott.svg" />
+              <img
+                alt="Ibis"
+                src="./images/Logo/brand-logos/Ibis-logo-2019 2.svg"
+              />
+              <img alt="amgen" src="./images/Logo/brand-logos/amgen.svg" />
+              <img
+                alt="taj"
+                src="./images/Logo/brand-logos/Taj_Hotels_logo 2.svg"
+              />
+              <img
+                alt="courtyard"
+                src="./images/Logo/brand-logos/courtyard-by-marriott-seeklogo 2.svg"
+              />
+              <img
+                alt="cipla"
+                src="./images/Logo/brand-logos/Cipla_logo 2.svg"
+              />
+              <img
+                alt="amazon"
+                src="./images/Logo/brand-logos/Amazon_2024 2.svg"
+              />
+              <img
+                alt="mahindra"
+                src="./images/Logo/brand-logos/Mahindra_Rise_New_Logo 2.svg"
+              />
+              <img
+                alt="Safran_logo"
+                src="./images/Logo/brand-logos/Safran_logo 2.svg"
+              />
+              <img
+                alt="Belimo"
+                src="./images/Logo/brand-logos/Belimo-Logo 2.svg"
+              />
+              <img
+                alt="TevaPharm"
+                src="./images/Logo/brand-logos/TevaPharm 2.svg"
+              />
+              <img
+                alt="Caterpillar_logo"
+                src="./images/Logo/brand-logos/Caterpillar_logo 2.svg"
+              />
+              <img
+                alt="S&P_Global_"
+                src="./images/Logo/brand-logos/S&P_Global_logo 2.svg"
+              />
+              <img
+                alt="Colt_Technology_Services_logo"
+                src="./images/Logo/brand-logos/Colt_Technology_Services_logo 2.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider test -->
+    </section>
+
+    <section class="testimonial-section">
+      <div class="testimonial-container">
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-text" id="testemonialText">
+              The team has provided superior maintenance service and HVAC asset
+              integrity assurance for eight years. Their professional rigor and
+              prompt ticket resolution are key contributors to consistent smooth
+              system uptime.
+            </p>
+            <div class="testimonial-company">
+              <img
+                id="testemonialLogo"
+                src="./images/Logo/brand-logos/ubs.png"
+                alt="mastercardlogo"
+                height="48px"
+              />
+            </div>
+          </div>
+          <div class="testimonial-quote-icon">
+            <object
+              data="./images/Vector.svg"
+              type="image/svg+xml"
+              height="100px"
+            ></object>
+            <path d="M10 7H6V17H10V7Z" />
+            <path d="M18 7H14V17H18V7Z" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nextsection" id="newsHomePageSection">
+      <div class="section-header">
+        <h2>News & Insights</h2>
+      </div>
+
+      <div class="innersection">
+        <div class="innerwarap" id="newsHomePageSectionInner">
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> October 1 2018
+              </div>
+              <h3 class="news-title">
+                HTL Aircon Pvt. Ltd.: Symbolizing the next wave of the HVAC
+                Industry
+              </h3>
+              <p class="news-excerpt">
+                A matured economic growth, scaling urbanization, expansion of
+                commercial &residential space, and rapid transit...
+              </p>
+              <div class="news-meta">
+                <a
+                  href="https://www.theceo.in/industry/marketing-news/htl-airconpvt-ltd-symbolizing-the-next-wave-of-the-hvac-industry"
+                  class="read-more"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> November 25 2017
+              </div>
+              <h3 class="news-title">HTL Aircon eyes SME listing</h3>
+              <p class="news-excerpt">
+                HTL Aircon Pvt. Ltd., a leading HVAC (Heating, Ventilation and
+                Air Conditioning) contractor for commercial and office buildings
+                and a leading dealer...
+              </p>
+              <div class="news-meta">
+                <a
+                  href="https://www.thehindu.com/business/Industry/htl-aircon-eyes-sme-listing/article20922503.ece"
+                  class="read-more"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="Data Center"
+              />
+            </div>
+            <div class="news-content">
+              <div class="news-date">
+                <i class="far fa-calendar"></i> November 25 2017
+              </div>
+              <h3 class="news-title">HTL Aircon eyes SME listing</h3>
+              <p class="news-excerpt">
+                HTL Aircon Pvt. Ltd., a leading HVAC (Heating, Ventilation and
+                Air Conditioning) contractor for commercial and office buildings
+                and a leading dealer...
+              </p>
+              <div class="news-meta">
+                <a
+                  href="https://www.thehindu.com/business/Industry/htl-aircon-eyes-sme-listing/article20922503.ece"
+                  class="read-more"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read more <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card" id="loadMoreCard" style="cursor: pointer;">
+            <div class="contain">
+              <p class="viewmore-text">Load More</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="textgroup">
+          <h3>
+            <span class="gradient-color">Trusted by over 3,000 clients </span
+            >worldwide for<br />
+            engineering excellence.
+          </h3>
+          <p>Get your expert advice today.</p>
+        </div>
+        <a href="#" class="btn">Request a Consultation</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="topper-section">
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Company</h5>
+          <div class="footer-link-group">
+            <a href="#">About Us</a>
+            <a href="#">Our Team</a>
+            <a href="#">People & Culture</a>
+            <a href="#">Services</a>
+            <a href="#">CSR Initiatives</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">services</h5>
+          <div class="footer-link-group">
+            <a href="#">HVAC</a>
+            <a href="#">MEP</a>
+
+            <a href="#">Base build</a>
+            <a href="#">Cleanrooms</a>
+            <a href="#">C&I & Interior fit-out</a>
+            <a href="#">Virtual Project Management</a>
+            <a href="#">Operations & Maintenance</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Sectors</h5>
+          <div class="footer-link-group">
+            <a href="#">Commercial Real Estate & GCC</a>
+            <a href="#">Industrial & Warehousing</a>
+            <a href="#">Data Centres & Critical rooms</a>
+            <a href="#">Pharma & biotech life sciences</a>
+            <a href="#">Hospital & healthcare</a>
+            <a href="#">Educational institutes</a>
+            <a href="#">Gov & Infra</a>
+          </div>
+        </div>
+        <div class="Topper-containers-last">
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Contact us</h5>
+            <div class="footer-link-group">
+              <a href="#">info@abcd.demo</a>
+              <a href="#">+91 920 000 0000</a>
+            </div>
+          </div>
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Follow us on</h5>
+            <div class="footer-link-group">
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <div class="left">
+          <img
+            src="./images/Logo/Footer Image Block.svg"
+            height="56px"
+            alt="logo footer"
+          />
+          <object
+            data="./images/Logo/iso.svg"
+            type="image/svg+xml"
+            height="48px"
+          ></object>
+        </div>
+        <div class="right">
+          <div class="location-group">
+            <a href="#">Mumbai</a>
+            <p>|</p>
+            <a href="#">CBD-Belapur</a>
+            <p>|</p>
+            <a href="#">Pune</a>
+            <p>|</p>
+            <a href="#">Bangalore</a>
+            <p>|</p>
+            <a href="#">Ahemdabad</a>
+            <p>|</p>
+            <a href="#">New Delhi</a>
+            <p>|</p>
+            <a href="#">Hyderabad</a>
+            <p>|</p>
+            <a href="#">Africa</a>
+          </div>
+          <p class="copyrights">
+            © 2025 HTL AIRCON<br />
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Scripts -->
+    <script src="./js/navbar.js"></script>
+    <!-- <script src="./js/carousal.js"></script> -->
+    <script src="./js/stats.js"></script>
+    <script src="./js/testemonials.js"></script>
+    <!-- Animations -->
+    <script src="./js/animation/Lenis.js"></script>
+    <script src="./Hamburger/script.js"></script>
+    <script src="./js/marquee.js"></script>
+    <script src="./js/herometrics.js"></script>
+    <script src="./js/animation/scrollTriggers.js"></script>
+
+    <script>
+      document
+        .getElementById("loadMoreCard")
+        .addEventListener("click", function () {
+          window.location.href = "news.html";
+        });
+    </script>
+
+    <script>
+      const openFormBtn = document.getElementById("openFormBtn");
+      const closeFormBtn = document.getElementById("closeFormBtn");
+      const businessForm = document.getElementById("businessForm");
+
+      openFormBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        businessForm.classList.add("active");
+      });
+
+      closeFormBtn.addEventListener("click", () => {
         businessForm.classList.remove("active");
-      }
-    });
-  </script>
-</body>
+      });
 
+      // Optional: close popup when clicking outside the form
+      businessForm.addEventListener("click", (e) => {
+        if (e.target === businessForm) {
+          businessForm.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
 </html>
