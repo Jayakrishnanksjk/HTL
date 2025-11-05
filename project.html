@@ -323,7 +323,6 @@
 
 
     <div class="card-pagination">
-      <!-- Back button with left arrow -->
       <button class="page-btn back-btn">
 
         Load more
@@ -558,6 +557,36 @@
         });
       });
     </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".new-project-card");
+    const loadMoreBtn = document.querySelector(".page-btn");
+    let visibleCards = 6; // show 6 at first
+
+    // Hide cards beyond the first 6
+    cards.forEach((card, index) => {
+      if (index >= visibleCards) {
+        card.style.display = "none";
+      }
+    });
+
+    loadMoreBtn.addEventListener("click", function () {
+      // Show 6 more cards
+      for (let i = visibleCards; i < visibleCards + 6 && i < cards.length; i++) {
+        cards[i].style.display = "flex"; // use flex if your cards use flexbox
+      }
+      visibleCards += 6;
+
+      // Hide button when all cards are visible
+      if (visibleCards >= cards.length) {
+        loadMoreBtn.style.display = "none";
+      }
+    });
+  });
+</script>
+
 </body>
 
 </html>
