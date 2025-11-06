@@ -3432,10 +3432,22 @@ footer {
 }
 
 .new-project-image {
-  width: 100%;
+  width: 425px;
   height: 374px; /* same as your perfect cards */
   overflow: hidden;
 }
+
+
+/* Hide all cards by default */
+.new-projects-row .new-project-card {
+  display: none;
+}
+
+/* Show only first 6 cards */
+.new-projects-row .new-project-card:nth-child(-n+6) {
+  display: flex;
+}
+
 
 .new-project-image img {
   width: 100%;

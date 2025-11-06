@@ -1,119 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTL Website</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTL Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="normalize.css" />
-</head>
-
-<body>
-  <!-- Hero Section -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-body">
-      <a class="link-style-reset" href="./index.html">
-        <div class="nav-brand">
-          <img src="./images/htl logo.png" alt="HTL brand logo" height="32px" width="auto" href="index.html" />
-        </div>
-      </a>
-
-      <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
-        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect class="top" y="9" width="48" height="6" fill="white" />
-          <rect class="bot" y="29" width="48" height="6" fill="white" />
-        </svg>
-      </div>
-    </div>
-    <div class="nav-menu-section" id="navSection">
-      <div class="inner-container">
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Company</h3>
-            </div>
-            <div class="menu-list">
-              <a href="/about.html" class="link-box">About Us</a>
-              <a href="/team.html" class="link-box">Our Team</a>
-              <a href="/culturePage.html" class="link-box">People and Culture</a>
-              <a href="/services.html" class="link-box">Services</a>
-              <a href="/CSR.html" class="link-box">CSR Initiatives</a>
-              <a href="#" class="link-box disabled">Investor Relations</a>
-            </div>
+  <body>
+    <!-- Hero Section -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-body">
+        <a class="link-style-reset" href="./index.html">
+          <div class="nav-brand">
+            <img
+              src="./images/htl logo.png"
+              alt="HTL brand logo"
+              height="32px"
+              width="auto"
+              href="index.html"
+            />
           </div>
-        </div>
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Services</h3>
-            </div>
-            <div class="menu-list">
-              <a href="/hvac.html" class="link-box">HVAC</a>
-              <a href="/mep.html" class="link-box">MEP</a>
-              <a href="/BaseBuild.html" class="link-box">Base build</a>
-              <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
-              <a href="/InteriorFitout.html" class="link-box">C&I & Interior Fit-out</a>
-              <a href="/VirtualProjectManagement.html" class="link-box">Virtual Project Management</a>
-              <a href="/OperationNmaintainance.html" class="link-box">Operations & Maintenance</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Sectors</h3>
-            </div>
-            <div class="menu-list">
-              <a href="/commGcc.html" class="link-box">Commercial Real Estate & GCC</a>
-              <a href="/Industrial.html" class="link-box">Industrial & Warehousing</a>
-              <a href="/DataCentres.html" class="link-box">Data Centres & Critical rooms</a>
-              <a href="/Biotech.html" class="link-box">Pharma & Biotech Life sciences</a>
-              <a href="/hospitality.html" class="link-box">Hospitality & Luxury Retail</a>
-              <a href="/healthcare.html" class="link-box">Hospital & healthcare</a>
-              <a href="/Educational.html" class="link-box">Educational institutes</a>
-              <a href="/Infra.html" class="link-box">Gov & Infra</a>
-            </div>
-          </div>
-        </div>
-        <div class="inner-div-nav">
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Resources</h3>
-            </div>
-            <div class="menu-list">
-              <a href="project.html" class="link-box">Projects</a>
-              <a href="news.html" class="link-box">News & Articles</a>
-            </div>
-          </div>
-
-          <div class="menu-box">
-            <div class="title-box">
-              <h3>Socials</h3>
-            </div>
-            <div class="menu-list">
-              <a href="#" class="link-box">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ===== MOBILE NAV START ===== -->
-  <nav class="mobile-navbar" id="mobileNavbar">
-    <div class="mobile-nav-header">
-      <div class="mobile-brand">
-        <a href="index.html">
-          <img src="./images/htl logo.png" alt="HTL Logo" height="28" />
         </a>
+
+        <div
+          class="nav-link-btn nav-toggle"
+          id="navToggle"
+          onclick="toggleNav()"
+        >
+          <svg
+            id="burger"
+            width="48"
+            height="32"
+            viewBox="0 0 56 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect class="top" y="9" width="48" height="6" fill="white" />
+            <rect class="bot" y="29" width="48" height="6" fill="white" />
+          </svg>
+        </div>
       </div>
-      <!--       
+      <div class="nav-menu-section" id="navSection">
+        <div class="inner-container">
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Company</h3>
+              </div>
+              <div class="menu-list">
+                <a href="/about.html" class="link-box">About Us</a>
+                <a href="/team.html" class="link-box">Our Team</a>
+                <a href="/culturePage.html" class="link-box"
+                  >People and Culture</a
+                >
+                <a href="/services.html" class="link-box">Services</a>
+                <a href="/CSR.html" class="link-box">CSR Initiatives</a>
+                <a href="#" class="link-box disabled">Investor Relations</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Services</h3>
+              </div>
+              <div class="menu-list">
+                <a href="/hvac.html" class="link-box">HVAC</a>
+                <a href="/mep.html" class="link-box">MEP</a>
+                <a href="/BaseBuild.html" class="link-box">Base build</a>
+                <a href="/Cleanroom.html" class="link-box">Cleanrooms</a>
+                <a href="/InteriorFitout.html" class="link-box"
+                  >C&I & Interior Fit-out</a
+                >
+                <a href="/VirtualProjectManagement.html" class="link-box"
+                  >Virtual Project Management</a
+                >
+                <a href="/OperationNmaintainance.html" class="link-box"
+                  >Operations & Maintenance</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Sectors</h3>
+              </div>
+              <div class="menu-list">
+                <a href="/commGcc.html" class="link-box"
+                  >Commercial Real Estate & GCC</a
+                >
+                <a href="/Industrial.html" class="link-box"
+                  >Industrial & Warehousing</a
+                >
+                <a href="/DataCentres.html" class="link-box"
+                  >Data Centres & Critical rooms</a
+                >
+                <a href="/Biotech.html" class="link-box"
+                  >Pharma & Biotech Life sciences</a
+                >
+                <a href="/hospitality.html" class="link-box"
+                  >Hospitality & Luxury Retail</a
+                >
+                <a href="/healthcare.html" class="link-box"
+                  >Hospital & healthcare</a
+                >
+                <a href="/Educational.html" class="link-box"
+                  >Educational institutes</a
+                >
+                <a href="/Infra.html" class="link-box">Gov & Infra</a>
+              </div>
+            </div>
+          </div>
+          <div class="inner-div-nav">
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Resources</h3>
+              </div>
+              <div class="menu-list">
+                <a href="project.html" class="link-box">Projects</a>
+                <a href="news.html" class="link-box">News & Articles</a>
+              </div>
+            </div>
+
+            <div class="menu-box">
+              <div class="title-box">
+                <h3>Socials</h3>
+              </div>
+              <div class="menu-list">
+                <a href="#" class="link-box">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== MOBILE NAV START ===== -->
+    <nav class="mobile-navbar" id="mobileNavbar">
+      <div class="mobile-nav-header">
+        <div class="mobile-brand">
+          <a href="index.html">
+            <img src="./images/htl logo.png" alt="HTL Logo" height="28" />
+          </a>
+        </div>
+        <!--       
       <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleNav()">
         <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect class="top" y="9" width="48" height="6" fill="white" />
@@ -121,398 +162,1779 @@
         </svg>
       </div> -->
 
-
-      <div class="mobile-menu-toggle" id="mobileMenuToggle">
-        <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="10" width="32" height="4" fill="white" />
-          <rect y="20" width="32" height="4" fill="white" />
-          <rect y="30" width="32" height="4" fill="white" />
-        </svg>
-      </div>
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <!-- Company -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Company
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="about.html">About Us</a>
-          <a href="team.html">Our Team</a>
-          <a href="/culturePage.html">People and Culture</a>
-          <a href="services.html">Services</a>
-          <a href="/CSR.html">CSR Initiatives</a>
-          <a href="#">Investor Relations</a>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect y="10" width="32" height="4" fill="white" />
+            <rect y="20" width="32" height="4" fill="white" />
+            <rect y="30" width="32" height="4" fill="white" />
+          </svg>
         </div>
       </div>
 
-      <!-- Services -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Services
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="hvac.html">HVAC</a>
-          <a href="mep.html">MEP</a>
-
-          <a href="/BaseBuild.html">Base build</a>
-          <a href="/Cleanroom.html">Cleanrooms</a>
-          <a href="/InteriorFitout.html">C&I & Interior Fit-out</a>
-          <a href="/VirtualProjectManagement.html">Virtual Project Management</a>
-          <a href="/OperationNmaintainance.html">Operations & Maintenance</a>
-        </div>
-      </div>
-
-      <!-- Sectors -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Sectors
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="commGcc.html">Commercial Real Estate & GCC</a>
-          <a href="/Industrial.html">Industrial & Warehousing</a>
-          <a href="/DataCentres.html">Data Centres & Critical Rooms</a>
-          <a href="/Biotech.html">Pharma & Biotech Life Sciences</a>
-          <a href="hospitality.html">Hospitality & Luxury Retail</a>
-          <a href="/healthcare.html">Hospital & Healthcare</a>
-          <a href="/Educational.html">Educational Institutes</a>
-          <a href="/Infra.html">Gov & Infra</a>
-        </div>
-      </div>
-
-      <!-- Resources -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Resources
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="project.html">Projects</a>
-          <a href="news.html">News & Articles</a>
-        </div>
-      </div>
-
-      <!-- Social -->
-      <div class="mobile-dropdown">
-        <button class="dropdown-btn">
-          Socials
-          <span class="arrow">&#9662;</span>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- ===== MOBILE NAV END ===== -->
-  <section class="project-hero-section">
-    <div class="project-content">
-      <h1>What We've Built</h1>
-      <p>A Glimpse Into Our Work</p>
-    </div>
-  </section>
-
-  <section class="new-projects-section">
-    <div class="new-projects-header">
-      <h2 class="new-projects-title">Projects Highlights</h2>
-
-   <div class="project-filter-bar">
-  <button class="project-clear-btn" id="clearProjectFilters">Clear filters</button>
-
-  <div class="project-dropdown" id="projectSectorDropdown">
-    <button class="project-dropdown-btn">Sector <span>▼</span></button>
-    <div class="project-dropdown-content">
-      <label><input type="checkbox" value="cre"> Commercial Real Estate & GCC</label>
-      <label><input type="checkbox" value="industrial"> Industrial & Warehousing</label>
-      <label><input type="checkbox" value="datacentres"> Data Centres & Critical rooms</label>
-      <label><input type="checkbox" value="pharma"> Pharma & biotech life sciences</label>
-      <label><input type="checkbox" value="healthcare"> Hospital & healthcare</label>
-      <label><input type="checkbox" value="education"> Educational institutes</label>
-      <label><input type="checkbox" value="govinfra"> Gov & Infra</label>
-    </div>
-  </div>
-
-  <div class="project-dropdown" id="projectServiceDropdown">
-    <button class="project-dropdown-btn">Services <span>▼</span></button>
-    <div class="project-dropdown-content">
-      <label><input type="checkbox" value="hvac"> HVAC</label>
-      <label><input type="checkbox" value="mep"> MEP</label>
-      <label><input type="checkbox" value="base-build"> Base build</label>
-      <label><input type="checkbox" value="cleanrooms"> Cleanrooms</label>
-      <label><input type="checkbox" value="interior"> C&I & Interior fit-out</label>
-      <label><input type="checkbox" value="virtual"> Virtual Project Management</label>
-      <label><input type="checkbox" value="maintenance"> Operations & Maintenance</label>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-
-    <div class="new-projects-row">
-      <div class="new-project-card" data-service="hvac" data-sector="industrial">
-        <div class="new-project-image">
-          <img src="images/projects/Microsoft_hyderabad.webp" alt="Project 1" />
-        </div>
-        <div class="new-project-info">
-          <div class="new-info-left">
-            <h3 class="new-client-name">Microsoft</h3>
-            <p class="new-location">Hyderabad</p>
-          </div>
-          <div class="new-info-right">
-            <p class="new-service-type">HVAC</p>
-            <p class="new-project-size">3,00,000 Sq.Ft</p>
+      <div class="mobile-menu" id="mobileMenu">
+        <!-- Company -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Company
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="team.html">Our Team</a>
+            <a href="/culturePage.html">People and Culture</a>
+            <a href="services.html">Services</a>
+            <a href="/CSR.html">CSR Initiatives</a>
+            <a href="#">Investor Relations</a>
           </div>
         </div>
-      </div>
 
-      <div class="new-project-card" data-service="mep" data-sector="industrial">
-        <div class="new-project-image">
-          <img src="images/projects/all projects/All Images/Adani Data Centre Chennai.png" alt="Project 2" />
-        </div>
-        <div class="new-project-info">
-          <div class="new-info-left">
-            <h3 class="new-client-name">E-Com Giant</h3>
-            <p class="new-location">HYD & Mumbai</p>
-          </div>
-          <div class="new-info-right">
-            <p class="new-service-type">HVAC</p>
-            <p class="new-project-size">2,00,000 Sq.Ft</p>
-          </div>
-        </div>
-      </div>
+        <!-- Services -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Services
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="hvac.html">HVAC</a>
+            <a href="mep.html">MEP</a>
 
-      <div class="new-project-card" data-service="mep" data-sector="industrial">
-        <div class="new-project-image">
-          <img src="images/projects/all projects/All Images/Nxtra Pune.jpg" alt="Project 3" />
-        </div>
-        <div class="new-project-info">
-          <div class="new-info-left">
-            <h3 class="new-client-name">Nxtra </h3>
-            <p class="new-location">Pune & Mumbai</p>
-          </div>
-          <div class="new-info-right">
-            <p class="new-service-type">HVAC</p>
-            <p class="new-project-size">1,50,000 Sq.Ft</p>
+            <a href="/BaseBuild.html">Base build</a>
+            <a href="/Cleanroom.html">Cleanrooms</a>
+            <a href="/InteriorFitout.html">C&I & Interior Fit-out</a>
+            <a href="/VirtualProjectManagement.html"
+              >Virtual Project Management</a
+            >
+            <a href="/OperationNmaintainance.html">Operations & Maintenance</a>
           </div>
         </div>
-      </div>
 
-      <div class="new-project-card" data-service="mep" data-sector="industrial">
-        <div class="new-project-image">
-          <img src="images/projects/Data Centre/colt navi mumbai.jpg" alt="Project 3" />
-        </div>
-        <div class="new-project-info">
-          <div class="new-info-left">
-            <h3 class="new-client-name">Colt </h3>
-            <p class="new-location">Mumbai</p>
-          </div>
-          <div class="new-info-right">
-            <p class="new-service-type">Plumbing</p>
-            <p class="new-project-size">1,50,000 Sq.Ft</p>
-          </div>
-        </div>
-      </div>
-      <div class="new-project-card" data-service="mep" data-sector="industrial">
-        <div class="new-project-image">
-          <img src="images/services/CtrlS-Mumbai-Phase-II-Datacenter-which-was-built-in-a-record-time-of-120-days-1.jpg" alt="Project 3" />
-        </div>
-        <div class="new-project-info">
-          <div class="new-info-left">
-            <h3 class="new-client-name">Ctrl S</h3>
-            <p class="new-location">Mumbai</p>
-          </div>
-          <div class="new-info-right">
-            <p class="new-service-type">MEP</p>
-            <p class="new-project-size">1,50,000 Sq.Ft</p>
+        <!-- Sectors -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Sectors
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="commGcc.html">Commercial Real Estate & GCC</a>
+            <a href="/Industrial.html">Industrial & Warehousing</a>
+            <a href="/DataCentres.html">Data Centres & Critical Rooms</a>
+            <a href="/Biotech.html">Pharma & Biotech Life Sciences</a>
+            <a href="hospitality.html">Hospitality & Luxury Retail</a>
+            <a href="/healthcare.html">Hospital & Healthcare</a>
+            <a href="/Educational.html">Educational Institutes</a>
+            <a href="/Infra.html">Gov & Infra</a>
           </div>
         </div>
-      </div>
-      <div class="new-project-card" data-service="mep" data-sector="industrial">
-        <div class="new-project-image">
-          <img src="images/projects/Data Centre/Bridge Data Centre Mumbai.png" alt="Project 3" />
-        </div>
-        <div class="new-project-info">
-          <div class="new-info-left">
-            <h3 class="new-client-name">Bridge Data Centres</h3>
-            <p class="new-location">Mumbai</p>
-          </div>
-          <div class="new-info-right">
-            <p class="new-service-type">HVAC</p>
-            <p class="new-project-size">1,50,000 Sq.Ft</p>
+
+        <!-- Resources -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Resources
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="project.html">Projects</a>
+            <a href="news.html">News & Articles</a>
           </div>
         </div>
-      </div>
 
-
-      <div class="new-project-card" data-service="mep" data-sector="industrial">
-        <div class="new-project-image">
-          <img src="images/projects/Data Centre/Bridge Data Centre Mumbai.png" alt="Project 3" />
-        </div>
-        <div class="new-project-info">
-          <div class="new-info-left">
-            <h3 class="new-client-name">Bridge Data Centres</h3>
-            <p class="new-location">Mumbai</p>
-          </div>
-          <div class="new-info-right">
-            <p class="new-service-type">HVAC</p>
-            <p class="new-project-size">1,50,000 Sq.Ft</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="card-pagination">
-      <button class="page-btn back-btn">
-
-        Load more
-      </button>
-    </div>
-
-
-
-  </section>
-
-  <footer>
-    <div class="topper-section">
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">Company</h5>
-        <div class="footer-link-group">
-          <a href="#">About Us</a>
-          <a href="#">Our Team</a>
-          <a href="#">People & Culture</a>
-          <a href="#">Services</a>
-          <a href="#">CSR Initiatives</a>
-        </div>
-      </div>
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">services</h5>
-        <div class="footer-link-group">
-          <a href="#">HVAC</a>
-          <a href="#">MEP</a>
-
-          <a href="#">Base build</a>
-          <a href="#">Cleanrooms</a>
-          <a href="#">C&I & Interior fit-out</a>
-          <a href="#">Virtual Project Management</a>
-          <a href="#">Operations & Maintenance</a>
-        </div>
-      </div>
-      <div class="Topper-containers">
-        <h5 class="footer-section-header">Sectors</h5>
-        <div class="footer-link-group">
-          <a href="#">Commercial Real Estate & GCC</a>
-          <a href="#">Industrial & Warehousing</a>
-          <a href="#">Data Centres & Critical rooms</a>
-          <a href="#">Pharma & biotech life sciences</a>
-          <a href="#">Hospital & healthcare</a>
-          <a href="#">Educational institutes</a>
-          <a href="#">Gov & Infra</a>
-        </div>
-      </div>
-      <div class="Topper-containers-last">
-        <div class="last-inner-containers">
-          <h5 class="footer-section-header">Contact us</h5>
-          <div class="footer-link-group">
-            <a href="#">info@abcd.demo</a>
-            <a href="#">+91 920 000 0000</a>
-          </div>
-        </div>
-        <div class="last-inner-containers">
-          <h5 class="footer-section-header">Follow us on</h5>
-          <div class="footer-link-group">
+        <!-- Social -->
+        <div class="mobile-dropdown">
+          <button class="dropdown-btn">
+            Socials
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-content">
             <a href="#">LinkedIn</a>
           </div>
         </div>
       </div>
-    </div>
-    <div class="bottom-section">
-      <div class="left">
-        <img src="./images/Logo/Footer Image Block.svg" height="56px" alt="logo footer" />
-        <object data="./images/Logo/iso.svg" type="image/svg+xml" height="48px"></object>
+    </nav>
+    <!-- ===== MOBILE NAV END ===== -->
+    <section class="project-hero-section">
+      <div class="project-content">
+        <h1>What We've Built</h1>
+        <p>A Glimpse Into Our Work</p>
       </div>
-      <div class="right">
-        <div class="location-group">
-          <a href="#">Mumbai</a>
-          <p>|</p>
-          <a href="#">CBD-Belapur</a>
-          <p>|</p>
-          <a href="#">Pune</a>
-          <p>|</p>
-          <a href="#">Bangalore</a>
-          <p>|</p>
-          <a href="#">Ahemdabad</a>
-          <p>|</p>
-          <a href="#">New Delhi</a>
-          <p>|</p>
-          <a href="#">Hyderabad</a>
-          <p>|</p>
-          <a href="#">Africa</a>
+    </section>
+
+    <section class="new-projects-section">
+      <div class="new-projects-header">
+        <h2 class="new-projects-title">Projects Highlights</h2>
+
+        <div class="project-filter-bar">
+          <button class="project-clear-btn" id="clearProjectFilters">
+            Clear filters
+          </button>
+
+          <div class="project-dropdown" id="projectSectorDropdown">
+            <button class="project-dropdown-btn">Sector <span>▼</span></button>
+            <div class="project-dropdown-content">
+              <label
+                ><input type="checkbox" value="cre" /> Commercial Real Estate &
+                GCC</label
+              >
+              <label
+                ><input type="checkbox" value="industrial" /> Industrial &
+                Warehousing</label
+              >
+              <label
+                ><input type="checkbox" value="datacentres" /> Data Centres &
+                Critical rooms</label
+              >
+              <label
+                ><input type="checkbox" value="pharma" /> Pharma & biotech life
+                sciences</label
+              >
+              <label
+                ><input type="checkbox" value="healthcare" /> Hospital &
+                healthcare</label
+              >
+              <label
+                ><input type="checkbox" value="education" /> Educational
+                institutes</label
+              >
+              <label
+                ><input type="checkbox" value="govinfra" /> Gov & Infra</label
+              >
+            </div>
+          </div>
+
+          <div class="project-dropdown" id="projectServiceDropdown">
+            <button class="project-dropdown-btn">
+              Services <span>▼</span>
+            </button>
+            <div class="project-dropdown-content">
+              <label><input type="checkbox" value="hvac" /> HVAC</label>
+              <label><input type="checkbox" value="mep" /> MEP</label>
+              <label
+                ><input type="checkbox" value="base-build" /> Base build</label
+              >
+              <label
+                ><input type="checkbox" value="cleanrooms" /> Cleanrooms</label
+              >
+              <label
+                ><input type="checkbox" value="interior" /> C&I & Interior
+                fit-out</label
+              >
+              <label
+                ><input type="checkbox" value="virtual" /> Virtual Project
+                Management</label
+              >
+              <label
+                ><input type="checkbox" value="maintenance" /> Operations &
+                Maintenance</label
+              >
+            </div>
+          </div>
         </div>
-        <p class="copyrights">
-          © 2025 HTL AIRCON<br />
-          All rights reserved
-        </p>
       </div>
-    </div>
-  </footer>
 
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <!-- Scripts -->
-  <script src="./js/navbar.js"></script>
-  <!-- <script src="./js/carousal.js"></script> -->
-  <script src="./js/stats.js"></script>
-  <script src="./js/testemonials.js"></script>
-  <!-- Animations -->
-  <script src="./js/animation/Lenis.js"></script>
-  <script src="./Hamburger/script.js"></script>
-  <script src="./js/marquee.js"></script>
-  <script src="./js/filteroption.js"></script>
-  <script src="./js/herometrics.js"></script>
-  <script src="./js/animation/scrollTriggers.js"></script>
+      <div class="new-projects-row">
+        <div
+          class="new-project-card"
+          data-service="hvac"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Microsoft_hyderabad.webp"
+              alt="Project 1"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Microsoft</h3>
+              <p class="new-location">Hyderabad</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">3,00,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Adani Data Centre Chennai.png"
+              alt="Project 2"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">E-Com Giant</h3>
+              <p class="new-location">HYD & Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">2,00,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Nxtra Pune.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Nxtra</h3>
+              <p class="new-location">Pune & Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Data Centre/colt navi mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Colt</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Plumbing</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/services/CtrlS-Mumbai-Phase-II-Datacenter-which-was-built-in-a-record-time-of-120-days-1.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Ctrl S</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Data Centre/Bridge Data Centre Mumbai.png"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Bridge Data Centres</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Data Centre/Princeton Digial Group Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Princeton Data Centres</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Data Centre/Adani Data Centre Chennai.png"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Adani Connex</h3>
+              <p class="new-location">Chennai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
 
 
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Jupiter Hospital  Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Jupiter Hospital</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
 
-<script>
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/MGM Hospital Mumbai.jpeg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">MGM Hospital</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Tata Memorial</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Bombay Ortho</h3>
+              <p class="new-location">Gujrat</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Malabar Cancer Centre </h3>
+              <p class="new-location">Kerala</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">CK Birla Hospital</h3>
+              <p class="new-location">Delhi</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">CK Birla Hospital</h3>
+              <p class="new-location">Delhi</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Fit-out</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Sterling Hospital</h3>
+              <p class="new-location">Vadodara</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Fit-out</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Sterling Hospital</h3>
+              <p class="new-location">Vadodara</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Sir H.N Reliance Hospital</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Sir H.N Reliance Hospital</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">FIT-OUT</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Morgan Stanley</h3>
+              <p class="new-location">Mumbai, Ahmdabad & Bangalore</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Qualcomm Hyderabad.png.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Qualcomm</h3>
+              <p class="new-location">Hyderabad</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/JP Morgan Chase Mumbai.jpeg.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">JP Morgan Chase</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Google</h3>
+              <p class="new-location">Mumbai, Delhi & Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/Pharma & Life sciences/Tata Memorial Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Netflix </h3>
+              <p class="new-location">Mumbai </p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/poonawalla-fincorp Pune.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Poonawala  </h3>
+              <p class="new-location">Pune </p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Mastercard Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Mastercard</h3>
+              <p class="new-location">Pune </p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Mastercard Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Mastercard</h3>
+              <p class="new-location">Pune </p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Goldman-Sachs Mumbai-Office.jpg.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Goldman Sachs</h3>
+              <p class="new-location">Pune </p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/BACI-Chennai-1.png"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">BACI</h3>
+              <p class="new-location">Chennai, Mum & Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Mastercard Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Mastercard</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Mastercard Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Bank</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Taj Vivanta Goa.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Vivanta </h3>
+              <p class="new-location">Goa</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Vivanta Thane.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Vivanta </h3>
+              <p class="new-location">Thane</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Soho House Mumbai.jpeg.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Soho House  </h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Hyatt-Regency-Pune-P088-Facade.16x9.jpg.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Hyatt Regency</h3>
+              <p class="new-location">Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Hyatt-Regency-Pune-P088-Facade.16x9.jpg.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Cartier </h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Hyatt-Regency-Pune-P088-Facade.16x9.jpg.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Yauatcha</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Hyatt-Regency-Pune-P088-Facade.16x9.jpg.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Hakkasan</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Ibis Navi Mumbai Interior.avif"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Ibis </h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Ibis Navi Mumbai Interior.avif"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Courtyard by Marriot</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/SP Jain-Bhavans, Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">SP Jain-Bhavans</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Podar School, Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Podar School</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Al Jamea Tus Saifiyah, Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Al Jamea Tus Saifiyah</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/isb hyderabad.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">ISB</h3>
+              <p class="new-location">Hyderabad</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/VIT , Banglore.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">VIT</h3>
+              <p class="new-location">Bangalore</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/G.D Somani International.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">G.D Somani International</h3>
+              <p class="new-location">Bangalore</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/KLE School, Hyderabad.avif"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">KLE School</h3>
+              <p class="new-location">Hyderabad</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/JBCN International School.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">JBCN International School</h3>
+              <p class="new-location">Hyderabad</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/JBCN International School.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">SM Shetty</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Hiranandani School, Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Hiranandani School</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Hiranandani School, Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Vidyalankar</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Sumitomo Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Sumitomo</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Sumitomo Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Kotak</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Operation & Maintenance</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Sumitomo Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Bank of America</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Operation & Maintenance</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+         <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Sumitomo Mumbai.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Burman</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Operation & Maintenance</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Crisil Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Crisil</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Operation & Maintenance</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Crisil Mumbai.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Times Tower</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">Operation & Maintenance</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/services/MEP/l&t seawoods.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">L&T Seawoods</h3>
+              <p class="new-location">Mumbai</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/services/MEP/l&t seawoods.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">TVS Motors</h3>
+              <p class="new-location">Hosur</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Vivanta Miramar.jpg"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Vivanta by Taj</h3>
+              <p class="new-location">Miramar</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Foxconn Bengaluru.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Foxconn</h3>
+              <p class="new-location">Banglore</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">MEP</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Foxconn Bengaluru.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">Nzurie Knowledge Park</h3>
+              <p class="new-location">Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="new-project-card"
+          data-service="mep"
+          data-sector="industrial"
+        >
+          <div class="new-project-image">
+            <img
+              src="images/projects/all projects/All Images/Foxconn Bengaluru.webp"
+              alt="Project 3"
+            />
+          </div>
+          <div class="new-project-info">
+            <div class="new-info-left">
+              <h3 class="new-client-name">BNY</h3>
+              <p class="new-location">Pune</p>
+            </div>
+            <div class="new-info-right">
+              <p class="new-service-type">HVAC</p>
+              <p class="new-project-size">1,50,000 Sq.Ft</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-pagination">
+        <button class="page-btn back-btn">Load more</button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="topper-section">
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Company</h5>
+          <div class="footer-link-group">
+            <a href="#">About Us</a>
+            <a href="#">Our Team</a>
+            <a href="#">People & Culture</a>
+            <a href="#">Services</a>
+            <a href="#">CSR Initiatives</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">services</h5>
+          <div class="footer-link-group">
+            <a href="#">HVAC</a>
+            <a href="#">MEP</a>
+
+            <a href="#">Base build</a>
+            <a href="#">Cleanrooms</a>
+            <a href="#">C&I & Interior fit-out</a>
+            <a href="#">Virtual Project Management</a>
+            <a href="#">Operations & Maintenance</a>
+          </div>
+        </div>
+        <div class="Topper-containers">
+          <h5 class="footer-section-header">Sectors</h5>
+          <div class="footer-link-group">
+            <a href="#">Commercial Real Estate & GCC</a>
+            <a href="#">Industrial & Warehousing</a>
+            <a href="#">Data Centres & Critical rooms</a>
+            <a href="#">Pharma & biotech life sciences</a>
+            <a href="#">Hospital & healthcare</a>
+            <a href="#">Educational institutes</a>
+            <a href="#">Gov & Infra</a>
+          </div>
+        </div>
+        <div class="Topper-containers-last">
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Contact us</h5>
+            <div class="footer-link-group">
+              <a href="#">info@abcd.demo</a>
+              <a href="#">+91 920 000 0000</a>
+            </div>
+          </div>
+          <div class="last-inner-containers">
+            <h5 class="footer-section-header">Follow us on</h5>
+            <div class="footer-link-group">
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <div class="left">
+          <img
+            src="./images/Logo/Footer Image Block.svg"
+            height="56px"
+            alt="logo footer"
+          />
+          <object
+            data="./images/Logo/iso.svg"
+            type="image/svg+xml"
+            height="48px"
+          ></object>
+        </div>
+        <div class="right">
+          <div class="location-group">
+            <a href="#">Mumbai</a>
+            <p>|</p>
+            <a href="#">CBD-Belapur</a>
+            <p>|</p>
+            <a href="#">Pune</a>
+            <p>|</p>
+            <a href="#">Bangalore</a>
+            <p>|</p>
+            <a href="#">Ahemdabad</a>
+            <p>|</p>
+            <a href="#">New Delhi</a>
+            <p>|</p>
+            <a href="#">Hyderabad</a>
+            <p>|</p>
+            <a href="#">Africa</a>
+          </div>
+          <p class="copyrights">
+            © 2025 HTL AIRCON<br />
+            All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Scripts -->
+    <script src="./js/navbar.js"></script>
+    <!-- <script src="./js/carousal.js"></script> -->
+    <script src="./js/stats.js"></script>
+    <script src="./js/testemonials.js"></script>
+    <!-- Animations -->
+    <script src="./js/animation/Lenis.js"></script>
+    <script src="./Hamburger/script.js"></script>
+    <script src="./js/marquee.js"></script>
+    <script src="./js/filteroption.js"></script>
+    <script src="./js/herometrics.js"></script>
+    <script src="./js/animation/scrollTriggers.js"></script>
+
+   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".new-project-card");
+    const allCards = document.querySelectorAll(".new-project-card");
     const loadMoreBtn = document.querySelector(".page-btn");
-    let visibleCards = 6; // how many cards are visible at a time
-    const step = 6; // how many to load each click
+    const step = 6;
+    let visibleCards = step;
 
-    // Initially show only 6
-    cards.forEach((card, index) => {
-      if (index >= visibleCards) {
-        card.style.display = "none";
-      }
+    // Force hide all cards first
+    allCards.forEach((card) => {
+      card.style.display = "none";
     });
 
+    // Show only the first 6
+    for (let i = 0; i < step && i < allCards.length; i++) {
+      allCards[i].style.display = "flex";
+    }
+
     loadMoreBtn.addEventListener("click", function () {
-      // If not all cards are visible — load more
-      if (visibleCards < cards.length) {
-        const nextVisible = Math.min(visibleCards + step, cards.length);
+      // Load more
+      if (visibleCards < allCards.length) {
+        const nextVisible = Math.min(visibleCards + step, allCards.length);
         for (let i = visibleCards; i < nextVisible; i++) {
-          cards[i].style.display = "flex"; // use flex to maintain layout
+          allCards[i].style.display = "flex";
         }
         visibleCards = nextVisible;
 
-        // Change button text to "Show Less" when all cards are visible
-        if (visibleCards >= cards.length) {
+        // Change button text when all are visible
+        if (visibleCards >= allCards.length) {
           loadMoreBtn.textContent = "Show Less";
         }
       } 
-      // If all cards are visible — collapse to the first 6
+      // Show less (collapse)
       else {
-        cards.forEach((card, index) => {
-          card.style.display = index < step ? "flex" : "none";
+        allCards.forEach((card, i) => {
+          card.style.display = i < step ? "flex" : "none";
         });
         visibleCards = step;
         loadMoreBtn.textContent = "Load More";
@@ -522,6 +1944,5 @@
 </script>
 
 
-</body>
-
+  </body>
 </html>
