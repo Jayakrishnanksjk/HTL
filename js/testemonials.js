@@ -22,7 +22,7 @@ const testimonials = [
 
   {
     text: "Appreciation for the Pune HTL Team's five years of outstanding HVAC lifecycle management for our portfolio. Their proactive maintenance cadence and commitment to customer-centricity maintain system operational efficiency.",
-    logo: "./images/Logo/brand-logos/WeWork.png",
+    logo: "./images/Logo/brand-logos/WeWork 2.svg",
   },
 ];
 

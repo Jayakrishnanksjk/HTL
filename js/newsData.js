@@ -33,7 +33,7 @@ Currently pegged at $2 Billion, the HVAC segment is booming and becoming an empl
     date: "November 25, 2017",
     image:
       "images/news-3.png",
-    articleLink: "#",
+    articleLink: "https://www.thehindu.com/business/Industry/htl-aircon-eyes-sme-listing/article20922503.ece/amp/",
     content: `
       <p>AC engineering company plans to bid for large contracts 
 HTL Aircon Pvt. Ltd., a leading HVAC (Heating, Ventilation and Air Conditioning).</p>
