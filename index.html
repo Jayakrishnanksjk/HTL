@@ -331,32 +331,47 @@
     </section>
 
     <div class="business-form-overlay" id="businessForm">
-      <div class="business-form-container">
-        <button class="close-btn" id="closeFormBtn">&times;</button>
-        <h2>Build a solution for your business</h2>
+  <div class="business-form-container">
+    <button class="close-btn" id="closeFormBtn">&times;</button>
+    <h2>Build a solution for your business</h2>
 
-        <form class="business-form">
-          <div class="form-row">
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-          </div>
-
-          <div class="form-row">
-            <select required>
-              <option value="">Service Type</option>
-              <option value="consulting">Consulting</option>
-              <option value="design">Design</option>
-              <option value="development">Development</option>
-            </select>
-            <input type="tel" placeholder="Contact Number" required />
-          </div>
-
-          <p class="required-note">*All the fields are required</p>
-
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
+    <form class="business-form" id="consultationForm" action="sendmail.php" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
       </div>
-    </div>
+
+      <div class="form-row">
+        <select name="service" required>
+          <option value="">Service Type</option>
+          <option value="hvac">HVAC</option>
+          <option value="mep">MEP</option>
+          <option value="base-build">Base Build</option>
+          <option value="cleanrooms">Cleanrooms</option>
+          <option value="interior-fitout">C&I & Interior Fit-out</option>
+          <option value="virtual">Virtual Project Management</option>
+          <option value="maintenance">Operations & Maintenance</option>
+        </select>
+
+        <input
+          type="tel"
+          name="phone"
+          id="contactNumber"
+          placeholder="Contact Number"
+          required
+          maxlength="15"
+          pattern="[0-9]{7,15}"
+          title="Please enter numbers only (7 to 15 digits)"
+        />
+      </div>
+
+      <p class="required-note">*All fields are required</p>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
 
     <!-- Services Section -->
     <section class="services">
@@ -1176,5 +1191,36 @@ HTL Aircon Pvt. Ltd., a leading HVAC (Heating, Ventilation and Air Conditioning)
         }
       });
     </script>
+
+    <script>
+  const consultationForm = document.getElementById("consultationForm");
+  const contactNumberInput = document.getElementById("contactNumber");
+
+  // Restrict input to numbers only while typing
+  contactNumberInput.addEventListener("input", function (e) {
+    this.value = this.value.replace(/[^0-9]/g, ""); // remove non-digits
+  });
+
+  consultationForm.addEventListener("submit", function (e) {
+    const phone = contactNumberInput.value.trim();
+    const service = consultationForm.querySelector("select").value;
+
+    // Validation: only numbers in phone
+    if (!/^[0-9]{7,15}$/.test(phone)) {
+      e.preventDefault();
+      alert("Please enter a valid contact number (7–15 digits only).");
+      contactNumberInput.focus();
+      return;
+    }
+
+    // Validation: must choose a service
+    if (service === "") {
+      e.preventDefault();
+      alert("Please select a service type.");
+      return;
+    }
+  });
+</script>
+
   </body>
 </html>
