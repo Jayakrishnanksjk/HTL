@@ -1,78 +1,66 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 
+// Include PHPMailer (paths relative to this file)
 require 'phpmailer/src/Exception.php';
-require 'phPMailer/src/PHPMailer.php';
+require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // reCAPTCHA verification
-    $secretKey = "6LehWnIrAAAAALo0Nu6Ad40t3u1uzDKvSKIBccAm";
-    $captchaResponse = $_POST['g-recaptcha-response'];
-    
-    $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captchaResponse");
-    $responseData = json_decode($verifyResponse);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Collect fields from your form (make sure your inputs have these name="" attrs)
+    $name    = isset($_POST['name'])    ? htmlspecialchars($_POST['name'])    : '';
+    $email   = isset($_POST['email'])   ? htmlspecialchars($_POST['email'])   : '';
+    $service = isset($_POST['service']) ? htmlspecialchars($_POST['service']) : '';
+    $phone   = isset($_POST['phone'])   ? htmlspecialchars($_POST['phone'])   : '';
+    $message = isset($_POST['message']) ? nl2br(htmlspecialchars($_POST['message'])) : '';
 
-    if ($responseData->success) {
-        // Captcha passed ✅
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $subject = !empty($_POST['subject']) ? $_POST['subject'] : "New Contact Form Submission";
-        $message = $_POST['message'];
+    $mail = new PHPMailer(true);
 
-        $mail = new PHPMailer(true);
+    try {
+        // --- SMTP: use Gmail (recommended for local testing) ---
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
 
-        try {
-            // Server settings
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'jayakrishnanashi@gmail.com'; // Your Gmail
-            $mail->Password   = 'qaxmoturtpmomsjn';    // Your App Password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+        // 👇 Replace with the mailbox you will SEND FROM
+        $mail->Username   = 'jayakrishnanashi@gmail.com';     // <- your Gmail address
+        $mail->Password   = 'ijcb xhef ovcj rols';            // <- Gmail App Password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
 
-            // Recipients
-            $mail->setFrom('contact-form@yoursite.com', 'Website Contact Form');
-            $mail->addAddress('test@example.com'); // Receiver email
-            $mail->addReplyTo($email, $name);
+        // --- From / To ---
+        $mail->setFrom('jayakrishnanashi@gmail.com', 'Website Form');
+        $mail->addReplyTo($email ?: 'no-reply@yourdomain.com', $name ?: 'Visitor');
 
-            // Content
-            $mail->isHTML(false);
-            $mail->Subject = "Contact Form: " . $subject;
-            
-            $mail->Body = "You received a new message from your website contact form:\n\n" .
-                         "Name: $name\n" .
-                         "Email: $email\n\n" .
-                         "Message:\n$message\n";
+        // ✅ Recipient
+        $mail->addAddress('jayakrishnanashi@gmail.com');
 
-            // File attachment
-            if (isset($_FILES['cv']) && $_FILES['cv']['error'] === UPLOAD_ERR_OK) {
-                $file_tmp_name = $_FILES['cv']['tmp_name'];
-                $file_name = $_FILES['cv']['name'];
-                
-                // Validate file type
-                $allowed_types = ['application/pdf', 'application/msword', 
-                                'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-                $file_type = mime_content_type($file_tmp_name);
-                
-                if (in_array($file_type, $allowed_types)) {
-                    $mail->addAttachment($file_tmp_name, $file_name);
-                } else {
-                    throw new Exception('Invalid file type. Please upload PDF or DOC files only.');
-                }
-            }
+        // --- Content ---
+        $mail->isHTML(true);
+        $mail->Subject = "New Business Consultation Request from {$name}";
+        $mail->Body    = "
+            <h2>New Consultation Request</h2>
+            <p><strong>Name:</strong> {$name}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Phone:</strong> {$phone}</p>
+            <p><strong>Service Type:</strong> {$service}</p>
+            <p><strong>Message:</strong><br>{$message}</p>
+        ";
 
-            $mail->send();
-            echo "✅ Message sent successfully!";
-            
-        } catch (Exception $e) {
-            echo "❌ Message could not be sent. Error: " . $e->getMessage();
-        }
-    } else {
-        echo "⚠️ Please verify that you are not a robot.";
+        $mail->AltBody = "New Consultation Request\n"
+                       . "Name: {$name}\n"
+                       . "Email: {$email}\n"
+                       . "Phone: {$phone}\n"
+                       . "Service Type: {$service}\n"
+                       . "Message: {$message}\n";
+
+        $mail->send();
+        echo "<script>alert('✅ Email sent successfully!'); window.history.back();</script>";
+    } catch (Exception $e) {
+        echo "<script>alert('⚠️ Message could not be sent. Error: " . addslashes($mail->ErrorInfo) . "'); window.history.back();</script>";
     }
+} else {
+    echo 'Invalid Request.';
 }
 ?>

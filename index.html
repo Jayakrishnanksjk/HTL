@@ -336,39 +336,50 @@
     <h2>Build a solution for your business</h2>
 
     <form class="business-form" id="consultationForm" action="sendmail.php" method="POST">
-      <div class="form-row">
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-      </div>
+  <div class="form-row">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+  </div>
 
-      <div class="form-row">
-        <select name="service" required>
-          <option value="">Service Type</option>
-          <option value="hvac">HVAC</option>
-          <option value="mep">MEP</option>
-          <option value="base-build">Base Build</option>
-          <option value="cleanrooms">Cleanrooms</option>
-          <option value="interior-fitout">C&I & Interior Fit-out</option>
-          <option value="virtual">Virtual Project Management</option>
-          <option value="maintenance">Operations & Maintenance</option>
-        </select>
+  <div class="form-row">
+    <select name="service" required>
+      <option value="">Service Type</option>
+      <option value="hvac">HVAC</option>
+      <option value="mep">MEP</option>
+      <option value="base-build">Base Build</option>
+      <option value="cleanrooms">Cleanrooms</option>
+      <option value="interior-fitout">C&I & Interior Fit-out</option>
+      <option value="virtual">Virtual Project Management</option>
+      <option value="maintenance">Operations & Maintenance</option>
+    </select>
 
-        <input
-          type="tel"
-          name="phone"
-          id="contactNumber"
-          placeholder="Contact Number"
-          required
-          maxlength="15"
-          pattern="[0-9]{7,15}"
-          title="Please enter numbers only (7 to 15 digits)"
-        />
-      </div>
+    <input
+      type="tel"
+      name="phone"
+      id="contactNumber"
+      placeholder="Contact Number"
+      required
+      maxlength="15"
+      pattern="[0-9]{7,15}"
+      title="Please enter numbers only (7 to 15 digits)"
+    />
+  </div>
 
-      <p class="required-note">*All fields are required</p>
+  <!-- ✅ New message box -->
+  <div class="form-row">
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      rows="5"
+      required
+    ></textarea>
+  </div>
 
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
+  <p class="required-note">*All fields are required</p>
+
+  <button type="submit" class="submit-btn">Submit</button>
+</form>
+
   </div>
 </div>
 
