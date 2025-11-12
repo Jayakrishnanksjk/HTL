@@ -1191,6 +1191,47 @@ body {
 
 
 
+@media (max-width: 768px) {
+  .missiongroup {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .sectiongroup {
+    flex-direction: column;
+  }
+  
+  .box1 {
+    height: 50vh;
+  }
+  
+  .missions-section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 40px;
+  }
+  
+  .mission-image img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .mission-content {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Tablet and Mobile - stack image over text */
 @media (max-width: 1024px) {
   .image-text-section-culture {
@@ -1512,6 +1553,11 @@ body {
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  
+    /* display: block; */
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .featured-project-card-new:hover {
   transition-duration: 300ms;
@@ -2326,7 +2372,7 @@ footer {
 @media (max-width: 768px) {
   footer {
     height: auto;
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
 
   .topper-section {
@@ -3338,6 +3384,94 @@ footer {
   text-align: center;
   width: 83%;
 }
+
+
+
+
+
+/* =======================
+   RESPONSIVE STYLING
+   ======================= */
+
+/* Large screens (up to 1440px) */
+@media (max-width: 1440px) {
+  .about-us-section {
+    padding: 70px 80px;
+  }
+
+  .about-us-section p {
+    font-size: 1.8rem;
+    width: 85%;
+  }
+}
+
+/* Tablets and smaller laptops (up to 1024px) */
+@media (max-width: 1024px) {
+  .about-us-section {
+    padding: 60px 60px;
+    height: auto;
+  }
+
+  .about-us-section h1 {
+    font-size: 1.1rem;
+  }
+
+  .about-us-section p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    width: 90%;
+  }
+}
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  .about-us-section {
+    padding: 50px 30px;
+    height: auto;
+    gap: 20px;
+  }
+
+  .about-us-section h1 {
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+  }
+
+  .about-us-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    width: 100%;
+  }
+}
+
+/* Small mobile (up to 480px) */
+@media (max-width: 480px) {
+  .about-us-section {
+    padding: 40px 20px;
+  }
+
+  .about-us-section h1 {
+    font-size: 0.95rem;
+  }
+
+  .about-us-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .stats-section-about {
   padding: 80px 100px;
@@ -4718,6 +4852,7 @@ footer {
   align-items: flex-start;
   gap: 110px;
   max-width: 1400px;
+    align-items: center; /* vertically centers content */
   margin: 0 auto;
 }
 
@@ -4734,6 +4869,8 @@ footer {
 
 .text-section {
   flex: 1;
+   display: flex;             /* ✅ new */
+  align-items: center; 
 }
 
 .text-section p {
@@ -5493,6 +5630,7 @@ footer {
 }
 
 .event-caption {
+  display: none;
   position: absolute;
   bottom: 16px;
   left: 16px;
@@ -5544,6 +5682,7 @@ footer {
   }
 
   .event-caption {
+    display: none;
     font-size: 1rem;
     padding: 6px 12px;
   }
