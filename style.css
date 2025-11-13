@@ -883,10 +883,11 @@ body {
 }
 
 .services-content h2 {
+
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
-  max-width: 100%;
+  width: 130%;
   white-space: normal;
   text-wrap: auto;
 }
