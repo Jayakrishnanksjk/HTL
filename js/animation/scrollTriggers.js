@@ -17,15 +17,18 @@ createHorizontalScrollById(
   "projectHomePageSectionInner"
 );
 
-createHorizontalScrollById(
-  "projectSectorSection",
-  "projectSectorSectionInner"
-);
+createHorizontalScrollById("projectSectorSection", "projectSectorSectionInner");
 
 createHorizontalScrollById(
   "projectTeamPageManagement",
   "projectTeamPageManagementInner"
 );
+
+createHorizontalScrollById(
+  "timelinemobilescroll",
+  "timelinemobilescrollInner"
+);
+
 createHorizontalScrollById("newsHomePageSection", "newsHomePageSectionInner");
 
 // Calculate scroll distance (total width - viewport)

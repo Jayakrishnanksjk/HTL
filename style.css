@@ -812,6 +812,9 @@ body {
   width: 100vw;
   padding-top: 64px !important;
 }
+.missiongroup.onMobile {
+  display: none;
+}
 .sectionwrap {
   height: 100%;
   width: 100%;
@@ -2014,14 +2017,22 @@ footer {
 }
 
 .excellence-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   flex: 1 1 calc(33.33% - 30px);
   max-width: 350px;
   box-sizing: border-box;
 }
 
+.excellence-content .on-mobile {
+  display: none;
+}
+
 .excellence-content h2 {
   font-size: 2rem;
+  width: 100%;
   margin-bottom: 10px;
   font-weight: 400;
   line-height: 1.2;
@@ -2041,6 +2052,10 @@ footer {
   padding: 80px;
   background: #ffffff;
   height: 100vh;
+}
+
+.onmobiletimeline {
+  display: none;
 }
 
 .timeline-container {
@@ -5094,9 +5109,17 @@ h2 {
     font-size: 0.95rem;
   }
 
+  .mission-content h2 {
+    font-size: 0.95rem;
+  }
+
   .about-us-section p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .mission-content p {
+    font-size: 16px;
+    line-height: 1.4;
   }
 
   /* Events Section */
@@ -5299,6 +5322,10 @@ h2 {
     gap: 40px;
   }
 
+  .stat-item-about hr {
+    width: 100%;
+  }
+
   .stat-value-about {
     font-size: 2.5rem;
   }
@@ -5326,7 +5353,22 @@ h2 {
     font-size: 1.4rem;
     line-height: 1.25;
   }
-
+  .mission-image {
+    display: none;
+  }
+  .excellence-content .on-mobile {
+    display: block;
+  }
+  .missiongroup.default {
+    display: none;
+  }
+  .missiongroup.onMobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .excellence-content .default {
+    display: none;
+  }
   .excellence-content p {
     font-size: 0.85rem;
     opacity: 0.9;
@@ -5978,6 +6020,62 @@ h2 {
     font-size: 0.85rem;
   }
 
+  .onmobiletimeline {
+    display: flex;
+  }
+
+  .section-header {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .timelineonmobile {
+    width: calc(100vw - 40px);
+    height: 400px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 12px;
+  }
+  .timelineonmobile .headerwhithyear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    font-size: 28px;
+    letter-spacing: -1.3px;
+    line-height: 100%;
+  }
+
+  .timelineonmobile .imagesection {
+    object-fit: cover;
+    height: 177px;
+    width: 100%;
+  }
+  .timelineonmobile .body {
+    height: fit-content;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+  }
+  .timelineonmobile .body h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  .timelineonmobile .body p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .innerwarap {
+    height: fit-content;
+  }
+
+  .maponmobile {
+    display: none;
+  }
   /* CTA Section */
   .textgroup > h3 {
     font-size: 28px;
@@ -5992,7 +6090,9 @@ h2 {
   }
 
   .location-group {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   /* Services */
