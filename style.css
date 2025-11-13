@@ -4874,7 +4874,12 @@ h2 {
 
   .section-header h2 {
     text-align: center;
+    font-size: 28px;
+    line-height: 110% !important;
   }
+
+
+
 
   .text-container {
     padding: 20px;
@@ -5068,6 +5073,16 @@ h2 {
   .stat {
     min-width: 100%;
   }
+
+.services-content-text > p {
+  font-size: 32px;
+  font-weight: 400;
+  width: 100%;
+  text-wrap: inherit;
+  line-height: 110% !important;
+  letter-spacing: -0.96px;
+}
+
 
   .hero-text-box > .text-group {
     gap: 10px;
@@ -5343,6 +5358,29 @@ h2 {
     justify-content: center;
   }
 
+.project-name{
+  font-size: 24px;
+}
+
+.project-service{
+  font-size: 24px;
+}
+
+.project-area{
+  font-size: 24px;
+}
+
+.project-area{
+  font-size: 18px;
+}
+
+.project-location{
+  font-size: 18px;
+}
+
+
+
+
   .hvac-hero-container {
     flex-direction: column;
     align-items: center;
@@ -5520,6 +5558,8 @@ h2 {
     background-size: cover;
   }
 
+
+
   /* Events Section */
   .events-section {
     margin-left: 10px;
@@ -5677,7 +5717,7 @@ h2 {
   }
 
   .trusted-brands-heading {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 120%;
   }
 
@@ -5708,9 +5748,11 @@ h2 {
   }
 
   .bottom-container > p {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 120%;
   }
+
+
 
   .nextsection {
     height: auto;
