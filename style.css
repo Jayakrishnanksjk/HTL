@@ -5050,6 +5050,7 @@ h2 {
   }
 
   .services-content h2 {
+    width: 100%;
     font-size: 2rem;
     line-height: 1.3;
     white-space: normal;
@@ -6128,6 +6129,7 @@ h2 {
 
   .services-content h2 {
     font-size: 1.6rem;
+    width: 100%;
   }
 
   .services-content span {
@@ -6425,6 +6427,7 @@ h2 {
 
   .services-content h2 {
     font-size: 2.5rem;
+    width: 100%;
   }
 
   .services-content p {
