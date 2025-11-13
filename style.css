@@ -4159,11 +4159,6 @@ footer {
 }
 
 
-/* Hide all cards by default */
-.new-projects-row .new-project-card {
-  display: none;
-} *
-
 /* Show only first 6 cards */
 .new-projects-row .new-project-card:nth-child(-n+6) {
   display: flex;
@@ -6762,7 +6757,7 @@ ease;
   justify-content: flex-start;
 }
 
-.new-project-card {
+/* .new-project-card {
   width: calc(33.333% - 20px);
   max-width: 425px;
   border-radius: 16px;
@@ -6775,14 +6770,38 @@ ease;
   transition: opacity 0.4s ease, transform 0.4s ease;
   display: none !important;
   margin-bottom: 0;
+} */
+
+
+/* SHOW ALL CARDS BY DEFAULT */
+.new-project-card {
+  display: flex;
+  width: calc(33.333% - 20px);
+  max-width: 425px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: #fff;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
+/* HIDE only filtered-out cards */
+.new-project-card.hidden {
+  display: none !important;
+}
 
-.new-project-card.visible {
-  display: flex !important; /* force it visible */
+/* OPTIONAL: fade animation for showing cards */
+.new-project-card {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.new-project-card:not(.hidden) {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
+
+
+
 
 /* keep your existing image + info styles, but fix this width: */
 .new-project-image { width: 100%; height: 374px; overflow: hidden; }
