@@ -18,7 +18,7 @@ const newsData = [
     publication: "Business Standard",
     date: "June 11, 2018",
     image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
+      "images/newsimage-2.webp",
     articleLink:
       "https://www.business-standard.com/amp/article/news-ani/a-record-breaker-100-cr-mark-for-htl-aircon-118061100614_1.html",
     content: `

@@ -2305,9 +2305,9 @@ footer {
 
 
 /* Hide all cards by default */
-.new-projects-row .new-project-card {
+/* .new-projects-row .new-project-card {
   display: none;
-} *
+} * */
 
 /* Show only first 6 cards */
 .new-projects-row .new-project-card:nth-child(-n+6) {
@@ -2504,7 +2504,7 @@ footer {
 .service-card-content {
   position: absolute;
   bottom: 0;
-  height: 64px; /* fixed height */
+  height: 90px; /* fixed height */
   transition: ease-in-out 300ms;
   gap: 16px;
   background-color: white;
@@ -6485,4 +6485,51 @@ h2 {
     text-align: center !important;
     font-size: 1.4rem !important;
   }
+
+  .no-margin-mobile{
+    margin-top: 0px !important;
+  }
+}
+
+
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background: red; /* change this color if needed */
+  color: #fff;
+  border: none;
+  border-radius: 50%;       /* makes it a circle */
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 999999;
+  
+  display: none;            /* default hidden */
+  align-items: center;
+  justify-content: center;
+
+  /* smooth fade-in */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-to-top.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);      /* normal size */
+}
+
+.scroll-to-top.hide {
+  opacity: 0;
+  transform: scale(0.8);    /* shrink when hiding */
+  pointer-events: none;
+}
+
+.scroll-to-top:hover {
+  background: #e20202;        /* slightly lighter black */
+  transform: scale(1.1);   /* pop-out effect */
 }
