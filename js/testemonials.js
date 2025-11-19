@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     text: "Sincere gratitude for the team's support capacity throughout this mission-critical activity. Their proactive contributions significantly enhanced our overall project velocity and are a benchmark for high performance. ",
-    logo: "./images/Logo/brand-logos/ncr.png",
+    logo: "./images/Logo/brand-logos/ncr.svg",
   },
   {
     text: "We commend the collective's exceptional support capacity demonstrated during the Power Shutdown Activity. The team's precise resource orchestration guaranteed on-time completion within the defined go-live schedule.",

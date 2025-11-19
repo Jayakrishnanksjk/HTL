@@ -6489,6 +6489,10 @@ h2 {
   .no-margin-mobile{
     margin-top: 0px !important;
   }
+
+  .margin-mobile{
+    margin-top: 100px !important;
+  }
 }
 
 
