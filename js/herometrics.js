@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", () => {
   createStatCycle(
     "statClients",
     "Team Strength",
-    "600",
+    "3000",
     "Clients served",
     "100+"
   );
