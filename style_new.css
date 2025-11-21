@@ -29,18 +29,22 @@
   --project-SQFT-font-family: "Geist", Helvetica; */
   --project-title-font-weight: 500;
   --project-title-font-size: 32px;
+  --project-title-letter-spacing: -0.64px;
   --project-title-line-height: 76.99999809265137%;
   --project-title-font-style: normal;
   --project-location-font-weight: 300;
   --project-location-font-size: 20px;
+  --project-location-letter-spacing: -0.48px;
   --project-location-line-height: 76.99999809265137%;
   --project-location-font-style: normal;
   --project-service-font-weight: 500;
   --project-service-font-size: 24px;
+  --project-service-letter-spacing: -0.48px;
   --project-service-line-height: 76.99999809265137%;
   --project-service-font-style: normal;
   --project-SQFT-font-weight: 400;
   --project-SQFT-font-size: 24px;
+  --project-SQFT-letter-spacing: -0.48px;
   --project-SQFT-line-height: 76.99999809265137%;
   --project-SQFT-font-style: normal;
 }
@@ -80,16 +84,17 @@ body {
 }
 /* TEXT STYLES */
 .hero-text {
-  font-size: 6rem;
+  font-size: 56px;
   line-height: 110%;
-  font-weight: 100 !important;
-  /* letter-spacing: -2.16px; */
+  font-weight: 400 !important;
+  letter-spacing: -2.16px;
   color: #fff;
 }
 .hero-subtext {
   font-size: 24px;
   font-weight: 300 !important;
   line-height: 110%;
+  letter-spacing: -0.8px;
   color: #fff;
 }
 /* --------------------------------------------- */
@@ -162,7 +167,7 @@ body {
   padding: 24px;
   gap: 56px;
   height: fit-content;
-  width: 100%;
+  width: 50%;
 }
 
 .hero-text-box > .text-group {
@@ -198,12 +203,14 @@ body {
   line-height: 140%;
   color: #fff;
   text-align: right;
+  letter-spacing: -1.12px;
   font-weight: 600;
 }
 .stat-individual > h4 {
   font-size: 20px;
   line-height: 160%;
   text-align: right;
+  letter-spacing: -0.6px;
   color: #fff;
   font-weight: 500;
 }
@@ -363,6 +370,7 @@ body {
   font-size: 32px;
   line-height: 77%;
   font-weight: 400;
+  letter-spacing: -0.96px;
 }
 
 .menu-list {
@@ -375,10 +383,10 @@ body {
   width: 100%;
   padding: 8px 0;
   padding-left: 8px;
-  font-size: 1.3rem;
+  font-size: 20px;
+  letter-spacing: -0.72px;
   text-decoration: none;
   color: var(--peach);
-  font-weight: 100;
   transition: ease 0.3s;
 }
 
@@ -672,6 +680,7 @@ body {
   font-size: 32px;
   font-weight: 400;
   line-height: 110% !important;
+  letter-spacing: -0.96px;
 }
 
 .section-header {
@@ -686,20 +695,23 @@ body {
 .section-header > h2 {
   font-size: 40px;
   line-height: 77% !important;
+  letter-spacing: -1.44px;
   font-weight: 500;
 }
 
 .btn {
   /* background: #ff2b2b; */
-
   background: var(--btn-gradient);
+
   color: #fff;
   text-decoration: none;
-  padding: 20px 25px;
-  border-radius: 0;
-  font-weight: 100;
+  padding: 18px 40px;
+  border-radius: 12px;
+  font-weight: 500;
   font-size: 20px;
   line-height: 77%;
+  letter-spacing: -0.6px;
+  /* transition: background 0.3s ease; */
   width: fit-content;
   transition-duration: 300ms;
 }
@@ -736,6 +748,7 @@ body {
   margin-bottom: 10px;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .stat span {
@@ -870,6 +883,7 @@ body {
 }
 
 .services-content h2 {
+
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
@@ -922,13 +936,14 @@ body {
   background-color: rgb(255, 255, 255);
   box-shadow: var(--shadow-elevation-1);
   transition-duration: 300ms;
-  border-radius: 0;
+  border-radius: 16px;
   min-width: 425px;
   height: 540px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
+
   /* display: block; */
   text-decoration: none;
   color: inherit;
@@ -956,6 +971,7 @@ body {
   font-weight: 500;
   color: #1f1f1f;
   font-size: 24px;
+  letter-spacing: -0.64px;
   line-height: 24.6px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -1005,11 +1021,11 @@ body {
 
 .bottom-container > p {
   opacity: 0.8;
-  font-weight: 100;
+  font-weight: 400;
   color: #ffffff;
   font-size: 20px;
   letter-spacing: -0.4px;
-  line-height: 30px;
+  line-height: 24.6px;
 }
 
 .image-container {
@@ -1050,12 +1066,14 @@ body {
   font-size: var(--project-title-font-size);
   font-style: var(--project-title-font-style);
   font-weight: var(--project-title-font-weight);
+  letter-spacing: var(--project-title-letter-spacing);
   line-height: var(--project-title-line-height);
 }
 .project-location {
   font-size: var(--project-location-font-size);
   font-style: var(--project-location-font-style);
   font-weight: var(--project-location-font-weight);
+  letter-spacing: var(--project-location-letter-spacing);
   line-height: var(--project-location-line-height);
   opacity: 80%;
 }
@@ -1071,6 +1089,7 @@ body {
   font-size: var(--project-service-font-size);
   font-style: var(--project-service-font-style);
   font-weight: var(--project-service-font-weight);
+  letter-spacing: var(--project-service-letter-spacing);
   line-height: var(--project-service-line-height);
   text-align: right;
 }
@@ -1078,6 +1097,7 @@ body {
   font-size: var(--project-SQFT-font-size);
   font-style: var(--project-SQFT-font-style);
   font-weight: var(--project-SQFT-font-weight);
+  letter-spacing: var(--project-SQFT-letter-spacing);
   line-height: var(--project-SQFT-line-height);
   text-align: right;
 }
@@ -1192,18 +1212,16 @@ footer {
   gap: 8px;
 }
 .footer-link-group > a {
-  font-size: 1rem;
+  font-size: 12px;
   line-height: 140%;
   opacity: 70%;
-  font-weight: 100;
+  font-weight: 300;
   text-decoration: none;
   color: #fff;
   letter-spacing: -0.28px;
 }
 .footer-link-group > a:hover {
   opacity: 100%;
-  padding-left: 5px;
-  transition-duration: 300ms;
 }
 
 .topper-section > .Topper-containers:nth-child(even) {
@@ -1293,6 +1311,7 @@ footer {
   font-weight: 300;
   text-decoration: none;
   color: #fff;
+  letter-spacing: -0.28px;
   opacity: 60%;
 }
 .location-group > a:hover {
@@ -1321,10 +1340,11 @@ footer {
 }
 
 .trusted-brands-heading {
-  font-size: 4rem;
-  font-weight: 100;
+  font-size: 40px;
+  font-weight: 400;
   color: #ffffff;
-  line-height: 100%;
+  line-height: 110% !important;
+  letter-spacing: -1.2px;
 }
 
 .cta-section {
@@ -1349,16 +1369,14 @@ footer {
   gap: 24px;
 }
 .textgroup > h3 {
-  font-size: 4rem;
+  font-size: 48px;
   line-height: 125%;
-  font-weight: 100;
+  font-weight: 500;
   letter-spacing: -1.44px;
   text-align: center;
 }
 .textgroup > p {
   opacity: 70%;
-  font-size: 1.7rem;
-  font-weight: 100;
 }
 
 .gradient-color {
@@ -1540,9 +1558,9 @@ footer {
 
 /* Testimonial text */
 .testimonial-text {
-  font-size: 3rem;
+  font-size: 46px;
   line-height: 1.1;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: -0.02rem;
   color: #fff;
   max-width: 100%;
@@ -1629,7 +1647,7 @@ footer {
 
 .news-card {
   background: white;
-  border-radius: 0;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow-elevation-1);
   transition: all 0.3s ease;
@@ -1693,6 +1711,7 @@ footer {
   line-height: 1.1;
   margin-bottom: 5px;
   color: #1a1a1a;
+  letter-spacing: -0.02em;
 }
 
 .news-excerpt {
@@ -1702,6 +1721,7 @@ footer {
   flex-grow: 1;
   font-size: 1rem;
   font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
 .news-meta {
@@ -1762,6 +1782,7 @@ footer {
   font-weight: 300;
   margin-bottom: 10px;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .about-content p {
@@ -1770,6 +1791,7 @@ footer {
   opacity: 0.9;
   margin: 0;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .csr-banner {
@@ -1800,6 +1822,7 @@ footer {
   font-weight: 300;
   margin-bottom: 10px;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .csr-content p {
@@ -1808,6 +1831,7 @@ footer {
   opacity: 0.9;
   margin: 0;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 /* ===== Responsive Adjustments for CSR Banner ===== */
@@ -1849,6 +1873,7 @@ footer {
   font-size: 24px;
   font-weight: 400;
   line-height: 110% !important;
+  letter-spacing: -0.96px;
 }
 
 .mission-image img {
@@ -1865,6 +1890,7 @@ footer {
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.23;
+  letter-spacing: 0.23em;
   margin-bottom: 25px;
   color: #000000;
   opacity: 60%;
@@ -1873,6 +1899,7 @@ footer {
 .mission-content p {
   font-size: 2rem;
   line-height: 1.23;
+  letter-spacing: -0.04em;
   opacity: 0.9;
   white-space: normal;
   word-wrap: break-word;
@@ -1893,6 +1920,7 @@ footer {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.23;
+  letter-spacing: 0.23em;
   color: #000000;
   opacity: 60%;
 }
@@ -1900,6 +1928,7 @@ footer {
 .about-us-section p {
   font-size: 2rem;
   line-height: 1.23;
+  letter-spacing: -0.04em;
   font-weight: 400;
   opacity: 0.9;
   white-space: normal;
@@ -1940,6 +1969,7 @@ footer {
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.4;
+  letter-spacing: 0.05em;
   color: #000000;
 }
 
@@ -1974,6 +2004,7 @@ footer {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.23;
+  letter-spacing: 0.23em;
   color: #000000;
   opacity: 60%;
   margin-bottom: 60px;
@@ -2006,11 +2037,13 @@ footer {
   margin-bottom: 10px;
   font-weight: 400;
   line-height: 1.2;
+  letter-spacing: -0.04em;
 }
 
 .excellence-content p {
   font-size: 1rem;
   line-height: 1.2;
+  letter-spacing: -0.01em;
   opacity: 70%;
 }
 
@@ -2042,6 +2075,7 @@ footer {
   font-size: 2.8rem;
   font-weight: 500;
   line-height: 1.77; /* 77% of font-size = 0.77? Usually 1.77 means 177% */
+  letter-spacing: -0.03em;
   color: #000000;
 }
 
@@ -2099,12 +2133,14 @@ footer {
   margin-bottom: 16px;
   font-weight: 500;
   line-height: 100%;
+  letter-spacing: -3px;
 }
 
 .timeline-description {
   font-size: 1.1rem;
   color: #000000;
   line-height: 120%;
+  letter-spacing: -1px;
 }
 
 .map-section {
@@ -2124,6 +2160,7 @@ footer {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.23;
+  letter-spacing: 0.23em;
   color: #000000;
   opacity: 60%;
 }
@@ -2157,6 +2194,7 @@ footer {
   font-weight: 300;
   margin-bottom: 10px;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .project-content p {
@@ -2165,6 +2203,7 @@ footer {
   opacity: 0.9;
   margin: 0;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .new-projects-section {
@@ -2231,6 +2270,7 @@ footer {
   text-align: center;
   font-size: 2.8rem;
   line-height: 0.77;
+  letter-spacing: -0.03em;
   font-weight: 500;
 }
 
@@ -2263,13 +2303,14 @@ footer {
   overflow: hidden;
 }
 
+
 /* Hide all cards by default */
 /* .new-projects-row .new-project-card {
   display: none;
 } * */
 
 /* Show only first 6 cards */
-.new-projects-row .new-project-card:nth-child(-n + 6) {
+.new-projects-row .new-project-card:nth-child(-n+6) {
   display: flex;
 }
 
@@ -2293,12 +2334,14 @@ footer {
   font-size: 1.7rem;
   font-weight: 500;
   line-height: 0.77;
+  letter-spacing: -0.02em;
 }
 
 .new-info-left p {
   margin: 2px 0 0;
   color: #555;
   line-height: 0.77;
+  letter-spacing: -0.02em;
   font-size: 1.2rem;
 }
 
@@ -2306,6 +2349,7 @@ footer {
   margin: 0;
   text-align: right;
   color: #333;
+  letter-spacing: -0.02em;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -2314,6 +2358,7 @@ footer {
   margin: 0;
   text-align: right;
   color: #333;
+  letter-spacing: -0.02em;
   font-size: 1.2rem;
 }
 
@@ -2395,6 +2440,7 @@ footer {
   font-weight: 300;
   margin-bottom: 10px;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .service-content p {
@@ -2403,6 +2449,7 @@ footer {
   opacity: 0.9;
   margin: 0;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .service-cards {
@@ -2476,6 +2523,7 @@ footer {
   font-size: 1.7rem;
   color: #333;
   line-height: 1.23; /* 123% of font size */
+  letter-spacing: -0.02em;
   font-weight: 400;
 }
 .service-card-content p {
@@ -2536,6 +2584,7 @@ footer {
   font-size: 1.7rem;
   color: #333;
   line-height: 1.23; /* 123% of font size */
+  letter-spacing: -0.02em;
   font-weight: 400;
 }
 
@@ -2584,6 +2633,7 @@ footer {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.1;
+  letter-spacing: -0.03em;
   margin-bottom: 20px;
   color: #fff;
 }
@@ -2591,6 +2641,7 @@ footer {
 .hvac-hero-left p {
   font-size: 1.6rem;
   line-height: 1.1;
+  letter-spacing: -0.03em;
   max-width: 90%;
   opacity: 0.8;
   font-weight: 300;
@@ -2642,6 +2693,7 @@ footer {
   text-align: left;
   font-size: 2rem;
   line-height: 1.23;
+  letter-spacing: -0.04em;
   color: #000000;
   margin: 0;
   font-weight: 400;
@@ -2662,6 +2714,7 @@ footer {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.23;
+  letter-spacing: 0.23em;
   color: #000000;
   opacity: 60%;
   margin-bottom: 60px;
@@ -2695,12 +2748,14 @@ footer {
   color: #333;
   margin: 0 0 10px 0;
   line-height: 1.2;
+  letter-spacing: -0.04em;
 }
 
 .service-item p {
   text-align: center;
   font-size: 1rem;
   line-height: 1.2;
+  letter-spacing: -0.01em;
   color: #555;
   margin: 0;
   font-weight: 300;
@@ -2802,11 +2857,13 @@ footer {
   color: #000000;
   margin: 0 0 30px 0;
   line-height: 0.77;
+  letter-spacing: -0.03em;
 }
 
 .expert-content p {
   font-size: 1.9rem;
   line-height: 1.23;
+  letter-spacing: -0.04em;
   color: #000000;
   margin: 0 0 40px 0;
   font-weight: 400;
@@ -2875,6 +2932,7 @@ footer {
   font-weight: 300;
   margin-bottom: 10px;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .culture-content p {
@@ -2883,6 +2941,7 @@ footer {
   opacity: 0.9;
   margin: 0;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 /* ===== Responsive Adjustments for Culture Hero Section ===== */
@@ -2898,6 +2957,7 @@ footer {
 .events-section h1 {
   font-size: 40px;
   line-height: 77% !important;
+  letter-spacing: -1.44px;
   font-weight: 500;
   margin-bottom: 30px;
 }
@@ -2952,6 +3012,7 @@ footer {
   font-weight: 500;
   color: #000000;
   font-size: 20px;
+  letter-spacing: -0.6px;
   line-height: 77%;
   padding: 7px 16px;
 }
@@ -2959,6 +3020,7 @@ footer {
 .image-text-header-culture {
   font-size: 40px;
   line-height: 77% !important;
+  letter-spacing: -1.44px;
   font-weight: 500;
   margin-bottom: 30px;
 }
@@ -2997,6 +3059,7 @@ footer {
   text-align: left;
   font-size: 2rem;
   line-height: 1.23;
+  letter-spacing: -0.04em;
   color: #000000;
   margin: 0;
   font-weight: 400;
@@ -3019,6 +3082,7 @@ footer {
 .emloyee-header h2 {
   font-size: 40px;
   line-height: 77% !important;
+  letter-spacing: -1.44px;
   font-weight: 500;
   margin-bottom: 30px;
 }
@@ -3085,6 +3149,7 @@ footer {
   font-size: 1rem;
   color: #333;
   line-height: 1.23; /* 123% of font size */
+  letter-spacing: -0.02em;
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -3094,6 +3159,7 @@ footer {
   font-size: 0.7rem;
   color: #333;
   line-height: 1.23; /* 123% of font size */
+  letter-spacing: -0.02em;
   font-weight: 400;
 }
 
@@ -3133,6 +3199,7 @@ footer {
   font-weight: 300;
   margin-bottom: 10px;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 
 .team-hero-header p {
@@ -3141,6 +3208,7 @@ footer {
   opacity: 0.9;
   margin: 0;
   line-height: 110%;
+  letter-spacing: -0.03em;
 }
 .leadership-section {
   height: 100vh;
@@ -3188,6 +3256,7 @@ h2 {
   font-weight: 400;
   color: var(--gray-primary);
   font-size: 24px;
+  letter-spacing: -0.96px;
   line-height: 110%;
   opacity: 70%;
 }
@@ -3205,9 +3274,10 @@ h2 {
   overflow: hidden;
 }
 .section-header h2 {
-  font-size: 3rem;
-  font-weight: 100;
+  font-size: 40px;
+  font-weight: 400;
   color: #222;
+  /* margin-bottom: 10px; */
 }
 
 .section-header p {
@@ -3237,6 +3307,7 @@ h2 {
 .team-section-header h2 {
   font-size: 2.8rem;
   line-height: 77% !important;
+  letter-spacing: -1.44px;
   font-weight: 400;
   margin-bottom: 30px;
 }
@@ -3319,6 +3390,7 @@ h2 {
   font-weight: 400;
   color: #000000;
   font-size: 20px;
+  letter-spacing: -0.4px;
   line-height: 24.6px;
 }
 .bottomline > p {
@@ -3341,6 +3413,7 @@ h2 {
   font-weight: 400;
   color: #000000;
   font-size: 24px;
+  letter-spacing: -0.64px;
   line-height: 77%;
 }
 
@@ -3373,6 +3446,7 @@ h2 {
   text-align: start;
   font-size: 40px;
   line-height: 77% !important;
+  letter-spacing: -1.44px;
   font-weight: 500;
   margin-bottom: 30px;
 }
@@ -3503,12 +3577,14 @@ h2 {
   font-weight: 500;
   color: #000;
   line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 .mission-highlight-content p {
   font-size: 2rem;
   color: #444;
   line-height: 1.2;
+  letter-spacing: -0.03em;
 }
 
 .mission-highlight-goal {
@@ -3526,12 +3602,14 @@ h2 {
   color: #000;
   margin-bottom: 10px;
   line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 .mission-highlight-goal p {
   font-size: 1.1rem;
   color: #111;
   line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 /* ===== Responsive Adjustments for Mission Highlight Section ===== */
@@ -3586,6 +3664,7 @@ h2 {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -0.03em;
   margin-bottom: 30px;
   color: #000;
 }
@@ -3786,7 +3865,7 @@ h2 {
   max-width: 425px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   background: #fff;
   flex-direction: column;
   margin-bottom: 0;
@@ -3805,6 +3884,9 @@ h2 {
   opacity: 1;
   transform: none;
 }
+
+
+
 
 /* keep your existing image + info styles, but fix this width: */
 .new-project-image {
@@ -3890,6 +3972,7 @@ h2 {
 
   .hero-text {
     font-size: 48px;
+    letter-spacing: -0.96px;
   }
 
   .hero-subtext {
@@ -4394,6 +4477,7 @@ h2 {
 
   .about-us-section h1 {
     font-size: 1rem;
+    letter-spacing: 0.18em;
   }
 
   .about-us-section p {
@@ -4472,6 +4556,7 @@ h2 {
 
   .hero-subtext {
     font-size: 18px;
+    letter-spacing: 0;
   }
 
   .hero-matrix,
@@ -5190,8 +5275,11 @@ h2 {
 
   .services-content-text > p {
     font-size: 32px;
-    font-weight: 100;
+    font-weight: 400;
+    width: 100%;
+    text-wrap: inherit;
     line-height: 110% !important;
+    letter-spacing: -0.96px;
   }
 
   .hero-text-box > .text-group {
@@ -5281,6 +5369,7 @@ h2 {
   .excellence-values-section h1 {
     font-size: 0.9rem;
     margin-bottom: 30px;
+    letter-spacing: 0.18em;
   }
 
   .excellence-item {
@@ -5326,6 +5415,7 @@ h2 {
     font-size: 2rem;
     font-weight: 400;
     line-height: 130%;
+    letter-spacing: -0.02em;
     white-space: normal;
   }
 
@@ -5333,6 +5423,7 @@ h2 {
     font-size: 1.1rem;
     font-weight: 300;
     line-height: 130%;
+    letter-spacing: -0.02em;
     opacity: 0.95;
   }
 
@@ -5395,6 +5486,7 @@ h2 {
     font-size: 2rem;
     font-weight: 400;
     line-height: 120%;
+    letter-spacing: -0.02em;
     white-space: normal;
   }
 
@@ -5402,6 +5494,7 @@ h2 {
     font-size: 1.1rem;
     font-weight: 300;
     line-height: 130%;
+    letter-spacing: -0.02em;
     opacity: 0.95;
   }
 
@@ -5978,6 +6071,7 @@ h2 {
     justify-content: center;
     height: 64px;
     font-size: 28px;
+    letter-spacing: -1.3px;
     line-height: 100%;
   }
 
@@ -6034,12 +6128,8 @@ h2 {
   }
 
   .services-content h2 {
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 1.2;
-    width: 130%;
-    white-space: normal;
-    text-wrap: auto;
+    font-size: 1.6rem;
+    width: 100%;
   }
 
   .services-content span {
@@ -6396,14 +6486,17 @@ h2 {
     font-size: 1.4rem !important;
   }
 
-  .no-margin-mobile {
+  .no-margin-mobile{
     margin-top: 0px !important;
   }
 
-  .margin-mobile {
+  .margin-mobile{
     margin-top: 100px !important;
   }
 }
+
+
+
 
 .scroll-to-top {
   position: fixed;
@@ -6414,12 +6507,12 @@ h2 {
   background: red; /* change this color if needed */
   color: #fff;
   border: none;
-  border-radius: 50%; /* makes it a circle */
+  border-radius: 50%;       /* makes it a circle */
   font-size: 26px;
   cursor: pointer;
   z-index: 999999;
-
-  display: none; /* default hidden */
+  
+  display: none;            /* default hidden */
   align-items: center;
   justify-content: center;
 
@@ -6431,16 +6524,16 @@ h2 {
 .scroll-to-top.show {
   display: flex;
   opacity: 1;
-  transform: scale(1); /* normal size */
+  transform: scale(1);      /* normal size */
 }
 
 .scroll-to-top.hide {
   opacity: 0;
-  transform: scale(0.8); /* shrink when hiding */
+  transform: scale(0.8);    /* shrink when hiding */
   pointer-events: none;
 }
 
 .scroll-to-top:hover {
-  background: #e20202; /* slightly lighter black */
-  transform: scale(1.1); /* pop-out effect */
+  background: #e20202;        /* slightly lighter black */
+  transform: scale(1.1);   /* pop-out effect */
 }
