@@ -130,49 +130,39 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// function applyFilters() {
-//   projects.forEach((p) => {
-//     const serviceMatch =
-//       selectedServices.length === 0 ||
-//       selectedServices.includes(p.dataset.service);
-
-//     if (serviceMatch) {
-//       p.classList.remove("hidden");
-//     } else {
-//       p.classList.add("hidden");
-//     }
-//   });
-
-//   const params = new URLSearchParams();
-//   if (selectedServices.length)
-//     params.set("service", selectedServices.join(","));
-
-//   history.replaceState({}, "", `${location.pathname}?${params.toString()}`);
-// }
 
 function applyFilters() {
   projects.forEach((p) => {
-    // Split card's services into array → ["virtual", "interior"]
-    const cardServices = p.dataset.service.split(" ");
+    // Sector logic
+    const cardSectors = p.dataset.sector.split(" ");
+    const sectorMatch =
+      selectedSectors.length === 0 ||
+      cardSectors.some((s) => selectedSectors.includes(s));
 
-    // Check if ANY service matches the selected ones
+    // Service logic
+    const cardServices = p.dataset.service.split(" ");
     const serviceMatch =
       selectedServices.length === 0 ||
       cardServices.some((s) => selectedServices.includes(s));
 
-    if (serviceMatch) {
-      p.classList.remove("hidden");  // SHOW the card
+    // Final condition → must match BOTH
+    if (sectorMatch && serviceMatch) {
+      p.classList.remove("hidden");
     } else {
-      p.classList.add("hidden");     // HIDE the card
+      p.classList.add("hidden");
     }
   });
 
   // Update URL
   const params = new URLSearchParams();
+  if (selectedSectors.length)
+    params.set("sector", selectedSectors.join(","));
   if (selectedServices.length)
     params.set("service", selectedServices.join(","));
+  
   history.replaceState({}, "", `${location.pathname}?${params.toString()}`);
 }
+
 
 
 
