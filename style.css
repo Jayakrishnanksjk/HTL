@@ -1890,11 +1890,11 @@ footer {
 }
 
 .about-us-section h1 {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: bold;
   line-height: 1.23;
-  color: #000000;
-  opacity: 60%;
+  margin-bottom: 25px;
+  color: #777;
 }
 
 .about-us-section p {
@@ -1949,7 +1949,7 @@ footer {
 }
 
 .stat-value-about {
-  font-size: 3.5rem;.history-trigger .history-wrapper .history-details .history-item h3
+  font-size: 3.5rem;
   font-weight: 500;
   line-height: 1.2;
   color: #000000;
@@ -1967,12 +1967,11 @@ footer {
 }
 
 .excellence-values-section h1 {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: bold;
   line-height: 1.23;
-  color: #000000;
-  opacity: 60%;
-  margin-bottom: 60px;
+  margin-bottom: 25px;
+  color: #777;
 }
 
 .excellence-content {
