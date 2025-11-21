@@ -80,10 +80,9 @@ body {
 }
 /* TEXT STYLES */
 .hero-text {
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 110%;
   font-weight: 100 !important;
-  /* letter-spacing: -2.16px; */
   color: #fff;
 }
 .hero-subtext {
@@ -157,12 +156,11 @@ body {
 .hero-text-box {
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 16px;
-  padding: 24px;
+  background-color: rgb(0 0 0 / 50%);
+  padding: 25px;
   gap: 56px;
   height: fit-content;
-  width: 100%;
+  width: 80%;
 }
 
 .hero-text-box > .text-group {
@@ -1325,6 +1323,7 @@ footer {
   font-weight: 100;
   color: #ffffff;
   line-height: 100%;
+  text-align: center;
 }
 
 .cta-section {
@@ -1688,8 +1687,8 @@ footer {
 }
 
 .news-title {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: normal;
   line-height: 1.1;
   margin-bottom: 5px;
   color: #1a1a1a;
@@ -3206,7 +3205,7 @@ h2 {
 }
 .section-header h2 {
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: 600;
   color: #222;
 }
 
@@ -4663,7 +4662,12 @@ h2 {
   }
 
   .news-excerpt {
-    font-size: 0.95rem;
+    color: #000;
+    line-height: 24px;
+    margin-bottom: 5px;
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: normal;
   }
 
   /* Testimonials */
