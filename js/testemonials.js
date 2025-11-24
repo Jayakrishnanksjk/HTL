@@ -3,15 +3,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
-    text: "A big thank you to the HTL Team and their key technical resources for their superb contingency coordination over the weekend. Their support was crucial for the seamless execution of our Risk Mitigation Activity. ",
+    text: "Big thank you to the HTL Team for superb contingency coordination. Their support was crucial for seamless Risk Mitigation.",
     logo: "./images/Logo/brand-logos/morgan stanly.png",
   },
   {
-    text: "Sincere gratitude for the team's support capacity throughout this mission-critical activity. Their proactive contributions significantly enhanced our overall project velocity and are a benchmark for high performance. ",
+    text: "Sincere gratitude for the team’s superb support during this mission-critical activity. Their proactive contribution is a benchmark for high performance.",
     logo: "./images/Logo/brand-logos/ncr.svg",
   },
   {
-    text: "We commend the collective's exceptional support capacity demonstrated during the Power Shutdown Activity. The team's precise resource orchestration guaranteed on-time completion within the defined go-live schedule.",
+    text: "We commend the collective's exceptional support capacity during Power Shutdown. Their precise orchestration ensured on-time completion.",
     logo: "./images/Logo/brand-logos/tiaa.png",
   },
   {
@@ -21,9 +21,10 @@ const testimonials = [
   },
 
   {
-    text: "Appreciation for the Pune HTL Team's five years of outstanding HVAC lifecycle management for our portfolio. Their proactive maintenance cadence and commitment to customer-centricity maintain system operational efficiency.",
+    text: "Appreciation for the Pune HTL Team's five years of outstanding HVAC lifecycle management. Their proactive maintenance sustains system efficiency.",
     logo: "./images/Logo/brand-logos/WeWork 2.svg",
   },
+  
 ];
 
 const textEl = document.getElementById("testemonialText");
