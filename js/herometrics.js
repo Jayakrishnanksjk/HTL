@@ -57,9 +57,9 @@ window.addEventListener("DOMContentLoaded", () => {
   createStatCycle(
     "statClients",
     "Team Strength",
-    "3000",
+    "600",
     "Clients served",
-    "100+"
+    "3000+"
   );
   createStatCycle(
     "statProjects",
@@ -73,13 +73,13 @@ window.addEventListener("DOMContentLoaded", () => {
     "IT Loads",
     "200 MW",
     "CSAT Score",
-    "96%"
+    "9.2"
   );
   createStatCycle(
     "statYears",
     "Presence",
     "30+",
-    "Team Strength",
-    "500+"
+    "No of Repeat Clients",
+    "86%"
   );
 });
