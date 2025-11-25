@@ -252,14 +252,17 @@
             <span class="arrow">&#9662;</span>
           </button>
           <div class="dropdown-content">
-            <a href="https://www.linkedin.com/company/htlaircon/?originalSubdomain=in">LinkedIn</a>
+            <a
+              href="https://www.linkedin.com/company/htlaircon/?originalSubdomain=in"
+              >LinkedIn</a
+            >
           </div>
         </div>
       </div>
     </nav>
     <!-- ===== MOBILE NAV END ===== -->
 
-      <!-- <section class="new-projects-section">
+    <!-- <section class="new-projects-section">
       <div class="new-projects-header">
         <h2 class="new-projects-title">News & Insights</h2>
         <button class="filter-btn" aria-label="Open filters">
@@ -461,19 +464,18 @@
         </div>
       </section> -->
 
-
-      <section class="new-projects-section">
-  <div class="new-projects-header">
-    <h2 class="new-projects-title">News & Insights</h2>
-    <!-- <button class="filter-btn" aria-label="Open filters">
+    <section class="new-projects-section">
+      <div class="new-projects-header">
+        <h2 class="new-projects-title">News & Insights</h2>
+        <!-- <button class="filter-btn" aria-label="Open filters">
       <img src="images/filter-svg.svg" alt="" />
     </button> -->
-  </div>
+      </div>
 
-  <!-- ✅ News cards will be injected here dynamically -->
-  <div class="new-projects-row"></div>
+      <!-- ✅ News cards will be injected here dynamically -->
+      <div class="new-projects-row"></div>
 
-  <!-- <div class="card-pagination">
+      <!-- <div class="card-pagination">
     <button class="page-btn back-btn">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -496,8 +498,7 @@
       </svg>
     </button>
   </div> -->
-</section>
-
+    </section>
 
     <div id="newsPopup" class="news-popup">
       <div class="news-popup-content">
@@ -514,7 +515,7 @@
       </div>
     </div>
 
-     <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+    <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
 
     <footer class="no-margin-mobile">
       <div class="topper-section">
@@ -651,27 +652,27 @@
       });
     </script> -->
 
-   <!-- 1️⃣ Load news data -->
-<script src="js/newsData.js"></script>
+    <!-- 1️⃣ Load news data -->
+    <script src="js/newsData.js"></script>
 
-<!-- 2️⃣ Load popup and render logic -->
-<script>
-  function renderNewsCards() {
-    const container = document.querySelector(".new-projects-row");
-    if (!container) return;
+    <!-- 2️⃣ Load popup and render logic -->
+    <script>
+      function renderNewsCards() {
+        const container = document.querySelector(".new-projects-row");
+        if (!container) return;
 
-    container.innerHTML = "";
+        container.innerHTML = "";
 
-    newsData.forEach((news, index) => {
-      const card = document.createElement("div");
-      card.className = "news-card";
-      card.onclick = () => openNewsPopup(index);
+        newsData.forEach((news, index) => {
+          const card = document.createElement("div");
+          card.className = "news-card";
+          card.onclick = () => openNewsPopup(index);
 
-      const shortText = news.content
-        ? news.content.split("</p>")[0].replace("<p>", "")
-        : "";
+          const shortText = news.content
+            ? news.content.split("</p>")[0].replace("<p>", "")
+            : "";
 
-      card.innerHTML = `
+          card.innerHTML = `
         <div class="news-image">
           <img src="${news.image}" alt="${news.headline}" />
         </div>
@@ -688,40 +689,40 @@
           </div>
         </div>
       `;
-      container.appendChild(card);
-    });
-  }
+          container.appendChild(card);
+        });
+      }
 
-  document.addEventListener("DOMContentLoaded", renderNewsCards);
-</script>
+      document.addEventListener("DOMContentLoaded", renderNewsCards);
+    </script>
 
-<!-- 3️⃣ Popup logic -->
-<script>
-  function openNewsPopup(index) {
-    const popup = document.getElementById("newsPopup");
-    const news = newsData[index];
+    <!-- 3️⃣ Popup logic -->
+    <script>
+      function openNewsPopup(index) {
+        const popup = document.getElementById("newsPopup");
+        const news = newsData[index];
 
-    document.getElementById("popupHeadline").innerText = news.headline;
-    document.getElementById("popupDate").innerText = `${news.publication} • ${news.date}`;
-    document.getElementById("popupImage").src = news.image;
-    document.getElementById("popupText").innerHTML = news.content;
+        document.getElementById("popupHeadline").innerText = news.headline;
+        document.getElementById(
+          "popupDate"
+        ).innerText = `${news.publication} • ${news.date}`;
+        document.getElementById("popupImage").src = news.image;
+        document.getElementById("popupText").innerHTML = news.content;
 
-    const popupLink = document.getElementById("popupLink");
-    if (news.articleLink && news.articleLink.trim() !== "") {
-      popupLink.href = news.articleLink;
-      popupLink.style.display = "inline-block";
-    } else {
-      popupLink.style.display = "none";
-    }
+        const popupLink = document.getElementById("popupLink");
+        if (news.articleLink && news.articleLink.trim() !== "") {
+          popupLink.href = news.articleLink;
+          popupLink.style.display = "inline-block";
+        } else {
+          popupLink.style.display = "none";
+        }
 
-    popup.style.display = "flex";
-  }
+        popup.style.display = "flex";
+      }
 
-  function closeNewsPopup() {
-    document.getElementById("newsPopup").style.display = "none";
-  }
-</script>
-
-
+      function closeNewsPopup() {
+        document.getElementById("newsPopup").style.display = "none";
+      }
+    </script>
   </body>
 </html>
