@@ -1760,7 +1760,7 @@ footer {
   align-items: center;
   height: calc(100vh - 64px);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("images/about-banner.svg");
+    url("images/banner/updated/About\ Us.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2419,7 +2419,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/services-hero.png");
+    url("images/banner/updated/Services.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2602,6 +2602,105 @@ footer {
       rgba(0, 0, 0, 0) 100%
     ),
     url("images/services-single-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  overflow: hidden;
+  margin: 0;
+  padding: 80px;
+}
+
+.hvac-hero-section.operation {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/O&M\ 2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container-comm.data {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/Data centre 3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container-comm.commgcc {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/GCC/CRE\ &\ GCC.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container-comm.education {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/Educational\ .png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container-comm.infra {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/Govt\ &\ Infra.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container-comm.healthcare {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/Healthcare.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container-comm.hospitality {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/Hospitality\ &\ Luxury\ Retail.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.base-hero-section {
+  display: flex;
+  justify-content: center; /* center container horizontally */
+  align-items: center; /* center vertically */
+  height: calc(100vh - 64px);
+
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/Base\ build.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2910,7 +3009,7 @@ footer {
       rgba(0, 0, 0, 0.2) 30%,
       rgba(0, 0, 0, 0) 45%
     ),
-    url("images/hero-culture.svg");
+    url("images/banner/updated/People\ &\ Culture.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3177,7 +3276,7 @@ footer {
       rgba(0, 0, 0, 0.2) 30%,
       rgba(0, 0, 0, 0) 45%
     ),
-    url("images/team-hero.svg");
+    url("images/banner/updated/Our\ Team.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -6147,6 +6246,10 @@ h2 {
     border-radius: 4px;
     align-self: center;
   }
+
+  .team-member-card.management{
+    width: 200px;
+  }
 }
 
 /* ===========================
@@ -6537,3 +6640,4 @@ h2 {
   background: #e20202;        /* slightly lighter black */
   transform: scale(1.1);   /* pop-out effect */
 }
+
