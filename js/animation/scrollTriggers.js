@@ -24,6 +24,10 @@ createHorizontalScrollById(
   "projectTeamPageManagementInner"
 );
 
+createHorizontalScrollById(
+  "teamManagement",
+  "teamManagementInner"
+);
 
 
 

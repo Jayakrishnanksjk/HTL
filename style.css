@@ -1760,7 +1760,7 @@ footer {
   align-items: center;
   height: calc(100vh - 64px);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("images/banner/updated/About\ Us.png");
+    url("images/banner/updated/About\ Us.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2419,7 +2419,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/Services.png");
+    url("images/banner/updated/Services.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2617,7 +2617,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/O&M\ 2.png");
+    url("images/banner/updated/O&M\ 2.webp");
   background-size: cover;
   background-position: center;
 }
@@ -2628,7 +2628,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/Data centre 3.png");
+    url("images/banner/updated/Data\ centre\ 3.webp");
   background-size: cover;
   background-position: center;
 }
@@ -2639,7 +2639,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/GCC/CRE\ &\ GCC.png");
+    url("images/banner/updated/CRE\ &\ GCC.webp");
   background-size: cover;
   background-position: center;
 }
@@ -2650,7 +2650,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/Educational\ .png");
+    url("images/banner/updated/Educational\ .webp");
   background-size: cover;
   background-position: center;
 }
@@ -2661,7 +2661,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/Govt\ &\ Infra.png");
+    url("images/banner/updated/Govt\ &\ Infra.webp");
   background-size: cover;
   background-position: center;
 }
@@ -2672,7 +2672,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/Healthcare.png");
+    url("images/banner/updated/Healthcare.webp");
   background-size: cover;
   background-position: center;
 }
@@ -2683,7 +2683,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/Hospitality\ &\ Luxury\ Retail.png");
+    url("images/banner/updated/Hospitality\ &\ Luxury\ Retail.webp");
   background-size: cover;
   background-position: center;
 }
@@ -2700,7 +2700,7 @@ footer {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("images/banner/updated/Base\ build.png");
+    url("images/banner/updated/Base\ build.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3009,7 +3009,7 @@ footer {
       rgba(0, 0, 0, 0.2) 30%,
       rgba(0, 0, 0, 0) 45%
     ),
-    url("images/banner/updated/People\ &\ Culture.png");
+    url("images/banner/updated/People\ &\ Culture.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3276,7 +3276,7 @@ footer {
       rgba(0, 0, 0, 0.2) 30%,
       rgba(0, 0, 0, 0) 45%
     ),
-    url("images/banner/updated/Our\ Team.png");
+    url("images/banner/updated/Our\ Team.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -6641,3 +6641,86 @@ h2 {
   transform: scale(1.1);   /* pop-out effect */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet Styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .leadership-section {
+    padding: 40px;
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .leadership-section .left {
+    height: auto;
+    text-align: center;
+  }
+
+  .leadership-section .right {
+    height: auto;
+    flex-direction: row;
+  }
+
+  .leadership-section .right .innercard {
+    height: auto;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .headingsubtext {
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .leadership-section {
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .leadership-section .left {
+    height: auto;
+    text-align: center;
+    align-items: flex-start;
+  }
+
+  .leadership-section .right {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .leadership-section .right .innercard {
+    width: 100%;
+  }
+
+  .leadership-section .right .innercard img {
+    height: auto;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .headingsubtext {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
