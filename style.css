@@ -1340,6 +1340,7 @@ footer {
 }
 
 .trusted-brands-heading {
+  text-align: center;
   font-size: 40px;
   font-weight: 400;
   color: #ffffff;
@@ -3358,6 +3359,7 @@ h2 {
   letter-spacing: -0.96px;
   line-height: 110%;
   opacity: 70%;
+  padding-right: 20px;
 }
 
 .management-team-section {

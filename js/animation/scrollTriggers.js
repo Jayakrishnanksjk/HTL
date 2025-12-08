@@ -12,6 +12,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 // createHorizontalScrollById("culturePageSection", "culturePageSectionInner");
 
+ScrollTrigger.defaults({
+  anticipatePin: 1
+});
+
+
 createHorizontalScrollById(
   "projectHomePageSection",
   "projectHomePageSectionInner"
