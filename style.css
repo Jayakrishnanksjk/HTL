@@ -3181,7 +3181,7 @@ footer {
 }
 
 .image-text-section-culture {
-  padding: 100px;
+  padding: 50px 100px 100px 100px;
   background-color: #ffffff;
   height: 100vh;
 }
@@ -5056,7 +5056,7 @@ h2 {
   /* Footer */
   footer {
     height: auto;
-    margin-top: 100px;
+    margin-top: 100px !important; 
   }
 
   .topper-section {
@@ -6652,6 +6652,9 @@ h2 {
 
   .margin-mobile{
     margin-top: 100px !important;
+  }
+  .margin-mobile2{
+    margin-top: 430px !important;
   }
 }
 
