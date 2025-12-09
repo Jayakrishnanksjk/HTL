@@ -1801,7 +1801,7 @@ footer {
   align-items: center;
   height: calc(100vh - 64px);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("images/about-banner.svg");
+    url("images/banner/updated/CSR-2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2173,7 +2173,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 64px);
-  background: url("images/project-hero.svg");
+  background: url("images/banner/updated/Projects.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2610,6 +2610,61 @@ footer {
   overflow: hidden;
   margin: 0;
   padding: 80px;
+}
+
+.hvac-hero-section.virtual {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/Virtual\ Project\ Management\ .webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.hvac-hero-section.cleanroom {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/Cleanroom.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.hvac-hero-section.mep {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/MEP.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.hvac-hero-section.hvac {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/HVAC\ .webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.hvac-hero-section.fitout {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/updated/C&I\ FITOUT.webp");
+  background-size: cover;
+  background-position: center;
 }
 
 .hvac-hero-section.operation {
