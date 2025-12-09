@@ -2689,6 +2689,17 @@ footer {
   background-position: center;
 }
 
+.hero-container-comm.industrial {
+  background: radial-gradient(
+      circle at center 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("images/banner/Industrial.webp");
+  background-size: cover;
+  background-position: center;
+}
+
 .hero-container-comm.commgcc {
   background: radial-gradient(
       circle at center 50%,

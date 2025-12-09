@@ -77,7 +77,7 @@ window.addEventListener("DOMContentLoaded", () => {
   );
   createStatCycle(
     "statYears",
-    "Presence",
+    "Presence In Cities",
     "30+",
     "No of Repeat Clients",
     "86%"
