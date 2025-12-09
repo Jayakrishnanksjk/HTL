@@ -4029,13 +4029,14 @@ h2 {
 .new-project-card {
   display: flex;
   width: calc(33.333% - 20px);
-  max-width: 425px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   background: #fff;
   flex-direction: column;
   margin-bottom: 0;
+  min-width: 425px;
+    height: 470px;
 }
 
 /* HIDE only filtered-out cards */
@@ -6794,4 +6795,150 @@ h2 {
     font-size: 18px;
     line-height: 140%;
   }
+}
+
+
+
+
+
+
+
+
+/* CARD HOVER STATE */
+.new-project-card {
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.new-project-card:hover {
+  transform: scale(1.01);
+  box-shadow: var(--shadow-elevation-3);
+}
+
+/* OVERLAY CONTAINER (hidden until hover) */
+.new-hovercontainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  z-index: 3;
+
+  background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 82%
+    ),
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.4) 50%,
+      rgba(0,0,0,0.8) 100%
+    );
+}
+
+/* SHOW OVERLAY ON HOVER */
+.new-project-card:hover .new-hovercontainer {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* INNER STRUCTURE */
+.new-innerhover {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.new-top-container {
+  color: #fff;
+}
+
+.new-bottom-container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* IMAGE ZOOM ON HOVER */
+.new-project-card:hover .new-project-image img {
+  transform: scale(1.2);
+}
+
+.new-project-image img {
+  transition: 0.3s ease;
+}
+
+/* TEXT LAYOUT (same structure as first card but scaled down slightly) */
+.new-text-innercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-text-inner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-project-name,
+.new-project-location {
+  color: #fff;
+}
+
+.new-project-location{
+  font-size: var(--project-location-font-size);
+    font-style: var(--project-location-font-style);
+    font-weight: var(--project-location-font-weight);
+    letter-spacing: var(--project-location-letter-spacing);
+    line-height: var(--project-location-line-height);
+    opacity: 80%;
+}
+
+.new-project-name{
+  font-size: var(--project-title-font-size);
+  font-style: var(--project-title-font-style);
+  font-weight: var(--project-title-font-weight);
+  letter-spacing: var(--project-title-letter-spacing);
+  line-height: var(--project-title-line-height);
+}
+
+.new-project-area{
+  font-size: var(--project-SQFT-font-size);
+    font-style: var(--project-SQFT-font-style);
+    font-weight: var(--project-SQFT-font-weight);
+    letter-spacing: var(--project-SQFT-letter-spacing);
+    line-height: var(--project-SQFT-line-height);
+    text-align: right;
+}
+
+.new-project-service{
+  font-size: var(--project-service-font-size);
+    font-style: var(--project-service-font-style);
+    font-weight: var(--project-service-font-weight);
+    letter-spacing: var(--project-service-letter-spacing);
+    line-height: var(--project-service-line-height);
+    text-align: right;
+}
+
+.new-bottom-container p{
+    opacity: 0.8;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    line-height: 24.6px;
+}
+
+.new-text-inner-right {
+  text-align: right;
+  color: #fff;
 }
