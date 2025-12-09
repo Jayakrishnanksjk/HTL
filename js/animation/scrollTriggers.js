@@ -34,6 +34,10 @@ createHorizontalScrollById(
   "teamManagementInner"
 );
 
+createHorizontalScrollById(
+  "teamMembers",
+  "teamMembersInner"
+);
 
 
 createHorizontalScrollById(
