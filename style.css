@@ -2208,7 +2208,7 @@ footer {
 }
 
 .new-projects-section {
-  padding: 0px 80px 20px 80px;
+  /* padding: 0px 80px 20px 80px; */
   background-color: #f9f9f9;
 }
 
@@ -2221,7 +2221,7 @@ footer {
   align-items: center;
   margin-bottom: 30px;
   background-color: #f9f9f9;
-  padding: 30px 0;
+  padding: 30px 80px;
 }
 
 /* button with SVG */
@@ -4007,6 +4007,29 @@ h2 {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: flex-start;
+  padding: 0 80px;
+}
+
+.news-projects-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+  padding: 0 80px;
+}
+
+/* Only for mobile devices */
+@media (max-width: 992px) {
+    .new-projects-mobile {
+        padding: 0 20px !important; /* Reduce side spacing for mobile */
+        justify-content: center;   /* Center the cards */
+        gap: 20px;                 /* Reduce gap */
+    }
+}
+
+
+.margin-bottom{
+  margin-bottom: 40px;
 }
 
 /* .new-project-card {
