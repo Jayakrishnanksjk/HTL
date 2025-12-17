@@ -19,12 +19,10 @@ const testimonials = [
     logo: "./images/Logo/brand-logos/netflix.webp",
 
   },
-
   {
     text: "Appreciation for the Pune HTL Team's five years of outstanding HVAC lifecycle management. Their proactive maintenance sustains system efficiency.",
     logo: "./images/Logo/brand-logos/WeWork 2.svg",
   },
-  
 ];
 
 const textEl = document.getElementById("testemonialText");
