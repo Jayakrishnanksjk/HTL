@@ -12,11 +12,11 @@ const testimonials = [
   },
   {
     text: "We commend the collective's exceptional support capacity during Power Shutdown. Their precise orchestration ensured on-time completion.",
-    logo: "./images/Logo/brand-logos/tiaa.png",
+    logo: "./images/Logo/brand-logos/tiaa.webp",
   },
   {
     text: "The leadership team's meticulous attention to detail and consistent contributions were instrumental in achieving key performance indicators (KPIs) for the HVAC system deployment across the lab upgrades.",
-    logo: "./images/Logo/brand-logos/netflix.png",
+    logo: "./images/Logo/brand-logos/netflix.webp",
 
   },
 
