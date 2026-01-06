@@ -2533,7 +2533,7 @@ footer {
   opacity: 0;
   font-size: 16px;
   line-height: 120%;
-  text-align: justify;
+  text-align: left;
   transition: linear 300ms;
 }
 
@@ -3077,7 +3077,7 @@ footer {
       rgba(0, 0, 0, 0.2) 30%,
       rgba(0, 0, 0, 0) 45%
     ),
-    url("images/banner/updated/People\ &\ Culture.webp");
+    url("images/banner/People\ &\ Culture\ .webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -6717,7 +6717,7 @@ h2 {
 
 .scroll-to-top {
   position: fixed;
-  bottom: 25px;
+  bottom: 75px;
   right: 25px;
   width: 55px;
   height: 55px;
@@ -7166,4 +7166,40 @@ h2 {
   .image-section-culture img {
     height: 260px;
   }
+}
+
+
+/* CSS to make it non-clickable */
+.location-group a.non-clickable {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: inherit; /* or whatever color matches your other links */
+}
+
+/* Add to your CSS file */
+.copyright-link {
+  color: inherit; /* Takes color from parent (.copyrights) */
+  text-decoration: none; /* Removes underline */
+}
+
+.copyright-link:hover {
+  text-decoration: underline; /* Optional: add underline on hover */
+  /* Or keep it without underline: text-decoration: none; */
+}
+
+
+/* Add to your CSS */
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6; /* Make it look disabled */
+  text-decoration: none;
+}
+
+/* Optional: Remove hover effects */
+a.disabled:hover {
+  text-decoration: none;
+  background-color: inherit; /* If your .link-box has background */
+  color: inherit;
 }
