@@ -904,7 +904,7 @@
           <a class="non-clickable">Africa</a>
         </div>
         <p class="copyrights">
-  © 2026 HTL AIRCON. All rights reserved | Powered by 
+  © <span id="currentYear"></span> HTL AIRCON. All rights reserved | Powered by 
   <a href="https://dms.family/" 
      target="_blank" 
      rel="noopener noreferrer"
@@ -917,6 +917,10 @@
 
 
    <!-- Libraries -->
+   <script>
+  // Simple script to update the year
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
