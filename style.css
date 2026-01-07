@@ -1063,7 +1063,8 @@ body {
   gap: 16px;
 }
 .project-name {
-  font-size: var(--project-title-font-size);
+  /* font-size: var(--project-title-font-size); */
+  font-size: 28px;
   font-style: var(--project-title-font-style);
   font-weight: var(--project-title-font-weight);
   letter-spacing: var(--project-title-letter-spacing);
