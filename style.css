@@ -7204,3 +7204,16 @@ a.disabled:hover {
   background-color: inherit; /* If your .link-box has background */
   color: inherit;
 }
+
+/* Center the reCAPTCHA container */
+.form-row .g-recaptcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Ensure the reCAPTCHA iframe itself is centered */
+.g-recaptcha > div {
+  margin: 0 auto !important;
+}
