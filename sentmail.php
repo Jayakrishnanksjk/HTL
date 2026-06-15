@@ -1,5 +1,12 @@
 <?php
-header('Content-Type: application/json');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Include PHPMailer (paths relative to this file)
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 🔐 Google reCAPTCHA secret key
@@ -7,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 🚨 Check captcha
     if (empty($_POST['g-recaptcha-response'])) {
-        echo "⚠️ Please verify that you are not a robot.";
+        echo "<script>alert('⚠️ Please verify that you are not a robot.'); window.history.back();</script>";
         exit;
     }
 
@@ -21,22 +28,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $responseData = json_decode($verifyResponse);
 
     if (!$responseData || !$responseData->success) {
-        echo "⚠️ reCAPTCHA verification failed.";
+        echo "<script>alert('⚠️ reCAPTCHA verification failed.'); window.history.back();</script>";
         exit;
     }
 
-    // 🧾 Common fields
-    $formType = $_POST['form_type'] ?? 'general';
+    // 🧾 Fields
+    $formType = $_POST['form_type'] ?? 'consultation';
     $name     = trim($_POST['name'] ?? 'N/A');
     $email    = trim($_POST['email'] ?? 'N/A');
     $message  = trim($_POST['message'] ?? 'N/A');
-
-    // 🧩 Optional fields (used by consultation form)
-    $service = trim($_POST['service'] ?? '');
-    $phone   = trim($_POST['phone'] ?? '');
+    $service  = trim($_POST['service'] ?? '');
+    $phone    = trim($_POST['phone'] ?? '');
 
     // 📧 Receiver
-    $to = "info@htlaircon.com";
+    $to = "jayakrishnanashi@gmail.com";
 
     // 🧠 Subject based on form type
     switch ($formType) {
@@ -76,17 +81,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 🚀 Send mail
     if (mail($to, $mail_subject, $body, $headers)) {
-        echo json_encode([
-    "status" => "success",
-    "message" => "Thank you! Your message has been sent successfully."
-]);
-
+        echo "✅ Message sent successfully!";
     } else {
-        echo json_encode([
-    "status" => "error",
-    "message" => "Something went wrong. Please try again later."
-]);
-
+        echo "❌ Message could not be sent. Please try again later.";
     }
+} else {
+    echo 'Invalid Request.';
 }
 ?>
