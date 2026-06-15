@@ -8,12 +8,12 @@ require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Collect fields from your form (make sure your inputs have these name="" attrs)
-    $name    = isset($_POST['name'])    ? htmlspecialchars($_POST['name'])    : '';
-    $email   = isset($_POST['email'])   ? htmlspecialchars($_POST['email'])   : '';
-    $service = isset($_POST['service']) ? htmlspecialchars($_POST['service']) : '';
-    $phone   = isset($_POST['phone'])   ? htmlspecialchars($_POST['phone'])   : '';
-    $message = isset($_POST['message']) ? nl2br(htmlspecialchars($_POST['message'])) : '';
+    // Collect fields from the Join Team form
+    $name       = isset($_POST['name'])       ? htmlspecialchars($_POST['name'])       : '';
+    $email      = isset($_POST['email'])      ? htmlspecialchars($_POST['email'])      : '';
+    $experience = isset($_POST['experience']) ? htmlspecialchars($_POST['experience']) : '';
+    $phone      = isset($_POST['phone'])      ? htmlspecialchars($_POST['phone'])      : '';
+    $hr_domain  = isset($_POST['hr'])         ? htmlspecialchars($_POST['hr'])         : '';
 
     $mail = new PHPMailer(true);
 
@@ -23,40 +23,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
 
-        // 👇 Replace with the mailbox you will SEND FROM
-        $mail->Username   = 'jayakrishnanashi@gmail.com';     // <- your Gmail address
+        // 👇 Gmail details
+        $mail->Username   = 'jayakrishnanashi@gmail.com';     // <- receiver/sender Gmail address
         $mail->Password   = 'ijcb xhef ovcj rols';            // <- Gmail App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // --- From / To ---
-        $mail->setFrom('jayakrishnanashi@gmail.com', 'Website Form');
-        $mail->addReplyTo($email ?: 'no-reply@yourdomain.com', $name ?: 'Visitor');
+        $mail->setFrom('jayakrishnanashi@gmail.com', 'Website CV Submission');
+        $mail->addReplyTo($email ?: 'no-reply@yourdomain.com', $name ?: 'Applicant');
 
-        // ✅ Recipient
+        // Recipient: send every submission to this address
         $mail->addAddress('jayakrishnanashi@gmail.com');
+
+        // --- Attach CV ---
+        if (isset($_FILES['cv']) && $_FILES['cv']['error'] === UPLOAD_ERR_OK) {
+            $mail->addAttachment($_FILES['cv']['tmp_name'], $_FILES['cv']['name']);
+        }
 
         // --- Content ---
         $mail->isHTML(true);
-        $mail->Subject = "New Business Consultation Request from {$name}";
+        $mail->Subject = "New Job Application / CV Submission from {$name}";
         $mail->Body    = "
-            <h2>New Consultation Request</h2>
+            <h2>New Job Application / CV Submission</h2>
             <p><strong>Name:</strong> {$name}</p>
             <p><strong>Email:</strong> {$email}</p>
             <p><strong>Phone:</strong> {$phone}</p>
-            <p><strong>Service Type:</strong> {$service}</p>
-            <p><strong>Message:</strong><br>{$message}</p>
+            <p><strong>Total Work Experience:</strong> {$experience}</p>
+            <p><strong>HR Domain:</strong> {$hr_domain}</p>
         ";
 
-        $mail->AltBody = "New Consultation Request\n"
+        $mail->AltBody = "New Job Application / CV Submission\n"
                        . "Name: {$name}\n"
                        . "Email: {$email}\n"
                        . "Phone: {$phone}\n"
-                       . "Service Type: {$service}\n"
-                       . "Message: {$message}\n";
+                       . "Total Work Experience: {$experience}\n"
+                       . "HR Domain: {$hr_domain}\n";
 
         $mail->send();
-        echo "<script>alert('✅ Email sent successfully!'); window.history.back();</script>";
+        echo "<script>alert('✅ CV submitted successfully!'); window.history.back();</script>";
     } catch (Exception $e) {
         echo "<script>alert('⚠️ Message could not be sent. Error: " . addslashes($mail->ErrorInfo) . "'); window.history.back();</script>";
     }
