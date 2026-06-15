@@ -5418,7 +5418,7 @@ h2 {
   }
 
   .stat-individual > h4 {
-    font-size: 12px;
+    font-size: 8px;
   }
 
   .stat-individual > hr {
@@ -7216,4 +7216,11 @@ a.disabled:hover {
 /* Ensure the reCAPTCHA iframe itself is centered */
 .g-recaptcha > div {
   margin: 0 auto !important;
+}
+
+
+.form-response {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }

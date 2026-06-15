@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->addReplyTo($email ?: 'no-reply@yourdomain.com', $name ?: 'Visitor');
 
         // ✅ Recipient
-        $mail->addAddress('jayakrishnanashi@gmail.com');
+        $mail->addAddress('info@htlaircon.com');
 
         // --- Content ---
         $mail->isHTML(true);

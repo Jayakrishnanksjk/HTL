@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 🔐 Google reCAPTCHA secret key
@@ -35,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $phone   = trim($_POST['phone'] ?? '');
 
     // 📧 Receiver
-    $to = "jayakrishnanashi@gmail.com";
+    $to = "info@htlaircon.com";
 
     // 🧠 Subject based on form type
     switch ($formType) {
@@ -75,9 +76,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 🚀 Send mail
     if (mail($to, $mail_subject, $body, $headers)) {
-        echo "✅ Message sent successfully!";
+        echo json_encode([
+    "status" => "success",
+    "message" => "Thank you! Your message has been sent successfully."
+]);
+
     } else {
-        echo "❌ Message could not be sent. Please try again later.";
+        echo json_encode([
+    "status" => "error",
+    "message" => "Something went wrong. Please try again later."
+]);
+
     }
 }
 ?>
