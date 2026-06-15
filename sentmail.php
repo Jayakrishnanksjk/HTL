@@ -1,4 +1,12 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Include PHPMailer (paths relative to this file)
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 🔐 Google reCAPTCHA secret key
@@ -6,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 🚨 Check captcha
     if (empty($_POST['g-recaptcha-response'])) {
-        echo "⚠️ Please verify that you are not a robot.";
+        echo "<script>alert('⚠️ Please verify that you are not a robot.'); window.history.back();</script>";
         exit;
     }
 
@@ -20,64 +28,71 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $responseData = json_decode($verifyResponse);
 
     if (!$responseData || !$responseData->success) {
-        echo "⚠️ reCAPTCHA verification failed.";
+        echo "<script>alert('⚠️ reCAPTCHA verification failed.'); window.history.back();</script>";
         exit;
     }
 
-    // 🧾 Common fields
-    $formType = $_POST['form_type'] ?? 'general';
+    // 🧾 Fields
+    $formType = $_POST['form_type'] ?? 'consultation';
     $name     = trim($_POST['name'] ?? 'N/A');
     $email    = trim($_POST['email'] ?? 'N/A');
     $message  = trim($_POST['message'] ?? 'N/A');
+    $service  = trim($_POST['service'] ?? '');
+    $phone    = trim($_POST['phone'] ?? '');
 
-    // 🧩 Optional fields (used by consultation form)
-    $service = trim($_POST['service'] ?? '');
-    $phone   = trim($_POST['phone'] ?? '');
+    $mail = new PHPMailer(true);
 
-    // 📧 Receiver
-    $to = "jayakrishnanashi@gmail.com";
+    try {
+        // --- SMTP: use Gmail (recommended for local testing) ---
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'jayakrishnanashi@gmail.com';     // <- your Gmail address
+        $mail->Password   = 'ijcb xhef ovcj rols';            // <- Gmail App Password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
 
-    // 🧠 Subject based on form type
-    switch ($formType) {
-        case "consultation":
-            $mail_subject = "New Consultation Request";
-            break;
+        // --- From / To ---
+        $mail->setFrom('jayakrishnanashi@gmail.com', 'Website Consultation');
+        $mail->addReplyTo($email ?: 'no-reply@yourdomain.com', $name ?: 'Visitor');
+        $mail->addAddress('jayakrishnanashi@gmail.com');
 
-        case "contact":
-            $mail_subject = "New Contact Form Submission";
-            break;
+        // --- Content ---
+        $mail->isHTML(true);
+        $mail->Subject = "New Business Consultation Request from {$name}";
+        
+        $body  = "<h2>New Consultation Request</h2>";
+        $body .= "<p><strong>Name:</strong> {$name}</p>";
+        $body .= "<p><strong>Email:</strong> {$email}</p>";
+        if (!empty($phone)) {
+            $body .= "<p><strong>Phone:</strong> {$phone}</p>";
+        }
+        if (!empty($service)) {
+            $body .= "<p><strong>Service:</strong> {$service}</p>";
+        }
+        $body .= "<p><strong>Message:</strong><br>" . nl2br(htmlspecialchars($message)) . "</p>";
 
-        default:
-            $mail_subject = "New Website Form Submission";
-            break;
+        $mail->Body = $body;
+
+        $altBody  = "New Consultation Request\n";
+        $altBody .= "Name: {$name}\n";
+        $altBody .= "Email: {$email}\n";
+        if (!empty($phone)) {
+            $altBody .= "Phone: {$phone}\n";
+        }
+        if (!empty($service)) {
+            $altBody .= "Service: {$service}\n";
+        }
+        $altBody .= "Message: {$message}\n";
+
+        $mail->AltBody = $altBody;
+
+        $mail->send();
+        echo "<script>alert('✅ Email sent successfully!'); window.history.back();</script>";
+    } catch (Exception $e) {
+        echo "<script>alert('⚠️ Message could not be sent. Error: " . addslashes($mail->ErrorInfo) . "'); window.history.back();</script>";
     }
-
-    // 📝 Email body
-    $body  = "New form submission received:\n\n";
-    $body .= "Form Type: {$formType}\n";
-    $body .= "Name: {$name}\n";
-    $body .= "Email: {$email}\n";
-
-    if (!empty($service)) {
-        $body .= "Service: {$service}\n";
-    }
-
-    if (!empty($phone)) {
-        $body .= "Phone: {$phone}\n";
-    }
-
-    $body .= "\nMessage:\n{$message}\n";
-
-    // 🧾 Headers
-    $headers  = "From: Website Contact <contact-form@" . $_SERVER['SERVER_NAME'] . ">\r\n";
-    $headers .= "Reply-To: {$email}\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    // 🚀 Send mail
-    if (mail($to, $mail_subject, $body, $headers)) {
-        echo "✅ Message sent successfully!";
-    } else {
-        echo "❌ Message could not be sent. Please try again later.";
-    }
+} else {
+    echo 'Invalid Request.';
 }
 ?>
