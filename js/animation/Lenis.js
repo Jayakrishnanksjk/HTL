@@ -8,9 +8,23 @@ const lenis = new Lenis({
   infinite: false, // document scroll stops at the real end
 });
 
-// RAF loop to drive Lenis
-function raf(time) {
-  lenis.raf(time);
+// Sync ScrollTrigger with Lenis
+if (typeof ScrollTrigger !== "undefined") {
+  lenis.on("scroll", ScrollTrigger.update);
+}
+
+// Drive Lenis via GSAP Ticker for perfect synchronization (fixes pin jitter/lag)
+if (typeof gsap !== "undefined") {
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+  gsap.ticker.lagSmoother(0);
+} else {
+  // Fallback to normal RAF if GSAP is not loaded
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
   requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf);
+

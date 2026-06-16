@@ -1,16 +1,5 @@
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-
-// Sync with ScrollTrigger
-lenis.on("scroll", ScrollTrigger.update);
 gsap.registerPlugin(ScrollTrigger);
 
-// createHorizontalScroll(".nextsection", ".innerwarap");
-
-// createHorizontalScrollById("culturePageSection", "culturePageSectionInner");
 
 ScrollTrigger.defaults({
   anticipatePin: 1
@@ -85,7 +74,6 @@ function createHorizontalScroll(sectionSelector, innerSelector) {
   const marginRight = parseFloat(style.marginRight) || 0;
   const extra = marginLeft + marginRight;
   const scrollDistance = inner.scrollWidth + extra - window.innerWidth;
-  // const scrollDistance = inner.scrollWidth - window.innerWidth;
 
   gsap.to(inner, {
     x: -scrollDistance,

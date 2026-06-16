@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="normalize.css" />
+  <title>Privacy Policy - HTL AIRCON</title>
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-body">
+      <a class="link-style-reset" href="./index.html">
+        <div class="nav-brand">
+          <img src="./images/Logomain.svg" alt="HTL brand logo" height="32px" width="auto" />
+        </div>
+      </a>
+      <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
+        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="top" y="9" width="48" height="6" fill="white" />
+          <rect class="bot" y="29" width="48" height="6" fill="white" />
+        </svg>
+      </div>
+    </div>
+    <div class="nav-menu-section" id="navSection">
+      <div class="inner-container">
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Company</h3>
+            </div>
+            <div class="menu-list">
+              <a href="about.html" class="link-box">About Us</a>
+              <a href="team.html" class="link-box">Our Team</a>
+              <a href="culturePage.html" class="link-box">People and Culture</a>
+              <a href="services.html" class="link-box">Services</a>
+              <a href="CSR.html" class="link-box">ESG</a>
+              <a href="#" class="link-box disabled">Investor Relations</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Services</h3>
+            </div>
+            <div class="menu-list">
+              <a href="hvac.html" class="link-box">HVAC</a>
+              <a href="mep.html" class="link-box">MEP</a>
+              <a href="BaseBuild.html" class="link-box">Base build</a>
+              <a href="Cleanroom.html" class="link-box">Cleanrooms</a>
+              <a href="InteriorFitout.html" class="link-box">C&I & Interior Fit-out</a>
+              <a href="VirtualProjectManagement.html" class="link-box">Virtual Project Management</a>
+              <a href="OperationNmaintainance.html" class="link-box">Operations & Maintenance</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Sectors</h3>
+            </div>
+            <div class="menu-list">
+              <a href="commGcc.html" class="link-box">Commercial Real Estate & GCC</a>
+              <a href="Industrial.html" class="link-box">Industrial & Warehousing</a>
+              <a href="DataCentres.html" class="link-box">Data Centres & Critical rooms</a>
+              <a href="Biotech.html" class="link-box">Pharma & Biotech Life sciences</a>
+              <a href="hospitality.html" class="link-box">Hospitality & Luxury Retail</a>
+              <a href="healthcare.html" class="link-box">Hospital & healthcare</a>
+              <a href="Educational.html" class="link-box">Educational institutes</a>
+              <a href="Infra.html" class="link-box">Gov & Infra</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Resources</h3>
+            </div>
+            <div class="menu-list">
+              <a href="project.html" class="link-box">Projects</a>
+              <a href="news.html" class="link-box">News & Articles</a>
+            </div>
+          </div>
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Socials</h3>
+            </div>
+            <div class="menu-list">
+              <a href="https://www.linkedin.com/company/htlaircon/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="link-box">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE NAV START ===== -->
+  <nav class="mobile-navbar" id="mobileNavbar">
+    <div class="mobile-nav-header">
+      <div class="mobile-brand">
+        <a href="index.html">
+          <img src="./images/Logomain.svg" alt="HTL Logo" height="28" />
+        </a>
+      </div>
+      <div class="mobile-menu-toggle" id="mobileMenuToggle">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="10" width="32" height="4" fill="white" />
+          <rect y="20" width="32" height="4" fill="white" />
+          <rect y="30" width="32" height="4" fill="white" />
+        </svg>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Company<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="about.html">About Us</a>
+          <a href="team.html">Our Team</a>
+          <a href="culturePage.html">People and Culture</a>
+          <a href="services.html">Services</a>
+          <a href="CSR.html">ESG</a>
+          <a href="#">Investor Relations</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Services<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="hvac.html">HVAC</a>
+          <a href="mep.html">MEP</a>
+          <a href="BaseBuild.html">Base build</a>
+          <a href="Cleanroom.html">Cleanrooms</a>
+          <a href="InteriorFitout.html">C&I & Interior Fit-out</a>
+          <a href="VirtualProjectManagement.html">Virtual Project Management</a>
+          <a href="OperationNmaintainance.html">Operations & Maintenance</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Sectors<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="commGcc.html">Commercial Real Estate & GCC</a>
+          <a href="Industrial.html">Industrial & Warehousing</a>
+          <a href="DataCentres.html">Data Centres & Critical Rooms</a>
+          <a href="Biotech.html">Pharma & Biotech Life Sciences</a>
+          <a href="hospitality.html">Hospitality & Luxury Retail</a>
+          <a href="healthcare.html">Hospital & Healthcare</a>
+          <a href="Educational.html">Educational Institutes</a>
+          <a href="Infra.html">Gov & Infra</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Resources<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="project.html">Projects</a>
+          <a href="news.html">News & Articles</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Socials<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/company/htlaircon/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- ===== MOBILE NAV END ===== -->
+
+  <section class="legal-page-section" style="padding: 140px 80px 80px; background: #ffffff; color: #1a1a1a; font-family: 'Geist', sans-serif;">
+    <div class="legal-container" style="max-width: 900px; margin: 0 auto; line-height: 1.6; font-size: 1.1rem; font-weight: 300;">
+      <h1 style="font-size: 3rem; font-weight: 500; margin-bottom: 10px; color: #000; letter-spacing: -1px;">Privacy Policy</h1>
+      <p style="opacity: 0.6; margin-bottom: 40px; font-size: 0.95rem;">Last Updated: June 16, 2026</p>
+      
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">1. Introduction</h3>
+        <p style="margin-bottom: 15px;">HTL AIRCON (hereinafter referred to as the "Company", "we", "us", or "our") is committed to protecting the privacy and security of your personal data. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit or interact with our website.</p>
+        <p style="margin-bottom: 15px;">By using our website, you agree to the collection and use of information in accordance with this policy and applicable data protection laws, including the Information Technology Act, 2000 (India).</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">2. Information We Collect</h3>
+        <p style="margin-bottom: 15px;">We may collect personal information that you voluntarily provide to us when you contact us, request a consultation, or submit inquiries. This includes:</p>
+        <ul style="margin-left: 20px; margin-bottom: 15px; list-style-type: disc;">
+          <li style="margin-bottom: 8px;">Full Name</li>
+          <li style="margin-bottom: 8px;">Email Address</li>
+          <li style="margin-bottom: 8px;">Contact Number</li>
+          <li style="margin-bottom: 8px;">Service of Interest</li>
+          <li style="margin-bottom: 8px;">Any other message content you provide</li>
+        </ul>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">3. Usage Data</h3>
+        <p style="margin-bottom: 15px;">We also collect information that your browser sends whenever you visit our website. This may include information such as your computer's IP address, browser type, browser version, the pages of our website that you visit, the time and date of your visit, and other diagnostic data.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">4. How We Use Your Data</h3>
+        <p style="margin-bottom: 15px;">We process your data for the following purposes:</p>
+        <ul style="margin-left: 20px; margin-bottom: 15px; list-style-type: disc;">
+          <li style="margin-bottom: 8px;">To respond to your inquiries and consultation requests.</li>
+          <li style="margin-bottom: 8px;">To provide and maintain our services.</li>
+          <li style="margin-bottom: 8px;">To improve our website functionality and user experience.</li>
+          <li style="margin-bottom: 8px;">To comply with legal obligations.</li>
+        </ul>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">5. Data Sharing and Security</h3>
+        <p style="margin-bottom: 15px;">We do not sell, rent, or lease your personal data to third parties. We take appropriate technical and organizational security measures to safeguard your personal data from unauthorized access, disclosure, alteration, or destruction. However, please be aware that no transmission method over the Internet is 100% secure.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">6. Cookies</h3>
+        <p style="margin-bottom: 15px;">We use cookies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. If you do not accept cookies, you may not be able to use some portions of our website.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">7. Changes to This Privacy Policy</h3>
+        <p style="margin-bottom: 15px;">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">8. Contact Us</h3>
+        <p style="margin-bottom: 15px;">If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
+        <p style="margin-bottom: 5px;"><strong>HTL AIRCON PVT LTD</strong></p>
+        <p style="margin-bottom: 5px;">Address: 38, NAND GHANSHAYAM INDL ESATE, NEXT TO SUN PHARMA, OFF MAHAKALI CAVES ROAD, ANDHERI EAST, MUMBAI - 400093</p>
+        <p style="margin-bottom: 5px;">Email: <a href="mailto:info@htlaircon.com">info@htlaircon.com</a></p>
+      </section>
+    </div>
+  </section>
+
+  <!-- Placeholder Footer to be replaced by script -->
+      <site-footer></site-footer>
+
+  <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/animation/Lenis.js"></script>
+  <script src="./Hamburger/script.js"></script>
+    <script src="./js/site-footer.js"></script>
+  </body>
+</html>

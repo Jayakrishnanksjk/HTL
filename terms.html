@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="normalize.css" />
+  <title>Terms & Conditions - HTL AIRCON</title>
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-body">
+      <a class="link-style-reset" href="./index.html">
+        <div class="nav-brand">
+          <img src="./images/Logomain.svg" alt="HTL brand logo" height="32px" width="auto" />
+        </div>
+      </a>
+      <div class="nav-link-btn nav-toggle" id="navToggle" onclick="toggleNav()">
+        <svg id="burger" width="48" height="32" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="top" y="9" width="48" height="6" fill="white" />
+          <rect class="bot" y="29" width="48" height="6" fill="white" />
+        </svg>
+      </div>
+    </div>
+    <div class="nav-menu-section" id="navSection">
+      <div class="inner-container">
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Company</h3>
+            </div>
+            <div class="menu-list">
+              <a href="about.html" class="link-box">About Us</a>
+              <a href="team.html" class="link-box">Our Team</a>
+              <a href="culturePage.html" class="link-box">People and Culture</a>
+              <a href="services.html" class="link-box">Services</a>
+              <a href="CSR.html" class="link-box">ESG</a>
+              <a href="#" class="link-box disabled">Investor Relations</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Services</h3>
+            </div>
+            <div class="menu-list">
+              <a href="hvac.html" class="link-box">HVAC</a>
+              <a href="mep.html" class="link-box">MEP</a>
+              <a href="BaseBuild.html" class="link-box">Base build</a>
+              <a href="Cleanroom.html" class="link-box">Cleanrooms</a>
+              <a href="InteriorFitout.html" class="link-box">C&I & Interior Fit-out</a>
+              <a href="VirtualProjectManagement.html" class="link-box">Virtual Project Management</a>
+              <a href="OperationNmaintainance.html" class="link-box">Operations & Maintenance</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Sectors</h3>
+            </div>
+            <div class="menu-list">
+              <a href="commGcc.html" class="link-box">Commercial Real Estate & GCC</a>
+              <a href="Industrial.html" class="link-box">Industrial & Warehousing</a>
+              <a href="DataCentres.html" class="link-box">Data Centres & Critical rooms</a>
+              <a href="Biotech.html" class="link-box">Pharma & Biotech Life sciences</a>
+              <a href="hospitality.html" class="link-box">Hospitality & Luxury Retail</a>
+              <a href="healthcare.html" class="link-box">Hospital & healthcare</a>
+              <a href="Educational.html" class="link-box">Educational institutes</a>
+              <a href="Infra.html" class="link-box">Gov & Infra</a>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div-nav">
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Resources</h3>
+            </div>
+            <div class="menu-list">
+              <a href="project.html" class="link-box">Projects</a>
+              <a href="news.html" class="link-box">News & Articles</a>
+            </div>
+          </div>
+          <div class="menu-box">
+            <div class="title-box">
+              <h3>Socials</h3>
+            </div>
+            <div class="menu-list">
+              <a href="https://www.linkedin.com/company/htlaircon/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="link-box">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE NAV START ===== -->
+  <nav class="mobile-navbar" id="mobileNavbar">
+    <div class="mobile-nav-header">
+      <div class="mobile-brand">
+        <a href="index.html">
+          <img src="./images/Logomain.svg" alt="HTL Logo" height="28" />
+        </a>
+      </div>
+      <div class="mobile-menu-toggle" id="mobileMenuToggle">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="10" width="32" height="4" fill="white" />
+          <rect y="20" width="32" height="4" fill="white" />
+          <rect y="30" width="32" height="4" fill="white" />
+        </svg>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Company<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="about.html">About Us</a>
+          <a href="team.html">Our Team</a>
+          <a href="culturePage.html">People and Culture</a>
+          <a href="services.html">Services</a>
+          <a href="CSR.html">ESG</a>
+          <a href="#">Investor Relations</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Services<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="hvac.html">HVAC</a>
+          <a href="mep.html">MEP</a>
+          <a href="BaseBuild.html">Base build</a>
+          <a href="Cleanroom.html">Cleanrooms</a>
+          <a href="InteriorFitout.html">C&I & Interior Fit-out</a>
+          <a href="VirtualProjectManagement.html">Virtual Project Management</a>
+          <a href="OperationNmaintainance.html">Operations & Maintenance</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Sectors<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="commGcc.html">Commercial Real Estate & GCC</a>
+          <a href="Industrial.html">Industrial & Warehousing</a>
+          <a href="DataCentres.html">Data Centres & Critical Rooms</a>
+          <a href="Biotech.html">Pharma & Biotech Life Sciences</a>
+          <a href="hospitality.html">Hospitality & Luxury Retail</a>
+          <a href="healthcare.html">Hospital & Healthcare</a>
+          <a href="Educational.html">Educational Institutes</a>
+          <a href="Infra.html">Gov & Infra</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Resources<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="project.html">Projects</a>
+          <a href="news.html">News & Articles</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="dropdown-btn">Socials<span class="arrow">&#9662;</span></button>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/company/htlaircon/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- ===== MOBILE NAV END ===== -->
+
+  <section class="legal-page-section" style="padding: 140px 80px 80px; background: #ffffff; color: #1a1a1a; font-family: 'Geist', sans-serif;">
+    <div class="legal-container" style="max-width: 900px; margin: 0 auto; line-height: 1.6; font-size: 1.1rem; font-weight: 300;">
+      <h1 style="font-size: 3rem; font-weight: 500; margin-bottom: 10px; color: #000; letter-spacing: -1px;">Terms and Conditions</h1>
+      <p style="opacity: 0.6; margin-bottom: 40px; font-size: 0.95rem;">Last Updated: June 16, 2026</p>
+      
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">1. Acceptance of Terms</h3>
+        <p style="margin-bottom: 15px;">Welcome to the website of HTL AIRCON. This document contains the terms and conditions that govern your access to and use of this website. By accessing or using this website, you acknowledge that you have read, understood, and agree to be bound by this Agreement and all applicable laws and regulations.</p>
+        <p style="margin-bottom: 15px;">HTL AIRCON (hereinafter referred to as the "Company", "we", "us", or "our") is owned and operated by HTL AIRCON PVT LTD. If you do not agree with the terms of this document, please do not use this platform.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">2. Description of Services</h3>
+        <p style="margin-bottom: 15px;">HTL AIRCON is a leading HVAC and MEP contractor, delivering specialized engineering, design, base build, cleanrooms, and operations & maintenance services. The contents of this website are provided solely for informational purposes to enable clients, partners, and visitors to understand our capabilities and get in touch with our team.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">3. Intellectual Property</h3>
+        <p style="margin-bottom: 15px;">All content, graphics, logos, designs, page headers, button icons, scripts, and service names included on this website are the intellectual property of HTL AIRCON PVT LTD or its licensors. You may not copy, distribute, modify, transmit, reuse, or use any of this content for commercial purposes without our express written permission.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">4. User Restrictions</h3>
+        <p style="margin-bottom: 15px;">You agree not to use this website in any way that causes, or may cause, damage to the website or impairment of the availability or accessibility of the website; or in any way which is unlawful, illegal, fraudulent, or harmful.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">5. Privacy and Data Protection</h3>
+        <p style="margin-bottom: 15px;">Your submission of personal information through the website (such as consultation requests or contact forms) is governed by our Privacy Policy. By using our services, you consent to the processing of your data in accordance with our Privacy Policy.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">6. Limitation of Liability</h3>
+        <p style="margin-bottom: 15px;">HTL AIRCON PVT LTD and its directors, employees, or agents shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or the inability to use this website or its contents.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">7. Governing Law and Jurisdiction</h3>
+        <p style="margin-bottom: 15px;">These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of Mumbai, Maharashtra.</p>
+      </section>
+
+      <section style="margin-bottom: 30px;">
+        <h3 style="font-size: 1.5rem; font-weight: 500; margin-top: 30px; margin-bottom: 15px; color: #000;">8. Contact Us</h3>
+        <p style="margin-bottom: 15px;">If you have any questions or concerns regarding these Terms and Conditions, please contact us at:</p>
+        <p style="margin-bottom: 5px;"><strong>HTL AIRCON PVT LTD</strong></p>
+        <p style="margin-bottom: 5px;">Address: 38, NAND GHANSHAYAM INDL ESATE, NEXT TO SUN PHARMA, OFF MAHAKALI CAVES ROAD, ANDHERI EAST, MUMBAI - 400093</p>
+        <p style="margin-bottom: 5px;">Email: <a href="mailto:info@htlaircon.com">info@htlaircon.com</a></p>
+      </section>
+    </div>
+  </section>
+
+  <!-- Placeholder Footer to be replaced by script -->
+      <site-footer></site-footer>
+
+  <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/animation/Lenis.js"></script>
+  <script src="./Hamburger/script.js"></script>
+    <script src="./js/site-footer.js"></script>
+  </body>
+</html>
