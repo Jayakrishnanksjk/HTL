@@ -440,6 +440,7 @@
           </div>
 
           <p class="required-note">*All fields are required</p>
+<div id="formResponse" class="form-response" style="display:none;"></div>
 
           <button type="submit" class="submit-btn">Submit</button>
         </form>
@@ -1243,20 +1244,20 @@
       });
     </script>
 
-    <script>
+    <!-- <script>
       const consultationForm = document.getElementById("consultationForm");
       const contactNumberInput = document.getElementById("contactNumber");
 
-      // Restrict input to numbers only while typing
+   
       contactNumberInput.addEventListener("input", function (e) {
-        this.value = this.value.replace(/[^0-9]/g, ""); // remove non-digits
+        this.value = this.value.replace(/[^0-9]/g, ""); 
       });
 
       consultationForm.addEventListener("submit", function (e) {
         const phone = contactNumberInput.value.trim();
         const service = consultationForm.querySelector("select").value;
 
-        // Validation: only numbers in phone
+     
         if (!/^[0-9]{7,15}$/.test(phone)) {
           e.preventDefault();
           alert("Please enter a valid contact number (7–15 digits only).");
@@ -1264,14 +1265,53 @@
           return;
         }
 
-        // Validation: must choose a service
+        
         if (service === "") {
           e.preventDefault();
           alert("Please select a service type.");
           return;
         }
       });
-    </script>
+    </script> -->
+  
+  <script>
+const form = document.getElementById("consultationForm");
+const responseBox = document.getElementById("formResponse");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop normal form submit
+
+  responseBox.style.display = "none";
+  responseBox.innerHTML = "";
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData
+  })
+    .then(res => res.json())
+    .then(data => {
+      responseBox.style.display = "block";
+
+      if (data.status === "success") {
+        responseBox.style.color = "green";
+        responseBox.innerHTML = data.message;
+        form.reset();
+        grecaptcha.reset(); // reset captcha
+      } else {
+        responseBox.style.color = "red";
+        responseBox.innerHTML = data.message;
+      }
+    })
+    .catch(() => {
+      responseBox.style.display = "block";
+      responseBox.style.color = "red";
+      responseBox.innerHTML = "Network error. Please try again.";
+    });
+});
+</script>
+
     <script src="./js/site-footer.js"></script>
   </body>
 </html>
