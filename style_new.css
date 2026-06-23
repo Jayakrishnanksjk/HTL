@@ -6537,3 +6537,9 @@ h2 {
   background: #e20202;        /* slightly lighter black */
   transform: scale(1.1);   /* pop-out effect */
 }
+
+#teamManagement {
+  height: auto;
+  overflow: visible;
+  padding-bottom: 80px;
+}

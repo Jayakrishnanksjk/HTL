@@ -18,10 +18,10 @@ createHorizontalScrollById(
   "projectTeamPageManagementInner"
 );
 
-createHorizontalScrollById(
-  "teamManagement",
-  "teamManagementInner"
-);
+// createHorizontalScrollById(
+//   "teamManagement",
+//   "teamManagementInner"
+// );
 
 createHorizontalScrollById(
   "teamMembers",
